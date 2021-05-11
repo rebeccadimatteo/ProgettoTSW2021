@@ -20,41 +20,47 @@ import model.Item;
 @WebServlet("/ServletCarrello")
 public class ServletCarrello extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ServletCarrello() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession sessione=request.getSession(true);
-		
-		synchronized(sessione) {
-			Item el=catal.getItem(request.getParameter("id"));
-			if(!car.isPresente(el))car.addProduct(el);
-			
+	public ServletCarrello() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		HttpSession sessione = request.getSession(true);
+
+		synchronized (sessione) {
+			Item el = catal.getItem(request.getParameter("id"));
+			if (!car.isPresente(el))
+				car.addProduct(el);
+
 			sessione.setAttribute("Carrello", car);
 		}
-		
-		RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/mainCarrello.jsp");
+
+		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/mainCarrello.jsp");
 		rd.forward(request, response);
-		
+
 	}
-	private Catalogo catal=new Catalogo();
-	private Carrello car=new Carrello();
+
+	private Catalogo catal = new Catalogo();
+	private Carrello car = new Carrello();
+
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
 }
-
