@@ -34,10 +34,12 @@
 	<br>
 
 	<div style="text-align: center">
-		<form action="ServletCarrello" method="get">
+		<form action="ServletCarrello" method="post">
 			<input type="hidden" id="id" name="id"
 				value="<%=prodotto.getCodice()%>"> <input type="submit"
-				value="AGGIUNGI AL CARRELLO"> <br>
+				value="AGGIUNGI AL CARRELLO"> <br> <input type="hidden"
+				name="azione" value="aggiungi"> <input type="hidden"
+				name="pagina" value="ServletDettaglio?id=${prodotto.getCodice() }">
 		</form>
 	</div>
 </body>

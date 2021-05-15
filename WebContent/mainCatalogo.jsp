@@ -9,12 +9,15 @@
 <title>Catalogo</title>
 </head>
 <body>
-
+	<a href="ServletCarrello" style=""> Vai al Carrello
+		(${car.lengthCarrello()})</a>
 	<%
 		Catalogo prodotti = (Catalogo) request.getAttribute("Catalogo");
+
 		for (int i = 0; i < prodotti.lengthCatalogo(); i++) {
 			Item el = prodotti.getItemIndex(i);
 	%>
+
 	<p align="center">
 		<b><%=el.getNome()%></b>
 	</p>
@@ -33,13 +36,16 @@
 			<input type="hidden" id="id" name="id" value="<%=el.getCodice()%>">
 			<input type="submit" value="DETTAGLI"> <br>
 		</form>
-		<form action="ServletCarrello" method="get">
+		<form action="ServletCarrello" method="post">
 			<input type="hidden" id="id" name="id" value="<%=el.getCodice()%>">
-			<input type="submit" value="AGGIUNGI AL CARRELLO"> <br>
+			<input type="hidden" name="azione" value="aggiungi"> <input
+				type="hidden" name="pagina" value="ServletDati"> <input
+				type="submit" value="AGGIUNGI AL CARRELLO"> <br>
 		</form>
 	</div>
 	<%
 		}
 	%>
+
 </body>
 </html>

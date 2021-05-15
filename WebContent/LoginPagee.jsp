@@ -22,6 +22,7 @@
 					type="password" name="pwsd" placeholder="**********" /> <input
 					type="submit" value="Accedi">
 
+
 			</p>
 
 
@@ -30,6 +31,14 @@
 
 
 	</form>
+	<br>
+	<p>Non sei Registrato? Clicca il tasto Registra!</p>
+	<br>
+	<form action="Registrazione.jsp" method="post">
+		<input type="submit" value="Registrati" />
+
+	</form>
+
 
 
 

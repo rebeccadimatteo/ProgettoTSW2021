@@ -8,34 +8,38 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 public class Catalogo {
+
+	private static DataSource ds;
+
+	static {
+		try {
+			Context initCtx = new InitialContext();
+			Context envCtx = (Context) initCtx.lookup("java:comp/env");
+
+			ds = (DataSource) envCtx.lookup("jdbc/storage");
+
+		} catch (NamingException e) {
+			System.out.println("Error:" + e.getMessage());
+		}
+	}
 
 	public Catalogo() {
 
-		Connection con = null;
-
 		try {
 
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/dbprogettotsw?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CET";
-			String username = "root";
-			String pwd = "Becca123*";
-			con = DriverManager.getConnection(url, username, pwd);
+			Connection connection = null;
+			PreparedStatement preparedStatement = null;
 
-		}
-
-		catch (SQLException e) {
-			System.out.println(e.getErrorCode());
-			System.out.println(e.getMessage());
-
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-
-		try {
 			String sql = "SELECT * FROM PRODOTTO";
-			PreparedStatement p2 = con.prepareStatement(sql);
-			ResultSet rs = p2.executeQuery();
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			ResultSet rs = preparedStatement.executeQuery();
 
 			while (rs.next()) {
 				String codice = rs.getString(1);

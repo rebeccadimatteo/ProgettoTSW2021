@@ -6,36 +6,42 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 public class UtenteDAO {
+
+	private static DataSource ds;
+
+	static {
+		try {
+			Context initCtx = new InitialContext();
+			Context envCtx = (Context) initCtx.lookup("java:comp/env");
+
+			ds = (DataSource) envCtx.lookup("jdbc/storage");
+
+		} catch (NamingException e) {
+			System.out.println("Error:" + e.getMessage());
+		}
+	}
 
 	public UtenteDAO() {
 
 	}
 
 	public boolean autentico(Utente a) {
-		Connection con = null;
 
 		try {
-
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/dbprogettotsw?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CET";
-			String username = "root";
-			String pwd = "Becca123*";
-			con = DriverManager.getConnection(url, username, pwd);
-
-		} catch (SQLException ex) {
-			System.out.println(ex.getErrorCode());
-			System.out.println(ex.getMessage());
-
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		try {
+			Connection connection = null;
+			PreparedStatement preparedStatement = null;
 			username = a.getId();
 			password = a.getPswd();
 			String sql = "select * from Utente where ID='" + username + "' AND Pwsd='" + password + "'";
-			PreparedStatement p2 = con.prepareStatement(sql);
-			ResultSet rs = p2.executeQuery();
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			ResultSet rs = preparedStatement.executeQuery();
 			boolean risposta = rs.next();
 
 			if (!risposta) {

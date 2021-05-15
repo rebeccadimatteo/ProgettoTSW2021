@@ -51,8 +51,17 @@ public class RegistrazioneServlet extends HttpServlet {
 		String tipologia = "Registrato";
 		int numeroordini = 0;
 		String pswd = request.getParameter("pwsd");
+		// indirizzo
+		String via = request.getParameter("via");
+		String cap = request.getParameter("cap");
+		String citta = request.getParameter("citta");
+		// metodo pagamento
+		String iban = request.getParameter("iban");
+		String tipo = request.getParameter("tipo");
+		String nominativo = request.getParameter("nominativo");
 
-		Utente nuovo = new Utente(id, nome, cognome, cf, email, cellulare, tipologia, numeroordini, pswd);
+		Utente nuovo = new Utente(id, nome, cognome, cf, email, cellulare, tipologia, numeroordini, pswd, via, cap,
+				citta, iban, tipo, nominativo);
 		request.setAttribute("utente", nuovo);
 		boolean ok = nuovo.idpresente();
 
@@ -63,6 +72,7 @@ public class RegistrazioneServlet extends HttpServlet {
 			rd.forward(request, response);
 		} else {
 			nuovo.inserisceutente();
+			nuovo.inseriscimetodo();
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/BenvenutoUtente.jsp");
 			rd.forward(request, response);
 		}

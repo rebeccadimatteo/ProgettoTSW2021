@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import model.Carrello;
 import model.Catalogo;
 import model.Item;
+import model.Utente;
 
 /**
  * Servlet implementation class ServletCarrello
@@ -35,23 +36,18 @@ public class ServletCarrello extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession sessione = request.getSession(true);
 
-		synchronized (sessione) {
-			Item el = catal.getItem(request.getParameter("id"));
-			if (!car.isPresente(el))
-				car.addProduct(el);
-
-			sessione.setAttribute("Carrello", car);
+		Carrello car = (Carrello) request.getSession().getAttribute("car");
+		if (car == null) {
+			car = new Carrello();
+			request.getSession().setAttribute("car", car);
 		}
 
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/mainCarrello.jsp");
 		rd.forward(request, response);
-
 	}
 
 	private Catalogo catal = new Catalogo();
-	private Carrello car = new Carrello();
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
@@ -59,8 +55,34 @@ public class ServletCarrello extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String azione = request.getParameter("azione");
+		if (azione != null) {
+			if (azione.equalsIgnoreCase("acquista")) {
+				if (request.getSession().getAttribute("utente") == null) {
+					response.sendRedirect("LoginServlet");
+				} else {
+					Utente ut = (Utente) request.getSession().getAttribute("utente");
+					Carrello car = new Carrello();
+					request.getSession().setAttribute("car", car);
+					RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Acquistato.jsp");
+					rd.forward(request, response);
+					return;
+
+				}
+
+			} else if (azione.equalsIgnoreCase("aggiungi")) {
+				String page = request.getParameter("pagina");
+				Item el = catal.getItem(request.getParameter("id"));
+				Carrello car = (Carrello) request.getSession().getAttribute("car");
+				if (!car.isPresente(el))
+					car.addProduct(el);
+
+				request.getSession().setAttribute("car", car);
+				response.sendRedirect(page);
+				return;
+			}
+		}
+
 	}
 
 }

@@ -33,6 +33,9 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("mi sono rotta il cazzo");
+		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/LoginPagee.jsp");
+		rd.forward(request, response);
 
 	}
 
@@ -45,17 +48,19 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		ut = new Utente(request.getParameter("username"), null, null, null, null, null, null, 0,
-				request.getParameter("pwsd"));
+				request.getParameter("pwsd"), null, null, null, null, null, null);
+
 		// VEDENDO SE L'UTENTE è VALIDO SE LO è LO PASSIAMO ALLA JSP
 		UtenteDAO ris = new UtenteDAO();
 		boolean ok = ris.autentico(ut);
+
 		ut.setValid(ok);
 		if (ut.isValid()) {
-			request.setAttribute("utente", ut);
+			request.getSession().setAttribute("utente", ut);
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/BenvenutoUtente.jsp");
 			rd.forward(request, response);
 		} else {
-			request.setAttribute("utente", ut);
+
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Registrazione.jsp");
 			rd.forward(request, response);
 		}

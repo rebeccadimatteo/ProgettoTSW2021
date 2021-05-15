@@ -11,9 +11,22 @@
 <body>
 
 	<%
-		Carrello car = (Carrello) session.getAttribute("Carrello");
-		for (int i = 0; i < car.lengthCarrello(); i++) {
-			Item el = car.getItemIndex(i);
+		Carrello car = (Carrello) request.getSession().getAttribute("car");
+		if (car.lengthCarrello() == 0) {
+	%>
+	<p align="center">Carrello vuoto
+	<form action="ServletDati">
+		<p align="center">
+			Carrello vuoto <input type="submit" value="Ritorna al Catalogo">
+			<br>
+		</p>
+	</form>
+
+	<%
+		}
+
+		else {
+			for (Item el : car.getProdotti()) {
 	%>
 
 	<p align="left">
@@ -29,12 +42,15 @@
 		Somma Totale: $<%=car.SommaPrezzo()%><br>
 	</p>
 	<div style="text-align: center">
-		<form action="Fallito.html">
+		<form action="ServletOrdine">
+
 			<input type="submit" value="CHECKOUT"> <br>
 		</form>
 	</div>
 
-
+	<%
+		}
+	%>
 
 </body>
 </html>

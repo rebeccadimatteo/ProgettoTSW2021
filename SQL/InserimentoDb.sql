@@ -1,11 +1,9 @@
 use dbprogettotsw;
-/*
-insert into Indirizzo(ID,Via,Cap,Citta) values ();
-insert into Indirizzo(ID,Via,Cap,Citta) values ();
-insert into Indirizzo(ID,Via,Cap,Citta) values ();
-*/
 
-insert into Utente(ID,Nome,Cognome,CF,Email,Cellulare,Tipologia,NumeroOrdini,Pwsd) values ("becca12","Rebecca","Di Matteo","DMTRCC00A0G1","Beccadimatteoo@gmail.com","3894685921","registrato",0,"becca123");
+
+
+
+insert into Utente(ID,Nome,Cognome,CF,Email,Cellulare,Tipologia,NumeroOrdini,Pwsd,Via,Cap,Citta) values ("becca12","Rebecca","Di Matteo","DMTRCC00A0G1","Beccadimatteoo@gmail.com","3894685921","registrato",0,"becca123","gugliemo marconi 18","84084","fisciano");
 
 
 
@@ -21,8 +19,9 @@ insert into Categoria(Codice,Nome) values ("F","Formaggi e latticini");
 insert into Categoria(Codice,Nome) values ("P","Pasta");
 
 
+
+insert into MetodoDiPagamento(Codice,Tipo,NominativoIntestatario) values ("IT34545677","mastercard","Rebecca Di Matteo");
 /*
-insert into MetodoDiPagamento(Codice,Tipo,NominativoIntestatario) values ();
 insert into MetodoDiPagamento(Codice,Tipo,NominativoIntestatario) values ();
 insert into MetodoDiPagamento(Codice,Tipo,NominativoIntestatario) values ();
 */

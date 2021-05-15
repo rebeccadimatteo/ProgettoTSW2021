@@ -1,16 +1,35 @@
 package model;
 
-import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.DriverManager;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 public class Utente {
 
+	private static DataSource ds;
+
+	static {
+		try {
+			Context initCtx = new InitialContext();
+			Context envCtx = (Context) initCtx.lookup("java:comp/env");
+
+			ds = (DataSource) envCtx.lookup("jdbc/storage");
+
+		} catch (NamingException e) {
+			System.out.println("Error:" + e.getMessage());
+		}
+	}
+
 	public Utente(String id, String nome, String cognome, String cf, String email, String cellulare, String tipologia,
-			int numeroordini, String pswd) {
+			int numeroordini, String pswd, String via, String cap, String citta, String iban, String tipo,
+			String nominativo) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -21,39 +40,33 @@ public class Utente {
 		this.tipologia = tipologia;
 		this.numeroordini = numeroordini;
 		this.pswd = pswd;
+		this.via = via;
+		this.cap = cap;
+		this.citta = citta;
+		this.iban = iban;
+		this.tipo = tipo;
+		this.nominativo = nominativo;
 	}
 
 	public boolean idpresente() {
-		Connection con = null;
 
 		try {
-
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/dbprogettotsw?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CET";
-			String username = "root";
-			String pwd = "Becca123*";
-			con = DriverManager.getConnection(url, username, pwd);
-
-		} catch (SQLException ex) {
-			System.out.println(ex.getErrorCode());
-			System.out.println(ex.getMessage());
-
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		try {
+			Connection connection = null;
+			PreparedStatement preparedStatement = null;
 			id = this.getId();
 
 			String sql = "select * from Utente where ID='" + id + "'";
-			PreparedStatement p2 = con.prepareStatement(sql);
-			ResultSet rs = p2.executeQuery();
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			ResultSet rs = preparedStatement.executeQuery();
+
 			boolean risposta = rs.next();
 
 			if (!risposta) {
 
 				System.out.println("Utente non trovato");
 			} else {
-				System.out.println("Utente trovatp");
+				System.out.println("Utente trovato");
 			}
 			return risposta;
 		} catch (SQLException e) {
@@ -65,51 +78,91 @@ public class Utente {
 	}
 
 	public void inserisceutente() {
-		Connection con = null;
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
 
 		try {
 
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/dbprogettotsw?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CET";
-			String username = "root";
-			String pwd = "Becca123*";
-			con = DriverManager.getConnection(url, username, pwd);
+			String sql = "INSERT INTO Utente(ID,Nome,Cognome,CF,Email,Cellulare,Tipologia,NumeroOrdini,Pwsd,Via,Cap,Citta) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, id);
+			preparedStatement.setString(2, nome);
+			preparedStatement.setString(3, cognome);
+			preparedStatement.setString(4, cf);
+			preparedStatement.setString(5, email);
+			preparedStatement.setString(6, cellulare);
+			preparedStatement.setString(7, tipologia);
+			preparedStatement.setInt(8, numeroordini);
+			preparedStatement.setString(9, pswd);
+			preparedStatement.setString(10, via);
+			preparedStatement.setString(11, cap);
+			preparedStatement.setString(12, citta);
 
-		} catch (SQLException ex) {
-			System.out.println(ex.getErrorCode());
-			System.out.println(ex.getMessage());
+			preparedStatement.executeUpdate();
 
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-
-		try {
-			CallableStatement y = con.prepareCall("{call inserimentoUtente(?,?,?,?,?,?,?,?,?)}");
-			y.setString(1, this.getId());
-			y.setString(2, this.getNome());
-			y.setString(3, this.getCognome());
-			y.setString(4, this.getCf());
-			y.setString(5, this.getEmail());
-			y.setString(6, this.getCellulare());
-			y.setString(7, this.getTipologia());
-			y.setInt(8, this.getNumeroordini());
-			y.setString(9, this.getPswd());
-			y.executeQuery();
-
-			System.out.println("INSERIMENTO ANDATO A BUON FINE !");
 		} catch (SQLException e) {
-			System.out.println("Errore");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (preparedStatement != null)
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			} finally {
 
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
 		}
-
 	}
 
-	public boolean isValid() {
-		return valid;
-	}
+	public void inseriscimetodo() {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
 
-	public void setValid(boolean newValid) {
-		valid = newValid;
+		try {
+
+			String sql = "INSERT INTO MetodoDiPagamento(Codice,Tipo,NominativoIntestatario) values (?,?,?)";
+
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, iban);
+			preparedStatement.setString(2, tipo);
+			preparedStatement.setString(3, nominativo);
+
+			preparedStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (preparedStatement != null)
+					preparedStatement.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} finally {
+
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+		}
 	}
 
 	public String getId() {
@@ -184,6 +237,62 @@ public class Utente {
 		this.pswd = pswd;
 	}
 
+	public boolean isValid() {
+		return valid;
+	}
+
+	public void setValid(boolean valid) {
+		this.valid = valid;
+	}
+
+	public String getVia() {
+		return via;
+	}
+
+	public void setVia(String via) {
+		this.via = via;
+	}
+
+	public String getCap() {
+		return cap;
+	}
+
+	public void setCap(String cap) {
+		this.cap = cap;
+	}
+
+	public String getCitta() {
+		return citta;
+	}
+
+	public void setCitta(String citta) {
+		this.citta = citta;
+	}
+
+	public String getIban() {
+		return iban;
+	}
+
+	public void setIban(String iban) {
+		this.iban = iban;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getNominativo() {
+		return nominativo;
+	}
+
+	public void setNominativo(String nominativo) {
+		this.nominativo = nominativo;
+	}
+
 	private String id;
 	private String nome;
 	private String cognome;
@@ -194,5 +303,13 @@ public class Utente {
 	private int numeroordini;
 	private String pswd;
 	private boolean valid;
+
+	private String via;
+	private String cap;
+	private String citta;
+
+	private String iban;
+	private String tipo;
+	private String nominativo;
 
 }
