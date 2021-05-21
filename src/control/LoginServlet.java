@@ -33,7 +33,6 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("mi sono rotta il cazzo");
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/LoginPagee.jsp");
 		rd.forward(request, response);
 
@@ -57,8 +56,14 @@ public class LoginServlet extends HttpServlet {
 		ut.setValid(ok);
 		if (ut.isValid()) {
 			request.getSession().setAttribute("utente", ut);
-			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/BenvenutoUtente.jsp");
-			rd.forward(request, response);
+			if (ut.getId().equalsIgnoreCase("admin")) {
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
+				rd.forward(request, response);
+			} else {
+
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
+				rd.forward(request, response);
+			}
 		} else {
 
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Registrazione.jsp");

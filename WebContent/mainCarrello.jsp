@@ -33,7 +33,8 @@
 		<img src="<%=el.getImg()%>" width="100" height="100"> <b><%=el.getNome()%></b>Prezzo:
 		$
 		<%=el.getPrezzo()%>
-		Quantita':<%=el.getQuantita()%><br>
+		Quantita':<%=el.getQuantita()%>
+		
 	</p>
 	<%
 		}

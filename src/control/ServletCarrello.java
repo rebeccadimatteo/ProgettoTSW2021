@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import model.Carrello;
 import model.Catalogo;
 import model.Item;
+import model.Ordine;
 import model.Utente;
 
 /**
@@ -42,6 +43,8 @@ public class ServletCarrello extends HttpServlet {
 			car = new Carrello();
 			request.getSession().setAttribute("car", car);
 		}
+		
+		System.out.println(car.getProdotti().size());
 
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/mainCarrello.jsp");
 		rd.forward(request, response);
@@ -62,6 +65,8 @@ public class ServletCarrello extends HttpServlet {
 					response.sendRedirect("LoginServlet");
 				} else {
 					Utente ut = (Utente) request.getSession().getAttribute("utente");
+					Ordine nuovo= new Ordine(ut.getId(),ut.getVia(),ut.getCap(),ut.getCitta()," ");
+					nuovo.inserisciordine();
 					Carrello car = new Carrello();
 					request.getSession().setAttribute("car", car);
 					RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Acquistato.jsp");
@@ -69,6 +74,8 @@ public class ServletCarrello extends HttpServlet {
 					return;
 
 				}
+				
+				
 
 			} else if (azione.equalsIgnoreCase("aggiungi")) {
 				String page = request.getParameter("pagina");
@@ -76,7 +83,6 @@ public class ServletCarrello extends HttpServlet {
 				Carrello car = (Carrello) request.getSession().getAttribute("car");
 				if (!car.isPresente(el))
 					car.addProduct(el);
-
 				request.getSession().setAttribute("car", car);
 				response.sendRedirect(page);
 				return;
