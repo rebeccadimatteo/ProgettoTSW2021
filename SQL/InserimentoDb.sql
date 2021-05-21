@@ -4,7 +4,7 @@ use dbprogettotsw;
 
 
 insert into Utente(ID,Nome,Cognome,CF,Email,Cellulare,Tipologia,NumeroOrdini,Pwsd,Via,Cap,Citta) values ("becca12","Rebecca","Di Matteo","DMTRCC00A0G1","Beccadimatteoo@gmail.com","3894685921","registrato",0,"becca123","gugliemo marconi 18","84084","fisciano");
-
+insert into Utente(ID,Nome,Cognome,CF,Email,Cellulare,Tipologia,NumeroOrdini,Pwsd,Via,Cap,Citta) values ("admin","admin","admin","XXXXXXX","admin@gmail.com","3894685921","amministratore",0,"admin","gugliemo marconi 18","84084","fisciano");
 
 
 insert into Produttore(PartitaIva,Nome) values ("34565678THK","Francesco De Rosa");
@@ -35,14 +35,6 @@ insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,q
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("005", "MOZZARELLA DI GIOIA DEL COLLE DOP" , "Il sapore della Mozzarella di Gioia del Colle Dop e' di latte delicatamente acidulo, con lieve retrogusto di fermentato/siero acido, piu' intenso nel formaggio appena prodotto; odore lattico, acidulo, con eventuali sfumature di burro; Si presenta con una superficie liscia o lievemente fibrosa, lucente, non viscida, ne scagliata. L'aspetto esterno e' di colore bianco, con eventuali sfumature stagionali di colore paglierino. Al taglio la pasta, che deve avere consistenza elastica ed essere priva di difetti, presenta una leggera fuoriuscita di siero di colore bianco.",30, 4.00,"F","images/mozzarellaGioia.jpg",1 );
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("006","Orecchiette di semola" , "Pasta di semola di grano duro. Ingredienti: semola di grano duro, acqua. Allergeni: glutine; puo' contenere tracce di soia.",3, 0.500, "P","images/orecchiette.jpg",1 );
 /*
-insert into Domiciliato(IDIndirizzo,IDUtente) values ();
-insert into Domiciliato(IDIndirizzo,IDUtente) values ();
-insert into Domiciliato(IDIndirizzo,IDUtente) values ();
-
-
-insert into Wishlist(IDUtente,CodiceProdotto,DataAggiunta) values ();
-insert into Wishlist(IDUtente,CodiceProdotto,DataAggiunta) values ();
-insert into Wishlist(IDUtente,CodiceProdotto,DataAggiunta) values ();
 
 
 insert into Acquisto(IDUtente,CodiceProdotto,CodFattura) values ();
