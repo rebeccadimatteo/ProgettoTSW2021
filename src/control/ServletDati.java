@@ -33,7 +33,18 @@ public class ServletDati extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		request.setAttribute("Catalogo", catal);
+		String azione = request.getParameter("azione");
+		if (azione != null) {
+		 if(azione.equalsIgnoreCase("admin"))
+		 {
+			 RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Admincat.jsp");
+				rd.forward(request, response);
+			 
+		 }
+		
+		}
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/mainCatalogo.jsp");
 		rd.forward(request, response);
 	}

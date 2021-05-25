@@ -1,10 +1,12 @@
 package model;
 
 import java.sql.Connection;
-
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -124,6 +126,67 @@ public class Utente {
 					}
 			}
 		}
+	}
+public void restituisciutente() {
+		
+	Utente ris=null;
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+
+		try {
+			String sql = "select * from Utente where ID='" + id + "'";
+
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			
+			ResultSet rs = preparedStatement.executeQuery();
+			
+			while (rs.next()) {
+				this.setId( rs.getString(1));
+				this.setNome(rs.getString(2));
+				this.setCognome(rs.getString(3));
+				this.setCf(rs.getString(4));
+				this.setEmail( rs.getString(5));
+				this.setCellulare(rs.getString(6));
+				this.setTipologia(rs.getString(7));
+				this.setNumeroordini(rs.getInt(8));
+				this.setPswd(rs.getString(9));
+				this.setVia(rs.getString(10));
+				this.setCap(rs.getString(11));
+				this.setCitta(rs.getString(12));
+				
+				
+				
+				
+				 
+
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (preparedStatement != null)
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			} finally {
+
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+		}
+		
 	}
 
 	public void inseriscimetodo() {

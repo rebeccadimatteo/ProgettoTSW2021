@@ -15,7 +15,13 @@ public class Carrello {
 		}
 		return somma;
 	}
-
+	public double SommaPeso() {
+		double peso = 0;
+		for (int i = 0; i < prodotti.size(); i++) {
+			peso = peso + prodotti.get(i).getPeso();
+		}
+		return peso;
+	}
 	public boolean isPresente(Item prod) {
 		int i = 0;
 		boolean trovato = false;

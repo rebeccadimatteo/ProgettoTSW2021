@@ -91,7 +91,7 @@ IDUtente VARCHAR(10),
 Via VARCHAR(50) NOT NULL,
 Cap VARCHAR(5) NOT NULL,
 Citta VARCHAR(50) NOT NULL,
-IDSpecificaOrdine VARCHAR(10),
+IDSpecificaOrdine INTEGER,
 FOREIGN KEY(IDUtente) REFERENCES Utente(ID)
 								ON DELETE CASCADE 
 								ON UPDATE CASCADE,
@@ -99,7 +99,7 @@ PRIMARY KEY(NumeroOrdine)
 );
 
 CREATE TABLE IF NOT EXISTS SpecificaOrdine(
-ID VARCHAR(10),
+ID INTEGER,
 NumeroOrdine INTEGER,
 PesoTotale DOUBLE NOT NULL,
 CostoTotale DOUBLE NOT NULL,
@@ -119,7 +119,7 @@ PRIMARY KEY(ID)
 
 CREATE TABLE IF NOT EXISTS Riferimento(
 CodiceProdotto VARCHAR(10),
-IDSpecificaOrdine VARCHAR(10),
+IDSpecificaOrdine INTEGER,
 FOREIGN KEY(CodiceProdotto) REFERENCES Prodotto(Codice)
 								ON DELETE CASCADE 
 								ON UPDATE CASCADE,

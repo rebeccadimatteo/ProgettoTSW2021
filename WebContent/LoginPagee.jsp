@@ -110,7 +110,13 @@ body {
 		padding: 0;
 	}
 }
-
+.logo {
+	float: left;
+	width: 2%;
+	background-color: #f1f1f1;
+	padding-left: 5px;
+	margin-top: 9px;
+}
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
 	.topnav a {
@@ -123,6 +129,11 @@ body {
 <body>
 
 	<div class="header">
+	<div class="logo">
+			<div class="img">
+				<a title="Clicca per andare alla home" href="HomePage.jsp"><img src="images/logo.png" alt="logo" style="height: 120px; "></a>
+			</div>
+		</div>
 		<h1>
 			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 		</h1>
@@ -131,6 +142,7 @@ body {
 	</div>
 
 	<div class="topnav">
+	<a href="HomePage.jsp" Style="color: white">HomePage</a> 
 		<a href="ServletDati" Style="color: white">Catalogo</a> <a
 			href="ChiSiamo.jsp" Style="color: white">Chi Siamo</a> <a
 			href="Contatti.jsp" Style="color: white">Contatti</a> <a
@@ -186,10 +198,15 @@ body {
 
 		<div class="rightcolumn">
 			<div class="card">
-				<div class="img">
-					<img src="images/logo.png" style="height: 150px;">
-				</div>
+				<h2 Style="color: #800000">Gestisci</h2>
 
+				<button onclick="location.href='mioprofilo.jsp'" id="pulsante"
+					type="submit">Vai al mio profilo</button>
+				<br> <br>
+
+				<button onclick="location.href='mioordini.jsp'" id="pulsante"
+					type="submit">I miei ordini</button>
+				<br> <br>
 
 
 			</div>
@@ -199,9 +216,10 @@ body {
 
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
-		<a href="#" Style="color: #800000">Metodi Di Pagamento e tempi di
-			spedizione</a> <br> <a href="#" Style="color: #800000">Chi Siamo</a>
-		<br> <a href="#" Style="color: #800000">Contatti</a> <br>
+		<a href="MetodoSpedizione.jsp" Style="color: #800000">Metodi Di
+			Pagamento e tempi di spedizione</a> <br> <a href="ChiSiamo.jsp"
+			Style="color: #800000">Chi Siamo</a> <br> <a href="Contatti.jsp"
+			Style="color: #800000">Contatti</a> <br>
 	</div>
 
 </body>

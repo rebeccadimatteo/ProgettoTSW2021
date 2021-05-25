@@ -14,6 +14,7 @@ import model.Carrello;
 import model.Catalogo;
 import model.Item;
 import model.Ordine;
+import model.SpecificaOrdine;
 import model.Utente;
 
 /**
@@ -43,7 +44,7 @@ public class ServletCarrello extends HttpServlet {
 			car = new Carrello();
 			request.getSession().setAttribute("car", car);
 		}
-		
+
 		System.out.println(car.getProdotti().size());
 
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/mainCarrello.jsp");
@@ -60,13 +61,20 @@ public class ServletCarrello extends HttpServlet {
 			throws ServletException, IOException {
 		String azione = request.getParameter("azione");
 		if (azione != null) {
-			if (azione.equalsIgnoreCase("acquista")) {
+		 if(azione.equalsIgnoreCase("acquista")) {
 				if (request.getSession().getAttribute("utente") == null) {
 					response.sendRedirect("LoginServlet");
 				} else {
+					Carrello carrelloin = (Carrello) request.getSession().getAttribute("car");
 					Utente ut = (Utente) request.getSession().getAttribute("utente");
-					Ordine nuovo= new Ordine(ut.getId(),ut.getVia(),ut.getCap(),ut.getCitta()," ");
+					Ordine nuovo = new Ordine(0,ut.getId(),null,null,request.getParameter("via"),request.getParameter("cap"),request.getParameter("citta") ,0);
+					SpecificaOrdine spec=new SpecificaOrdine(0,nuovo.getNumeroordine(),carrelloin.SommaPeso(),carrelloin.SommaPrezzo(),request.getParameter("via"),request.getParameter("cap"),request.getParameter("citta"),ut.getId());
+					nuovo.setIdspecificaordine(spec.getId());
+					ut.setIban(request.getParameter("iban"));
+					ut.setTipo(request.getParameter("tipo"));
+					ut.setNominativo(request.getParameter("nominativo"));
 					nuovo.inserisciordine();
+					spec.inserisciSpecificaOrdine();
 					Carrello car = new Carrello();
 					request.getSession().setAttribute("car", car);
 					RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Acquistato.jsp");
@@ -74,8 +82,6 @@ public class ServletCarrello extends HttpServlet {
 					return;
 
 				}
-				
-				
 
 			} else if (azione.equalsIgnoreCase("aggiungi")) {
 				String page = request.getParameter("pagina");
@@ -90,5 +96,5 @@ public class ServletCarrello extends HttpServlet {
 		}
 
 	}
-
 }
+

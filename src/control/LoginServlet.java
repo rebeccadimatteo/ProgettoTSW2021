@@ -55,12 +55,14 @@ public class LoginServlet extends HttpServlet {
 
 		ut.setValid(ok);
 		if (ut.isValid()) {
+			ut.restituisciutente();
+			
 			request.getSession().setAttribute("utente", ut);
 			if (ut.getId().equalsIgnoreCase("admin")) {
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
 				rd.forward(request, response);
-			} else {
-
+			}   
+			else {
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
 				rd.forward(request, response);
 			}

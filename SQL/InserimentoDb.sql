@@ -44,8 +44,10 @@ insert into Acquisto(IDUtente,CodiceProdotto,CodFattura) values ();
 insert into Creazione(CodiceProdotto,PartitaIvaProduttore) values ("001","34565678THK");
 insert into Creazione(CodiceProdotto,PartitaIvaProduttore) values ("002","567493024TW");
 insert into Creazione(CodiceProdotto,PartitaIvaProduttore) values ("003","34567009SWS");
+
+insert into Ordine(NumeroOrdine,Stato,DataOrdine,IDUtente,Via,Cap,Citta,IDSpecificaOrdine)values (001,"ordinato","2021/12/12","becca12","fratelli 62","84084","fisciano","0003");
+insert into SpecificaOrdine(ID,NumeroOrdine,PesoTotale,CostoTotale,Via,Cap,Citta,IDUtente) values (0003,001,13.6,12.7,"fratelli 62","84084","fisciano","becca12");
 /*
-insert into Ordine(NumeroOrdine,Stato,DataOrdine,IDUtente,IDIndirizzo,IDSpecificaOrdine) values ();
 insert into Ordine(NumeroOrdine,Stato,DataOrdine,IDUtente,IDIndirizzo,IDSpecificaOrdine) values ();
 insert into Ordine(NumeroOrdine,Stato,DataOrdine,IDUtente,IDIndirizzo,IDSpecificaOrdine) values ();
 

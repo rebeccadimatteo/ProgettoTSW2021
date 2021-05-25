@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Carrello;
+import model.Item;
 
 /**
  * Servlet implementation class ServletOrdine
@@ -33,7 +34,7 @@ public class ServletOrdine extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Carrello car = (Carrello) request.getAttribute("Carrello");
-		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/OrdinePage.jsp");
+		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaOrdine.jsp");
 		rd.forward(request, response);
 	}
 
@@ -43,8 +44,24 @@ public class ServletOrdine extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		Carrello car = (Carrello) request.getAttribute("Carrello");
+		String azione = request.getParameter("azione");
+		if (azione != null) {
+			if (azione.equalsIgnoreCase("avanti")) {
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Avanti.jsp");
+				rd.forward(request, response);
 
+			}
+			if (azione.equalsIgnoreCase("+")) {
+
+			}
+			if (azione.equalsIgnoreCase("-")) {
+
+			}
+			if (azione.equalsIgnoreCase("rim")) {
+
+			}
+		}
+
+	}
 }

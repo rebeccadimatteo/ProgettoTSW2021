@@ -73,7 +73,7 @@ public class RegistrazioneServlet extends HttpServlet {
 		} else {
 			nuovo.inserisceutente();
 			nuovo.inseriscimetodo();
-			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/BenvenutoUtente.jsp");
+			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
 			rd.forward(request, response);
 		}
 

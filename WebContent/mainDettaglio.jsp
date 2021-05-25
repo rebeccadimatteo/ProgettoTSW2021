@@ -142,7 +142,7 @@ pre {
 	<div class="header">
 		<div class="logo">
 			<div class="img">
-				<img src="images/logo.png" style="height: 120px;">
+				<a title="Clicca per andare alla home" href="HomePage.jsp"><img src="images/logo.png" alt="logo" style="height: 120px; "></a>
 			</div>
 		</div>
 		<h1>
@@ -155,6 +155,7 @@ pre {
 	</div>
 
 	<div class="topnav">
+	<a href="HomePage.jsp" Style="color: white">HomePage</a> 
 		<a href="ServletDati" Style="color: white">Catalogo</a> <a
 			href="ChiSiamo.jsp" Style="color: white">Chi Siamo</a> <a
 			href="Contatti.jsp" Style="color: white">Contatti</a> <a
@@ -226,9 +227,10 @@ pre {
 
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
-		<a href="#" Style="color: #800000">Metodi Di Pagamento e tempi di
-			spedizione</a> <br> <a href="#" Style="color: #800000">Chi Siamo</a>
-		<br> <a href="#" Style="color: #800000">Contatti</a> <br>
+		<a href="MetodoSpedizione.jsp" Style="color: #800000">Metodi Di
+			Pagamento e tempi di spedizione</a> <br> <a href="ChiSiamo.jsp"
+			Style="color: #800000">Chi Siamo</a> <br> <a href="Contatti.jsp"
+			Style="color: #800000">Contatti</a> <br>
 	</div>
 
 </body>
