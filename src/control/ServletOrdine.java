@@ -44,24 +44,41 @@ public class ServletOrdine extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		Carrello car = (Carrello) request.getAttribute("Carrello");
+		Carrello car1 = (Carrello) request.getAttribute("Carrello");
 		String azione = request.getParameter("azione");
-		if (azione != null) {
+		
 			if (azione.equalsIgnoreCase("avanti")) {
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Avanti.jsp");
 				rd.forward(request, response);
 
 			}
 			if (azione.equalsIgnoreCase("+")) {
-
+				
+				String coditem=request.getParameter("cod");
+				int ind=car1.indice(coditem);
+				Item el=car1.getItemIndex(ind);
+				el.setQuantita(el.getQuantita()+1);
+				
+				
+				
 			}
 			if (azione.equalsIgnoreCase("-")) {
-
+				String coditem=request.getParameter("cod");
+				int ind=car1.indice(coditem);
+				Item el=car1.getItemIndex(ind);
+				el.setQuantita(el.getQuantita()-1);
+				
 			}
 			if (azione.equalsIgnoreCase("rim")) {
+				String coditem=request.getParameter("cod");
+				car1.rimuovi(coditem);
+				
+				
 
 			}
+			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaOrdine.jsp");
+			rd.forward(request, response);
 		}
 
-	}
+	
 }

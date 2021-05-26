@@ -1,4 +1,4 @@
-<%@ page import="model.*"%>
++<%@ page import="model.*"%>
 <%@ page import="java.util.ArrayList"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -258,6 +258,7 @@ color: white;
 					<%
 						double pesotot = 0;
 						double prezzotot = 0;
+						
 						Carrello car = (Carrello) session.getAttribute("car");
 						for (int i = 0; i < car.lengthCarrello(); i++) {
 							Item el = car.getItemIndex(i);
@@ -278,11 +279,15 @@ color: white;
 						</td>
 						<td>
 						<form action="ServletOrdine"  method="post">
-						
-						<button id="pulsante2" type="submit" >Aumenta</button>
+						<button id="pulsante2" type="submit" >Aumenta</button>	
 						<br> <input type="hidden" name="azione" value="+">
+						      <input type="hidden" name="cod" value="<%=el.getCodice()%>">
+						</form>
+						<form action="ServletOrdine"  method="post">
 						<button id="pulsante2" type="submit">Diminuisci</button>
 						<br> <input type="hidden" name="azione" value="-">
+						</form>
+						<form action="ServletOrdine"  method="post">
 						<button id="pulsante2" type="submit">Rimuovi</button>
 						<br> <input type="hidden" name="azione" value="rim">
 					

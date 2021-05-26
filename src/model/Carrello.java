@@ -36,6 +36,35 @@ public class Carrello {
 		return trovato;
 
 	}
+	public int indice(String codfin) {
+		int i = 0;
+		int fin=0;
+		while(i<this.getProdotti().size())
+		{
+			if(this.getProdotti().get(i).getCodice().equalsIgnoreCase(codfin))
+			{
+				fin=i;
+			}
+		}
+		return fin;
+
+	}
+	
+	public void rimuovi(String cod2) {
+		int i=0;
+		while (i < this.prodotti.size()) {
+			if(this.getProdotti().get(i).getCodice().equalsIgnoreCase(cod2))
+			{
+				this.getProdotti().remove(i);
+			}
+			i++;
+		}
+		
+		
+
+	}
+
+
 
 	public void incrementaQuantita(Item prod) {
 		prod.setQuantita(prod.getQuantita() + 1);
