@@ -58,7 +58,7 @@ public class ServletOrdine extends HttpServlet {
 				int ind=car1.indice(coditem);
 				Item el=car1.getItemIndex(ind);
 				el.setQuantita(el.getQuantita()+1);
-				
+				response.sendRedirect("/PaginaOrdine.jsp");
 				
 				
 			}
@@ -67,17 +67,16 @@ public class ServletOrdine extends HttpServlet {
 				int ind=car1.indice(coditem);
 				Item el=car1.getItemIndex(ind);
 				el.setQuantita(el.getQuantita()-1);
+				response.sendRedirect("/PaginaOrdine.jsp");
 				
 			}
 			if (azione.equalsIgnoreCase("rim")) {
 				String coditem=request.getParameter("cod");
 				car1.rimuovi(coditem);
-				
-				
+				response.sendRedirect("/PaginaOrdine.jsp");
 
 			}
-			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaOrdine.jsp");
-			rd.forward(request, response);
+			
 		}
 
 	
