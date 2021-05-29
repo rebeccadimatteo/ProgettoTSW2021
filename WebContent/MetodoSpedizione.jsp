@@ -160,8 +160,6 @@ body {
 				<h1 Style="color: #800000" align="center">Tempi di Spedizione:</h1>
 				<h5 align="center">
 
-					
-					</div>
 					La merce e' sempre pronta per la spedizione nei nostri magazzini, i
 					tempi medi di lavorazione dell'ordine è sono 1-3 giorni lavorativi,
 					i tempi possono variare a seconda dei periodi ed al volume degli
@@ -173,10 +171,11 @@ body {
 
 				</h5>
 				<h1 Style="color: #800000" align="center">Metodi di pagamento:</h1>
-				<div class="img">
-						<img src="images/mastercard.png"  align="center" vstyle="height: 120px;"> 
-						<img src="images/visa.png"  align="center"  style="height: 120px;">
+				<div class="img" align=center>
+						<img src="images/mastercard.png" vstyle="height: 120px;"> 
+						<img src="images/visa.png"  style="height: 100px;">
 
+			</div>
 			</div>
 		</div>
 		<div class="rightcolumn">

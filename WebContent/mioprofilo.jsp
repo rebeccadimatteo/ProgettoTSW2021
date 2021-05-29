@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Il mio profilo</title>
+<title>Ecco il mio profilo</title>
 <style>
 * {
 	box-sizing: border-box;
