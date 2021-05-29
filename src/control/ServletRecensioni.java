@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Recensione;
+
 /**
  * Servlet implementation class ServletRecensioni
  */
@@ -29,10 +31,7 @@ public class ServletRecensioni extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList <String> rec=new ArrayList<String>();
-		rec.add(request.getParameter("rec"));
-		request.setAttribute("recensioni", rec);
-		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
+		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/adminrecensioni.jsp");
 		rd.forward(request, response);
 		
 		
@@ -43,8 +42,16 @@ public class ServletRecensioni extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		 String id=request.getParameter("id");
+		 String descr=request.getParameter("arearec");
+		 Recensione nuova=new Recensione(0,id,descr);
+		 nuova.inseriscirecensione();
+		 
+		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
+		rd.forward(request, response);
+		
+		
+		
 	}
 
 }

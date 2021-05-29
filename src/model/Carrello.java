@@ -11,14 +11,14 @@ public class Carrello {
 	public double SommaPrezzo() {
 		double somma = 0;
 		for (int i = 0; i < prodotti.size(); i++) {
-			somma = somma + prodotti.get(i).getPrezzo();
+			somma = somma +( prodotti.get(i).getPrezzo())*prodotti.get(i).getQuantita();
 		}
 		return somma;
 	}
 	public double SommaPeso() {
 		double peso = 0;
 		for (int i = 0; i < prodotti.size(); i++) {
-			peso = peso + prodotti.get(i).getPeso();
+			peso = peso + prodotti.get(i).getPeso()*prodotti.get(i).getQuantita();
 		}
 		return peso;
 	}
@@ -38,15 +38,18 @@ public class Carrello {
 	}
 	public int indice(String codfin) {
 		int i = 0;
-		int fin=0;
+		int trovato=0;
+		
 		while(i<this.getProdotti().size())
 		{
 			if(this.getProdotti().get(i).getCodice().equalsIgnoreCase(codfin))
 			{
-				fin=i;
+				 trovato=i;
 			}
+			i++;
+			
 		}
-		return fin;
+		return trovato;
 
 	}
 	

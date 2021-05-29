@@ -32,6 +32,17 @@ body {
 .header h1 {
 	font-size: 50px;
 }
+#pulsantee {
+outline: none;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+font: bold 20px Arial, Helvetica, sans-serif;
+color: white;
+padding: 10px 20px;
+border: solid 1px #333;
+background: #333;
+}
 
 /* Style the top navigation bar */
 .topnav {
@@ -113,19 +124,20 @@ body {
 	margin-top: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
 		padding: 0;
+		display: block;
 	}
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
 	.topnav a {
 		float: none;
 		width: 100%;
+		display: block;
+	}
+	.logo {
+		width: 80%;
+		display: block;
 	}
 }
 </style>
@@ -135,7 +147,8 @@ body {
 	<div class="header">
 		<div class="logo">
 			<div class="img">
-				<a title="Clicca per andare alla home" href="HomePage.jsp"><img src="images/logo.png" alt="logo" style="height: 120px; "></a>
+				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
+					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>
 		<h1>
@@ -146,13 +159,83 @@ body {
 	</div>
 
 	<div class="topnav">
-	<a href="HomePage.jsp" Style="color: white">HomePage</a> 
-		<a href="ServletDati" Style="color: white">Catalogo</a> <a
-			href="ChiSiamo.jsp" Style="color: white">Chi Siamo</a> <a
-			href="Contatti.jsp" Style="color: white">Contatti</a> <a
-			href="Recensioni.jsp" Style="color: white">Recensioni</a> <a
-			href="LoginPagee.jsp" style="float: right" Style="color:white">Login</a>
-		<a href="Registrazione.jsp" style="float: right" Style="color:white">Registrati</a>
+	<div class="topnav" style="float: left;">
+
+			<form action="ServletHomePage" method="get">
+
+				<button id="pulsantee" type="submit">HomePage</button>
+				<input type="hidden" name="home" value="home">
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+
+			<form action="ServletHomePage" method="get">
+
+				<button id="pulsantee" type="submit">Catalogo</button>
+				<input type="hidden" name="home" value="catal">
+
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="ServletHomePage" method="get">
+				<button id="pulsantee" type="submit">Chi Siamo</button>
+				<input type="hidden" name="home" value="chisiamo">
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="ServletHomePage" method="get">
+				<button id="pulsantee" type="submit">Contatti</button>
+				<input type="hidden" name="home" value="contatti">
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="ServletHomePage" method="get">
+				<button id="pulsantee" type="submit">Recensioni</button>
+				<input type="hidden" name="home" value="recensione">
+			</form>
+		</div>
+
+
+		<%
+			if (request.getSession().getAttribute("utente") != null) {
+		%>
+		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
+			 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; 
+			 
+			
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="LoginServlet" method="post">
+				<button id="pulsantee" type="submit">Logout</button>
+				<input type="hidden" name="azione" value="autentico">
+			</form>
+		</div>
+		<%
+			} else {
+		%>
+		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
+		</div>
+
+		<div class="topnav" style="float: left;">
+
+			<form action="LoginServlet" method="get">
+				<button id="pulsantee" type="submit">Login</button>
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="RegistrazioneServlet" method="get">
+				<button id="pulsantee" type="submit">Registrazione</button>
+			</form>
+		</div>
+
+		<%
+			}
+		%>
+	
 	</div>
 
 	<div class="row">
@@ -160,28 +243,28 @@ body {
 			<div class="card">
 				<h1 Style="color: #800000" align="center">Vuoi lasciare una
 					recensione?</h1>
-				<textarea id="recensione" name="rec" rows="10" cols="100"
-					align="center">
+				<form action="ServletRecensioni" method="post">
+					<fieldset>
 
-                 </textarea>
-				<div class="c4l-rating">
-					<input name="c4l-rating" type="radio" id="c4l-rate1" value="1" />
-					<label for="c4l-rate1"></label> <input name="c4l-rating"
-						type="radio" id="c4l-rate2" value="2" /> <label for="c4l-rate2"></label>
+						<legend>
+							<b Style="color: #800000">Inserisci dati per la recensione: </b>
+						</legend>
+						<p align="center" Style="color: #800000">
+						
+							Inserire Nome Utente : <input type="text" name="id"
+								placeholder="becca12" /><br>
+						</p>
+						<p align="center" Style="color: #800000">
+							Inserire recensione : <textarea id="arearec" name="arearec" rows=5 cols=20>
 
-					<input name="c4l-rating" type="radio" id="c4l-rate3" value="3" />
-					<label for="c4l-rate3"></label> <input name="c4l-rating"
-						type="radio" id="c4l-rate4" value="4" /> <label for="c4l-rate4"></label>
+                          </textarea><br></p>
+						
+                       </fieldset>
+					<p align="right">
+						<button id="pulsante" type="submit">Invia</button>
+					</p>
 
-					<input name="c4l-rating" type="radio" id="c4l-rate5" value="5"
-						checked /> <label for="c4l-rate5"></label>
-				</div>
-				<p align="right">
-					<button onclick="location.href='ServletRecensioni'" id="pulsante"
-						type="submit">Invia</button>
-				</p>
-
-
+				</form>
 
 
 
@@ -205,10 +288,21 @@ body {
 
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
-		<a href="MetodoSpedizione.jsp" Style="color: #800000">Metodi Di
-			Pagamento e tempi di spedizione</a> <br> <a href="ChiSiamo.jsp"
-			Style="color: #800000">Chi Siamo</a> <br> <a href="Contatti.jsp"
-			Style="color: #800000">Contatti</a> <br>
+		<form action="ServletHomePage" method="get">
+		<button id="pulsantee"
+					type="submit">Pagamenti e metodi di Spedizione</button>
+            	 <input type="hidden" name="home" value="pagmet"><br><br>
+            	 </form>
+            	 <form action="ServletHomePage" method="get">
+		 <button id="pulsantee"
+					type="submit">Chi Siamo</button>
+            	 <input type="hidden" name="home" value="chisiamo"><br><br>
+            	 </form>
+            	 <form action="ServletHomePage" method="get">
+            	  <button id="pulsantee"
+					type="submit">Contatti</button>
+            	 <input type="hidden" name="home" value="contatti">
+			      </form>
 	</div>
 
 </body>

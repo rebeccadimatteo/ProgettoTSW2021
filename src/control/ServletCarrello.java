@@ -60,10 +60,15 @@ public class ServletCarrello extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String azione = request.getParameter("azione");
-		if (azione != null) {
-		 if(azione.equalsIgnoreCase("acquista")) {
+		String az=request.getParameter("az");
+	
+		if (az != null) {
+		
+		 if(az.equalsIgnoreCase("acquista")) {
+			 
 				if (request.getSession().getAttribute("utente") == null) {
 					response.sendRedirect("LoginServlet");
+
 				} else {
 					Carrello carrelloin = (Carrello) request.getSession().getAttribute("car");
 					Utente ut = (Utente) request.getSession().getAttribute("utente");
@@ -83,8 +88,13 @@ public class ServletCarrello extends HttpServlet {
 
 				}
 
-			} else if (azione.equalsIgnoreCase("aggiungi")) {
+			
+		}
+
+	} if(azione!=null) {
+		 if (azione.equalsIgnoreCase("aggiungi")) {
 				String page = request.getParameter("pagina");
+				System.out.println("page " + page);
 				Item el = catal.getItem(request.getParameter("id"));
 				Carrello car = (Carrello) request.getSession().getAttribute("car");
 				if (!car.isPresente(el))
@@ -93,8 +103,7 @@ public class ServletCarrello extends HttpServlet {
 				response.sendRedirect(page);
 				return;
 			}
-		}
-
+	}
 	}
 }
 

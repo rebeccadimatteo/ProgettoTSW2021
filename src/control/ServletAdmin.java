@@ -48,6 +48,17 @@ public class ServletAdmin extends HttpServlet {
 			 RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/AdminModifica.jsp");
 				rd.forward(request, response);
 		 }
+		 if(azione.equalsIgnoreCase("ordini"))
+		 {
+			 RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/adminordini.jsp");
+				rd.forward(request, response);
+		 }
+		 if(azione.equalsIgnoreCase("homepage"))
+		 {
+			 RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Adminhomepage.jsp");
+				rd.forward(request, response);
+		 }
+		 
 		 
 		 }
 		

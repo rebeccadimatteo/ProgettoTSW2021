@@ -13,7 +13,17 @@ body {
 	padding: 10px;
 	background: #f1f1f1;
 }
-
+#pulsantee {
+outline: none;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+font: bold 20px Arial, Helvetica, sans-serif;
+color: white;
+padding: 10px 20px;
+border: solid 1px #333;
+background: #333;
+}
 #pulsante {
 	outline: none;
 	cursor: pointer;
@@ -111,20 +121,20 @@ body {
 	background: #ddd;
 	margin-top: 20px;
 }
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
 		padding: 0;
+		display: block;
 	}
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
 	.topnav a {
 		float: none;
 		width: 100%;
+		display: block;
+	}
+	.logo {
+		width: 80%;
+		display: block;
 	}
 }
 </style>
@@ -145,23 +155,92 @@ body {
 	</div>
 
 	<div class="topnav">
-	<a href="HomePage.jsp" Style="color: white">HomePage</a> 
-		<a href="ServletDati" Style="color: white">Catalogo</a> <a
-			href="ChiSiamo.jsp" Style="color: white">Chi Siamo</a> <a
-			href="Contatti.jsp" Style="color: white">Contatti</a> <a
-			href="Recensioni.jsp" Style="color: white">Recensioni</a> <a
-			href="LoginPagee.jsp" style="float: right" Style="color:white">Login</a>
-		<a href="Registrazione.jsp" style="float: right" Style="color:white">Registrati</a>
+	
+	 <div class="topnav" style="float: left;">
+
+			<form action="ServletHomePage" method="get">
+
+				<button id="pulsantee" type="submit">HomePage</button>
+				<input type="hidden" name="home" value="home">
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+
+			<form action="ServletHomePage" method="get">
+
+				<button id="pulsantee" type="submit">Catalogo</button>
+				<input type="hidden" name="home" value="catal">
+
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="ServletHomePage" method="get">
+				<button id="pulsantee" type="submit">Chi Siamo</button>
+				<input type="hidden" name="home" value="chisiamo">
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="ServletHomePage" method="get">
+				<button id="pulsantee" type="submit">Contatti</button>
+				<input type="hidden" name="home" value="contatti">
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="ServletHomePage" method="get">
+				<button id="pulsantee" type="submit">Recensioni</button>
+				<input type="hidden" name="home" value="recensione">
+			</form>
+		</div>
+
+
+		<%
+			if (request.getSession().getAttribute("utente") != null) {
+		%>
+		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
+			 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; 
+			 
+			
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="LoginServlet" method="post">
+				<button id="pulsantee" type="submit">Logout</button>
+				<input type="hidden" name="azione" value="autentico">
+			</form>
+		</div>
+		<%
+			} else {
+		%>
+		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
+		</div>
+
+		<div class="topnav" style="float: left;">
+
+			<form action="LoginServlet" method="get">
+				<button id="pulsantee" type="submit">Login</button>
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="RegistrazioneServlet" method="get">
+				<button id="pulsantee" type="submit">Registrazione</button>
+			</form>
+		</div>
+
+		<%
+			}
+		%>
+	 
 	</div>
 
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
 				<h1 Style="color: #800000" align="center">Tempi di Spedizione:</h1>
-				<h5 align="center">
-
+				<h4 align="center">
 					
-					</div>
 					La merce e' sempre pronta per la spedizione nei nostri magazzini, i
 					tempi medi di lavorazione dell'ordine è sono 1-3 giorni lavorativi,
 					i tempi possono variare a seconda dei periodi ed al volume degli
@@ -171,12 +250,16 @@ body {
 					Utilizziamo corriere espresso NEXIVE e GLS, i tempi di spedizione
 					variano dalle 24 alle 72 ore (salvo ritardi). I costi di spedizione sono gratuiti
 
-				</h5>
+				</h4>
+				</div>
+				<div class="card">
 				<h1 Style="color: #800000" align="center">Metodi di pagamento:</h1>
 				<div class="img">
-						<img src="images/mastercard.png"  align="center" vstyle="height: 120px;"> 
-						<img src="images/visa.png"  align="center"  style="height: 120px;">
-
+				<p align="center">
+						<img src="images/mastercard.png"  align="center" style="height: 50px;"> 
+						<img src="images/visa.png"  align="center"  style="height: 50px;">
+						</p>
+</div>
 			</div>
 		</div>
 		<div class="rightcolumn">
@@ -196,10 +279,21 @@ body {
 
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
-		<a href="MetodoSpedizione.jsp" Style="color: #800000">Metodi Di
-			Pagamento e tempi di spedizione</a> <br> <a href="ChiSiamo.jsp"
-			Style="color: #800000">Chi Siamo</a> <br> <a href="Contatti.jsp"
-			Style="color: #800000">Contatti</a> <br>
+		<form action="ServletHomePage" method="get">
+		<button id="pulsantee"
+					type="submit">Pagamenti e metodi di Spedizione</button>
+            	 <input type="hidden" name="home" value="pagmet"><br><br>
+            	 </form>
+            	 <form action="ServletHomePage" method="get">
+		 <button id="pulsantee"
+					type="submit">Chi Siamo</button>
+            	 <input type="hidden" name="home" value="chisiamo"><br><br>
+            	 </form>
+            	 <form action="ServletHomePage" method="get">
+            	  <button id="pulsantee"
+					type="submit">Contatti</button>
+            	 <input type="hidden" name="home" value="contatti">
+			      </form>
 	</div>
 
 </body>

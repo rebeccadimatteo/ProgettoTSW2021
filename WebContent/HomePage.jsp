@@ -55,16 +55,29 @@ body {
 	float: left;
 	width: 75%;
 }
+
 #pulsante {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 12px Arial, Helvetica, sans-serif;
-color: #800000;
-padding: 10px 20px;
-border: solid 1px #0076a3;
-background: white;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 10px 20px;
+	border: solid 1px #0076a3;
+	background: white;
+}
+
+#pulsantee {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
 }
 
 pre {
@@ -81,14 +94,13 @@ pre {
 	background-color: #f1f1f1;
 	padding-left: 20px;
 }
+
 .logo {
 	float: left;
 	width: 2%;
 	background-color: #f1f1f1;
 	padding-left: 5px;
 	margin-top: 9px;
-	
-	
 }
 
 /* Fake image */
@@ -120,19 +132,20 @@ pre {
 	margin-top: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
 		padding: 0;
+		display: block;
 	}
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
 	.topnav a {
 		float: none;
 		width: 100%;
+		display: block;
+	}
+	.logo {
+		width: 80%;
+		display: block;
 	}
 }
 </style>
@@ -140,30 +153,100 @@ pre {
 <body>
 
 	<div class="header">
-	<div class="logo">
+		<div class="logo">
 			<div class="img">
-					<a title="Clicca per andare alla home" href="HomePage.jsp"><img src="images/logo.png" alt="logo" style="height: 120px; "></a>
-				</div>
+				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
+					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
+		</div>
 		<h1>
 			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-			
+
 		</h1>
 		<p Style="color: #800000">Sito di e-commerce incentrato sulle
 			specialita' gastronomiche del sud Italia.</p>
-			
-	</div>
 
+	</div>
 	<div class="topnav">
-	<a href="HomePage.jsp" Style="color: white">HomePage</a> 
-		<a href="ServletDati" Style="color: white">Catalogo</a> <a
-			href="ChiSiamo.jsp" Style="color: white">Chi Siamo</a> <a
-			href="Contatti.jsp" Style="color: white">Contatti</a> <a
-			href="Recensioni.jsp" Style="color: white">Recensioni</a> <a
-			href="LoginPagee.jsp" style="float: right" Style="color:white">Login</a>
-		<a href="Registrazione.jsp" style="float: right" Style="color:white">Registrati</a>
-	</div>
+		<div class="topnav" style="float: left;">
 
+			<form action="ServletHomePage" method="get">
+
+				<button id="pulsantee" type="submit">HomePage</button>
+				<input type="hidden" name="home" value="home">
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+
+			<form action="ServletHomePage" method="get">
+
+				<button id="pulsantee" type="submit">Catalogo</button>
+				<input type="hidden" name="home" value="catal">
+
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="ServletHomePage" method="get">
+				<button id="pulsantee" type="submit">Chi Siamo</button>
+				<input type="hidden" name="home" value="chisiamo">
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="ServletHomePage" method="get">
+				<button id="pulsantee" type="submit">Contatti</button>
+				<input type="hidden" name="home" value="contatti">
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="ServletHomePage" method="get">
+				<button id="pulsantee" type="submit">Recensioni</button>
+				<input type="hidden" name="home" value="recensione">
+			</form>
+		</div>
+
+
+		<%
+			if (request.getSession().getAttribute("utente") != null) {
+		%>
+		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
+			 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; 
+			 
+			
+		</div>
+		<div class="topnav" style="float: left;">
+		
+			<form action="LoginServlet" method="post">
+				<button id="pulsantee" type="submit">Logout</button>
+				<input type="hidden" name="azione" value="autentico">
+			</form>
+		</div>
+		<%
+			} else {
+		%>
+		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
+		</div>
+
+		<div class="topnav" style="float: left;">
+
+			<form action="LoginServlet" method="get">
+				<button id="pulsantee" type="submit">Login</button>
+			</form>
+		</div>
+		<div class="topnav" style="float: left;">
+			<form action="RegistrazioneServlet" method="get">
+				<button id="pulsantee" type="submit">Registrazione</button>
+			</form>
+		</div>
+
+		<%
+			}
+		%>
+
+	</div>
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
@@ -225,7 +308,7 @@ pre {
 				La Sicilia e' la piu' grande isola d'Italia e del Mediterraneo. Di forma triangolare, e' bagnata a nord dal Mar Tirreno, a ovest dal Canale di Sicilia, a sud dal Mar di Sicilia, a est dal Mar Ionio e a nord-est dallo stretto di Messina che la separa dalla Calabria.
 				</pre>
 			</div>
-			
+
 		</div>
 		<div class="rightcolumn">
 			<div class="card">
@@ -241,18 +324,29 @@ pre {
 
 
 			</div>
-			
-			
+
+
 		</div>
-		
+
 	</div>
 
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
-		<a href="MetodoSpedizione.jsp" Style="color: #800000">Metodi Di
-			Pagamento e tempi di spedizione</a> <br> <a href="ChiSiamo.jsp"
-			Style="color: #800000">Chi Siamo</a> <br> <a href="Contatti.jsp"
-			Style="color: #800000">Contatti</a> <br>
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">Pagamenti e metodi di
+				Spedizione</button>
+			<input type="hidden" name="home" value="pagmet"><br>
+			<br>
+		</form>
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br>
+			<br>
+		</form>
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit" >Contatti</button>
+			<input type="hidden" name="home" value="contatti">
+		</form>
 	</div>
 
 </body>

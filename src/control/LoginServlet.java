@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Carrello;
+import model.Item;
 import model.Utente;
 import model.UtenteDAO;
 
@@ -46,32 +48,48 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		ut = new Utente(request.getParameter("username"), null, null, null, null, null, null, 0,
 				request.getParameter("pwsd"), null, null, null, null, null, null);
 
 		// VEDENDO SE L'UTENTE è VALIDO SE LO è LO PASSIAMO ALLA JSP
 		UtenteDAO ris = new UtenteDAO();
 		boolean ok = ris.autentico(ut);
-
+		
+		
 		ut.setValid(ok);
 		if (ut.isValid()) {
 			ut.restituisciutente();
 			
 			request.getSession().setAttribute("utente", ut);
+			request.getSession().setMaxInactiveInterval(2*60*60);
 			if (ut.getId().equalsIgnoreCase("admin")) {
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
 				rd.forward(request, response);
 			}   
-			else {
+			else{
+				
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
 				rd.forward(request, response);
+				
 			}
+             
 		} else {
 
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Registrazione.jsp");
 			rd.forward(request, response);
 		}
-
+		
+		String azione=request.getParameter("azione");
+		if(azione!=null) {
+			 if (azione.equalsIgnoreCase("autentico")) {
+				 request.getSession().invalidate();
+				 RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
+					rd.forward(request, response);
+				}
+		}
+		
+	
 	}
 
 }
