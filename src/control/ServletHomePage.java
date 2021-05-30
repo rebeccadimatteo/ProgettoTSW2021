@@ -28,6 +28,7 @@ public class ServletHomePage extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String home=request.getParameter("home");
 		if(home!=null)
 		{
@@ -48,6 +49,7 @@ public class ServletHomePage extends HttpServlet {
 			}
 			if(home.equalsIgnoreCase("chisiamo"))
 			{
+				
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/ChiSiamo.jsp");
 				rd.forward(request, response);
 			}

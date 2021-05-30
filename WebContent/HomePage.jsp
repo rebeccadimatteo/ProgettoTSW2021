@@ -210,13 +210,10 @@ pre {
 		%>
 		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
-			 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; 
-			 
-			
-		</div>
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+			&emsp;&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</div>
 		<div class="topnav" style="float: left;">
-		
+
 			<form action="LoginServlet" method="post">
 				<button id="pulsantee" type="submit">Logout</button>
 				<input type="hidden" name="azione" value="autentico">
@@ -227,8 +224,8 @@ pre {
 		%>
 		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
-		</div>
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+			&emsp;&emsp;</div>
 
 		<div class="topnav" style="float: left;">
 
@@ -335,16 +332,16 @@ pre {
 		<form action="ServletHomePage" method="get">
 			<button id="pulsantee" type="submit">Pagamenti e metodi di
 				Spedizione</button>
-			<input type="hidden" name="home" value="pagmet"><br>
-			<br>
+			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
+		
+		 <form action="ServletHomePage" method="get">  
+			<button id="pulsantee" type="submit" >Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+			 </form>
+		
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Chi Siamo</button>
-			<input type="hidden" name="home" value="chisiamo"><br>
-			<br>
-		</form>
-		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit" >Contatti</button>
+			<button id="pulsantee" type="submit">Contatti</button>
 			<input type="hidden" name="home" value="contatti">
 		</form>
 	</div>

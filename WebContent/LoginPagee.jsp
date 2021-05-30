@@ -197,10 +197,11 @@ background: #333;
            
 	</div>
 
+
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
-
+               
 				<form action="LoginServlet" method="post">
 
 					<fieldset>
@@ -211,7 +212,7 @@ background: #333;
 
 						<p align="center">
 							<b Style="color: #800000">Inserisci nome utente:</b> <input
-								type="text" name="username" placeholder="becca12" /><br> <br>
+								type="text" id="user" name="username" placeholder="becca12" /><br> <br>
 							<b Style="color: #800000">Inserisci password:</b> <input
 								type="password" name="pwsd" placeholder="**********" /> <br>
 							<br>

@@ -249,7 +249,7 @@ background: white;
 					stimoli e valorizzi la scoperta delle tradizioni ed incentivi la
 					vendita di prodotti sia tipici che innovativi, mantenendo sempre
 					uno standard qualitativo alto ed un basso impatto ambientale.<br>
-					Lâ€™obiettivo infatti e' quello di soddisfare le esigenze degli
+					L'€™obiettivo infatti e' quello di soddisfare le esigenze degli
 					utenti offrendo loro una varieta' di prodotti che li facciano
 					sentire immersi tra i sapori. <br> La finalita' e' di
 					sviluppare un sito accessibile ed interattivo tale da garantire

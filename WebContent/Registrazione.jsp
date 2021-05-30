@@ -20,16 +20,17 @@ body {
 	text-align: center;
 	background: white;
 }
+
 #pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
 }
 
 .header h1 {
@@ -113,7 +114,6 @@ background: #333;
 	margin-top: 20px;
 }
 
-
 .logo {
 	float: left;
 	width: 2%;
@@ -121,6 +121,7 @@ background: #333;
 	padding-left: 5px;
 	margin-top: 9px;
 }
+
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
@@ -142,9 +143,10 @@ background: #333;
 <body>
 
 	<div class="header">
-	<div class="logo">
+		<div class="logo">
 			<div class="img">
-				<a title="Clicca per andare alla home" href="HomePage.jsp"><img src="images/logo.png" alt="logo" style="height: 120px; "></a>
+				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
+					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>
 		<h1>
@@ -155,7 +157,7 @@ background: #333;
 	</div>
 
 	<div class="topnav">
-	<div class="topnav" style="float: left;">
+		<div class="topnav" style="float: left;">
 
 			<form action="ServletHomePage" method="get">
 
@@ -194,10 +196,9 @@ background: #333;
 
 		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
-			 &emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-			
-		</div>
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+			&emsp;&emsp; &emsp; &emsp; &emsp;
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
 
 		<div class="topnav" style="float: left;">
 
@@ -205,16 +206,82 @@ background: #333;
 				<button id="pulsantee" type="submit">Login</button>
 			</form>
 		</div>
-		
-		
+
+
 	</div>
-	
+
+	<script>
+		function validateusername() {
+			var validusername = /^[A-Za-z]+$/;
+			var username = document.getElementById("user");
+			if (username.value.match(validusername)) {
+				return true;
+			} else {
+				
+				username.focus;
+				return false;
+			}
+		}
+		function validatecap() {
+			var valicap=/^\d{5}$/;
+			var postalCode=document.getElementById("postalcode");
+			if(postalCode.value.match(valicap)) {
+				return true;
+			} else {
+				postalCode.focus;
+				return false;
+			}
+		}
+		function validaphonenumber() {
+			var input = document.getElementById("phone");
+			var phoneno = /^\d{10}$/;
+			if (input.value.match(phoneno)) {
+				return true;
+			} else {
+				input.focus;
+				return false;
+			}
+		}
+		function validateEmail() {
+			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			var uemail = document.getElementById("email");
+			if (uemail.value.match(mailformat)) {
+				return true;
+			} else {
+				uemail.focus();
+				return false;
+			}
+		}
+		
+		function myfunction(regform) {
+			if (validateusername()) {
+				if (validateEmail()) {
+					if(validatecap() ){
+					if (validaphonenumber()) {
+						regform.submit;
+					} else {
+						alert("Telefono inserito non giusta");
+					}
+				} else {
+					alert("Cap non giusto);
+				}
+			} else {
+				alert("Email non giusta");
+			}
+				else{
+					alert("Username non giusto");
+				}
+			}
+			
+		}
+	</script>
 
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
 
-				<form action="RegistrazioneServlet" method="post">
+				<form action="RegistrazioneServlet" method="post" name="regform"
+					onsubmit="event.preventDefault(); myfunction(this)">
 
 					<fieldset>
 
@@ -235,17 +302,17 @@ background: #333;
 								placeholder="RDM00AOG1" />
 						</p>
 						<p align="center" Style="color: #800000">
-							Inserire Email : <input type="email" name="email"
+							Inserire Email : <input type="email" id="email" name="email"
 								placeholder="beccadimatteo@gmail.com" />
 						</p>
 						<p align="center" Style="color: #800000">
-							Inserire Cellulare : <input type="tel" name="cell"
+							Inserire Cellulare : <input type="tel" id="phone" name="cell"
 								placeholder="3894685921" />
 						</p>
 
 						<p align="center" Style="color: #800000">
-							Inserire nome utente : <input type="text" name="username"
-								placeholder="becca12" /><br>
+							Inserire nome utente : <input type="text" id="user"
+								name="username" placeholder="becca12" /><br>
 						</p>
 						<p align="center" Style="color: #800000">
 							Inserire password : <input type="password" name="pwsd"
@@ -266,19 +333,20 @@ background: #333;
 					</h4>
 
 
-					
+
 
 
 					<fieldset>
-					<legend>
-						<b Style="color: #800000">Indirizzo </b>
-					</legend>
+						<legend>
+							<b Style="color: #800000">Indirizzo </b>
+						</legend>
 						<p align="center" Style="color: #800000">
 							Inserire via : <input type="text" name="via"
 								placeholder="Alcide De Gasperi" /><br>
 						</p>
 						<p align="center" Style="color: #800000">
-							Inserire Cap : <input type="text" name="cap" placeholder="84084" />
+							Inserire Cap : <input type="text" name="cap" id="postalcod"
+								placeholder="84084" />
 						</p>
 						<p align="center" Style="color: #800000">
 							Inserire Città: <input type="text" name="citta"
@@ -287,13 +355,13 @@ background: #333;
 					</fieldset>
 
 
-					
+
 
 
 					<fieldset>
-					<legend>
-						<b Style="color: #800000">Metodo Pagamento</b>
-					</legend>
+						<legend>
+							<b Style="color: #800000">Metodo Pagamento</b>
+						</legend>
 						<p align="center" Style="color: #800000">
 							Inserire Iban : <input type="text" name="iban"
 								placeholder="IT567HN3456777" /><br>
@@ -347,20 +415,18 @@ background: #333;
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		<button id="pulsantee"
-					type="submit">Pagamenti e metodi di Spedizione</button>
-            	 <input type="hidden" name="home" value="pagmet"><br><br>
-            	 </form>
-            	 <form action="ServletHomePage" method="get">
-		 <button id="pulsantee"
-					type="submit">Chi Siamo</button>
-            	 <input type="hidden" name="home" value="chisiamo"><br><br>
-            	 </form>
-            	 <form action="ServletHomePage" method="get">
-            	  <button id="pulsantee"
-					type="submit">Contatti</button>
-            	 <input type="hidden" name="home" value="contatti">
-			      </form>
+			<button id="pulsantee" type="submit">Pagamenti e metodi di
+				Spedizione</button>
+			<input type="hidden" name="home" value="pagmet"><br> <br>
+		</form>
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+		</form>
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">Contatti</button>
+			<input type="hidden" name="home" value="contatti">
+		</form>
 	</div>
 
 </body>
