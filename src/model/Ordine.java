@@ -54,7 +54,7 @@ public class Ordine {
 		PreparedStatement preparedStatement = null;
 
 		try {
-			String sql = "INSERT INTO Ordine(NumeroOrdine,Stato,DataOrdine,IDUtente,Via,Cap,Citta,IDSpecificaOrdine) values (?,?,?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO Ordine(NumeroOrdine,Stato,DataOrdine,IDUtente,Via,Cap,Citta,IDSpecificaOrdine) values (?,?,?,?,?,?,?,?)";
 
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(sql);

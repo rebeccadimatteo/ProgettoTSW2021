@@ -44,9 +44,10 @@ public class ServletRecensioni extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 String id=request.getParameter("id");
 		 String descr=request.getParameter("arearec");
-		 Recensione nuova=new Recensione(0,id,descr);
+		 Recensione nuova=new Recensione(0,descr,id);
+		
 		 nuova.inseriscirecensione();
-		 
+		
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
 		rd.forward(request, response);
 		

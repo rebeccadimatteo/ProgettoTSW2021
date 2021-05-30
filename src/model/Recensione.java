@@ -96,17 +96,20 @@ public class Recensione {
 		PreparedStatement preparedStatement = null;
 
 		try {
-			String sql = "INSERT INTO RECENSIONE(Num,Descrizione,IDUtente) VALUES (?,?,?)";
+			String sql = "INSERT INTO Recensione(Num,Descrizione,IDUtente) values (?,?,?)";
 
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1, num);
+			preparedStatement.setInt(1,num);
 			preparedStatement.setString(2,descrizione);
 			preparedStatement.setString(3,idutente);
+			System.out.println(preparedStatement);
 			preparedStatement.executeUpdate();
 			
-		} catch (SQLException e) {
 			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			try {

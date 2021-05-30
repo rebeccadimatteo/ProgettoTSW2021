@@ -72,7 +72,7 @@ public class ServletCarrello extends HttpServlet {
 				} else {
 					Carrello carrelloin = (Carrello) request.getSession().getAttribute("car");
 					Utente ut = (Utente) request.getSession().getAttribute("utente");
-					Ordine nuovo = new Ordine(0,ut.getId(),null,null,request.getParameter("via"),request.getParameter("cap"),request.getParameter("citta") ,0);
+					Ordine nuovo = new Ordine(0,null,null,ut.getId(),request.getParameter("via"),request.getParameter("cap"),request.getParameter("citta") ,0);
 					SpecificaOrdine spec=new SpecificaOrdine(0,nuovo.getNumeroordine(),carrelloin.SommaPeso(),carrelloin.SommaPrezzo(),request.getParameter("via"),request.getParameter("cap"),request.getParameter("citta"),ut.getId());
 					nuovo.setIdspecificaordine(spec.getId());
 					ut.setIban(request.getParameter("iban"));
@@ -80,8 +80,7 @@ public class ServletCarrello extends HttpServlet {
 					ut.setNominativo(request.getParameter("nominativo"));
 					nuovo.inserisciordine();
 					spec.inserisciSpecificaOrdine();
-					Carrello car = new Carrello();
-					request.getSession().setAttribute("car", car);
+					
 					RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Acquistato.jsp");
 					rd.forward(request, response);
 					return;

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Carrello;
 import model.Catalogo;
 
 /**
@@ -36,6 +37,7 @@ public class ServletDati extends HttpServlet {
 		
 		request.setAttribute("Catalogo", catal);
 		String azione = request.getParameter("azione");
+		String azione2 = request.getParameter("azione2");
 		if (azione != null) {
 		 if(azione.equalsIgnoreCase("admin"))
 		 {
@@ -44,6 +46,13 @@ public class ServletDati extends HttpServlet {
 			 
 		 }
 		
+		}
+		if(azione2!=null)
+		{
+			if(azione2.equalsIgnoreCase("fine")) {
+				Carrello car = new Carrello();
+				request.getSession().setAttribute("car", car);
+			}
 		}
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/mainCatalogo.jsp");
 		rd.forward(request, response);
