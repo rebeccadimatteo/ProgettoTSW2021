@@ -57,6 +57,7 @@ public class Catalogo {
 
 			}
 		} catch (SQLException e) {
+			e.printStackTrace();
 			System.out.println("errore");
 		}
 
