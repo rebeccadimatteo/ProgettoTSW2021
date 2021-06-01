@@ -263,7 +263,7 @@ body {
 						alert("Telefono inserito non giusta");
 					}
 				} else {
-					alert("Cap non giusto);
+					alert("Cap non giusto");
 				}
 			} else {
 				alert("Email non giusta");
