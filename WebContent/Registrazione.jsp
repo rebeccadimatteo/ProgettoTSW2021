@@ -103,7 +103,7 @@ body {
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
-	border: solid 1px #0076a3;
+	border: solid 1px #333;
 	background: white;
 }
 /* Footer */
@@ -289,32 +289,32 @@ body {
 							<b Style="color: #800000">Dati Utente </b>
 						</legend>
 
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Nome : <input type="text" name="nome"
 								placeholder="Rebecca" /><br>
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Cognome : <input type="text" name="cognome"
 								placeholder="Di Matteo" />
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Codice Fiscale : <input type="text" name="cf"
 								placeholder="RDM00AOG1" />
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Email : <input type="email" id="email" name="email"
 								placeholder="beccadimatteo@gmail.com" />
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Cellulare : <input type="tel" id="phone" name="cell"
 								placeholder="3894685921" />
 						</p>
 
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire nome utente : <input type="text" id="user"
 								name="username" placeholder="becca12" /><br>
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire password : <input type="password" name="pwsd"
 								placeholder="**********" />
 						</p>
@@ -340,15 +340,15 @@ body {
 						<legend>
 							<b Style="color: #800000">Indirizzo </b>
 						</legend>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire via : <input type="text" name="via"
 								placeholder="Alcide De Gasperi" /><br>
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Cap : <input type="text" name="cap" id="postalcod"
 								placeholder="84084" />
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Città: <input type="text" name="citta"
 								placeholder="Fisciano" />
 						</p>
@@ -362,18 +362,18 @@ body {
 						<legend>
 							<b Style="color: #800000">Metodo Pagamento</b>
 						</legend>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Iban : <input type="text" name="iban"
 								placeholder="IT567HN3456777" /><br>
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Tipologia Carta : <input type="radio" name="tipo" id="mastercard"
 								value="MasterCard"> <label for="mastecard">MasterCard</label>
 							<input type="radio" name="tipo" id="visa" value="Visa"> <label
 								for="visa">Visa</label>
 
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Nominativo Intestatario: <input type="text" name="nominativo"
 								placeholder="Rebecca Di Matteo" />
 						</p>

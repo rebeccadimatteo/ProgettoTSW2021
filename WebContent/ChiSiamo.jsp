@@ -32,7 +32,7 @@ text-decoration: none;
 font: bold 12px Arial, Helvetica, sans-serif;
 color: #800000;
 padding: 10px 20px;
-border: solid 1px #0076a3;
+border: solid 1px #333;
 background: white;
 }
 

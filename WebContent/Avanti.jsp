@@ -72,7 +72,7 @@ background: #333;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 20px;
-	border: solid 1px #0076a3;
+	border: solid 1px #333;
 	background: white;
 }
 
@@ -257,14 +257,14 @@ pre {
 						<legend>
 							<b Style="color: #800000">Indirizzo di spedizione </b>
 						</legend>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire via : <input type="text" name="via"
 								placeholder="Alcide De Gasperi" /><br>
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Cap : <input type="text" name="cap" placeholder="84084" />
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Città: <input type="text" name="citta"
 								placeholder="Fisciano" />
 					</fieldset>
@@ -276,18 +276,18 @@ pre {
 
 
 
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Inserire Iban : <input type="text" name="iban"
 								placeholder="IT567HN3456777" /><br>
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Tipologia Carta : <input type="radio" name="tipo" id="mastercard"
 								value="MasterCard"> <label for="mastecard">MasterCard</label>
 							<input type="radio" name="tipo" id="visa" value="Visa"> <label
 								for="visa">Visa</label>
 
 						</p>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 							Nominativo Intestatario: <input type="text" name="nominativo"
 								placeholder="Rebecca Di Matteo" />
 						</p>

@@ -47,6 +47,8 @@ body {
 	background-color: #ddd;
 	color: black;
 }
+
+
 #pulsantee {
 outline: none;
 cursor: pointer;
@@ -102,7 +104,7 @@ background: #333;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
-	border: solid 1px #0076a3;
+	border: solid 1px #333;
 	background: white;
 }
 /* Footer */
@@ -202,7 +204,7 @@ background: #333;
 		<div class="leftcolumn">
 			<div class="card">
                
-				<form action="LoginServlet" method="post">
+				<form action="LoginServlet" method="post" >
 
 					<fieldset>
 
@@ -210,11 +212,11 @@ background: #333;
 							<b Style="color: #800000">Dati utente:</b>
 						</legend>
 
-						<p align="center">
-							<b Style="color: #800000">Inserisci nome utente:</b> <input
+						<p align="left"  >
+							<b Style="color: #800000" >Inserisci nome utente:</b> <input
 								type="text" id="user" name="username" placeholder="becca12" /><br> <br>
 							<b Style="color: #800000">Inserisci password:</b> <input
-								type="password" name="pwsd" placeholder="**********" /> <br>
+								type="password" name="pwsd" placeholder="**********"  /> <br>
 							<br>
 
 

@@ -72,6 +72,7 @@ background: #333;
 .leftcolumn {
 	float: left;
 	width: 75%;
+	
 }
 
 /* Right column */
@@ -88,6 +89,7 @@ background: #333;
 	width: 300%;
 	padding: 10px;
 }
+
 
 /* Add a card effect for articles */
 .card {
@@ -111,7 +113,7 @@ background: #333;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
-	border: solid 1px #0076a3;
+	border: solid 1px #333;
 	background: white;
 }
 /* Footer */
@@ -251,9 +253,11 @@ background: #333;
 				<p align="center">
 					<b><%=el.getNome()%></b>
 				</p>
+				
 				<p align="center">
-					<img src="<%=el.getImg()%>" width="400" height="400">
+					<img src="<%=el.getImg()%>" width=300 height=350 >
 				</p>
+				
 				<p align="center">
 					Codice prodotto:
 					<%=el.getCodice()%>
@@ -275,6 +279,7 @@ background: #333;
 						</button>
 						<br>
 					</form>
+					
 				</div>
 				<%
 					}

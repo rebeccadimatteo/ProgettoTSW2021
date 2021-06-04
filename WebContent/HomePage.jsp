@@ -64,7 +64,7 @@ body {
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 20px;
-	border: solid 1px #0076a3;
+	border: solid 1px #333;
 	background: white;
 }
 
@@ -103,12 +103,17 @@ pre {
 	margin-top: 9px;
 }
 
-/* Fake image */
 .img {
-	background-color: white;
-	width: 100%;
-	padding: 10px;
-}
+       -webkit-filter: grayscale(100%);
+       -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+       -ms-transition: all 1s ease;
+       transition: all 1s ease;
+ }
+ .img:hover {
+       -webkit-filter: grayscale(0%);
+ }
 
 /* Add a card effect for articles */
 .card {
@@ -148,6 +153,7 @@ pre {
 		display: block;
 	}
 }
+
 </style>
 </head>
 <body>
@@ -329,11 +335,18 @@ pre {
 
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
+		
+		
+		
+		
+		
 		<form action="ServletHomePage" method="get">
+		
 			<button id="pulsantee" type="submit">Pagamenti e metodi di
 				Spedizione</button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
+		
 		
 		 <form action="ServletHomePage" method="get">  
 			<button id="pulsantee" type="submit" >Chi Siamo</button>

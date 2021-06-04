@@ -76,7 +76,7 @@ body {
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: black;
 	padding: 9px 9px;
-	border: solid 1px #0076a3;
+	border: solid 1px #333;
 	background: white;
 }
 

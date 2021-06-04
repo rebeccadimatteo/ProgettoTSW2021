@@ -104,7 +104,7 @@ background: #333;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 20px;
-	border: solid 1px #0076a3;
+	border: solid 1px #333;
 	background: white;
 	align: right;
 }
@@ -249,15 +249,16 @@ background: #333;
 						<legend>
 							<b Style="color: #800000">Inserisci dati per la recensione: </b>
 						</legend>
-						<p align="center" Style="color: #800000">
+						<p align="left" Style="color: #800000">
 						
-							Inserire Nome Utente : <input type="text" name="id"
-								placeholder="becca12" /><br>
+							<b>Inserire Nome Utente : </b> <input type="text" name="id"
+								placeholder="becca12" /> <br>
 						</p>
-						<p align="center" Style="color: #800000">
-							Inserire recensione : <textarea id="arearec" name="arearec" rows=5 cols=20>
+						<p align="left" Style="color: #800000">
+							<b>Inserire recensione :</b><textarea id="arearec" name="arearec" rows=5 cols=20>
 
                           </textarea><br></p>
+                          
 						
                        </fieldset>
 					<p align="right">
