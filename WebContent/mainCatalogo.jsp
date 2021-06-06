@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 * {
 	box-sizing: border-box;
@@ -15,30 +18,34 @@ body {
 	background: #f1f1f1;
 }
 
+
+
+#pulsantee {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
+}
+
+.logo {
+	float: left;
+	width: 20%;
+	background-color: #f1f1f1;
+	padding-left: 5px;
+	margin-top: 9px;
+}
 /* Header/Blog Title */
 .header {
 	padding: 30px;
 	text-align: center;
 	background: white;
-}
-#pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
-}
-
-.logo {
-	float: left;
-	width: 2%;
-	background-color: #f1f1f1;
-	padding-left: 5px;
-	margin-top: 9px;
+	display:flex;
+	flex-wrap:wrap;
 }
 
 .header h1 {
@@ -54,7 +61,9 @@ background: #333;
 /* Style the topnav links */
 .topnav a {
 	float: left;
-	display: block;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content :space-between;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
@@ -72,7 +81,6 @@ background: #333;
 .leftcolumn {
 	float: left;
 	width: 75%;
-	
 }
 
 /* Right column */
@@ -81,6 +89,7 @@ background: #333;
 	width: 25%;
 	background-color: #f1f1f1;
 	padding-left: 20px;
+	display: table;
 }
 
 /* Fake image */
@@ -89,7 +98,11 @@ background: #333;
 	width: 300%;
 	padding: 10px;
 }
-
+.img2 {
+	background-color: white;
+	width: 100%;
+	padding: 10px;
+}
 
 /* Add a card effect for articles */
 .card {
@@ -115,6 +128,10 @@ background: #333;
 	padding: 10px 40px;
 	border: solid 1px #333;
 	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 /* Footer */
 .footer {
@@ -123,7 +140,6 @@ background: #333;
 	background: #ddd;
 	margin-top: 20px;
 }
-
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
@@ -135,39 +151,204 @@ background: #333;
 		width: 100%;
 		display: block;
 	}
+	
+	.topnav,.topnavLeft,.topnavRight {
+	flex-wrap:wrap;
+	flex-direction:column;
+	text-align:center;
+	
+	}
+	
+	
 	.logo {
-		width: 80%;
+		width: 100%;
 		display: block;
 	}
 }
+
+/* LOGHI FOOTER */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+/* ICONA CARRELLO */
+.icon-cart {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	overflow: hidden;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	
+	display:table-cell;
+}
+
+.icon-cart .cart-line-1 {
+	width: 15%;
+	height: 7%;
+	position: absolute;
+	left: 8%;
+	top: 25%;
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	transform: rotate(5deg);
+	background-color: #000;
+	border-bottom-left-radius: 35%;
+}
+
+.icon-cart .cart-line-2 {
+	width: 35%;
+	height: 7%;
+	position: absolute;
+	left: 6%;
+	top: 40%;
+	-webkit-transform: rotate(80deg);
+	-moz-transform: rotate(80deg);
+	-ms-transform: rotate(80deg);
+	transform: rotate(80deg);
+	background-color: #000;
+}
+
+.icon-cart .cart-line-2:before {
+	content: "";
+	width: 120%;
+	height: 100%;
+	position: absolute;
+	left: 45%;
+	top: -280%;
+	-webkit-transform: rotate(-80deg);
+	-moz-transform: rotate(-80deg);
+	-ms-transform: rotate(-80deg);
+	transform: rotate(-80deg);
+	background-color: inherit;
+}
+
+.icon-cart .cart-line-2:after {
+	content: "";
+	width: 70%;
+	height: 100%;
+	position: absolute;
+	left: 59%;
+	top: -670%;
+	background-color: inherit;
+	-webkit-transform: rotate(40deg);
+	-moz-transform: rotate(40deg);
+	-ms-transform: rotate(40deg);
+	transform: rotate(40deg);
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 25%;
+}
+
+.icon-cart .cart-line-3 {
+	width: 30%;
+	height: 7%;
+	position: absolute;
+	left: 33%;
+	top: 45%;
+	background-color: #000;
+}
+
+.icon-cart .cart-line-3:after {
+	content: "";
+	width: 124%;
+	height: 100%;
+	position: absolute;
+	top: -150%;
+	left: -5%;
+	background-color: inherit;
+}
+
+.icon-cart .cart-wheel {
+	width: 12%;
+	height: 12%;
+	background-color: #000;
+	border-radius: 100%;
+	position: absolute;
+	left: 28%;
+	bottom: 20%;
+}
+
+.icon-cart .cart-wheel:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: inherit;
+	border-radius: 100%;
+	position: absolute;
+	left: 200%;
+	bottom: 0;
+}
+
+
+
 </style>
 </head>
 <body>
 
 	<div class="header">
 		<div class="logo">
-			<div class="img">
-				<a title="Clicca per andare alla home" href="HomePage.jsp"><img src="images/logo.png" alt="logo" style="height: 120px; "></a>
+			<div class="img2">
+				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
+					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
-		</div>
+		</div>	
+
+		<div>
 		<h1>
 			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
+			
 		</h1>
 		<p Style="color: #800000">Sito di e-commerce incentrato sulle
 			specialita' gastronomiche del sud Italia.</p>
+		</div>
+		
+		
 	</div>
 
-	<div class="topnav">
-	
-	<div class="topnav" style="float: left;">
+	<div class="topnav" style="display:flex; justify-content:space-between;">
+		<div class="topnavLeft" style="float: left; display:flex;">
 
 			<form action="ServletHomePage" method="get">
 
 				<button id="pulsantee" type="submit">HomePage</button>
 				<input type="hidden" name="home" value="home">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
 
 			<form action="ServletHomePage" method="get">
 
@@ -175,58 +356,46 @@ background: #333;
 				<input type="hidden" name="home" value="catal">
 
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+		
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Chi Siamo</button>
 				<input type="hidden" name="home" value="chisiamo">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+		
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Contatti</button>
 				<input type="hidden" name="home" value="contatti">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+		
+		
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Recensioni</button>
 				<input type="hidden" name="home" value="recensione">
 			</form>
 		</div>
-
-
+	
+		<div class="topnavRight" style="float: right; display:flex;">
+	
 		<%
 			if (request.getSession().getAttribute("utente") != null) {
 		%>
-		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+		
+		
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
-			 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; 
-			 
-			
-		</div>
-		<div class="topnav" style="float: left;">
 			<form action="LoginServlet" method="post">
 				<button id="pulsantee" type="submit">Logout</button>
 				<input type="hidden" name="azione" value="autentico">
 			</form>
-		</div>
 		<%
 			} else {
 		%>
-		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
-
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
-		</div>
-
-		<div class="topnav" style="float: left;">
+		
 
 			<form action="LoginServlet" method="get">
 				<button id="pulsantee" type="submit">Login</button>
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+		
+		
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
@@ -235,7 +404,7 @@ background: #333;
 		<%
 			}
 		%>
-	
+
 	</div>
 
 	<div class="row">
@@ -253,11 +422,11 @@ background: #333;
 				<p align="center">
 					<b><%=el.getNome()%></b>
 				</p>
-				
+
 				<p align="center">
-					<img src="<%=el.getImg()%>" width=300 height=350 >
+					<img src="<%=el.getImg()%>" width=300 height=350>
 				</p>
-				
+
 				<p align="center">
 					Codice prodotto:
 					<%=el.getCodice()%>
@@ -273,13 +442,13 @@ background: #333;
 					</form>
 					<form action="ServletCarrello" method="post">
 						<input type="hidden" id="id" name="id" value="<%=el.getCodice()%>">
-						<input type="hidden" name="azione" value="aggiungi"> 
-						<input type="hidden" name="pagina" value="ServletDati">
+						<input type="hidden" name="azione" value="aggiungi"> <input
+							type="hidden" name="pagina" value="ServletDati">
 						<button id="pulsante" type="submit">AGGIUNGI AL CARRELLO
 						</button>
 						<br>
 					</form>
-					
+
 				</div>
 				<%
 					}
@@ -303,13 +472,18 @@ background: #333;
 				<br> <br>
 			</div>
 			<div class="card">
+
 				<button onclick="location.href='ServletCarrello'" id="pulsante"
 					type="submit">
-					<p>Vai al Carrello (${car.lengthCarrello()})</p>
+					<div class="icon-cart"
+						style="align: center; clear: left; float: left">
+						<div class="cart-line-1" style="background-color: black"></div>
+						<div class="cart-line-2" style="background-color: black"></div>
+						<div class="cart-line-3" style="background-color: black"></div>
+						<div class="cart-wheel" style="background-color: black"></div>
+					</div>
+					<br>&emsp; &emsp; Carrello (${car.lengthCarrello()})
 				</button>
-
-
-
 			</div>
 
 		</div>
@@ -318,20 +492,24 @@ background: #333;
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		<button id="pulsantee"
-					type="submit">Pagamenti e metodi di Spedizione</button>
-            	 <input type="hidden" name="home" value="pagmet"><br><br>
-            	 </form>
-            	 <form action="ServletHomePage" method="get">
-		 <button id="pulsantee"
-					type="submit">Chi Siamo</button>
-            	 <input type="hidden" name="home" value="chisiamo"><br><br>
-            	 </form>
-            	 <form action="ServletHomePage" method="get">
-            	  <button id="pulsantee"
-					type="submit">Contatti</button>
-            	 <input type="hidden" name="home" value="contatti">
-			      </form>
+			<button id="pulsantee" type="submit">Pagamenti e metodi di
+				Spedizione</button>
+			<input type="hidden" name="home" value="pagmet"><br> <br>
+		</form>
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+		</form>
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">Contatti</button>
+			<input type="hidden" name="home" value="contatti">
+		</form>
+		  <br>
+			      <a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
 	</div>
 
 </body>

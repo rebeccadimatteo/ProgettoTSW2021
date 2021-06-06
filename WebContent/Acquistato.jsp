@@ -8,6 +8,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 * {
 	box-sizing: border-box;
@@ -19,11 +22,17 @@ body {
 	background: #f1f1f1;
 }
 
+
+.header h1 {
+	font-size: 50px;
+}
 /* Header/Blog Title */
 .header {
 	padding: 30px;
 	text-align: center;
 	background: white;
+	display:flex;
+	flex-wrap:wrap;
 }
 
 .header h1 {
@@ -39,7 +48,9 @@ body {
 /* Style the topnav links */
 .topnav a {
 	float: left;
-	display: block;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content :space-between;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
@@ -51,6 +62,7 @@ body {
 	background-color: #ddd;
 	color: black;
 }
+
 #pulsantee {
 	outline: none;
 	cursor: pointer;
@@ -134,7 +146,6 @@ pre {
 	margin-top: 20px;
 }
 
-/* Responsive */
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
@@ -146,12 +157,61 @@ pre {
 		width: 100%;
 		display: block;
 	}
+	
+	.topnav,.topnavLeft,.topnavRight {
+	flex-wrap:wrap;
+	flex-direction:column;
+	text-align:center;
+	
+	}
+	
+	
 	.logo {
-		width: 80%;
+		width: 100%;
 		display: block;
 	}
 }
 
+
+/* LOGHI FOOTER */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
 /* Fattura */
 .invoice-box {
 	max-width: 800px;
@@ -250,30 +310,32 @@ pre {
 
 	<div class="header">
 		<div class="logo">
-			<div class="img">
+			<div class="img2">
 				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
-		</div>
+		</div>	
+
+		<div>
 		<h1>
 			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-
+			
 		</h1>
 		<p Style="color: #800000">Sito di e-commerce incentrato sulle
 			specialita' gastronomiche del sud Italia.</p>
-
+		</div>
+		
+		
 	</div>
-
-	<div class="topnav">
-		<div class="topnav" style="float: left;">
+		
+	<div class="topnav" style="display:flex; justify-content:space-between;">
+		<div class="topnavLeft" style="float: left; display:flex;">
 
 			<form action="ServletHomePage" method="get">
 
 				<button id="pulsantee" type="submit">HomePage</button>
 				<input type="hidden" name="home" value="home">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
 
 			<form action="ServletHomePage" method="get">
 
@@ -281,59 +343,46 @@ pre {
 				<input type="hidden" name="home" value="catal">
 
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+		
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Chi Siamo</button>
 				<input type="hidden" name="home" value="chisiamo">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+		
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Contatti</button>
 				<input type="hidden" name="home" value="contatti">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+		
+		
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Recensioni</button>
 				<input type="hidden" name="home" value="recensione">
 			</form>
 		</div>
-
-
+	
+		<div class="topnavRight" style="float: right; display:flex;">
+	
 		<%
 			if (request.getSession().getAttribute("utente") != null) {
 		%>
 		
-		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+		
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
-			 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; 
-			 
-			
-		</div>
-		<div class="topnav" style="float: left;">
 			<form action="LoginServlet" method="post">
 				<button id="pulsantee" type="submit">Logout</button>
 				<input type="hidden" name="azione" value="autentico">
 			</form>
-		</div>
 		<%
 			} else {
 		%>
-		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
-
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-			&emsp;&emsp;</div>
-
-		<div class="topnav" style="float: left;">
+		
 
 			<form action="LoginServlet" method="get">
 				<button id="pulsantee" type="submit">Login</button>
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+		
+		
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
@@ -342,6 +391,7 @@ pre {
 		<%
 			}
 		%>
+
 	</div>
 
 	<div class="row">
@@ -485,6 +535,12 @@ pre {
 			<button id="pulsantee" type="submit">Contatti</button>
 			<input type="hidden" name="home" value="contatti">
 		</form>
+		<br>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
 	</div>
 
 </body>

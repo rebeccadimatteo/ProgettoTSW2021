@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 * {
 	box-sizing: border-box;
@@ -19,18 +22,10 @@ body {
 	padding: 30px;
 	text-align: center;
 	background: white;
+	display:flex;
+	flex-wrap:wrap;
 }
-#pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
-}
+
 .header h1 {
 	font-size: 50px;
 }
@@ -44,7 +39,9 @@ background: #333;
 /* Style the topnav links */
 .topnav a {
 	float: left;
-	display: block;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content :space-between;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
@@ -57,6 +54,17 @@ background: #333;
 	color: black;
 }
 
+#pulsantee {
+outline: none;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+font: bold 20px Arial, Helvetica, sans-serif;
+color: white;
+padding: 10px 20px;
+border: solid 1px #333;
+background: #333;
+}
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {
@@ -106,6 +114,11 @@ pre {
 	padding: 10px;
 }
 
+.img2 {
+	background-color: white;
+	width: 100%;
+	padding: 10px;
+}
 /* Add a card effect for articles */
 .card {
 	background-color: white;
@@ -144,24 +157,69 @@ pre {
 		display: block;
 	}
 }
+/* LOGHI FOOTER */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+
 </style>
 </head>
 <body>
 
 	<div class="header">
 		<div class="logo">
-			<div class="img">
+			<div class="img2">
 				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
-		</div>
+		</div>	
+
+		<div>
 		<h1>
 			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-
+			
 		</h1>
 		<p Style="color: #800000">Sito di e-commerce incentrato sulle
 			specialita' gastronomiche del sud Italia.</p>
-
+		</div>
+		
+		
 	</div>
 
 	<div class="topnav">
@@ -347,6 +405,12 @@ pre {
 					type="submit">Contatti</button>
             	 <input type="hidden" name="home" value="contatti">
 			      </form>
+			      <br>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
 	</div>
 
 </body>

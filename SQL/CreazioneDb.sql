@@ -1,5 +1,5 @@
 
-use dbprogettotsw;
+use ProgettoTsw;
 
 /*Rappresento prima le entita' indipendenti*/
 

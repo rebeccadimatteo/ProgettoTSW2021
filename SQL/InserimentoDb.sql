@@ -1,8 +1,9 @@
-use dbprogettotsw;
+use ProgettoTsw;
 
 
 insert into Utente(ID,Nome,Cognome,CF,Email,Cellulare,Tipologia,NumeroOrdini,Pwsd,Via,Cap,Citta) values ("becca12","Rebecca","Di Matteo","DMTRCC00A0G1","Beccadimatteoo@gmail.com","3894685921","registrato",0,"becca123","gugliemo marconi 18","84084","fisciano");
 insert into Utente(ID,Nome,Cognome,CF,Email,Cellulare,Tipologia,NumeroOrdini,Pwsd,Via,Cap,Citta) values ("admin","admin","admin","XXXXXXX","admin@gmail.com","3894685921","amministratore",0,"admin","gugliemo marconi 18","84084","fisciano");
+insert into Utente(ID,Nome,Cognome,CF,Email,Cellulare,Tipologia,NumeroOrdini,Pwsd,Via,Cap,Citta) values ("ila123","Ilaria","De Sio","DSLE00SH704E","iladesio@gmail.com","3349677013","registrato",0,"ila123","antonio santelmo 2","84128","salerno");
 
 
 insert into Produttore(PartitaIva,Nome) values ("34565678THK","Francesco De Rosa");
