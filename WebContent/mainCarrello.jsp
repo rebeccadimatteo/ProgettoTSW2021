@@ -18,6 +18,22 @@ body {
 	padding: 10px;
 	background: #f1f1f1;
 }
+
+#pulsante {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 10px 40px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
 #pulsantee {
 outline: none;
 cursor: pointer;
@@ -306,7 +322,7 @@ pre {
 					Carrello car = (Carrello) request.getSession().getAttribute("car");
 					if (car.lengthCarrello() == 0) {
 				%>
-				<p align="center">Carrello vuoto
+				<p align="center">Il tuo Carrello e' vuoto<br><br>
 				<button onclick="location.href='ServletDati'" id="pulsante"
 					type="submit">Ritorna al Catalogo</button>
 						<br>

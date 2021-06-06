@@ -19,22 +19,27 @@ body {
 	background: #f1f1f1;
 }
 
-#pulsante {
+
+
+#pulsantee {
 	outline: none;
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
-	font: bold 12px Arial, Helvetica, sans-serif;
-	color: #800000;
-	padding: 10px 40px;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
 	border: solid 1px #333;
-	background: white;
-	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
-	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
-	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
-	box-shadow: 5px 5px 10px 0px #3B3B3B;
+	background: #333;
 }
 
+.logo {
+	float: left;
+	width: 20%;
+	background-color: #f1f1f1;
+	padding-left: 5px;
+	margin-top: 9px;
+}
 /* Header/Blog Title */
 .header {
 	padding: 30px;
@@ -79,48 +84,22 @@ body {
 	width: 75%;
 }
 
-#pulsante {
-	outline: none;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	font: bold 12px Arial, Helvetica, sans-serif;
-	color: #800000;
-	padding: 10px 20px;
-	border: solid 1px #333;
-	background: white;
-}
-
-pre {
-	display: block;
-	font-family: Arial;
-	white-space: pre-line;
-	margin: 1em 0;
-	text-align: riht;
-}
 /* Right column */
 .rightcolumn {
 	float: left;
 	width: 25%;
 	background-color: #f1f1f1;
 	padding-left: 20px;
-}
-
-.logo {
-	float: left;
-	width: 20%;
-	background-color: #f1f1f1;
-	padding-left: 5px;
-	margin-top: 9px;
-}
-.img2 {
-	background-color: white;
-	width: 100%;
-	padding: 10px;
+	display: table;
 }
 
 /* Fake image */
 .img {
+	background-color: white;
+	width: 300%;
+	padding: 10px;
+}
+.img2 {
 	background-color: white;
 	width: 100%;
 	padding: 10px;
@@ -140,6 +119,21 @@ pre {
 	clear: both;
 }
 
+#pulsante {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 10px 40px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
 /* Footer */
 .footer {
 	padding: 20px;
@@ -147,7 +141,6 @@ pre {
 	background: #ddd;
 	margin-top: 20px;
 }
-
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
@@ -173,7 +166,6 @@ pre {
 		display: block;
 	}
 }
-
 
 /* LOGHI FOOTER */
 .fa {
@@ -318,16 +310,14 @@ pre {
 					<img src="<%=prodotto.getImg()%>" width="400" height="400">
 				</p>
 				<p align="center">
-					Descrizione Prodotto:
 					<%=prodotto.getDescrizione()%>
-					<br> Peso Prodotto:
+					<br><br> <b>Peso:</b>
 					<%=prodotto.getPeso()%><br>
-				</p>
-				<br>
-				<p align="center">
-					Codice Prodotto:
+				
+				
+					<b>Codice :</b>
 					<%=prodotto.getCodice()%>
-					<br> Prezzo: $<%=prodotto.getPrezzo()%><br>
+					<br> <b>Prezzo: </b>$<%=prodotto.getPrezzo()%><br>
 				</p>
 				<br>
 

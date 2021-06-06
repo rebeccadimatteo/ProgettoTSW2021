@@ -315,7 +315,19 @@ body {
 	bottom: 0;
 }
 
-
+.zoom img {
+       height: 200px;
+       width: 200px;
+       -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+       -ms-transition: all 0.5s ease;
+       transition: all 0.5s ease;
+ }
+ .zoom img:hover {
+       width: 250px;
+       height: 250px;
+ } 
 
 </style>
 </head>
@@ -418,14 +430,14 @@ body {
 					for (int i = 0; i < prodotti.lengthCatalogo(); i++) {
 						Item el = prodotti.getItemIndex(i);
 				%>
-
+<div>
 				<p align="center">
 					<b><%=el.getNome()%></b>
 				</p>
 
-				<p align="center">
-					<img src="<%=el.getImg()%>" width=300 height=350>
-				</p>
+				
+				<div class="zoom img" align="left"> <img src="<%=el.getImg()%>" ></div>
+				
 
 				<p align="center">
 					Codice prodotto:
@@ -434,6 +446,7 @@ body {
 					<%=el.getPrezzo()%><br>
 				</p>
 				<br>
+				
 				<div style="text-align: center">
 					<form action="ServletDettaglio" method="get">
 						<input type="hidden" id="id" name="id" value="<%=el.getCodice()%>">
@@ -448,7 +461,7 @@ body {
 						</button>
 						<br>
 					</form>
-
+</div>
 				</div>
 				<%
 					}
