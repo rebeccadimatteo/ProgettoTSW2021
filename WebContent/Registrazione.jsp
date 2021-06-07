@@ -194,7 +194,7 @@ body {
 	<div class="header">
 		<div class="logo">
 			<div class="img2">
-				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
+				<a title="Registrati" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>
@@ -274,7 +274,7 @@ body {
 		%>
 
 	</div>
-<!-- controlli java script -->
+	<!-- controlli java script -->
 	<script>
 		function validateusername() {
 			var validusername = /^[A-Za-z]+$/;
@@ -462,14 +462,16 @@ body {
 
 
 					</fieldset>
-					<p align="right">
-						<button id="pulsante" type="submit">Registrati</button>
-
-					</p>
+					
 
 
 
 				</form>
+				<form action="RegistrazioneServlet" method="post">
+						<p align="right">
+							<button id="pulsante" type="submit">Registrati</button>
+					</form>
+					</p>
 
 
 

@@ -17,10 +17,7 @@ body {
 	padding: 10px;
 	background: #f1f1f1;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> bdc7d84cbb7ab086b78b5de6404559836f36a6ce
 #pulsantee {
 outline: none;
 cursor: pointer;
@@ -213,11 +210,10 @@ pre {
 	<div class="header">
 		<div class="logo">
 			<div class="img2">
-<<<<<<< HEAD
-				<a title="Clicca per andare alla home" href="Adminhomepage.jsp"><img
-=======
-				<a title="Clicca per andare alla home" href="Adminhomepage.jsp" ><img
->>>>>>> bdc7d84cbb7ab086b78b5de6404559836f36a6ce
+
+			
+				<a title="Rimuovi prodotto" href="Adminhomepage.jsp" ><img
+
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>	
