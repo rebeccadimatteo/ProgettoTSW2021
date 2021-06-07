@@ -21,18 +21,12 @@ import model.UtenteDAO;
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public LoginServlet() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	// metodo get porta a login page per far loggare la persona
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/LoginPagee.jsp");
@@ -40,56 +34,54 @@ public class LoginServlet extends HttpServlet {
 
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	// variabile dell'utente
 	private Utente ut;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+		// prende paranetri dal form login
 		ut = new Utente(request.getParameter("username"), null, null, null, null, null, null, 0,
 				request.getParameter("pwsd"), null, null, null, null, null, null);
 
-		// VEDENDO SE L'UTENTE è VALIDO SE LO è LO PASSIAMO ALLA JSP
+		// VEDENDO SE L'UTENTE è VALIDO
 		UtenteDAO ris = new UtenteDAO();
 		boolean ok = ris.autentico(ut);
-		
-		
+
+		// se valido allora lo inserisce nella sessione e se corrisponde alle
+		// credenziali dell amministratore
+		// lo porta alla pagine amministratore
 		ut.setValid(ok);
 		if (ut.isValid()) {
 			ut.restituisciutente();
-			
+
 			request.getSession().setAttribute("utente", ut);
-			request.getSession().setMaxInactiveInterval(2*60*60);
+			request.getSession().setMaxInactiveInterval(2 * 60 * 60);
 			if (ut.getId().equalsIgnoreCase("admin")) {
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
 				rd.forward(request, response);
-			}   
-			else{
-				
+			} // se è un utente lo porta verso home page del sito
+			else {
+
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
 				rd.forward(request, response);
-				
+
 			}
-             
+			// se non è valido lo porta a registrarsi
 		} else {
 
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Registrazione.jsp");
 			rd.forward(request, response);
 		}
-		
-		String azione=request.getParameter("azione");
-		if(azione!=null) {
-			 if (azione.equalsIgnoreCase("autentico")) {
-				 request.getSession().invalidate();
-				 RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
-					rd.forward(request, response);
-				}
+		// invalidare la sessione
+		String azione = request.getParameter("azione");
+		if (azione != null) {
+			if (azione.equalsIgnoreCase("autentico")) {
+				request.getSession().invalidate();
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
+				rd.forward(request, response);
+			}
 		}
-		
-	
+
 	}
 
 }

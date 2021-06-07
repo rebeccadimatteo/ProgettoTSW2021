@@ -335,7 +335,7 @@ th {
 			}
 		%>
 
-	</div>
+	</div> <!-- Stampa il resoconto dell'ordine quindi la tabella con tutti i prodotti -->
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">

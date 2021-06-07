@@ -436,6 +436,7 @@ body {
 							<textarea class=textarea2 id="arearec" name="arearec" rows=8
 								cols=43> </textarea>
 							<br>
+							<!--  stelline -->
 							<div class="star-rating">
 								<input id="star-5" type="radio" name="rating" value="star-5" />
 								<label for="star-5" title="5 stars"> <i

@@ -18,18 +18,12 @@ import model.Catalogo;
 public class ServletDettaglio extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public ServletDettaglio() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	// riporta al dettaglio del prodotto in base a quello che clicca sul bottone
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setAttribute("Prodotto", catal.getItem(request.getParameter("id")));
@@ -39,13 +33,9 @@ public class ServletDettaglio extends HttpServlet {
 
 	private Catalogo catal = new Catalogo();
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 		doGet(request, response);
 	}
 

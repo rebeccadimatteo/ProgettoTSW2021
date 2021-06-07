@@ -1,5 +1,6 @@
 package model;
 
+// questa classe crea un oggetto di tipo prodotto
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -37,6 +38,7 @@ public class Item {
 		this.quantita = q;
 	}
 
+// get e set
 	public String getNome() {
 		return nome;
 	}
@@ -100,93 +102,93 @@ public class Item {
 	public void setQuantita(double d) {
 		this.quantita = d;
 	}
-	 public void inserisciprodotto() {
-		 
-		 Connection connection = null;
-			PreparedStatement preparedStatement = null;
 
+	// Inserisce prodotto nel db
+	public void inserisciprodotto() {
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+
+		try {
+
+			String sql = "INSERT INTO Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,Image,Quantita) values (?,?,?,?,?,?,?,?)";
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, codice);
+			preparedStatement.setString(2, nome);
+			preparedStatement.setString(3, descrizione);
+			preparedStatement.setDouble(4, prezzo);
+			preparedStatement.setDouble(5, peso);
+			preparedStatement.setString(6, codicecategoria);
+			preparedStatement.setString(7, img);
+			preparedStatement.setDouble(8, quantita);
+
+			preparedStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
 			try {
-
-				String sql = "INSERT INTO Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,Image,Quantita) values (?,?,?,?,?,?,?,?)";
-				connection = ds.getConnection();
-				preparedStatement = connection.prepareStatement(sql);
-				preparedStatement.setString(1, codice);
-				preparedStatement.setString(2, nome);
-				preparedStatement.setString(3, descrizione);
-				preparedStatement.setDouble(4, prezzo);
-				preparedStatement.setDouble(5, peso);
-				preparedStatement.setString(6, codicecategoria);
-				preparedStatement.setString(7, img);
-				preparedStatement.setDouble(8, quantita);
-				
-
-				preparedStatement.executeUpdate();
-
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				if (preparedStatement != null)
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 			} finally {
-				try {
-					if (preparedStatement != null)
-						try {
-							preparedStatement.close();
-						} catch (SQLException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-				} finally {
 
-					if (connection != null)
-						try {
-							connection.close();
-						} catch (SQLException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-				}
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 			}
-		 
-	 }
-	 
-public void rimuoviprodotto() {
-		 
-		 Connection connection = null;
-			PreparedStatement preparedStatement = null;
+		}
 
+	}
+	// rimuove prodotto dal db
+
+	public void rimuoviprodotto() {
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+
+		try {
+
+			String sql = "delete * from Prodotto where Codice='" + codice + "'";
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
 			try {
-
-				String sql = "delete * from Prodotto where Codice='" + codice + "'";
-				connection = ds.getConnection();
-				preparedStatement = connection.prepareStatement(sql);
-				preparedStatement.executeUpdate();
-
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				if (preparedStatement != null)
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 			} finally {
-				try {
-					if (preparedStatement != null)
-						try {
-							preparedStatement.close();
-						} catch (SQLException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-				} finally {
 
-					if (connection != null)
-						try {
-							connection.close();
-						} catch (SQLException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-				}
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 			}
-		 
-	 }
-	 
-	 
+		}
+
+	}
 
 	private String nome;
 	private String codice;

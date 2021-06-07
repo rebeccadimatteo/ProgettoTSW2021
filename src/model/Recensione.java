@@ -1,5 +1,6 @@
 package model;
 
+// crea un oggetto recensione
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,9 +14,7 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 public class Recensione {
-	
 
-	
 	private static DataSource ds;
 
 	static {
@@ -29,11 +28,11 @@ public class Recensione {
 			System.out.println("Error:" + e.getMessage());
 		}
 	}
-	
-	
+
 	public Recensione() {
-		
+
 	}
+
 	public Recensione(int num, String descrizione, String idutente) {
 		super();
 		Random n = new Random();
@@ -42,27 +41,36 @@ public class Recensione {
 		this.descrizione = descrizione;
 		this.idutente = idutente;
 	}
+
+	// get e set
 	public int getNum() {
 		return num;
 	}
+
 	public void setNum(int num) {
 		this.num = num;
 	}
+
 	public String getDescrizione() {
 		return descrizione;
 	}
+
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
+
 	public String getIdutente() {
 		return idutente;
 	}
+
 	public void setIdutente(String idutente) {
 		this.idutente = idutente;
 	}
-	public ArrayList<Recensione> totrecensioni(){
-		ArrayList<Recensione> fin=new ArrayList<Recensione> ();
-		
+
+	// restituisce totale recensioni nel db
+	public ArrayList<Recensione> totrecensioni() {
+		ArrayList<Recensione> fin = new ArrayList<Recensione>();
+
 		try {
 
 			Connection connection = null;
@@ -75,22 +83,24 @@ public class Recensione {
 
 			while (rs.next()) {
 				int num = rs.getInt(1);
-			
+
 				String descr = rs.getString(2);
-				
+
 				String idut = rs.getString(3);
-				
+
 				Recensione a = new
 
-				Recensione(num,descr,idut);
+				Recensione(num, descr, idut);
 				fin.add(a);
-				
+
 			}
 		} catch (SQLException e) {
 			System.out.println("errore");
 		}
 		return fin;
 	}
+
+	// inserisce recensione nel db
 	public void inseriscirecensione() {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -100,14 +110,12 @@ public class Recensione {
 
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1,num);
-			preparedStatement.setString(2,descrizione);
-			preparedStatement.setString(3,idutente);
+			preparedStatement.setInt(1, num);
+			preparedStatement.setString(2, descrizione);
+			preparedStatement.setString(3, idutente);
 			System.out.println(preparedStatement);
 			preparedStatement.executeUpdate();
-			
-			
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -132,6 +140,7 @@ public class Recensione {
 			}
 		}
 	}
+
 	private int num;
 	private String descrizione;
 	private String idutente;

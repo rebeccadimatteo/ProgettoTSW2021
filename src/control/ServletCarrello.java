@@ -24,18 +24,12 @@ import model.Utente;
 public class ServletCarrello extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public ServletCarrello() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	// crea carello lo inserisce nella sessione va a main carrello
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -53,45 +47,45 @@ public class ServletCarrello extends HttpServlet {
 
 	private Catalogo catal = new Catalogo();
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+// se l'azione è acquista allora lo porta a registrarsi altrimenti si trova nella pagina vanti prende i dati e lo porta ad acquistato
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String azione = request.getParameter("azione");
-		String az=request.getParameter("az");
-	
+		String az = request.getParameter("az");
+
 		if (az != null) {
-		
-		 if(az.equalsIgnoreCase("acquista")) {
-			 
+
+			if (az.equalsIgnoreCase("acquista")) {
+
 				if (request.getSession().getAttribute("utente") == null) {
 					response.sendRedirect("LoginServlet");
 
 				} else {
 					Carrello carrelloin = (Carrello) request.getSession().getAttribute("car");
 					Utente ut = (Utente) request.getSession().getAttribute("utente");
-					Ordine nuovo = new Ordine(0,null,null,ut.getId(),request.getParameter("via"),request.getParameter("cap"),request.getParameter("citta") ,0);
-					SpecificaOrdine spec=new SpecificaOrdine(0,nuovo.getNumeroordine(),carrelloin.SommaPeso(),carrelloin.SommaPrezzo(),request.getParameter("via"),request.getParameter("cap"),request.getParameter("citta"),ut.getId());
+					Ordine nuovo = new Ordine(0, null, null, ut.getId(), request.getParameter("via"),
+							request.getParameter("cap"), request.getParameter("citta"), 0);
+					SpecificaOrdine spec = new SpecificaOrdine(0, nuovo.getNumeroordine(), carrelloin.SommaPeso(),
+							carrelloin.SommaPrezzo(), request.getParameter("via"), request.getParameter("cap"),
+							request.getParameter("citta"), ut.getId());
 					nuovo.setIdspecificaordine(spec.getId());
 					ut.setIban(request.getParameter("iban"));
 					ut.setTipo(request.getParameter("tipo"));
 					ut.setNominativo(request.getParameter("nominativo"));
 					nuovo.inserisciordine();
 					spec.inserisciSpecificaOrdine();
-					
+
 					RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Acquistato.jsp");
 					rd.forward(request, response);
 					return;
 
 				}
 
-			
+			}
+// ci troviamo nell home page e stiamoa ggiunendo al carrello che sarà incrementato
 		}
-
-	} if(azione!=null) {
-		 if (azione.equalsIgnoreCase("aggiungi")) {
+		if (azione != null) {
+			if (azione.equalsIgnoreCase("aggiungi")) {
 				String page = request.getParameter("pagina");
 				System.out.println("page " + page);
 				Item el = catal.getItem(request.getParameter("id"));
@@ -102,7 +96,6 @@ public class ServletCarrello extends HttpServlet {
 				response.sendRedirect(page);
 				return;
 			}
-	}
+		}
 	}
 }
-

@@ -18,18 +18,12 @@ import model.Utente;
 public class RegistrazioneServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public RegistrazioneServlet() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+//porta l'utente a registrarsi
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Registrazione.jsp");
@@ -37,13 +31,9 @@ public class RegistrazioneServlet extends HttpServlet {
 
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+// prende parametri dal form per creare  l'utente
 		String nome = request.getParameter("nome");
 		String cognome = request.getParameter("cognome");
 		String id = request.getParameter("username");
@@ -66,13 +56,13 @@ public class RegistrazioneServlet extends HttpServlet {
 				citta, iban, tipo, nominativo);
 		request.setAttribute("utente", nuovo);
 		boolean ok = nuovo.idpresente();
-
+		// lo riporta alla pagina con scritto che id è gia presente
 		if (ok) {
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Registrazione.jsp");
 			String err = "Username già presente";
 			request.setAttribute("errore", err);
 			rd.forward(request, response);
-		} else {
+		} else {// inserisce l'utente all'interno del db
 			nuovo.inserisceutente();
 			nuovo.inseriscimetodo();
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
