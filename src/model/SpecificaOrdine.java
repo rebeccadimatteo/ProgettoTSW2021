@@ -1,5 +1,6 @@
 package model;
 
+// crea una specifica ordine che sarebbe ovvero il dettaglio dell 'ordine
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +15,7 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 public class SpecificaOrdine {
-	
+
 	private static DataSource ds;
 
 	static {
@@ -28,18 +29,14 @@ public class SpecificaOrdine {
 			System.out.println("Error:" + e.getMessage());
 		}
 	}
-	
-	
-	
+
 	public SpecificaOrdine(int id, int numeroordine, double pesotot, double costotot, String via, String cap,
 			String citta, String idutente) {
 		super();
 		Random n = new Random();
 
-		
-
 		int d = 1 + n.nextInt(100000) + 1;
-		this.id =d;
+		this.id = d;
 		this.numeroordine = numeroordine;
 		this.pesotot = pesotot;
 		this.costotot = costotot;
@@ -48,58 +45,73 @@ public class SpecificaOrdine {
 		this.citta = citta;
 		this.idutente = idutente;
 	}
-	 
-	
+
+	// get e set
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public int getNumeroordine() {
 		return numeroordine;
 	}
+
 	public void setNumeroordine(int numeroordine) {
 		this.numeroordine = numeroordine;
 	}
+
 	public double getPesotot() {
 		return pesotot;
 	}
+
 	public void setPesotot(double pesotot) {
 		this.pesotot = pesotot;
 	}
+
 	public double getCostotot() {
 		return costotot;
 	}
+
 	public void setCostotot(double costotot) {
 		this.costotot = costotot;
 	}
+
 	public String getVia() {
 		return via;
 	}
+
 	public void setVia(String via) {
 		this.via = via;
 	}
+
 	public String getCap() {
 		return cap;
 	}
+
 	public void setCap(String cap) {
 		this.cap = cap;
 	}
+
 	public String getCitta() {
 		return citta;
 	}
+
 	public void setCitta(String citta) {
 		this.citta = citta;
 	}
+
 	public String getIdutente() {
 		return idutente;
 	}
+
 	public void setIdutente(String idutente) {
 		this.idutente = idutente;
 	}
 
-	
+	// inserisce una nuova specifica poichè si e crato un nuovo ordine
 	public void inserisciSpecificaOrdine() {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -117,7 +129,6 @@ public class SpecificaOrdine {
 			preparedStatement.setString(6, cap);
 			preparedStatement.setString(7, citta);
 			preparedStatement.setString(8, idutente);
-			
 
 			preparedStatement.executeUpdate();
 
@@ -145,38 +156,37 @@ public class SpecificaOrdine {
 			}
 		}
 	}
-	
-	
-public ArrayList<SpecificaOrdine>getOrdiniById(Utente ut)
-{
-	ArrayList<SpecificaOrdine> listaordini= new ArrayList<SpecificaOrdine>();
-	if(ut.isValid())
-	{
-		try {
-			Connection connection = null;
-			PreparedStatement preparedStatement = null;
-			id = this.getId();
+	// da le specifiche che sono nel db in base al id
 
-			String sql = "select * from SpecificaOrdine where IDUtente='" + ut.getId() + "'";
-			connection = ds.getConnection();
-			preparedStatement = connection.prepareStatement(sql);
-			ResultSet rs = preparedStatement.executeQuery();
+	public ArrayList<SpecificaOrdine> getOrdiniById(Utente ut) {
+		ArrayList<SpecificaOrdine> listaordini = new ArrayList<SpecificaOrdine>();
+		if (ut.isValid()) {
+			try {
+				Connection connection = null;
+				PreparedStatement preparedStatement = null;
+				id = this.getId();
 
-			while( rs.next() )
-			{
-				
-				SpecificaOrdine ris= new SpecificaOrdine(rs.getInt(1),rs.getInt(2),rs.getDouble(3),rs.getDouble(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8));
-			listaordini.add(ris);
+				String sql = "select * from SpecificaOrdine where IDUtente='" + ut.getId() + "'";
+				connection = ds.getConnection();
+				preparedStatement = connection.prepareStatement(sql);
+				ResultSet rs = preparedStatement.executeQuery();
+
+				while (rs.next()) {
+
+					SpecificaOrdine ris = new SpecificaOrdine(rs.getInt(1), rs.getInt(2), rs.getDouble(3),
+							rs.getDouble(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8));
+					listaordini.add(ris);
+				}
+
+			} catch (SQLException e) {
+				System.out.println("Errore");
+
 			}
 
-		} catch (SQLException e) {
-			System.out.println("Errore");
-
 		}
-		
+		return listaordini;
 	}
-	return listaordini;
-}
+
 	private int id;
 	private int numeroordine;
 	private double pesotot;
@@ -185,6 +195,5 @@ public ArrayList<SpecificaOrdine>getOrdiniById(Utente ut)
 	private String cap;
 	private String citta;
 	private String idutente;
-	
 
 }

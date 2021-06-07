@@ -4,9 +4,10 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src='https://kit.fontawesome.com/a076d05399.js' ></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 <style>
 * {
@@ -24,8 +25,8 @@ body {
 	padding: 30px;
 	text-align: center;
 	background: white;
-	display:flex;
-	flex-wrap:wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .header h1 {
@@ -42,8 +43,8 @@ body {
 .topnav a {
 	float: left;
 	display: flex;
-	flex-wrap:wrap;
-	justify-content :space-between;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
@@ -57,15 +58,15 @@ body {
 }
 
 #pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
 }
 /* Create two unequal columns that floats next to each other */
 /* Left column */
@@ -161,45 +162,42 @@ pre {
 }
 /* LOGHI FOOTER */
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
+	padding: 20px;
+	font-size: 30px;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
 }
 
 .fa:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+	background: #3B5998;
+	color: white;
 }
 
 .fa-youtube {
-  background: #bb0000;
-  color: white;
+	background: #bb0000;
+	color: white;
 }
 
 .fa-instagram {
-  background: #125688;
-  color: white;
+	background: #125688;
+	color: white;
 }
 
-
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+	background: #55ACEE;
+	color: white;
 }
 
 .fa-google {
-  background: #dd4b39;
-  color: white;
+	background: #dd4b39;
+	color: white;
 }
-
-
 </style>
 </head>
 <body>
@@ -210,27 +208,29 @@ pre {
 				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
-		</div>	
+		</div>
 
 		<div>
-		<h1>
-			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-			
-		</h1>
-		<p Style="color: #800000">Sito di e-commerce incentrato sulle
-			specialita' gastronomiche del sud Italia.</p>
+			<h1>
+				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
+
+			</h1>
+			<p Style="color: #800000">Sito di e-commerce incentrato sulle
+				specialita' gastronomiche del sud Italia.</p>
 		</div>
-		
-		
+
+
 	</div>
 
 	<div class="topnav">
-		
-	<div class="topnav" style="float: left;">
+
+		<div class="topnav" style="float: left;">
 
 			<form action="ServletHomePage" method="get">
 
-				<button id="pulsantee" type="submit"> <i style='font-size:24px' class='fas'>&#xf015;</i></button>
+				<button id="pulsantee" type="submit">
+					<i style='font-size: 24px' class='fas'>&#xf015;</i>
+				</button>
 				<input type="hidden" name="home" value="home">
 			</form>
 		</div>
@@ -268,11 +268,8 @@ pre {
 		%>
 		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
-			 &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; 
-			 
-			
-		</div>
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+			&emsp;&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</div>
 		<div class="topnav" style="float: left;">
 			<form action="LoginServlet" method="post">
 				<button id="pulsantee" type="submit">Logout</button>
@@ -284,8 +281,8 @@ pre {
 		%>
 		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;
-		</div>
+			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+			&emsp;&emsp;</div>
 
 		<div class="topnav" style="float: left;">
 
@@ -302,7 +299,7 @@ pre {
 		<%
 			}
 		%>
-	
+
 	</div>
 
 	<div class="row">
@@ -353,10 +350,9 @@ pre {
 						</p>
 					</fieldset>
 
-					<br>
-					<input type="hidden" name="az" value="acquista">
+					<br> <input type="hidden" name="az" value="acquista">
 					<button id="pulsante" type="submit">Acquista</button>
-					<br> 
+					<br>
 
 
 				</form>
@@ -393,29 +389,31 @@ pre {
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		
-			<button id="pulsantee" type="submit"> Pagamenti e metodi di
-				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
+
+			<button id="pulsantee" type="submit">
+				Pagamenti e metodi di Spedizione &nbsp;<i style="font-size: 24px"
+					class="fa">&#xf09d;</i><i style='font-size: 24px' class='fas'>&#xf0d1;</i>
+			</button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
-		
-		
-		 <form action="ServletHomePage" method="get">  
-			<button id="pulsantee" type="submit" >Chi Siamo</button>
-			<input type="hidden" name="home" value="chisiamo"><br> <br>
-			 </form>
-		
+
+
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
-		
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+		</form>
+
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">
+				Contatti &nbsp;&nbsp; <i style='font-size: 24px' class='fas'>&#xf095;</i>
+			</button>
+
 			<input type="hidden" name="home" value="contatti">
 		</form>
-		<br>
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
+		<br> <a href="#" class="fa fa-facebook"></a> <a href="#"
+			class="fa fa-google"></a> <a href="#" class="fa fa-twitter"></a> <a
+			href="#" class="fa fa-youtube"></a> <a href="#"
+			class="fa fa-instagram"></a>
 	</div>
 </body>
 </html>

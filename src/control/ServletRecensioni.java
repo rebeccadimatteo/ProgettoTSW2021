@@ -18,41 +18,32 @@ import model.Recensione;
 @WebServlet("/ServletRecensioni")
 public class ServletRecensioni extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ServletRecensioni() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/adminrecensioni.jsp");
-		rd.forward(request, response);
-		
-		
-		
+	public ServletRecensioni() {
+		super();
+
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 String id=request.getParameter("id");
-		 String descr=request.getParameter("arearec");
-		 Recensione nuova=new Recensione(0,descr,id);
-		
-		 nuova.inseriscirecensione();
-		
+	// se è l'amministratore lo porta a vedere tutte le recensioni
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/adminrecensioni.jsp");
+		rd.forward(request, response);
+
+	}
+
+// prende i parametri dal form crea una nuova recensione  e l'aggiunge al db
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String id = request.getParameter("id");
+		String descr = request.getParameter("arearec");
+		Recensione nuova = new Recensione(0, descr, id);
+
+		nuova.inseriscirecensione();
+
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
 		rd.forward(request, response);
-		
-		
-		
+
 	}
 
 }

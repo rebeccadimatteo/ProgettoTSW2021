@@ -1,5 +1,6 @@
 package model;
 
+//questa classe crea un oggetto catalogo contente item ovvero i nostri pordotti che vengono presi dal data base utkizzando datasource
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -63,6 +64,7 @@ public class Catalogo {
 
 	}
 
+// get e set
 	public Item getItemIndex(int i) {
 		return catalogo.get(i);
 	}

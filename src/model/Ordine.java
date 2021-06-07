@@ -1,5 +1,6 @@
 package model;
 
+// crea un oggetto di tipo ordine
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -32,7 +33,8 @@ public class Ordine {
 		}
 	}
 
-	public Ordine(int numeroordine,String stato,Date dataord,String idutente, String via, String cap, String citta, int idspecificaordine) {
+	public Ordine(int numeroordine, String stato, Date dataord, String idutente, String via, String cap, String citta,
+			int idspecificaordine) {
 		super();
 		Random n = new Random();
 
@@ -49,6 +51,7 @@ public class Ordine {
 		this.idspecificaordine = idspecificaordine;
 	}
 
+// inserisce ordine nel db
 	public void inserisciordine() {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -68,7 +71,7 @@ public class Ordine {
 			preparedStatement.setInt(8, idspecificaordine);
 
 			preparedStatement.executeUpdate();
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -93,11 +96,11 @@ public class Ordine {
 			}
 		}
 	}
-	
-	
+
+	// restiuisce tutti gli ordini del db
 	public ArrayList<Ordine> restituisciordini() {
-		
-		ArrayList<Ordine> listaordini= new ArrayList<Ordine>();
+
+		ArrayList<Ordine> listaordini = new ArrayList<Ordine>();
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 
@@ -106,28 +109,27 @@ public class Ordine {
 
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(sql);
-			
+
 			ResultSet rs = preparedStatement.executeQuery();
 			LocalDate dataoggi = LocalDate.now();
-			Date data=java.sql.Date.valueOf(dataordine);
+			Date data = java.sql.Date.valueOf(dataordine);
 
 			while (rs.next()) {
-				int numeroordine= rs.getInt(1);
+				int numeroordine = rs.getInt(1);
 				String stato = rs.getString(2);
-				 data= rs.getDate(3);
-				
+				data = rs.getDate(3);
+
 				String idutente = rs.getString(4);
 				String via = rs.getString(5);
-				String cap= rs.getString(6);
-				String citta= rs.getString(7);
-				int idspecificaordine=rs.getInt(8);
-				
-				Ordine ris=new Ordine(numeroordine,stato,data,idutente,via,cap,citta,idspecificaordine);
+				String cap = rs.getString(6);
+				String citta = rs.getString(7);
+				int idspecificaordine = rs.getInt(8);
+
+				Ordine ris = new Ordine(numeroordine, stato, data, idutente, via, cap, citta, idspecificaordine);
 				listaordini.add(ris);
 
 			}
-			
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -153,40 +155,40 @@ public class Ordine {
 		}
 		return listaordini;
 	}
-	
-public ArrayList<Ordine> restituisciordiniid(String id) {
-		
-		ArrayList<Ordine> listaordini= new ArrayList<Ordine>();
+
+	// restituisce ordine in base all id
+	public ArrayList<Ordine> restituisciordiniid(String id) {
+
+		ArrayList<Ordine> listaordini = new ArrayList<Ordine>();
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 
 		try {
-			String sql = "select* from Ordine where IDUtente='" + id + "'" ;
+			String sql = "select* from Ordine where IDUtente='" + id + "'";
 
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(sql);
-			
+
 			ResultSet rs = preparedStatement.executeQuery();
 			LocalDate dataoggi = LocalDate.now();
-			Date data=java.sql.Date.valueOf(dataordine);
+			Date data = java.sql.Date.valueOf(dataordine);
 
 			while (rs.next()) {
-				int numeroordine= rs.getInt(1);
+				int numeroordine = rs.getInt(1);
 				String stato = rs.getString(2);
-				 data= rs.getDate(3);
-				
+				data = rs.getDate(3);
+
 				String idutente = rs.getString(4);
 				String via = rs.getString(5);
-				String cap= rs.getString(6);
-				String citta= rs.getString(7);
-				int idspecificaordine=rs.getInt(8);
-				
-				Ordine ris=new Ordine(numeroordine,stato,data,idutente,via,cap,citta,idspecificaordine);
+				String cap = rs.getString(6);
+				String citta = rs.getString(7);
+				int idspecificaordine = rs.getInt(8);
+
+				Ordine ris = new Ordine(numeroordine, stato, data, idutente, via, cap, citta, idspecificaordine);
 				listaordini.add(ris);
 
 			}
-			
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -213,6 +215,7 @@ public ArrayList<Ordine> restituisciordiniid(String id) {
 		return listaordini;
 	}
 
+// get e set
 	public int getNumeroordine() {
 		return numeroordine;
 	}

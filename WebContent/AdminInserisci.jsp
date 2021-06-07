@@ -64,6 +64,17 @@ background: #333;
 	padding: 14px 16px;
 	text-decoration: none;
 }
+#pulsantee {
+outline: none;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+font: bold 20px Arial, Helvetica, sans-serif;
+color: white;
+padding: 10px 20px;
+border: solid 1px #333;
+background: #333;
+}
 
 /* Change color on hover */
 .topnav a:hover {

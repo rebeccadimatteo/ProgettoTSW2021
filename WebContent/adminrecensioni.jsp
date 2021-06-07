@@ -19,7 +19,17 @@ body {
 	padding: 10px;
 	background: #f1f1f1;
 }
-
+#pulsantee {
+outline: none;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+font: bold 20px Arial, Helvetica, sans-serif;
+color: white;
+padding: 10px 20px;
+border: solid 1px #333;
+background: #333;
+}
 /* Header/Blog Title */
 .header {
 	padding: 30px;

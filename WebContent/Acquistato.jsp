@@ -8,9 +8,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'
+	crossorigin='anonymous'></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 * {
@@ -23,7 +25,6 @@ body {
 	background: #f1f1f1;
 }
 
-
 .header h1 {
 	font-size: 50px;
 }
@@ -32,8 +33,8 @@ body {
 	padding: 30px;
 	text-align: center;
 	background: white;
-	display:flex;
-	flex-wrap:wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .header h1 {
@@ -50,8 +51,8 @@ body {
 .topnav a {
 	float: left;
 	display: flex;
-	flex-wrap:wrap;
-	justify-content :space-between;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
@@ -158,60 +159,54 @@ pre {
 		width: 100%;
 		display: block;
 	}
-	
-	.topnav,.topnavLeft,.topnavRight {
-	flex-wrap:wrap;
-	flex-direction:column;
-	text-align:center;
-	
+	.topnav, .topnavLeft, .topnavRight {
+		flex-wrap: wrap;
+		flex-direction: column;
+		text-align: center;
 	}
-	
-	
 	.logo {
 		width: 100%;
 		display: block;
 	}
 }
 
-
 /* LOGHI FOOTER */
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
+	padding: 20px;
+	font-size: 30px;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
 }
 
 .fa:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+	background: #3B5998;
+	color: white;
 }
 
 .fa-youtube {
-  background: #bb0000;
-  color: white;
+	background: #bb0000;
+	color: white;
 }
 
 .fa-instagram {
-  background: #125688;
-  color: white;
+	background: #125688;
+	color: white;
 }
 
-
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+	background: #55ACEE;
+	color: white;
 }
 
 .fa-google {
-  background: #dd4b39;
-  color: white;
+	background: #dd4b39;
+	color: white;
 }
 /* Fattura */
 .invoice-box {
@@ -315,26 +310,29 @@ pre {
 				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
-		</div>	
+		</div>
 
 		<div>
-		<h1>
-			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-			
-		</h1>
-		<p Style="color: #800000">Sito di e-commerce incentrato sulle
-			specialita' gastronomiche del sud Italia.</p>
+			<h1>
+				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
+
+			</h1>
+			<p Style="color: #800000">Sito di e-commerce incentrato sulle
+				specialita' gastronomiche del sud Italia.</p>
 		</div>
-		
-		
+
+
 	</div>
-		
-	<div class="topnav" style="display:flex; justify-content:space-between;">
-		<div class="topnavLeft" style="float: left; display:flex;">
+
+	<div class="topnav"
+		style="display: flex; justify-content: space-between;">
+		<div class="topnavLeft" style="float: left; display: flex;">
 
 			<form action="ServletHomePage" method="get">
 
-						<button id="pulsantee" type="submit"> <i style='font-size:24px' class='fas'>&#xf015;</i></button>
+				<button id="pulsantee" type="submit">
+					<i style='font-size: 24px' class='fas'>&#xf015;</i>
+				</button>
 				<input type="hidden" name="home" value="home">
 			</form>
 
@@ -344,46 +342,46 @@ pre {
 				<input type="hidden" name="home" value="catal">
 
 			</form>
-		
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Chi Siamo</button>
 				<input type="hidden" name="home" value="chisiamo">
 			</form>
-		
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Contatti</button>
 				<input type="hidden" name="home" value="contatti">
 			</form>
-		
-		
+
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Recensioni</button>
 				<input type="hidden" name="home" value="recensione">
 			</form>
 		</div>
-	
-		<div class="topnavRight" style="float: right; display:flex;">
-	
-		<%
-			if (request.getSession().getAttribute("utente") != null) {
-		%>
-		
-		
+
+		<div class="topnavRight" style="float: right; display: flex;">
+
+			<%
+				if (request.getSession().getAttribute("utente") != null) {
+			%>
+
+
 
 			<form action="LoginServlet" method="post">
 				<button id="pulsantee" type="submit">Logout</button>
 				<input type="hidden" name="azione" value="autentico">
 			</form>
-		<%
-			} else {
-		%>
-		
+			<%
+				} else {
+			%>
+
 
 			<form action="LoginServlet" method="get">
 				<button id="pulsantee" type="submit">Login</button>
 			</form>
-		
-		
+
+
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
@@ -399,8 +397,8 @@ pre {
 		<div class="leftcolumn">
 			<div class="card">
 
-				
-					<h3 align="center" color:#800000>Ordine effettuato con
+
+				<h3 align="center" color:#800000>Ordine effettuato con
 					successo.</h3>
 
 				<div class="invoice-box">
@@ -411,9 +409,10 @@ pre {
 									<tr>
 										<td class="title"><img src=""
 											style="width: 100%; max-width: 300px" /></td>
+											<!-- prendiamo carrello dalla sessione utente dalla sessione e stampiamo la fattura -->
 										<%
 											Carrello car = (Carrello) session.getAttribute("car");
-                                            Utente ut=(Utente)request.getSession().getAttribute("utente");
+											Utente ut = (Utente) request.getSession().getAttribute("utente");
 											Random generatore = new Random();
 											int d = 1 + generatore.nextInt(300);
 											LocalDate dataoggi = LocalDate.now();
@@ -430,7 +429,7 @@ pre {
 								<table>
 									<tr>
 										<td>I Sapori del Sud,srl.<br /> Via Vittorio Emanuele,18
-										<br /> Salerno, (SA) 84128
+											<br /> Salerno, (SA) 84128
 										</td>
 										<td><br /> SaporiDelSud-CEO<br />
 											ISaporiDelSud@gmail.com</td>
@@ -448,10 +447,7 @@ pre {
 						<tr class="details">
 							<td>Carta di Credito</td>
 
-							<td>
-							
-								<%=ut.getIban()%>
-							</td>
+							<td><%=ut.getIban()%></td>
 						</tr>
 
 						<tr class="heading">
@@ -461,18 +457,12 @@ pre {
 						</tr>
 						<%
 							for (int i = 0; i < car.lengthCarrello(); i++) {
-							Item el = car.getItemIndex(i);
+								Item el = car.getItemIndex(i);
 						%>
 						<tr class="item">
-							<td>
-								<%=
-									el.getNome()
-								%>
-							</td>
+							<td><%=el.getNome()%></td>
 
-							<td>$<%=el.getPrezzo()
-								
-							%></td>
+							<td>$<%=el.getPrezzo()%></td>
 						</tr>
 
 
@@ -482,9 +472,7 @@ pre {
 						<tr class="total">
 							<td></td>
 
-							<td>Total: $<%= car.SommaPrezzo()
-								
-							%></td>
+							<td>Total: $<%=car.SommaPrezzo()%></td>
 						</tr>
 					</table>
 				</div>
@@ -493,10 +481,9 @@ pre {
 
 				<br>
 				<form action="ServletDati" method="get">
-				<button  id="pulsante"
-					type="submit">Ritorna al Catalogo</button>
+					<button id="pulsante" type="submit">Ritorna al Catalogo</button>
 					<input type="hidden" name="azione2" value="fine">
-</form>
+				</form>
 
 			</div>
 		</div>
@@ -524,30 +511,31 @@ pre {
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		
-			<button id="pulsantee" type="submit"> Pagamenti e metodi di
-				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
+
+			<button id="pulsantee" type="submit">
+				Pagamenti e metodi di Spedizione &nbsp;<i style="font-size: 24px"
+					class="fa">&#xf09d;</i><i style='font-size: 24px' class='fas'>&#xf0d1;</i>
+			</button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
-		
-		
-		 <form action="ServletHomePage" method="get">  
-			<button id="pulsantee" type="submit" >Chi Siamo</button>
-			<input type="hidden" name="home" value="chisiamo"><br> <br>
-			 </form>
-		
+
+
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
-		
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+		</form>
+
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">
+				Contatti &nbsp;&nbsp; <i style='font-size: 24px' class='fas'>&#xf095;</i>
+			</button>
+
 			<input type="hidden" name="home" value="contatti">
 		</form>
-		<br>
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
+		<br> <a href="#" class="fa fa-facebook"></a> <a href="#"
+			class="fa fa-google"></a> <a href="#" class="fa fa-twitter"></a> <a
+			href="#" class="fa fa-youtube"></a> <a href="#"
+			class="fa fa-instagram"></a>
 	</div>
 
 </body>
-

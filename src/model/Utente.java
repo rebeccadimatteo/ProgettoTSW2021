@@ -1,5 +1,6 @@
 package model;
 
+// crea oggetto di tipo utente
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -50,6 +51,7 @@ public class Utente {
 		this.nominativo = nominativo;
 	}
 
+// se utente con id è presente
 	public boolean idpresente() {
 
 		try {
@@ -78,9 +80,8 @@ public class Utente {
 		return false;
 
 	}
-	
-	
 
+// inserisce utente nel db
 	public void inserisceutente() {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -129,9 +130,11 @@ public class Utente {
 			}
 		}
 	}
-public void restituisciutente() {
-		
-	Utente ris=null;
+
+	// restituisce utente con quel id
+	public void restituisciutente() {
+
+		Utente ris = null;
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 
@@ -140,15 +143,15 @@ public void restituisciutente() {
 
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(sql);
-			
+
 			ResultSet rs = preparedStatement.executeQuery();
-			
+
 			while (rs.next()) {
-				this.setId( rs.getString(1));
+				this.setId(rs.getString(1));
 				this.setNome(rs.getString(2));
 				this.setCognome(rs.getString(3));
 				this.setCf(rs.getString(4));
-				this.setEmail( rs.getString(5));
+				this.setEmail(rs.getString(5));
 				this.setCellulare(rs.getString(6));
 				this.setTipologia(rs.getString(7));
 				this.setNumeroordini(rs.getInt(8));
@@ -156,15 +159,9 @@ public void restituisciutente() {
 				this.setVia(rs.getString(10));
 				this.setCap(rs.getString(11));
 				this.setCitta(rs.getString(12));
-				
-				
-				
-				
-				 
 
 			}
-			
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -188,9 +185,10 @@ public void restituisciutente() {
 					}
 			}
 		}
-		
+
 	}
 
+// inserisce metodo di pagamento nell'utente
 	public void inseriscimetodo() {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -230,6 +228,7 @@ public void restituisciutente() {
 		}
 	}
 
+// get e set
 	public String getId() {
 		return id;
 	}
