@@ -86,7 +86,17 @@ body {
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
-
+#pulsantee {
+outline: none;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+font: bold 20px Arial, Helvetica, sans-serif;
+color: white;
+padding: 10px 20px;
+border: solid 1px #333;
+background: #333;
+}
 pre {
 	display: block;
 	font-family: Arial;
@@ -209,7 +219,7 @@ pre {
 	<div class="header">
 		<div class="logo">
 			<div class="img2">
-				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
+				<a title="Clicca per andare alla home" href="Adminhomepage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>	
@@ -298,25 +308,7 @@ pre {
 			</div>
 
 		</div>
-		<div class="rightcolumn">
-			<div class="card">
-				<h2 Style="color: #800000">Gestisci</h2>
-
-				<button onclick="location.href='mioprofilo.jsp'" id="pulsante"
-					type="submit">Vai al mio profilo</button>
-				<br> <br>
-
-				<button onclick="location.href='mioordini.jsp'" id="pulsante"
-					type="submit">I miei ordini</button>
-				<br> <br>
-
-
-			</div>
-
-
-		</div>
-
-	</div>
+	
 		<div class="rightcolumn">
 			<div class="card">
 				<h2 Style="color: #800000">Gestisci</h2>

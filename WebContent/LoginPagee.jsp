@@ -4,9 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script src='https://kit.fontawesome.com/a076d05399.js' ></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <style>
 * {
@@ -206,6 +213,54 @@ background: #333;
   color: white;
 }
 
+#body2 {
+  font-family: 'Nunito';
+background: linear-gradient(top right, #FFFFFF 0%, #AACFEF 100%);
+}
+#login-card{
+    width:500px;
+    border-radius: 25px;
+    margin:150px auto;
+    border: 2px solid black;
+  
+}
+
+#email{
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #9da3b0;
+}
+
+#button{
+    border-radius:30px;
+
+}
+
+#btn{
+   position: absolute; 
+   bottom: -35px; 
+   padding: 5px;
+   margin: 0px 55px;
+   align-items: center;
+   border-radius: 5px"
+}
+#container{
+    margin-top:25px;
+}
+
+.btn-circle.btn-sm { 
+            width: 40px; 
+            height: 40px; 
+            padding: 2px 0px; 
+            border-radius: 25px; 
+            font-size: 14px; 
+            text-align: center;
+            
+            margin: 8px;
+        }
+
+
 </style>
 </head>
 <body>
@@ -269,37 +324,23 @@ background: #333;
 
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card">
-               
-				<form action="LoginServlet" method="post" >
-
-					<fieldset>
-
-						<legend>
-							<b Style="color: #800000">Dati utente:</b>
-						</legend>
-
-						<p align="left"  >
-							<b Style="color: #800000" >Inserisci nome utente:</b> <input
-								type="text" id="user" name="username" placeholder="becca12" /><br> <br>
-							<b Style="color: #800000">Inserisci password:</b> <input
-								type="password" name="pwsd" placeholder="**********"  /> <br>
-							<br>
-
-
-
-						</p>
-						<p align="right">
-							<button id="pulsante" type="submit">Accedi</button>
-						</p>
-
-
-					</fieldset>
-
-
-
+			<div class="card" >
+			<div class=body2>
+				<div id="login-card" class="card">
+<div class="card-body">
+  <h2 class="text-center" Style="color: #800000"><b>Login</b></h2>
+  <br>
+  <form action="LoginServlet" method="post" >
+   <div class="form-group">
+     <input type="text" id="user" name="username" class="form-control" placeholder="Inserisci nome utente" /><br> <br>
+    </div>
+    <div class="form-group">
+   <input type="password" name="pwsd" class="form-control" placeholder="Inserisci password"  /> <br>
+    </div>
+    <button id="pulsante" class="btn btn-primary deep-purple btn-block" type="submit">Accedi</button>
 				</form>
-				<br> <b Style="color: #800000">Non sei registrato? Clicca
+			</div><br><br>
+			<b Style="color: black">Non sei registrato? Clicca
 					il tasto Registrati!</b> <br>
 				<form action="RegistrazioneServlet" method="get">
 					<p align="left">
@@ -307,14 +348,17 @@ background: #333;
 					</p>
 
 				</form>
-
-
-			</div>
+				</div>
+			
 		</div>
 
+</div>
+<div>
+</div>
+</div> 
 		<div class="rightcolumn">
 			<div class="card">
-				<h2 Style="color: #800000">Gestisci</h2>
+				<h2 Style="color: #800000"><b>Gestisci</b></h2>
 
 				<button onclick="location.href='mioprofilo.jsp'" id="pulsante"
 					type="submit">Vai al mio profilo</button>
@@ -331,7 +375,7 @@ background: #333;
 	</div>
 
 	<div class="footer">
-		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
+		<h2 Style="color: #800000"><b>Hai bisogno di aiuto ?</b></h2>
 		<form action="ServletHomePage" method="get">
 		
 			<button id="pulsantee" type="submit"> Pagamenti e metodi di
