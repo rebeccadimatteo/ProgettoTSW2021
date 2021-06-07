@@ -5,7 +5,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -397,6 +396,7 @@ pre {
             	 <form action="ServletHomePage" method="get">
             	  <button id="pulsantee"
 					type="submit">Contatti</button>
+					
             	 <input type="hidden" name="home" value="contatti">
 			      </form>
 			      <br>
