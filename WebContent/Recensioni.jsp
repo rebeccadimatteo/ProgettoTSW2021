@@ -76,7 +76,7 @@ body {
 	width: 75%;
 	box-sizing: border-box;
 	background: linear-gradient(to right bottom, white, white);
-	height: 100vh;
+	height: 110vh;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;

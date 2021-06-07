@@ -132,6 +132,7 @@ pre {
        -o-transition: all 1s ease;
        -ms-transition: all 1s ease;
        transition: all 1s ease;
+       display:flex;
  }
  .img:hover {
        -webkit-filter: grayscale(0%);
@@ -142,6 +143,7 @@ pre {
 	background-color: white;
 	padding: 20px;
 	margin-top: 20px;
+	-webkit-border-radius:20px;
 }
 
 /* Clear floats after the columns */
@@ -321,7 +323,7 @@ pre {
 			<div class="card">
 				<h1 Style="color: #800000">Campania</h1>
 				<div class="img">
-					<img src="images/costieracilentana.jpg" style="height: 300px;">
+					<img src="images/costieracilentana.jpg" style="height: 250px;">
 				</div>
 				<p align="right">
 					<font face="WildWest" size="5"><i>Costiera Amalfitana</i></font><br />
@@ -340,7 +342,7 @@ pre {
 				<h1 Style="color: #800000">Calabria</h1>
 				
 				<div class="img">
-					<img src="images/calabria.jpg" style="height: 300px;">
+					<img src="images/calabria.jpg" style="height: 250px;">
 				</div>
 				<p align="right">
 					<font face="WildWest" size="5"><i>Paesaggio Calabrese</i></font><br />
@@ -350,7 +352,7 @@ pre {
 			<div class="card">
 				<h1 Style="color: #800000">Puglia</h1>
 				<div class="img">
-					<img src="images/puglia.jpg" style="height: 300px;">
+					<img src="images/puglia.jpg" style="height: 250px;">
 				</div>
 				<p align="right">
 					<font face="WildWest" size="5"><i>Paesaggio Pugliese</i></font><br />
@@ -362,7 +364,7 @@ pre {
 				<h1 Style="color: #800000">Basilicata</h1>
 				
 				<div class="img">
-					<img src="images/bas.jpg" style="height: 300px;">
+					<img src="images/bas.jpg" style="height: 250px;">
 				</div>
 				<p align="right">
 					<font face="WildWest" size="5"><i>Paesaggio Lucano</i></font><br />
@@ -374,7 +376,7 @@ pre {
 				<h1 Style="color: #800000">Sicilia</h1>
 				
 				<div class="img">
-					<img src="images/sic.jpg" style="height: 300px;">
+					<img src="images/sic.jpg" style="height: 250px;">
 				</div>
 				<p align="right">
 					<font face="WildWest" size="5"><i>Paesaggio Siciliano</i></font><br />
