@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<script src='https://kit.fontawesome.com/a076d05399.js' ></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>* {
@@ -372,11 +372,25 @@ pre {
 
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
-		<a href="MetodoSpedizione.jsp" Style="color: #800000">Metodi Di
-			Pagamento e tempi di spedizione</a> <br> <a href="ChiSiamo.jsp"
-			Style="color: #800000">Chi Siamo</a> <br> <a href="Contatti.jsp"
-			Style="color: #800000">Contatti</a> <br>
-			<br>
+		<form action="ServletHomePage" method="get">
+		
+			<button id="pulsantee" type="submit"> Pagamenti e metodi di
+				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
+			<input type="hidden" name="home" value="pagmet"><br> <br>
+		</form>
+		
+		
+		 <form action="ServletHomePage" method="get">  
+			<button id="pulsantee" type="submit" >Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+			 </form>
+		
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
+		
+			<input type="hidden" name="home" value="contatti">
+		</form>
+		<br>
 		<a href="#" class="fa fa-facebook"></a>
 		<a href="#" class="fa fa-google"></a>
 <a href="#" class="fa fa-twitter"></a>

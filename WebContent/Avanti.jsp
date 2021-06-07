@@ -6,6 +6,8 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src='https://kit.fontawesome.com/a076d05399.js' ></script>
+
 <style>
 * {
 	box-sizing: border-box;
@@ -228,7 +230,7 @@ pre {
 
 			<form action="ServletHomePage" method="get">
 
-				<button id="pulsantee" type="submit">HomePage</button>
+				<button id="pulsantee" type="submit"> <i style='font-size:24px' class='fas'>&#xf015;</i></button>
 				<input type="hidden" name="home" value="home">
 			</form>
 		</div>
@@ -391,27 +393,29 @@ pre {
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		<button id="pulsantee"
-					type="submit">Pagamenti e metodi di Spedizione</button>
-            	 <input type="hidden" name="home" value="pagmet"><br><br>
-            	 </form>
-            	 <form action="ServletHomePage" method="get">
-		 <button id="pulsantee"
-					type="submit">Chi Siamo</button>
-            	 <input type="hidden" name="home" value="chisiamo"><br><br>
-            	 </form>
-            	 <form action="ServletHomePage" method="get">
-            	  <button id="pulsantee"
-					type="submit">Contatti</button>
-            	 <input type="hidden" name="home" value="contatti">
-			      </form>
-			      <br>
+		
+			<button id="pulsantee" type="submit"> Pagamenti e metodi di
+				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
+			<input type="hidden" name="home" value="pagmet"><br> <br>
+		</form>
+		
+		
+		 <form action="ServletHomePage" method="get">  
+			<button id="pulsantee" type="submit" >Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+			 </form>
+		
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
+		
+			<input type="hidden" name="home" value="contatti">
+		</form>
+		<br>
 		<a href="#" class="fa fa-facebook"></a>
 		<a href="#" class="fa fa-google"></a>
 <a href="#" class="fa fa-twitter"></a>
 <a href="#" class="fa fa-youtube"></a>
 <a href="#" class="fa fa-instagram"></a>
 	</div>
-
 </body>
 </html>

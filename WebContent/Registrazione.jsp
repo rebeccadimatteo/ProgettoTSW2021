@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src='https://kit.fontawesome.com/a076d05399.js' ></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -222,7 +224,7 @@ body {
 
 			<form action="ServletHomePage" method="get">
 
-				<button id="pulsantee" type="submit">HomePage</button>
+					<button id="pulsantee" type="submit"> <i style='font-size:24px' class='fas'>&#xf015;</i></button>
 				<input type="hidden" name="home" value="home">
 			</form>
 
@@ -497,16 +499,21 @@ body {
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Pagamenti e metodi di
-				Spedizione</button>
+		
+			<button id="pulsantee" type="submit"> Pagamenti e metodi di
+				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
-		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Chi Siamo</button>
+		
+		
+		 <form action="ServletHomePage" method="get">  
+			<button id="pulsantee" type="submit" >Chi Siamo</button>
 			<input type="hidden" name="home" value="chisiamo"><br> <br>
-		</form>
+			 </form>
+		
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Contatti</button>
+			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
+		
 			<input type="hidden" name="home" value="contatti">
 		</form>
 		<br>
