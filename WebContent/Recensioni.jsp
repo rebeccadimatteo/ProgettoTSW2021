@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src='https://kit.fontawesome.com/a076d05399.js' ></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,8 +25,8 @@ body {
 	padding: 30px;
 	text-align: center;
 	background: white;
-	display:flex;
-	flex-wrap:wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .header h1 {
@@ -43,8 +43,8 @@ body {
 .topnav a {
 	float: left;
 	display: flex;
-	flex-wrap:wrap;
-	justify-content :space-between;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
@@ -74,6 +74,15 @@ body {
 .leftcolumn {
 	float: left;
 	width: 75%;
+	box-sizing: border-box;
+	background: linear-gradient(to right bottom, white, white);
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /* Right column */
@@ -91,6 +100,7 @@ body {
 	padding-left: 5px;
 	margin-top: 9px;
 }
+
 .img2 {
 	background-color: white;
 	width: 100%;
@@ -153,15 +163,11 @@ body {
 		width: 100%;
 		display: block;
 	}
-	
-	.topnav,.topnavLeft,.topnavRight {
-	flex-wrap:wrap;
-	flex-direction:column;
-	text-align:center;
-	
+	.topnav, .topnavLeft, .topnavRight {
+		flex-wrap: wrap;
+		flex-direction: column;
+		text-align: center;
 	}
-	
-	
 	.logo {
 		width: 100%;
 		display: block;
@@ -208,8 +214,8 @@ body {
 /* VOTAZIONE STELLE */
 .star-rating {
 	direction: rtl;
-	display: block;
-	padding: 20px
+	display: flex;
+	padding: 0px
 }
 
 .star-rating input[type=radio] {
@@ -218,7 +224,7 @@ body {
 
 .star-rating label {
 	color: #bbb;
-	font-size: 18px;
+	font-size: 13px;
 	padding: 0;
 	cursor: pointer;
 	-webkit-transition: all .3s ease-in-out;
@@ -226,8 +232,100 @@ body {
 }
 
 .star-rating label:hover, .star-rating label:hover ~ label, .star-rating input[type=radio]:checked 
-	~ label {
+	 ~ label {
 	color: #f2b600
+}
+
+-!-----
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+.body2 {
+	box-sizing: border-box;
+	background: linear-gradient(to right bottom, #000046, #5B86E5);
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper2 {
+	height: 620px;
+	width: 460px;
+	background-color: white;
+	border-radius: 24px;
+	border: 2px solid black;
+	overflow: hidden;
+}
+
+.header2 {
+	width: 100%;
+	height: 32%;
+	background-image: url("images/macos.jpg");
+	background-size: cover;
+	background-position: center;
+	color: white;
+	text-align: center;
+}
+
+.h12 {
+	margin: 0;
+	padding: 34px 24px 12px;
+	font-weight: 300;
+	font-size: 60px;
+}
+
+.p2 {
+	margin: 0;
+	padding: 0 24px;
+	font-size: 16px;
+	width: 360px;
+	opacity: 0.8;
+	margin: 0 auto;
+}
+
+.form2 {
+	display: flex;
+	flex-direction: column;
+	margin: 8px auto;
+	width: 76%;
+}
+
+.h42 {
+	color: #666;
+	margin: 16px 0 6px;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+.input2, .textarea2 {
+	border: solid 1px #cbcbcb;
+	border-radius: 6px;
+	width: 92%;
+	padding: 6px 12px;
+	outline: none;
+	margin: 4px auto;
+}
+
+.input2 {
+	height: 28px;
+}
+
+.textarea2 {
+	height: 62px;
+}
+
+.button2 {
+	height: 42px;
+	width: 60%;
+	margin: 24px auto;
+	border-radius: 6px;
+	border: none;
+	color: white;
+	background: linear-gradient(to left bottom, #000046, #5B86E5);
+	cursor: pointer;
 }
 </style>
 </head>
@@ -239,24 +337,27 @@ body {
 				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
-		</div>	
+		</div>
 
 		<div>
-		<h1>
-			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-			
-		</h1>
-		<p Style="color: #800000">Sito di e-commerce incentrato sulle
-			specialita' gastronomiche del sud Italia.</p>
+			<h1>
+				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
+
+			</h1>
+			<p Style="color: #800000">Sito di e-commerce incentrato sulle
+				specialita' gastronomiche del sud Italia.</p>
 		</div>
-		
-		
+
+
 	</div>
-	<div class="topnav" style="display:flex; justify-content:space-between;">
-		<div class="topnavLeft" style="float: left; display:flex;">
+	<div class="topnav"
+		style="display: flex; justify-content: space-between;">
+		<div class="topnavLeft" style="float: left; display: flex;">
 
 			<form action="ServletHomePage" method="get">
-	<button id="pulsantee" type="submit"> <i style='font-size:24px' class='fas'>&#xf015;</i></button>
+				<button id="pulsantee" type="submit">
+					<i style='font-size: 24px' class='fas'>&#xf015;</i>
+				</button>
 				<input type="hidden" name="home" value="home">
 			</form>
 
@@ -266,46 +367,46 @@ body {
 				<input type="hidden" name="home" value="catal">
 
 			</form>
-		
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Chi Siamo</button>
 				<input type="hidden" name="home" value="chisiamo">
 			</form>
-		
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Contatti</button>
 				<input type="hidden" name="home" value="contatti">
 			</form>
-		
-		
+
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Recensioni</button>
 				<input type="hidden" name="home" value="recensione">
 			</form>
 		</div>
-	
-		<div class="topnavRight" style="float: right; display:flex;">
-	
-		<%
-			if (request.getSession().getAttribute("utente") != null) {
-		%>
-		
-		
+
+		<div class="topnavRight" style="float: right; display: flex;">
+
+			<%
+				if (request.getSession().getAttribute("utente") != null) {
+			%>
+
+
 
 			<form action="LoginServlet" method="post">
 				<button id="pulsantee" type="submit">Logout</button>
 				<input type="hidden" name="azione" value="autentico">
 			</form>
-		<%
-			} else {
-		%>
-		
+			<%
+				} else {
+			%>
+
 
 			<form action="LoginServlet" method="get">
 				<button id="pulsantee" type="submit">Login</button>
 			</form>
-		
-		
+
+
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
@@ -320,53 +421,51 @@ body {
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
-				<h1 Style="color: #800000" align="center">Vuoi lasciare una
-					recensione?</h1>
-				<form action="ServletRecensioni" method="post">
-					<fieldset>
 
-						<legend>
-							<b Style="color: #800000">Inserisci dati per la recensione: </b>
-						</legend>
-						<p align="left" Style="color: #800000">
+				<div class=body2>
+					<div class="wrapper2">
+						<div class="header2">
+							<h1 class="h12">Lasciaci una recensione</h1>
 
-							<b>Inserire Nome Utente : </b> <input type="text" name="id"
-								placeholder="becca12" /> <br>
-						</p>
-						<p align="left" Style="color: #800000">
-							<b>Inserisci la tua recensione</b>
-						<br><br>
-							<textarea id="arearec" name="arearec" rows=8 cols=43> </textarea>
-							<br>
-						</p>
-						<div class="star-rating" >
-							<input id="star-5" type="radio" name="rating" value="star-5" />
-							<label for="star-5" title="5 stars"> <i
-								class="active fa fa-star" aria-hidden="true"></i>
-							</label> <input id="star-4" type="radio" name="rating" value="star-4" />
-							<label for="star-4" title="4 stars"> <i
-								class="active fa fa-star" aria-hidden="true"></i>
-							</label> <input id="star-3" type="radio" name="rating" value="star-3" />
-							<label for="star-3" title="3 stars"> <i
-								class="active fa fa-star" aria-hidden="true"></i>
-							</label> <input id="star-2" type="radio" name="rating" value="star-2" />
-							<label for="star-2" title="2 stars"> <i
-								class="active fa fa-star" aria-hidden="true"></i>
-							</label> <input id="star-1" type="radio" name="rating" value="star-1" />
-							<label for="star-1" title="1 star"> <i
-								class="active fa fa-star" aria-hidden="true"></i>
-							</label>
 						</div>
+						<form class="form2" action="ServletRecensioni" method="post">
+							<h4 class="h42">Nome utente</h4>
+							<input class="input2" type="text" name="id" /> <br>
+							<h4 class="h42">Recensione</h4>
 
-					</fieldset>
-					<p align="right">
-						<button id="pulsante" type="submit">Invia</button>
-					</p>
+							<textarea class=textarea2 id="arearec" name="arearec" rows=8
+								cols=43> </textarea>
+							<br>
+							<div class="star-rating">
+								<input id="star-5" type="radio" name="rating" value="star-5" />
+								<label for="star-5" title="5 stars"> <i
+									class="active fa fa-star" aria-hidden="true"></i>
+								</label> <input id="star-4" type="radio" name="rating" value="star-4" />
+								<label for="star-4" title="4 stars"> <i
+									class="active fa fa-star" aria-hidden="true"></i>
+								</label> <input id="star-3" type="radio" name="rating" value="star-3" />
+								<label for="star-3" title="3 stars"> <i
+									class="active fa fa-star" aria-hidden="true"></i>
+								</label> <input id="star-2" type="radio" name="rating" value="star-2" />
+								<label for="star-2" title="2 stars"> <i
+									class="active fa fa-star" aria-hidden="true"></i>
+								</label> <input id="star-1" type="radio" name="rating" value="star-1" />
+								<label for="star-1" title="1 star"> <i
+									class="active fa fa-star" aria-hidden="true"></i>
+								</label>
+							</div>
 
-				</form>
+
+							<button class=button2 id="pulsante" type="submit">Invia</button>
+						</form>
+					</div>
 
 
 
+
+
+
+				</div>
 			</div>
 		</div>
 		<div class="rightcolumn">
@@ -388,29 +487,31 @@ body {
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		
-			<button id="pulsantee" type="submit"> Pagamenti e metodi di
-				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
+
+			<button id="pulsantee" type="submit">
+				Pagamenti e metodi di Spedizione &nbsp;<i style="font-size: 24px"
+					class="fa">&#xf09d;</i><i style='font-size: 24px' class='fas'>&#xf0d1;</i>
+			</button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
-		
-		
-		 <form action="ServletHomePage" method="get">  
-			<button id="pulsantee" type="submit" >Chi Siamo</button>
-			<input type="hidden" name="home" value="chisiamo"><br> <br>
-			 </form>
-		
+
+
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
-		
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+		</form>
+
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">
+				Contatti &nbsp;&nbsp; <i style='font-size: 24px' class='fas'>&#xf095;</i>
+			</button>
+
 			<input type="hidden" name="home" value="contatti">
 		</form>
-		<br>
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
+		<br> <a href="#" class="fa fa-facebook"></a> <a href="#"
+			class="fa fa-google"></a> <a href="#" class="fa fa-twitter"></a> <a
+			href="#" class="fa fa-youtube"></a> <a href="#"
+			class="fa fa-instagram"></a>
 	</div>
 
 </body>
