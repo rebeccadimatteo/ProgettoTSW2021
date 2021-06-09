@@ -3,11 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 
 <style>
+@import
+	url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css")
+	;
+
 * {
 	box-sizing: border-box;
 }
@@ -200,6 +207,63 @@ body {
 	background: #dd4b39;
 	color: white;
 }
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.content .left-side {
+	width: 25%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 15px;
+	position: relative;
+}
+
+.content .left-side::before {
+	content: '';
+	position: absolute;
+	height: 70%;
+	width: 2px;
+	right: -15px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #afafb6;
+}
+
+.content .left-side .details {
+	margin: 14px;
+	text-align: center;
+}
+
+.content .left-side .details i {
+	font-size: 30px;
+	color: #3e2093;
+	margin-bottom: 10px;
+}
+
+.content .left-side .details .topic {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.content .left-side, .content .left-side {
+	font-size: 14px;
+	color: #afafb6;
+}
+
+.content .left-side {
+	width: 100%;
+	flex-direction: row;
+	margin-top: 40px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 </style>
 </head>
 <body>
@@ -294,15 +358,46 @@ body {
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
+
 				<h1 Style="color: #800000" align="center">Stai riscontrando dei
 					problemi? Contattaci!!</h1>
-				<p size=10 align="center">
-					<b>Email</b>:ISaporiDelSud@gmail.com<br> <b>Chiamaci</b>:3894685921<br>
-					<b>Via Vittorio Emanuele,18 84128 Salerno-Italy</b><br>
+
+				<div class="address details"
+					style="float: center; text-align: center;">
+					<i class="bi bi-geo-alt-fill" style='font-size: 24px'></i>
+					<div class="topic">
+						<b>Indirizzo</b>
+					</div>
+					<div class="text-one">Via Vittorio Emanuele,18 84128
+						Salerno-Italy</div>
+					<div class="text-two"></div>
+				</div>
+				<br>
+				<div class="phone details"
+					style="float: center; text-align: center;">
+					<i class="fas fa-phone-alt" style='font-size: 24px'></i>
+					<div class="topic">
+						<b>Telefono</b>
+					</div>
+					<div class="text-one">+(39)3894685921</div>
+					<div class="text-two">+(39)3316558728</div>
+				</div>
+				<br>
+				<div class="email details"
+					style="float: center; text-align: center;">
+					<i class="fas fa-envelope" style='font-size: 24px'></i>
+					<div class="topic">
+						<b>Email</b>
+					</div>
+					<div class="text-one">ISaporiDelSud@gmail.com</div>
+					<div class="text-two">IsaporiSrl@assistenza.com</div>
+				</div>
 
 
 
-				</p>
+
+
+
 
 			</div>
 		</div>
