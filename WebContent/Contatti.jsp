@@ -126,11 +126,11 @@ body {
 	align: center;
 }
 
-/* Add a card effect for articles */
 .card {
 	background-color: white;
-	padding: 60px;
-	margin-top: 40px;
+	padding: 20px;
+	margin-top: 20px;
+	-webkit-border-radius: 20px;
 }
 
 /* Clear floats after the columns */

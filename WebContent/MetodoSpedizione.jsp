@@ -8,7 +8,6 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
 <style>
 * {
 	box-sizing: border-box;
@@ -121,11 +120,11 @@ body {
 	align: center;
 }
 
-/* Add a card effect for articles */
 .card {
 	background-color: white;
-	padding: 60px;
-	margin-top: 40px;
+	padding: 20px;
+	margin-top: 20px;
+	-webkit-border-radius: 20px;
 }
 
 /* Clear floats after the columns */
@@ -298,8 +297,9 @@ body {
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
-				<h1 Style="color: #800000" align="center">Tempi di Spedizione:</h1>
-				<h4 align="center">La merce e' sempre pronta per la spedizione
+			<div style="float:left"><img src="images/delivery.png" width="300"  style=" height:auto; padding: -9px; align: left;" ></div>
+				<h1 Style="color: #800000" align="center">Tempi di Spedizione</h1>
+				<h4 align="center" style="font-family: 'Trebuchet MS', sans-serif;">La merce e' sempre pronta per la spedizione
 					nei nostri magazzini, i tempi medi di lavorazione dell'ordine è
 					sono 1-3 giorni lavorativi, i tempi possono variare a seconda dei
 					periodi ed al volume degli ordini (es: black friday, Natale,
@@ -309,12 +309,18 @@ body {
 					ritardi). I costi di spedizione sono gratuiti</h4>
 			</div>
 			<div class="card">
-				<h1 Style="color: #800000" align="center">Metodi di pagamento:</h1>
-				<div class="img">
+				<h1 Style="color: #800000" align="center">Metodi di pagamento</h1>
+				<div style="float:center;">
 					<p align="center">
-						<img src="images/mastercard.png" align="center"
-							style="height: 50px;"> <img src="images/visa.png"
-							align="center" style="height: 50px;">
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						<img src="images/mastercard.png" 
+							style="height: 50px; float:center;">
+						<img src="images/visa.png"
+							 style="height: 50px;float:center;">
+						<img src="images/paypal.png"
+							 style="height: 50px;float:center;">
+							 <img src="images/discover.png"
+							 style="height: 50px;float:center;">
 					</p>
 				</div>
 			</div>

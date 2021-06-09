@@ -123,8 +123,9 @@ body {
 /* Add a card effect for articles */
 .card {
 	background-color: white;
-	padding: 60px;
-	margin-top: 40px;
+	padding: 20px;
+	margin-top: 20px;
+	-webkit-border-radius: 20px;
 }
 
 /* Clear floats after the columns */
@@ -319,13 +320,13 @@ body {
 					nostra storia...</h1>
 				<p align="center" style="font-family: 'Trebuchet MS', sans-serif;">
 
-					I Sapori del Sud tra Terra e Mare e' un sito di e-commerce
+					I <i>Sapori del Sud tra Terra e Mare</i> e' un sito di e-commerce
 					incentrato sulle specialita' gastronomiche del sud Italia.<br>
 					Quest'ultimo propone di accompagnare gli utenti in un percorso che
 					stimoli e valorizzi la scoperta delle tradizioni ed incentivi la
 					vendita di prodotti sia tipici che innovativi, mantenendo sempre
 					uno standard qualitativo alto ed un basso impatto ambientale.<br>
-					L'obiettivo infatti e' quello di soddisfare le esigenze degli
+					L'<i>obiettivo</i> infatti e' quello di soddisfare le esigenze degli
 					utenti offrendo loro una varieta' di prodotti che li facciano
 					sentire immersi tra i sapori. <br> La finalita' e' di
 					sviluppare un sito accessibile ed interattivo tale da garantire

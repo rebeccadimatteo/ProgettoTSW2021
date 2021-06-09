@@ -135,11 +135,11 @@ pre {
 	padding: 10px;
 }
 
-/* Add a card effect for articles */
 .card {
 	background-color: white;
 	padding: 20px;
 	margin-top: 20px;
+	-webkit-border-radius: 20px;
 }
 
 /* Clear floats after the columns */

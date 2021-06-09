@@ -145,6 +145,7 @@ pre {
 	background-color: white;
 	padding: 20px;
 	margin-top: 20px;
+	-webkit-border-radius: 20px;
 }
 
 /* Clear floats after the columns */
