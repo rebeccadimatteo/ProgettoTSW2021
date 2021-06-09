@@ -124,6 +124,7 @@ pre {
 	background-color: white;
 	width: 100%;
 	padding: 10px;
+	height: auto;
 }
 
 .img {
@@ -134,6 +135,7 @@ pre {
 	-ms-transition: all 1s ease;
 	transition: all 1s ease;
 	display: flex;
+	height: auto;
 }
 
 .img:hover {

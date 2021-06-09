@@ -134,6 +134,7 @@ pre {
        -o-transition: all 1s ease;
        -ms-transition: all 1s ease;
        transition: all 1s ease;
+       height: auto;
  }
  .img:hover {
        -webkit-filter: grayscale(0%);

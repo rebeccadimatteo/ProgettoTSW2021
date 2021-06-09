@@ -97,12 +97,14 @@ body {
 	background-color: white;
 	width: 300%;
 	padding: 10px;
+	height: auto;
 }
 
 .img2 {
 	background-color: white;
 	width: 100%;
 	padding: 10px;
+	height: auto;
 }
 
 /* Add a card effect for articles */
@@ -319,6 +321,7 @@ body {
 	-o-transition: all 0.5s ease;
 	-ms-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+
 }
 
 .zoom img:hover {

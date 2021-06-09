@@ -360,7 +360,7 @@ body {
 			<div class="card">
 
 				<h1 Style="color: #800000" align="center">Stai riscontrando dei
-					problemi? Contattaci!!</h1>
+					problemi? Contattaci!</h1>
 
 				<div class="address details"
 					style="float: center; text-align: center;">
@@ -392,13 +392,6 @@ body {
 					<div class="text-one">ISaporiDelSud@gmail.com</div>
 					<div class="text-two">IsaporiSrl@assistenza.com</div>
 				</div>
-
-
-
-
-
-
-
 			</div>
 		</div>
 		<div class="rightcolumn">

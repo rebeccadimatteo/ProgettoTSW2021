@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 
 <style>
 * {
@@ -202,10 +202,28 @@ body {
 	background: #dd4b39;
 	color: white;
 }
+
+.chip {
+	display: inline-block;
+	padding: 0 25px;
+	height: 50px;
+	font-size: 16px;
+	line-height: 50px;
+	border-radius: 25px;
+	background-color: #f1f1f1;
+}
+
+.chip img {
+	float: left;
+	margin: 0 10px 0 -25px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
 </style>
 </head>
 <body>
-<!--  parte superiore -->
+	<!--  parte superiore -->
 	<div class="header">
 		<div class="logo">
 			<div class="img2">
@@ -225,7 +243,7 @@ body {
 
 
 	</div>
-<!--  barra navivgazionale-->
+	<!--  barra navivgazionale-->
 	<div class="topnav"
 		style="display: flex; justify-content: space-between;">
 		<div class="topnavLeft" style="float: left; display: flex;">
@@ -299,15 +317,15 @@ body {
 			<div class="card">
 				<h1 Style="color: #800000" align="center">Ora vi raccontiamo la
 					nostra storia...</h1>
-				<h5 align="center">
+				<p align="center" style="font-family: 'Trebuchet MS', sans-serif;">
 
-					I sapori del sud tra terra e mare e' un sito di e-commerce
+					I Sapori del Sud tra Terra e Mare e' un sito di e-commerce
 					incentrato sulle specialita' gastronomiche del sud Italia.<br>
 					Quest'ultimo propone di accompagnare gli utenti in un percorso che
 					stimoli e valorizzi la scoperta delle tradizioni ed incentivi la
 					vendita di prodotti sia tipici che innovativi, mantenendo sempre
 					uno standard qualitativo alto ed un basso impatto ambientale.<br>
-					L'€™obiettivo infatti e' quello di soddisfare le esigenze degli
+					L'obiettivo infatti e' quello di soddisfare le esigenze degli
 					utenti offrendo loro una varieta' di prodotti che li facciano
 					sentire immersi tra i sapori. <br> La finalita' e' di
 					sviluppare un sito accessibile ed interattivo tale da garantire
@@ -315,8 +333,27 @@ body {
 					coinvolgere un numero cospicuo di utenti su vari dispositivi fissi
 					e mobile.
 
-				</h5>
-
+				</p>
+				<br>
+				<div class="chip">
+					<img src="images/avatar1.png" alt="Person" width="96" height="96">
+					Ilaria De Sio
+				</div>
+				&emsp;
+				<div class="chip">
+					<img src="images/avatar2.png" alt="Person" width="96" height="96">
+					Rebecca Di Matteo
+				</div>
+				&emsp;
+				<div class="chip">
+					<img src="images/avatar3.png" alt="Person" width="96" height="96">
+					Martina Giugliano
+				</div>
+				&emsp;
+				<div class="chip">
+					<img src="images/avatar4.png" alt="Person" width="96" height="96">
+					Angela De Martino
+				</div>
 			</div>
 		</div>
 		<div class="rightcolumn">
