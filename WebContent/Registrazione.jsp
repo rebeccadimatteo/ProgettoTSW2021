@@ -231,7 +231,7 @@ label {
 	<div class="header">
 		<div class="logo">
 			<div class="img2">
-				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
+				<a title="Registrati" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>
@@ -311,7 +311,7 @@ label {
 		%>
 
 	</div>
-<!-- controlli java script -->
+	<!-- controlli java script -->
 	<script>
 		function validateusername() {
 			var validusername = /^[A-Za-z]+$/;
@@ -470,6 +470,7 @@ label {
 						<br>
 					<fieldset>
 
+
 							<legend>
 								<b Style="color: #800000">Metodo Pagamento</b>
 							</legend>
@@ -491,9 +492,12 @@ label {
 
 					</p>
 
+					
+					
 
 
 				</form>
+				
 
 
 </div>

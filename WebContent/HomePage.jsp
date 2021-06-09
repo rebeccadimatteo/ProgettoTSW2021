@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>La nostra homepage</title>
+<title>Home Page</title>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 <link rel="stylesheet"
@@ -230,7 +230,7 @@ pre {
 	<div class="header">
 		<div class="logo">
 			<div class="img2">
-				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
+				<a title="Home Page" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>

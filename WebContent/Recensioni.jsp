@@ -334,7 +334,7 @@ body {
 	<div class="header">
 		<div class="logo">
 			<div class="img2">
-				<a title="Clicca per andare alla home" href="HomePage.jsp"><img
+				<a title="Recensione" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>
