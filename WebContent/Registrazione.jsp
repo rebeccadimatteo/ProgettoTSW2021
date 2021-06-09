@@ -7,6 +7,7 @@
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style>
 * {
@@ -187,6 +188,42 @@ body {
 	background: #dd4b39;
 	color: white;
 }
+
+
+.container {
+	background-color: #f2f2f2;
+	padding: 5px 20px 15px 20px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+}
+
+input[type=text],input[type=email],input[type=password],input[type=tel]  {
+	width: 30%;
+	margin-bottom: 20px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+
+
+label {
+	margin-bottom: 10px;
+	display: block;
+}
+
+.icon-container {
+	margin-bottom: 20px;
+	padding: 7px 0;
+	font-size: 24px;
+}
+
+.container {
+	background-color: #f2f2f2;
+	padding: 5px 20px 15px 20px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+}
 </style>
 </head>
 <body>
@@ -344,7 +381,7 @@ body {
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
-
+<div class="container">
 				<form action="RegistrazioneServlet" method="post" name="regform"
 					onsubmit="event.preventDefault(); myfunction(this)">
 
@@ -354,27 +391,29 @@ body {
 							<b Style="color: #800000">Dati Utente </b>
 						</legend>
 
-						<p align="center" Style="color: #800000">
-							Inserire Nome : <input type="text" name="nome"
-								placeholder="Rebecca" /><br>
+					<br>
+					
+					<div>  
+					<div style="float:left;display: block; width:40%;">
+					<label><i style='font-size:24px' class='fas'>&#xf2c1;</i> Nome </label><input type="text" name="nome"
+								placeholder="Mario" /><br>
+								</div>
+						
+						<div style="float:center;display: block;">
+						<label><i style='font-size:24px' class='fas'>&#xf2c1;</i> Cognome </label><input type="text" name="cognome"
+								placeholder="Rossi" />  
+						</div>		
+								</div>
+						<label><i style='font-size:24px' class='far'>&#xf2c2;</i> Codice Fiscale </label><input type="text" name="cf"
+								placeholder="CF123400" />
+						
+						<br>
+							<label><i class="material-icons">&#xe0d0;</i> Email </label><input type="email" onfocusout="erroreMail(this.value)" id="email" name="email"
+								placeholder="mariorossi@gmail.com" />
+						<p align=center style="color: black; font: bold;">
+							<span id=errorMessage > </span>
 						</p>
-						<p align="center" Style="color: #800000">
-							Inserire Cognome : <input type="text" name="cognome"
-								placeholder="Di Matteo" />
-						</p>
-						<p align="center" Style="color: #800000">
-							Inserire Codice Fiscale : <input type="text" name="cf"
-								placeholder="RDM00AOG1" />
-						</p>
-						<p align="center" Style="color: #800000">
-							Inserire Email : <input type="email"
-								onfocusout="erroreMail(this.value)" id="email" name="email"
-								placeholder="beccadimatteo@gmail.com" />
-						</p>
-						<p align=center Style="color: black; font: bold;">
-							<span id=errorMessage> </span>
-						</p>
-						<!--  controlla con ajak campo email attraverso uan query controlla se presente se lo è segnala a schermo che è presente -->
+						<!--  controlla con ajax campo email attraverso uan query controlla se presente se lo è segnala a schermo che è presente -->
 						<script>
 						function erroreMail(stringa){
 							
@@ -396,19 +435,18 @@ body {
 						}
 						
 						</script>
-						<p align="center" Style="color: #800000">
-							Inserire Cellulare : <input type="tel" id="phone" name="cell"
-								placeholder="3894685921" />
-						</p>
+						
+							<label><i class="material-icons">&#xe0dd;</i> Cellulare </label><input type="tel" id="phone" name="cell"
+								placeholder="+(39)3317782165" />
+						
 
-						<p align="center" Style="color: #800000">
-							Inserire nome utente : <input type="text" id="user"
-								name="username" placeholder="becca12" /><br>
-						</p>
-						<p align="center" Style="color: #800000">
-							Inserire password : <input type="password" name="pwsd"
+						<br>
+							<label><i class="material-icons">&#xe7fd;</i> Nome utente </label><input type="text" id="user"
+								name="username" placeholder="MarioRossi7" /><br>
+						<br>
+							<label><i class="material-icons">&#xe0da;</i> Password </label><input type="password" name="pwsd"
 								placeholder="**********" />
-						</p>
+						
 					</fieldset>
 					<%
 						String errore = (String) request.getAttribute("errore");
@@ -418,52 +456,38 @@ body {
 					%>
 					<h4><%=errore%>
 					</h4>
+						<fieldset>
+							<legend>
+								<b Style="color: #800000">Indirizzo di spedizione </b>
+							</legend>
+							<br> <label><i style='font-size: 24px' class='fas'>&#xf1ad;</i>
+								Via</label><input type="text" name="via" placeholder="Alcide De Gasperi" />
+							<label> Cap </label> <input type="text" name="cap"
+								placeholder="84084" /> <label><i
+								style='font-size: 24px' class='fas'>&#xf64f;</i> Città </label><input
+								type="text" name="citta" placeholder="Salerno" />
+						</fieldset>
+						<br>
 					<fieldset>
-						<legend>
-							<b Style="color: #800000">Indirizzo </b>
-						</legend>
-						<p align="center" Style="color: #800000">
-							Inserire via : <input type="text" name="via"
-								placeholder="Alcide De Gasperi" /><br>
-						</p>
-						<p align="center" Style="color: #800000">
-							Inserire Cap : <input type="text" name="cap" id="postalcod"
-								placeholder="84084" />
-						</p>
-						<p align="center" Style="color: #800000">
-							Inserire Città: <input type="text" name="citta"
-								placeholder="Fisciano" />
-						</p>
-					</fieldset>
 
+							<legend>
+								<b Style="color: #800000">Metodo Pagamento</b>
+							</legend>
+							<br> <label>IBAN <br> <input type="text"
+								name="iban" placeholder="IT567HN3456777" /></label> Tipologia Carta : <br>
+							<br> <input type="radio" name="tipo" id="mastercard"
+								value="MasterCard"><i style='font-size: 35px'
+								class='fab'>&emsp; &emsp; &#xf1f1;</i><br> <input
+								type="radio" name="tipo" id="visa" value="Visa"> <i
+								style="font-size: 33px" class="fa">&#xf1f0;</i> <label
+								for="fname"><i style='font-size: 24px' class='fas'>&#xf2bd;</i>
+								Nominativo Intestatario</label><input type="text" name="nominativo"
+								placeholder="Mario Rossi" />
 
-
-
-
-					<fieldset>
-						<legend>
-							<b Style="color: #800000">Metodo Pagamento</b>
-						</legend>
-						<p align="center" Style="color: #800000">
-							Inserire Iban : <input type="text" name="iban"
-								placeholder="IT567HN3456777" /><br>
-						</p>
-						<p align="center" Style="color: #800000">
-							Tipologia Carta : <input type="radio" name="tipo" id="mastercard"
-								value="MasterCard"> <label for="mastecard">MasterCard</label>
-							<input type="radio" name="tipo" id="visa" value="Visa"> <label
-								for="visa">Visa</label>
-
-						</p>
-						<p align="center" Style="color: #800000">
-							Nominativo Intestatario: <input type="text" name="nominativo"
-								placeholder="Rebecca Di Matteo" />
-						</p>
-
-
-					</fieldset>
+						</fieldset>
 					<p align="right">
-						<button id="pulsante" type="submit">Registrati</button>
+					<button id="pulsante" type="submit">Registrati</button>
+				
 
 					</p>
 
@@ -472,7 +496,7 @@ body {
 				</form>
 
 
-
+</div>
 			</div>
 		</div>
 

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 
 <style>
 * {
@@ -67,6 +67,10 @@ body {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 /* Create two unequal columns that floats next to each other */
 /* Left column */
@@ -82,9 +86,13 @@ body {
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
-	padding: 10px 20px;
+	padding: 10px 40px;
 	border: solid 1px #333;
 	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 
 pre {
@@ -104,10 +112,16 @@ pre {
 
 .logo {
 	float: left;
-	width: 2%;
+	width: 20%;
 	background-color: #f1f1f1;
 	padding-left: 5px;
 	margin-top: 9px;
+}
+
+.img2 {
+	background-color: white;
+	width: 100%;
+	padding: 10px;
 }
 
 /* Fake image */
@@ -117,11 +131,6 @@ pre {
 	padding: 10px;
 }
 
-.img2 {
-	background-color: white;
-	width: 100%;
-	padding: 10px;
-}
 /* Add a card effect for articles */
 .card {
 	background-color: white;
@@ -155,8 +164,13 @@ pre {
 		width: 100%;
 		display: block;
 	}
+	.topnav, .topnavLeft, .topnavRight {
+		flex-wrap: wrap;
+		flex-direction: column;
+		text-align: center;
+	}
 	.logo {
-		width: 80%;
+		width: 100%;
 		display: block;
 	}
 }
@@ -198,10 +212,44 @@ pre {
 	background: #dd4b39;
 	color: white;
 }
+
+.container {
+	background-color: #f2f2f2;
+	padding: 5px 20px 15px 20px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+}
+
+input[type=text] {
+	width: 30%;
+	margin-bottom: 20px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+label {
+	margin-bottom: 10px;
+	display: block;
+}
+
+.icon-container {
+	margin-bottom: 20px;
+	padding: 7px 0;
+	font-size: 24px;
+}
+
+.container {
+	background-color: #f2f2f2;
+	padding: 5px 20px 15px 20px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+}
 </style>
 </head>
 <body>
 
+	<!--  parte superiore con titolo e logo -->
 	<div class="header">
 		<div class="logo">
 			<div class="img2">
@@ -222,9 +270,10 @@ pre {
 
 	</div>
 
-	<div class="topnav">
-
-		<div class="topnav" style="float: left;">
+	<!--  barra navigazione -->
+	<div class="topnav"
+		style="display: flex; justify-content: space-between;">
+		<div class="topnavLeft" style="float: left; display: flex;">
 
 			<form action="ServletHomePage" method="get">
 
@@ -233,8 +282,6 @@ pre {
 				</button>
 				<input type="hidden" name="home" value="home">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
 
 			<form action="ServletHomePage" method="get">
 
@@ -242,55 +289,46 @@ pre {
 				<input type="hidden" name="home" value="catal">
 
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Chi Siamo</button>
 				<input type="hidden" name="home" value="chisiamo">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Contatti</button>
 				<input type="hidden" name="home" value="contatti">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Recensioni</button>
 				<input type="hidden" name="home" value="recensione">
 			</form>
 		</div>
 
+		<div class="topnavRight" style="float: right; display: flex;">
+			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
+			<%
+				if (request.getSession().getAttribute("utente") != null) {
+			%>
 
-		<%
-			if (request.getSession().getAttribute("utente") != null) {
-		%>
-		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-			&emsp;&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</div>
-		<div class="topnav" style="float: left;">
+
 			<form action="LoginServlet" method="post">
 				<button id="pulsantee" type="submit">Logout</button>
 				<input type="hidden" name="azione" value="autentico">
 			</form>
-		</div>
-		<%
-			} else {
-		%>
-		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+			<%
+				} else {
+			%>
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-			&emsp;&emsp;</div>
-
-		<div class="topnav" style="float: left;">
 
 			<form action="LoginServlet" method="get">
 				<button id="pulsantee" type="submit">Login</button>
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+
+
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
@@ -299,64 +337,51 @@ pre {
 		<%
 			}
 		%>
-
+		<!--  colonna destra -->
 	</div>
-
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
-				<form action="ServletCarrello" method="post">
+				<div class="container">
+					<form action="ServletCarrello" method="post">
 
+						<fieldset>
+							<legend>
+								<b Style="color: #800000">Indirizzo di spedizione </b>
+							</legend>
+							<br> <label><i style='font-size: 24px' class='fas'>&#xf1ad;</i>
+								Via</label><input type="text" name="via" placeholder="Alcide De Gasperi" />
+							<label> Cap </label> <input type="text" name="cap"
+								placeholder="84084" /> <label><i
+								style='font-size: 24px' class='fas'>&#xf64f;</i> Città </label><input
+								type="text" name="citta" placeholder="Salerno" />
+						</fieldset>
+						<fieldset>
 
+							<legend>
+								<b Style="color: #800000">Metodo Pagamento</b>
+							</legend>
+							<br> <label>IBAN <br> <input type="text"
+								name="iban" placeholder="IT567HN3456777" /></label> Tipologia Carta : <br>
+							<br> <input type="radio" name="tipo" id="mastercard"
+								value="MasterCard"><i style='font-size: 35px'
+								class='fab'>&emsp; &emsp; &#xf1f1;</i><br> <input
+								type="radio" name="tipo" id="visa" value="Visa"> <i
+								style="font-size: 33px" class="fa">&#xf1f0;</i> <label
+								for="fname"><i style='font-size: 24px' class='fas'>&#xf2bd;</i>
+								Nominativo Intestatario</label><input type="text" name="nominativo"
+								placeholder="Mario Rossi" />
 
-					<fieldset>
-
-						<legend>
-							<b Style="color: #800000">Indirizzo di spedizione </b>
-						</legend>
-						<p align="left" Style="color: #800000">
-							Inserire via : <input type="text" name="via"
-								placeholder="Alcide De Gasperi" /><br>
+						</fieldset>
+						<p align=right>
+							<br> <input type="hidden" name="az" value="acquista">
+							<button id="pulsante" type="submit">Acquista</button>
+							<br>
 						</p>
-						<p align="left" Style="color: #800000">
-							Inserire Cap : <input type="text" name="cap" placeholder="84084" />
-						</p>
-						<p align="left" Style="color: #800000">
-							Inserire Città: <input type="text" name="citta"
-								placeholder="Fisciano" />
-					</fieldset>
-					<fieldset>
-
-						<legend>
-							<b Style="color: #800000">Metodo Pagamento</b>
-						</legend>
 
 
-
-						<p align="left" Style="color: #800000">
-							Inserire Iban : <input type="text" name="iban"
-								placeholder="IT567HN3456777" /><br>
-						</p>
-						<p align="left" Style="color: #800000">
-							Tipologia Carta : <input type="radio" name="tipo" id="mastercard"
-								value="MasterCard"> <label for="mastecard">MasterCard</label>
-							<input type="radio" name="tipo" id="visa" value="Visa"> <label
-								for="visa">Visa</label>
-
-						</p>
-						<p align="left" Style="color: #800000">
-							Nominativo Intestatario: <input type="text" name="nominativo"
-								placeholder="Rebecca Di Matteo" />
-						</p>
-					</fieldset>
-
-					<br> <input type="hidden" name="az" value="acquista">
-					<button id="pulsante" type="submit">Acquista</button>
-					<br>
-
-
-				</form>
-
+					</form>
+				</div>
 
 
 

@@ -221,6 +221,16 @@ pre {
 	background: #dd4b39;
 	color: white;
 }
+
+
+.sin {
+float: left;
+}
+.des {
+float: right;
+text-align: right;
+}
+
 </style>
 </head>
 <body>
@@ -336,19 +346,20 @@ pre {
 					else {
 						for (Item el : car.getProdotti()) {
 				%>
-
-				<p align="left">
-					<img src="<%=el.getImg()%>" width="100" height="100"> <b><%=el.getNome()%></b>Prezzo:
-					$
-					<%=el.getPrezzo()%>
-					Quantita':<%=(int) el.getQuantita()%>
-
+	
+				<p align=left>
+				<img src="<%=el.getImg()%>" width="100" height="100"> <b><%=el.getNome()%> </b> x<%=(int) el.getQuantita()%>
+				&emsp;&emsp;&emsp;
+				$<%=el.getPrezzo()%>
+				
 				</p>
 				<%
 					}
 				%>
+				<br>
+				<br>
 				<p align="center">
-					Somma Totale: $<%=car.SommaPrezzo()%><br>
+					<b>Totale:</b> $<%=car.SommaPrezzo()%><br>
 				</p>
 				<div style="text-align: center">
 					<form action="ServletOrdine" method="get">
