@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet {
 	// metodo get porta a login page per far loggare la persona
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/LoginPagee.jsp");
 		rd.forward(request, response);
 
@@ -72,7 +73,7 @@ public class LoginServlet extends HttpServlet {
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Registrazione.jsp");
 			rd.forward(request, response);
 		}
-		// invalidare la sessione
+		// uscire dal login
 		String azione = request.getParameter("azione");
 		if (azione != null) {
 			if (azione.equalsIgnoreCase("autentico")) {
@@ -81,6 +82,7 @@ public class LoginServlet extends HttpServlet {
 				rd.forward(request, response);
 			}
 		}
+		
 
 	}
 

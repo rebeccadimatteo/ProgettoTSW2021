@@ -329,12 +329,12 @@ th {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		</div>
+		
 
 		<%
 			}
 		%>
-
+</div>
 	</div> <!-- Stampa il resoconto dell'ordine quindi la tabella con tutti i prodotti -->
 	<div class="row">
 		<div class="leftcolumn">

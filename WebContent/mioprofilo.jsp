@@ -9,7 +9,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<title>Ecco il mio profilo</title>
+<title></title>
 <style>
 * {
 	box-sizing: border-box;
@@ -193,10 +193,11 @@ body {
 </head>
 <body>
 
+	<!--  parte superiore con titolo e logo -->
 	<div class="header">
 		<div class="logo">
 			<div class="img2">
-				<a title="Il Mio Profilo" href="HomePage.jsp"><img
+				<a title="Home Page" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>
@@ -212,8 +213,7 @@ body {
 
 
 	</div>
-
-
+	<!--  barra navigazione -->
 	<div class="topnav"
 		style="display: flex; justify-content: space-between;">
 		<div class="topnavLeft" style="float: left; display: flex;">
@@ -251,7 +251,7 @@ body {
 		</div>
 
 		<div class="topnavRight" style="float: right; display: flex;">
-
+			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
 			<%
 				if (request.getSession().getAttribute("utente") != null) {
 			%>
@@ -275,13 +275,16 @@ body {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		</div>
-
+		
 		<%
 			}
 		%>
-
+			</div>
+		
+		
 	</div>
+
+	
 
 	<div class="row">
 		<div class="leftcolumn">

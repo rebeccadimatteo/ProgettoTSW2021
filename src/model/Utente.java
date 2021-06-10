@@ -85,24 +85,24 @@ public class Utente {
 	public void inserisceutente() {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
-
+        
 		try {
 
 			String sql = "INSERT INTO Utente(ID,Nome,Cognome,CF,Email,Cellulare,Tipologia,NumeroOrdini,Pwsd,Via,Cap,Citta) values (?,?,?,?,?,?,?,?,?,?,?,?)";
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, id);
-			preparedStatement.setString(2, nome);
-			preparedStatement.setString(3, cognome);
-			preparedStatement.setString(4, cf);
-			preparedStatement.setString(5, email);
-			preparedStatement.setString(6, cellulare);
-			preparedStatement.setString(7, tipologia);
-			preparedStatement.setInt(8, numeroordini);
-			preparedStatement.setString(9, pswd);
-			preparedStatement.setString(10, via);
-			preparedStatement.setString(11, cap);
-			preparedStatement.setString(12, citta);
+			preparedStatement.setString(1,id);
+			preparedStatement.setString(2,nome);
+			preparedStatement.setString(3,cognome);
+			preparedStatement.setString(4,cf);
+			preparedStatement.setString(5,email);
+			preparedStatement.setString(6,cellulare);
+			preparedStatement.setString(7,tipologia);
+			preparedStatement.setInt(8,numeroordini);
+			preparedStatement.setString(9,pswd);
+			preparedStatement.setString(10,via);
+			preparedStatement.setString(11,cap);
+			preparedStatement.setString(12,citta);
 
 			preparedStatement.executeUpdate();
 

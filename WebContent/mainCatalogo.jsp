@@ -95,8 +95,8 @@ body {
 /* Fake image */
 .img {
 	background-color: white;
-	width: 300%;
-	padding: 10px;
+	width: 100%;
+	padding: 5px;
 	height: auto;
 }
 
@@ -413,12 +413,12 @@ body {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		</div>
+		
 
 		<%
 			}
 		%>
-
+</div>
 	</div>
 	<!-- Stampa catalogo -->
 	<div class="row">

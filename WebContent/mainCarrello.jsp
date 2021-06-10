@@ -316,11 +316,11 @@ text-align: right;
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		</div>
-
+		
 		<%
 			}
 		%>
+</div>
 
 	</div>
 

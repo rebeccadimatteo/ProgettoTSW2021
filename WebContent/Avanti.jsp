@@ -332,13 +332,14 @@ label {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		</div>
-
+		
 		<%
 			}
 		%>
 		<!--  colonna destra -->
 	</div>
+	</div>
+	
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">

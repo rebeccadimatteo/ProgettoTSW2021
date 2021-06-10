@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home Page</title>
+<title></title>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 <link rel="stylesheet"
@@ -310,11 +310,12 @@ pre {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		</div>
-
+		
 		<%
 			}
 		%>
+			</div>
+		
 		<!--  colonna destra -->
 	</div>
 	<div class="row">

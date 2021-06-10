@@ -10,7 +10,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<title>Il mio profilo</title>
+<title></title>
 <style>
 * {
 	box-sizing: border-box;
@@ -314,14 +314,14 @@ th {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		</div>
+		
 
 		<%
 			}
 		%>
 
 
-
+</div>
 	</div>
 
 	<div class="row">

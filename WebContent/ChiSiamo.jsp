@@ -306,12 +306,13 @@ body {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		</div>
+		
 
 		<%
 			}
 		%>
 
+	</div>
 	</div>
 	<div class="row">
 		<div class="leftcolumn">
