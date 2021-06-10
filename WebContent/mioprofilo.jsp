@@ -20,7 +20,13 @@ body {
 	padding: 10px;
 	background: #f1f1f1;
 }
-
+.header {
+	padding: 30px;
+	text-align: center;
+	background: white;
+	display: flex;
+	flex-wrap: wrap;
+}
 .header h1 {
 	font-size: 50px;
 }
@@ -49,6 +55,7 @@ body {
 	color: black;
 }
 
+
 .logo {
 	float: left;
 	width: 20%;
@@ -61,6 +68,7 @@ body {
 	background-color: white;
 	width: 100%;
 	padding: 10px;
+	height: auto;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -99,6 +107,7 @@ body {
 	clear: both;
 }
 
+
 #pulsante {
 	outline: none;
 	cursor: pointer;
@@ -106,16 +115,13 @@ body {
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
-	padding: 10px 20px;
+	padding: 10px 40px;
 	border: solid 1px #333;
 	background: white;
-}
-/* Footer */
-.footer {
-	padding: 20px;
-	text-align: center;
-	background: #ddd;
-	margin-top: 20px;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 
 #pulsantee {
@@ -128,7 +134,19 @@ body {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
+/* Footer */
+.footer {
+	padding: 20px;
+	text-align: center;
+	background: #ddd;
+	margin-top: 20px;
+}
+
 
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {

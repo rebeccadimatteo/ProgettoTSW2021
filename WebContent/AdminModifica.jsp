@@ -253,8 +253,26 @@ pre {
 		
 	</div>
 
-	<div class="topnav">
-	<h1  >Ciao Amministratore!</h1>
+	<div class="topnav" style="display: flex; justify-content: space-between;">
+		<div class="topnavLeft" style="float: left; display: flex;">
+	<h1 style="color:white">Ciao Amministratore!</h1>
+	</div>
+	<div class="topnavRight" style="float: right; display: flex;">
+			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
+			<%
+				if (request.getSession().getAttribute("utente") != null) {
+			%>
+
+
+
+			<form action="LoginServlet" method="post">
+				<button id="pulsantee" type="submit">Logout</button>
+				<input type="hidden" name="azione" value="autentico">
+			</form>
+			<%
+				}
+			%>
+	</div>
 	</div>
 
 	<div class="row">
@@ -274,7 +292,7 @@ pre {
 								type="text" name="codmod" placeholder="003" /><br> <br>
 							
 								</form>
-								
+							
 				<form action="ServletAdmin" method="post">
 							<p align="left">
 							<input
@@ -380,7 +398,7 @@ pre {
 		</div>
 		
 	</div>
-
+</div>
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">

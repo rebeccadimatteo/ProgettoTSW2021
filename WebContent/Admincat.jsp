@@ -22,16 +22,21 @@ body {
 
 /* Header/Blog Title */
 
+
 #pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 .logo {
 	float: left;
@@ -59,17 +64,6 @@ background: #333;
 .topnav {
 	overflow: hidden;
 	background-color: #333;
-}
-#pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
 }
 
 /* Style the topnav links */
@@ -243,8 +237,26 @@ background: #333;
 		
 	</div>
 
-	<div class="topnav">
-	<h1>Ciao Amministratore!</h1>
+	<div class="topnav" style="display: flex; justify-content: space-between;">
+		<div class="topnavLeft" style="float: left; display: flex;">
+	<h1 style="color:white">Ciao Amministratore!</h1>
+	</div>
+	<div class="topnavRight" style="float: right; display: flex;">
+			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
+			<%
+				if (request.getSession().getAttribute("utente") != null) {
+			%>
+
+
+
+			<form action="LoginServlet" method="post">
+				<button id="pulsantee" type="submit">Logout</button>
+				<input type="hidden" name="azione" value="autentico">
+			</form>
+			<%
+				}
+			%>
+	</div>
 	</div>
 
 	<div class="row">

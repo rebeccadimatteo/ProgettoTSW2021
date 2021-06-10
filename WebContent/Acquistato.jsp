@@ -64,6 +64,23 @@ body {
 	color: black;
 }
 
+
+#pulsante {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 10px 40px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
+
 #pulsantee {
 	outline: none;
 	cursor: pointer;
@@ -74,6 +91,10 @@ body {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -83,17 +104,6 @@ body {
 	width: 75%;
 }
 
-#pulsante {
-	outline: none;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	font: bold 12px Arial, Helvetica, sans-serif;
-	color: #800000;
-	padding: 10px 20px;
-	border: solid 1px #333;
-	background: white;
-}
 
 pre {
 	display: block;
@@ -112,7 +122,7 @@ pre {
 
 .logo {
 	float: left;
-	width: 2%;
+	width: 20%;
 	background-color: #f1f1f1;
 	padding-left: 5px;
 	margin-top: 9px;
@@ -124,7 +134,12 @@ pre {
 	width: 100%;
 	padding: 10px;
 }
-
+.img2 {
+	background-color: white;
+	width: 100%;
+	padding: 10px;
+	height: auto;
+}
 /* Add a card effect for articles */
 .card {
 	background-color: white;

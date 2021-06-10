@@ -438,7 +438,7 @@ body {
 					</p>
 
 
-					<div class="zoom img" align="left">
+					<div class="zoom img" align="center">
 						<img src="<%=el.getImg()%>">
 					</div>
 

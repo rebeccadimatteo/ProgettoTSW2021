@@ -59,6 +59,7 @@ body {
 	color: black;
 }
 
+
 .logo {
 	float: left;
 	width: 20%;
@@ -71,6 +72,7 @@ body {
 	background-color: white;
 	width: 100%;
 	padding: 10px;
+	height: auto;
 }
 /* Create two unequal columns that floats next to each other */
 /* Left column */
@@ -108,17 +110,6 @@ body {
 	clear: both;
 }
 
-#pulsante {
-	outline: none;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	font: bold 12px Arial, Helvetica, sans-serif;
-	color: #800000;
-	padding: 10px 20px;
-	border: solid 1px #333;
-	background: white;
-}
 /* Footer */
 .footer {
 	padding: 20px;
@@ -141,6 +132,22 @@ tr:nth-child(even) {
 	background-color: #f2f2f2
 }
 
+#pulsante {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 10px 40px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
+
 #pulsantee {
 	outline: none;
 	cursor: pointer;
@@ -151,6 +158,10 @@ tr:nth-child(even) {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 
 th {
@@ -228,23 +239,30 @@ th {
 </head>
 <body>
 
+	<!--  parte superiore con titolo e logo -->
 	<div class="header">
 		<div class="logo">
-			<div class="img">
-				<a title="I miei Ordini" href="HomePage.jsp"><img
+			<div class="img2">
+				<a title="Home Page" href="HomePage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
 		</div>
-		<h1>
-			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-		</h1>
-		<p Style="color: #800000">Sito di e-commerce incentrato sulle
-			specialita' gastronomiche del sud Italia.</p>
+
+		<div>
+			<h1>
+				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
+
+			</h1>
+			<p Style="color: #800000">Sito di e-commerce incentrato sulle
+				specialita' gastronomiche del sud Italia.</p>
+		</div>
+
+
 	</div>
-
-
-	<div class="topnav">
-		<div class="topnav" style="float: left;">
+	<!--  barra navigazione -->
+	<div class="topnav"
+		style="display: flex; justify-content: space-between;">
+		<div class="topnavLeft" style="float: left; display: flex;">
 
 			<form action="ServletHomePage" method="get">
 
@@ -253,8 +271,6 @@ th {
 				</button>
 				<input type="hidden" name="home" value="home">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
 
 			<form action="ServletHomePage" method="get">
 
@@ -262,68 +278,57 @@ th {
 				<input type="hidden" name="home" value="catal">
 
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Chi Siamo</button>
 				<input type="hidden" name="home" value="chisiamo">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Contatti</button>
 				<input type="hidden" name="home" value="contatti">
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+
+
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Recensioni</button>
 				<input type="hidden" name="home" value="recensione">
 			</form>
 		</div>
 
+		<div class="topnavRight" style="float: right; display: flex;">
+			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
+			<%
+				if (request.getSession().getAttribute("utente") != null) {
+			%>
 
-		<%
-			if (request.getSession().getAttribute("utente") != null) {
-		%>
-		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-			&emsp;&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</div>
-		<div class="topnav" style="float: left;">
+
 			<form action="LoginServlet" method="post">
 				<button id="pulsantee" type="submit">Logout</button>
 				<input type="hidden" name="azione" value="autentico">
 			</form>
-		</div>
-		<%
-			} else {
-		%>
-		<div class="topnav" style="float: left;">&emsp; &emsp; &emsp;
+			<%
+				} else {
+			%>
 
-			&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
-			&emsp;&emsp;</div>
-
-		<div class="topnav" style="float: left;">
 
 			<form action="LoginServlet" method="get">
 				<button id="pulsantee" type="submit">Login</button>
 			</form>
-		</div>
-		<div class="topnav" style="float: left;">
+
+
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
 		
-
 		<%
 			}
 		%>
-
-
-</div>
+			</div>
+		
+		<!--  colonna destra -->
 	</div>
-
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
