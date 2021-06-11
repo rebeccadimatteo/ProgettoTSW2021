@@ -33,39 +33,66 @@ public class Recensione {
 
 	}
 
-	public Recensione(int num, String descrizione, String idutente) {
+	
+
+	public Recensione(int num, String descrizione, String idutente, String nomeprodotto) {
 		super();
-		Random n = new Random();
-		int d = 1 + n.nextInt(100000) + 1;
-		this.num = d;
+		this.num = num;
 		this.descrizione = descrizione;
 		this.idutente = idutente;
+		this.nomeprodotto = nomeprodotto;
 	}
+	
 
-	// get e set
+
+
 	public int getNum() {
 		return num;
 	}
+
+
 
 	public void setNum(int num) {
 		this.num = num;
 	}
 
+
+
 	public String getDescrizione() {
 		return descrizione;
 	}
+
+
 
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
 
+
+
 	public String getIdutente() {
 		return idutente;
 	}
 
+
+
 	public void setIdutente(String idutente) {
 		this.idutente = idutente;
 	}
+
+
+
+	public String getNomeprodotto() {
+		return nomeprodotto;
+	}
+
+
+
+	public void setNomeprodotto(String nomeprodotto) {
+		this.nomeprodotto = nomeprodotto;
+	}
+
+
 
 	// restituisce totale recensioni nel db
 	public ArrayList<Recensione> totrecensioni() {
@@ -87,10 +114,11 @@ public class Recensione {
 				String descr = rs.getString(2);
 
 				String idut = rs.getString(3);
+				String nomp = rs.getString(4);
 
 				Recensione a = new
 
-				Recensione(num, descr, idut);
+				Recensione(num, descr, idut,nomp);
 				fin.add(a);
 
 			}
@@ -106,13 +134,14 @@ public class Recensione {
 		PreparedStatement preparedStatement = null;
 
 		try {
-			String sql = "INSERT INTO Recensione(Num,Descrizione,IDUtente) values (?,?,?)";
+			String sql = "INSERT INTO Recensione(Num,Descrizione,IDUtente,NomeProdotto) values (?,?,?,?)";
 
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, num);
 			preparedStatement.setString(2, descrizione);
 			preparedStatement.setString(3, idutente);
+			preparedStatement.setString(4, nomeprodotto);
 			System.out.println(preparedStatement);
 			preparedStatement.executeUpdate();
 
@@ -144,5 +173,6 @@ public class Recensione {
 	private int num;
 	private String descrizione;
 	private String idutente;
+	private String nomeprodotto;
 
 }

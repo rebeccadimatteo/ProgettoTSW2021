@@ -1,5 +1,5 @@
 
-use ProgettoTsw;
+use dbprogettotsw;
 
 /*Rappresento prima le entita' indipendenti*/
 
@@ -21,15 +21,6 @@ Citta VARCHAR(50) NOT NULL,
 PRIMARY KEY(ID)
 );
 
-CREATE TABLE IF NOT EXISTS Recensione(
-Num INTEGER PRIMARY KEY,
-Descrizione VARCHAR(200),
-IDUtente VARCHAR(10),
-FOREIGN KEY(IDUtente) REFERENCES Utente(ID)
-								ON DELETE CASCADE 
-								ON UPDATE CASCADE
-
-);
 
 
 CREATE TABLE IF NOT EXISTS Produttore(
@@ -158,5 +149,15 @@ FOREIGN KEY(CodiceMetodoDiPagamento) REFERENCES MetodoDiPagamento(Codice)
 FOREIGN KEY(IDUtente) REFERENCES Utente(ID)
 								ON DELETE CASCADE 
 								ON UPDATE CASCADE
+);
+CREATE TABLE IF NOT EXISTS Recensione(
+Num INTEGER PRIMARY KEY,
+Descrizione VARCHAR(200),
+IDUtente VARCHAR(10),
+NomeProdotto VARCHAR(100),
+FOREIGN KEY(IDUtente) REFERENCES Utente(ID)
+								ON DELETE CASCADE 
+								ON UPDATE CASCADE
+
 );
 

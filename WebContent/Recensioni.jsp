@@ -137,6 +137,23 @@ body {
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 
+#pulsante3 {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	align: "center";
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 5px 10px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
+
 /* Clear floats after the columns */
 .row:after {
 	content: "";
@@ -255,7 +272,7 @@ body {
 	height: 620px;
 	width: 460px;
 	background-color: white;
-	border-radius: 24px;
+	border-radius: 34px;
 	border: 2px solid black;
 	overflow: hidden;
 }
@@ -318,14 +335,16 @@ body {
 }
 
 .button2 {
-	height: 42px;
-	width: 60%;
+	height: 20px;
+	width: 20%;
+	align: center;
 	margin: 24px auto;
 	border-radius: 6px;
 	border: none;
 	color: white;
 	background: linear-gradient(to left bottom, #000046, #5B86E5);
 	cursor: pointer;
+	margin: 24px auto;
 }
 </style>
 </head>
@@ -410,12 +429,12 @@ body {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		
 
-		<%
-			}
-		%>
-</div>
+
+			<%
+				}
+			%>
+		</div>
 	</div>
 
 	<div class="row">
@@ -431,6 +450,9 @@ body {
 						<form class="form2" action="ServletRecensioni" method="post">
 							<h4 class="h42">Nome utente</h4>
 							<input class="input2" type="text" name="id" /> <br>
+
+							<h4 class="h42">Nome Prdotto</h4>
+							<input class="input2" type="text" name="nomep" /> <br>
 							<h4 class="h42">Recensione</h4>
 
 							<textarea class=textarea2 id="arearec" name="arearec" rows=8
@@ -454,21 +476,21 @@ body {
 								<label for="star-1" title="1 star"> <i
 									class="active fa fa-star" aria-hidden="true"></i>
 								</label>
+
+
 							</div>
-
-
-							<button class=button2 id="pulsante" type="submit">Invia</button>
-						</form>
 					</div>
 
 
 
-
-
-
 				</div>
+				<p align="center">
+					<button class="button2" id="pulsante3" type="submit">Invia</button>
+				</form>
 			</div>
+
 		</div>
+
 		<div class="rightcolumn">
 			<div class="card">
 

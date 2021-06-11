@@ -249,6 +249,8 @@ pre {
 	<div class="topnav" style="display: flex; justify-content: space-between;">
 		<div class="topnavLeft" style="float: left; display: flex;">
 	<h1 style="color:white">Ciao Amministratore!</h1>
+	
+				
 	</div>
 	<div class="topnavRight" style="float: right; display: flex;">
 			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
@@ -340,6 +342,19 @@ pre {
 		<div class="rightcolumn">
 			<div class="card">
 				<h2 Style="color: #800000">Gestisci</h2>
+				
+				<form action="ServletAdmin" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza HomePage</button>
+					<input type="hidden" name="azione" value="homepage">
+				<br> <br>
+					</form>
+					<form action="ServletDati" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza Catalogo</button>
+					<input type="hidden" name="azione" value="admin">
+				<br> <br>
+				</form>
                 <form action="ServletAdmin" method="get">
                
 				<button  id="pulsante"
@@ -361,29 +376,15 @@ pre {
 				<br> <br>
 					</form>
 				
-				<form action="ServletDati" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza Catalogo</button>
-					<input type="hidden" name="azione" value="admin">
-				<br> <br>
-				</form>
+				
 				<form action="ServletAdmin" method="get">
 				<button  id="pulsante"
 					type="submit">Ordini totali effettuati dai clienti</button>
 					<input type="hidden" name="azione" value="ordini">
 				<br> <br>
 					</form>
-				
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza HomePage</button>
-					<input type="hidden" name="azione" value="homepage">
-				<br> <br>
-					</form>
-				
-				
-				
-				
+					
+					
 				
 				<form action="ServletRecensioni" method="get">
 				<button  id="pulsante"
@@ -396,6 +397,7 @@ pre {
 			
 		</div>
 		
+	</div>
 	</div>
 
 	<div class="footer">

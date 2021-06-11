@@ -36,8 +36,9 @@ public class ServletRecensioni extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
+		String nome = request.getParameter("nomep");
 		String descr = request.getParameter("arearec");
-		Recensione nuova = new Recensione(0, descr, id);
+		Recensione nuova = new Recensione(0, descr, id,nome);
 
 		nuova.inseriscirecensione();
 

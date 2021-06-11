@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -61,13 +62,14 @@ public class ServletAdmin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String azionee = request.getParameter("azionee");
+		String azione3 = request.getParameter("azione3");
 
 		String codice = request.getParameter("cod");
 		String nome = request.getParameter("nome");
 		String descrizione = request.getParameter("descrizione");
 		double prezzo = Double.parseDouble(request.getParameter("prezzo"));
 		double peso = Double.parseDouble(request.getParameter("peso"));
-		String codicecategoria = request.getParameter("codcat");
+		String codicecategoria = request.getParameter("tipo");
 		String img = request.getParameter("image");
 		Item nuovo = new Item(codice, nome, descrizione, prezzo, peso, codicecategoria, img, 0);
 
@@ -122,6 +124,20 @@ public class ServletAdmin extends HttpServlet {
 
 			}
 		}
-	}
+		if(azione3!=null) {
+		if (azione3.equalsIgnoreCase("cliente")) {
+			
+			String c = null;
+			request.setAttribute("c",c);
+			c=(String)c;
 
-}
+			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdminOrdineCliente.jsp");
+			rd.forward(request, response);
+
+		}
+		}
+	}
+		
+
+
+	}

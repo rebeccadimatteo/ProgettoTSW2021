@@ -341,12 +341,12 @@ th {
 			<div class="card">
 				<table width="75%" border="1">
 					<tr>
-						<th style="width: 25%">Codice</th>
+						<th style="width: 25%">Prodotto</th>
 						<th style="width: 25%">Nome</th>
 						<th style="width: 25%">Descrizione</th>
 						<th style="width: 25%">Prezzo</th>
 						<th style="width: 25%">Peso</th>
-						<th style="width: 25%">Quantita'</th>
+						
 					</tr>
 
 					<%
@@ -358,24 +358,24 @@ th {
 
 
 					<tr>
-						<td><%=el.getCodice()%> &nbsp;</td>
+						<td><img src="<%=el.getImg()%>" width="100" height="100">&nbsp;</td>
 						<td><%=el.getNome()%> &nbsp;</td>
 						<td><%=el.getDescrizione()%>&nbsp;</td>
 						<td><%=el.getPrezzo()%> &nbsp;</td>
 						<td><%=el.getPeso()%> &nbsp;</td>
-						<td><%=(int) el.getQuantita()%>&nbsp;</td>
+					
 						<td>
 							<form action="ServletOrdine" method="post">
-								<button id="pulsante2" type="submit">Aumenta</button>
-								<br> <input type="hidden" name="azione" value="+">
+							<input type="number" name="age" min="1" max="30" step="1">
+							<br> <input type="hidden" name="azione" value="+">
 								<input type="hidden" name="cod" value="<%=el.getCodice()%>">
+								<% if(el.getQuantita()>30){%>
+								<p>Quanità non disponibile</p>
+								<%
+								}%>
 
 							</form>
-							<form action="ServletOrdine" method="post">
-								<button id="pulsante2" type="submit">Diminuisci</button>
-								<br> <input type="hidden" name="azione" value="-">
-								<input type="hidden" name="cod2" value="<%=el.getCodice()%>">
-							</form>
+							
 							<form action="ServletOrdine" method="post">
 								<button id="pulsante2" type="submit">Rimuovi</button>
 								<br> <input type="hidden" name="azione" value="rim">

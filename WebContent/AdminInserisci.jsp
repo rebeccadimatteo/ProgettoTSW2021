@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<script src='https://kit.fontawesome.com/a076d05399.js' ></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 * {
@@ -19,16 +20,17 @@ body {
 }
 
 #pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
 }
+
 .header h1 {
 	font-size: 50px;
 }
@@ -38,16 +40,16 @@ background: #333;
 	padding: 30px;
 	text-align: center;
 	background: white;
-	display:flex;
-	flex-wrap:wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
-
 
 /* Style the top navigation bar */
 .topnav {
 	overflow: hidden;
 	background-color: #333;
 }
+
 .img2 {
 	background-color: white;
 	width: 100%;
@@ -57,23 +59,24 @@ background: #333;
 .topnav a {
 	float: left;
 	display: flex;
-	flex-wrap:wrap;
-	justify-content :space-between;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 }
+
 #pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
 }
 
 /* Change color on hover */
@@ -87,6 +90,7 @@ background: #333;
 	float: left;
 	width: 75%;
 }
+
 #pulsante {
 	outline: none;
 	cursor: pointer;
@@ -102,6 +106,7 @@ background: #333;
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
+
 pre {
 	display: block;
 	font-family: Arial;
@@ -116,14 +121,13 @@ pre {
 	background-color: #f1f1f1;
 	padding-left: 20px;
 }
+
 .logo {
 	float: left;
 	width: 20%;
 	background-color: #f1f1f1;
 	padding-left: 5px;
 	margin-top: 9px;
-	
-	
 }
 
 /* Fake image */
@@ -167,60 +171,54 @@ pre {
 		width: 100%;
 		display: block;
 	}
-	
-	.topnav,.topnavLeft,.topnavRight {
-	flex-wrap:wrap;
-	flex-direction:column;
-	text-align:center;
-	
+	.topnav, .topnavLeft, .topnavRight {
+		flex-wrap: wrap;
+		flex-direction: column;
+		text-align: center;
 	}
-	
-	
 	.logo {
 		width: 100%;
 		display: block;
 	}
 }
 
-
 /* LOGHI FOOTER */
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
+	padding: 20px;
+	font-size: 30px;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
 }
 
 .fa:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+	background: #3B5998;
+	color: white;
 }
 
 .fa-youtube {
-  background: #bb0000;
-  color: white;
+	background: #bb0000;
+	color: white;
 }
 
 .fa-instagram {
-  background: #125688;
-  color: white;
+	background: #125688;
+	color: white;
 }
 
-
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+	background: #55ACEE;
+	color: white;
 }
 
 .fa-google {
-  background: #dd4b39;
-  color: white;
+	background: #dd4b39;
+	color: white;
 }
 </style>
 </head>
@@ -232,25 +230,26 @@ pre {
 				<a title="Inserisci un nuovo prodotto" href="Adminhomepage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
-		</div>	
+		</div>
 
 		<div>
-		<h1>
-			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-			
-		</h1>
-		<p Style="color: #800000">Sito di e-commerce incentrato sulle
-			specialita' gastronomiche del sud Italia.</p>
+			<h1>
+				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
+
+			</h1>
+			<p Style="color: #800000">Sito di e-commerce incentrato sulle
+				specialita' gastronomiche del sud Italia.</p>
 		</div>
-		
-		
+
+
 	</div>
 
-	<div class="topnav" style="display: flex; justify-content: space-between;">
+	<div class="topnav"
+		style="display: flex; justify-content: space-between;">
 		<div class="topnavLeft" style="float: left; display: flex;">
-	<h1 style="color:white">Ciao Amministratore!</h1>
-	</div>
-	<div class="topnavRight" style="float: right; display: flex;">
+			<h1 style="color: white">Ciao Amministratore!</h1>
+		</div>
+		<div class="topnavRight" style="float: right; display: flex;">
 			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
 			<%
 				if (request.getSession().getAttribute("utente") != null) {
@@ -265,13 +264,13 @@ pre {
 			<%
 				}
 			%>
-	</div>
+		</div>
 	</div>
 
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
-				
+
 				<form action="ServletAdmin" method="post">
 
 					<fieldset>
@@ -284,38 +283,39 @@ pre {
 						<fieldset>
 							<b Style="color: #800000">Inserisci codice prodotto:</b> <input
 								type="text" name="cod" placeholder="003" /><br> <br>
-							<b Style="color: #800000">Inserisci nome:</b> <input
-								type="text" name="nome" placeholder="Formaggio al tartufo" /> <br>
-								</fieldset>
-							<br>
-							<fieldset>
+							<b Style="color: #800000">Inserisci nome:</b> <input type="text"
+								name="nome" placeholder="Formaggio al tartufo" /> <br>
+						</fieldset>
+						<br>
+						<fieldset>
 							<b Style="color: #800000">Inserisci descrizione:</b> <input
-								type="text" name="descrizione" placeholder="Questo formaggio proviene.."  size="100" /> <br>
+								type="text" name="descrizione"
+								placeholder="Questo formaggio proviene.." size="100" /> <br>
 							<br>
-							</fieldset>
-							<fieldset>
+						</fieldset>
+						<fieldset>
 							<b Style="color: #800000">Inserisci prezzo:</b> <input
-								type="number" name="prezzo"  size="100" /> <br>
-							<br>
-							<b Style="color: #800000">Inserisci peso:</b> <input
-								type="number" name="peso"  size="100" /> <br>
-							<br>
-							</fieldset>
-							<fieldset>
+								type="number" name="prezzo" size="100" /> <br> <br> <b
+								Style="color: #800000">Inserisci peso:</b> <input type="number"
+								name="peso" size="100" /> <br> <br>
+						</fieldset>
+						<fieldset>
 							<b Style="color: #800000">Inserisci codice categoria :</b><br>
-							<b Style="color: #800000"> Digita VL per inserire in Vini E Liquori:</b> <br>
-							<b Style="color: #800000"> Digita F per inserire inFormaggi:</b><br>
-							<b Style="color: #800000"> Digita P per inserire in Pasta:</b><br><input
-								type="text" name="codcat"  placeholder="Vl" /> <br>
-							<br>
-							</fieldset>
-							<br>
-							<fieldset>
-							<b Style="color: #800000">Inserisci stringa image:</b> <input
-								type="text" name="image"  placeholder="images/costaAm.jpg" /> <br>
-							<br>
-							</fieldset>
+							<select name="cat">
+								<option value="vl" name="tipo">VL</option>
+								<option value="f" name="tipo">F</option>
+								<option value="p" name="tipo">P</option>
+								<br>
+								</select>
 							
+						</fieldset>
+						<br>
+						<fieldset>
+							<b Style="color: #800000">Inserisci stringa image:</b> <input
+								type="text" name="image" placeholder="images/costaAm.jpg" /> <br>
+							<br>
+						</fieldset>
+
 
 
 
@@ -332,12 +332,24 @@ pre {
 
 				</form>
 			</div>
-			
+
 		</div>
 		<div class="rightcolumn">
 			<div class="card">
 				<div class="card">
 				<h2 Style="color: #800000">Gestisci</h2>
+				<form action="ServletAdmin" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza HomePage</button>
+					<input type="hidden" name="azione" value="homepage">
+				<br> <br>
+					</form>
+					<form action="ServletDati" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza Catalogo</button>
+					<input type="hidden" name="azione" value="admin">
+				<br> <br>
+				</form>
                 <form action="ServletAdmin" method="get">
                
 				<button  id="pulsante"
@@ -359,12 +371,7 @@ pre {
 				<br> <br>
 					</form>
 				
-				<form action="ServletDati" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza Catalogo</button>
-					<input type="hidden" name="azione" value="admin">
-				<br> <br>
-				</form>
+				
 				<form action="ServletAdmin" method="get">
 				<button  id="pulsante"
 					type="submit">Ordini totali effettuati dai clienti</button>
@@ -372,12 +379,7 @@ pre {
 				<br> <br>
 					</form>
 				
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza HomePage</button>
-					<input type="hidden" name="azione" value="homepage">
-				<br> <br>
-					</form>
+				
 				
 				
 				
@@ -388,6 +390,8 @@ pre {
 					type="submit">Recensioni clienti</button>
 				<br> <br>
                    </form>
+
+
 			</div>
 			
 			
@@ -395,33 +399,36 @@ pre {
 		
 	</div>
 	</div>
+	
 
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		
-			<button id="pulsantee" type="submit"> Pagamenti e metodi di
-				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
+
+			<button id="pulsantee" type="submit">
+				Pagamenti e metodi di Spedizione &nbsp;<i style="font-size: 24px"
+					class="fa">&#xf09d;</i><i style='font-size: 24px' class='fas'>&#xf0d1;</i>
+			</button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
-		
-		
-		 <form action="ServletHomePage" method="get">  
-			<button id="pulsantee" type="submit" >Chi Siamo</button>
-			<input type="hidden" name="home" value="chisiamo"><br> <br>
-			 </form>
-		
+
+
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
-		
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+		</form>
+
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">
+				Contatti &nbsp;&nbsp; <i style='font-size: 24px' class='fas'>&#xf095;</i>
+			</button>
+
 			<input type="hidden" name="home" value="contatti">
 		</form>
-		<br>
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
+		<br> <a href="#" class="fa fa-facebook"></a> <a href="#"
+			class="fa fa-google"></a> <a href="#" class="fa fa-twitter"></a> <a
+			href="#" class="fa fa-youtube"></a> <a href="#"
+			class="fa fa-instagram"></a>
 	</div>
 </body>
 </html>

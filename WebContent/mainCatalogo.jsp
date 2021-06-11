@@ -444,8 +444,7 @@ body {
 
 
 					<p align="center">
-						Codice prodotto:
-						<%=el.getCodice()%>
+						
 						<br> Prezzo: $
 						<%=el.getPrezzo()%><br>
 					</p>

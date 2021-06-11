@@ -367,6 +367,7 @@ th {
 
 							<th style="width: 25%">Cap</th>
 							<th style="width: 25%">Citta</th>
+							<th style="width: 25%">Dettaglio</th>
 
 						</tr>
 
@@ -385,6 +386,7 @@ th {
 							<td><%=listaordini1.get(i).getCap()%>&nbsp;</td>
 
 							<td><%=listaordini1.get(i).getCitta()%>&nbsp;</td>
+							<td><a href="Acquistato.jsp" >Vai al dettaglio</a></td>
 
 
 

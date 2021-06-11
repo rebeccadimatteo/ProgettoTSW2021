@@ -41,7 +41,7 @@ public class ServletCarrello extends HttpServlet {
 
 		System.out.println(car.getProdotti().size());
 
-		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/mainCarrello.jsp");
+		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaOrdine.jsp");
 		rd.forward(request, response);
 	}
 

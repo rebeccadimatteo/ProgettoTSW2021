@@ -291,14 +291,7 @@ body {
 						<button id="pulsante" type="submit">DETTAGLIO</button>
 						<br> <br>
 					</form>
-					<form action="ServletCarrello" method="post">
-						<input type="hidden" id="id" name="id" value="<%=el.getCodice()%>">
-						<input type="hidden" name="azione" value="aggiungi"> <input
-							type="hidden" name="pagina" value="ServletDati">
-						<button id="pulsante" type="submit">AGGIUNGI AL CARRELLO
-						</button>
-						<br>
-					</form>
+					
 				</div>
 				<%
 					}
@@ -309,10 +302,21 @@ body {
 		</div>
 
 		<div class="rightcolumn">
-
 			<div class="card">
 				<div class="card">
 				<h2 Style="color: #800000">Gestisci</h2>
+				<form action="ServletAdmin" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza HomePage</button>
+					<input type="hidden" name="azione" value="homepage">
+				<br> <br>
+					</form>
+					<form action="ServletDati" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza Catalogo</button>
+					<input type="hidden" name="azione" value="admin">
+				<br> <br>
+				</form>
                 <form action="ServletAdmin" method="get">
                
 				<button  id="pulsante"
@@ -334,12 +338,7 @@ body {
 				<br> <br>
 					</form>
 				
-				<form action="ServletDati" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza Catalogo</button>
-					<input type="hidden" name="azione" value="admin">
-				<br> <br>
-				</form>
+				
 				<form action="ServletAdmin" method="get">
 				<button  id="pulsante"
 					type="submit">Ordini totali effettuati dai clienti</button>
@@ -347,21 +346,24 @@ body {
 				<br> <br>
 					</form>
 				
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza HomePage</button>
-					<input type="hidden" name="azione" value="homepage">
-				<br> <br>
-					</form>
+				
+				
+				
+				
+				
+				
 				<form action="ServletRecensioni" method="get">
 				<button  id="pulsante"
 					type="submit">Recensioni clienti</button>
 				<br> <br>
                    </form>
 
-			</div>
 
+			</div>
+			
+			
 		</div>
+		
 	</div>
 	</div>
 	<div class="footer">

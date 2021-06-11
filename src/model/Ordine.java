@@ -214,6 +214,66 @@ public class Ordine {
 		}
 		return listaordini;
 	}
+	// restituisce ordine in base all id
+		public ArrayList<Ordine> restituisciordinidata(GregorianCalendar data) {
+
+			ArrayList<Ordine> listaordini = new ArrayList<Ordine>();
+			GregorianCalendar dat=new GregorianCalendar();
+			Connection connection = null;
+			PreparedStatement preparedStatement = null;
+
+			try {
+				String sql = "select* from Ordine where DataOrdine between'" + data + "' and'" + dat + "'";
+
+				connection = ds.getConnection();
+				preparedStatement = connection.prepareStatement(sql);
+
+				ResultSet rs = preparedStatement.executeQuery();
+				LocalDate dataoggi = LocalDate.now();
+				Date data2 = java.sql.Date.valueOf(dataordine);
+
+				while (rs.next()) {
+					int numeroordine = rs.getInt(1);
+					String stato = rs.getString(2);
+					data2 = rs.getDate(3);
+
+					String idutente = rs.getString(4);
+					String via = rs.getString(5);
+					String cap = rs.getString(6);
+					String citta = rs.getString(7);
+					int idspecificaordine = rs.getInt(8);
+
+					Ordine ris = new Ordine(numeroordine, stato, data2, idutente, via, cap, citta, idspecificaordine);
+					listaordini.add(ris);
+
+				}
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} finally {
+				try {
+					if (preparedStatement != null)
+						try {
+							preparedStatement.close();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+				} finally {
+
+					if (connection != null)
+						try {
+							connection.close();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+				}
+			}
+			return listaordini;
+		}
+
 
 // get e set
 	public int getNumeroordine() {

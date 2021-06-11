@@ -24,12 +24,10 @@ public class ServletOrdine extends HttpServlet {
 
 	}
 
-	// ridireziona a pagina ordine
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		Carrello car = (Carrello) request.getAttribute("Carrello");
-		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaOrdine.jsp");
-		rd.forward(request, response);
+		
 	}
 
 // prende carrello dalla sessione se va avnti lo porta ad avanti 
@@ -43,26 +41,18 @@ public class ServletOrdine extends HttpServlet {
 			rd.forward(request, response);
 			return;
 
-		} // agiunge quantita
+		} // agiunge quantita e diminuisce quantita
 		if (azione.equalsIgnoreCase("+")) {
 
 			String coditem = request.getParameter("cod");
+			int quant=Integer.parseInt(request.getParameter("age"));
 			int ind = car1.indice(coditem);
 			Item el = car1.getItemIndex(ind);
-			el.setQuantita(el.getQuantita() + 1);
+			el.setQuantita(quant);
 
-		} // diminuisce quantita
-		if (azione.equalsIgnoreCase("-")) {
-			String coditem = request.getParameter("cod2");
-			int ind = car1.indice(coditem);
-			Item el = car1.getItemIndex(ind);
-			if (el.getQuantita() == 0) {
-				car1.rimuovi(coditem);
-			} else {
-				el.setQuantita(el.getQuantita() - 1);
-			}
+		} 
 
-		} // rimuove elemento
+		// rimuove elemento
 		if (azione.equalsIgnoreCase("rim")) {
 			String coditem = request.getParameter("cod3");
 			car1.rimuovi(coditem);

@@ -89,6 +89,21 @@ background: #333;
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
+#pulsante3{
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 3px 5px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
 pre {
 	display: block;
 	font-family: Arial;
@@ -285,14 +300,24 @@ th {
 		<div class="leftcolumn">
 			<div class="card">
 			
-				<%
 				
+				<h1 Style="color: #800000">Ecco tutti gli ordini che hanno effettuato </h1>
+				<h1 Style="color: #800000">Visualizza ordini per Cliente : </h1>
+				<form action="ServletAdmin" method="post">
+				
+				<p Style="color: #800000">Inserisci id: 				<input type="text" id="c">
+						<button id="pulsante3" type="submit">cerca </button>
+						<input type="hidden" name="azione3" value="cliente"> <br>
+						<br>
+					</form>
+				</p>
+				<%
+			
 				ArrayList<Ordine> listaordini= new ArrayList<Ordine>();
 				Ordine ris=new Ordine(0,null,null,null,null,null,null,0);
 				listaordini=ris.restituisciordini();
 				
 				%>
-				<h1 Style="color: #800000">Ecco gli ordini che hanno effettuato i tuoi clienti </h1>
 				
 				<% 
 				for(int i=0; i<listaordini.size();i++)
@@ -350,6 +375,7 @@ th {
 				<% 
 				}
 				
+				
 				%>
 				
 				
@@ -360,6 +386,18 @@ th {
 			<div class="card">
 				<div class="card">
 				<h2 Style="color: #800000">Gestisci</h2>
+				<form action="ServletAdmin" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza HomePage</button>
+					<input type="hidden" name="azione" value="homepage">
+				<br> <br>
+					</form>
+					<form action="ServletDati" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza Catalogo</button>
+					<input type="hidden" name="azione" value="admin">
+				<br> <br>
+				</form>
                 <form action="ServletAdmin" method="get">
                
 				<button  id="pulsante"
@@ -381,12 +419,7 @@ th {
 				<br> <br>
 					</form>
 				
-				<form action="ServletDati" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza Catalogo</button>
-					<input type="hidden" name="azione" value="admin">
-				<br> <br>
-				</form>
+				
 				<form action="ServletAdmin" method="get">
 				<button  id="pulsante"
 					type="submit">Ordini totali effettuati dai clienti</button>
@@ -394,12 +427,7 @@ th {
 				<br> <br>
 					</form>
 				
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza HomePage</button>
-					<input type="hidden" name="azione" value="homepage">
-				<br> <br>
-					</form>
+				
 				
 				
 				
@@ -418,7 +446,7 @@ th {
 		</div>
 		
 	</div>
-</div>
+
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">

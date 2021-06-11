@@ -337,9 +337,20 @@ pre {
 		</div>
 		<div class="rightcolumn">
 			<div class="card">
-				
-			<div class="card">
+				<div class="card">
 				<h2 Style="color: #800000">Gestisci</h2>
+				<form action="ServletAdmin" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza HomePage</button>
+					<input type="hidden" name="azione" value="homepage">
+				<br> <br>
+					</form>
+					<form action="ServletDati" method="get">
+				<button  id="pulsante"
+					type="submit">Visualizza Catalogo</button>
+					<input type="hidden" name="azione" value="admin">
+				<br> <br>
+				</form>
                 <form action="ServletAdmin" method="get">
                
 				<button  id="pulsante"
@@ -361,12 +372,7 @@ pre {
 				<br> <br>
 					</form>
 				
-				<form action="ServletDati" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza Catalogo</button>
-					<input type="hidden" name="azione" value="admin">
-				<br> <br>
-				</form>
+				
 				<form action="ServletAdmin" method="get">
 				<button  id="pulsante"
 					type="submit">Ordini totali effettuati dai clienti</button>
@@ -374,12 +380,7 @@ pre {
 				<br> <br>
 					</form>
 				
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza HomePage</button>
-					<input type="hidden" name="azione" value="homepage">
-				<br> <br>
-					</form>
+				
 				
 				
 				
@@ -390,7 +391,7 @@ pre {
 					type="submit">Recensioni clienti</button>
 				<br> <br>
                    </form>
-			
+
 
 			</div>
 			
@@ -398,7 +399,7 @@ pre {
 		</div>
 		
 	</div>
-</div>
+	</div>
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
