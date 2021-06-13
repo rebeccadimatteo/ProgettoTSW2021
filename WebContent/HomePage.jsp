@@ -217,6 +217,10 @@ pre {
 		width: 100%;
 		padding: 0;
 		display: block;
+		
+	}
+	.rightcolumn{
+	text-align:center;
 	}
 	.topnav a {
 		float: none;
