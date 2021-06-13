@@ -76,7 +76,7 @@ body {
 	width: 75%;
 	box-sizing: border-box;
 	background: linear-gradient(to right bottom, white, white);
-	height: 110vh;
+	height: 130vh;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -118,6 +118,15 @@ body {
 	background-color: white;
 	padding: 20px;
 	margin-top: 20px;
+	-webkit-border-radius: 20px;
+}
+
+.card2{
+height:85%;
+width:50%;
+	background-color: white;
+	padding: 0px;
+	margin-top: 0px;
 	-webkit-border-radius: 20px;
 }
 
@@ -260,7 +269,7 @@ body {
 .body2 {
 	box-sizing: border-box;
 	background: linear-gradient(to right bottom, #000046, #5B86E5);
-	height: 100vh;
+	height: 135vh;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -270,8 +279,8 @@ body {
 }
 
 .wrapper2 {
-	height: 620px;
-	width: 460px;
+	height: 700px;
+	width: 500px;
 	background-color: white;
 	border-radius: 34px;
 	border: 2px solid black;
@@ -336,16 +345,16 @@ body {
 }
 
 .button2 {
-	height: 20px;
-	width: 20%;
+	height: 30px;
+	width: 40%;
 	align: center;
-	margin: 24px auto;
-	border-radius: 6px;
+	margin-top: 30px auto;
+	margin-bottom: 30px auto ;
+	border-radius: 3px;
 	border: none;
 	color: white;
 	background: linear-gradient(to left bottom, #000046, #5B86E5);
 	cursor: pointer;
-	margin: 24px auto;
 }
 </style>
 </head>
@@ -440,7 +449,7 @@ body {
 
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card">
+			<div class="card2">
 
 				<div class=body2>
 					<div class="wrapper2">
@@ -452,7 +461,7 @@ body {
 							<h4 class="h42">Nome utente</h4>
 							<input class="input2" type="text" name="id" /> <br>
 
-							<h4 class="h42">Nome Prdotto</h4>
+							<h4 class="h42">Nome Prodotto</h4>
 							<input class="input2" type="text" name="nomep" /> <br>
 							<h4 class="h42">Recensione</h4>
 
@@ -476,13 +485,13 @@ body {
 								</label> <input id="star-1" type="radio" name="rating" value="star-1" />
 								<label for="star-1" title="1 star"> <i
 									class="active fa fa-star" aria-hidden="true"></i>
-								</label>
-
-
-							</div>
-							<p align="center">
+								</label></div>
+<p align="center">
 			<button class="button2" id="pulsante3" type="submit">Invia</button>
+			
 		</form>
+
+							
 					</div>
 
 

@@ -24,8 +24,7 @@ public class ServletHomePage extends HttpServlet {
 	// in basew a cio che viene cliccato sul menu ridireziona
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		String home = request.getParameter("home");
+String home = request.getParameter("home");
 		if (home != null) {
 			if (home.equalsIgnoreCase("home")) {
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/HomePage.jsp");
