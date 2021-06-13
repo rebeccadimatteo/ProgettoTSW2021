@@ -45,7 +45,7 @@ public class ServletOrdine extends HttpServlet {
 		if (azione.equalsIgnoreCase("+")) {
 
 			String coditem = request.getParameter("cod");
-			int quant=Integer.parseInt(request.getParameter("age"));
+			int quant=Integer.parseInt(request.getParameter("agg"));
 			int ind = car1.indice(coditem);
 			Item el = car1.getItemIndex(ind);
 			el.setQuantita(quant);

@@ -38,6 +38,7 @@ body {
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
+	width:70%;
 	padding: 10px 40px;
 	border: solid 1px #333;
 	background: white;
@@ -218,7 +219,7 @@ body {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p Style="color: #800000">Sito di e-commerce incentrato sulle
+			<p >Sito di e-commerce incentrato sulle
 				specialita' gastronomiche del sud Italia.</p>
 		</div>
 

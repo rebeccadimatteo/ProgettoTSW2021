@@ -136,6 +136,7 @@ tr:nth-child(even) {
 	outline: none;
 	cursor: pointer;
 	text-align: center;
+	width:70%;
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
@@ -253,7 +254,7 @@ th {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p Style="color: #800000">Sito di e-commerce incentrato sulle
+			<p>Sito di e-commerce incentrato sulle
 				specialita' gastronomiche del sud Italia.</p>
 		</div>
 

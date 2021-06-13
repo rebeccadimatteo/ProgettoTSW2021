@@ -215,15 +215,15 @@ public class Ordine {
 		return listaordini;
 	}
 	// restituisce ordine in base all id
-		public ArrayList<Ordine> restituisciordinidata(GregorianCalendar data) {
+		public ArrayList<Ordine> restituisciordinidata(Date data1,Date data3) {
 
 			ArrayList<Ordine> listaordini = new ArrayList<Ordine>();
-			GregorianCalendar dat=new GregorianCalendar();
+			
 			Connection connection = null;
 			PreparedStatement preparedStatement = null;
 
 			try {
-				String sql = "select* from Ordine where DataOrdine between'" + data + "' and'" + dat + "'";
+				String sql = "select* from Ordine where DataOrdine between'" + data1 + "' and'" + data3 + "'";
 
 				connection = ds.getConnection();
 				preparedStatement = connection.prepareStatement(sql);

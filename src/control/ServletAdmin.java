@@ -1,6 +1,9 @@
 package control;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.Catalogo;
 import model.Item;
+import model.Ordine;
 
 /**
  * Servlet implementation class ServletAdmin
@@ -127,11 +131,28 @@ public class ServletAdmin extends HttpServlet {
 		if(azione3!=null) {
 		if (azione3.equalsIgnoreCase("cliente")) {
 			
-			String c = null;
-			request.setAttribute("c",c);
-			c=(String)c;
-
+			String c = request.getParameter("c");
+			ArrayList<Ordine> listaordini= new ArrayList<Ordine>();
+			Ordine ris=new Ordine(0,null,null,null,null,null,null,0);
+			listaordini=ris.restituisciordiniid(c);
+			request.setAttribute("listaid",listaordini);
+			
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdminOrdineCliente.jsp");
+			rd.forward(request, response);
+
+		}
+        if (azione3.equalsIgnoreCase("data")) {
+        	
+        	
+			Date  d1 = java.sql.Date.valueOf(request.getParameter("data1"));
+			Date  d2 = java.sql.Date.valueOf(request.getParameter("data2"));
+			ArrayList<Ordine> listaordini= new ArrayList<Ordine>();
+			Ordine ris=new Ordine(0,null,null,null,null,null,null,0);
+			listaordini=ris.restituisciordinidata(d1, d2);
+			request.setAttribute("listadata",listaordini);
+			
+
+			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdminOrdineData.jsp");
 			rd.forward(request, response);
 
 		}

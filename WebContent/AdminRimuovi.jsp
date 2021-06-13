@@ -17,6 +17,22 @@ body {
 	padding: 10px;
 	background: #f1f1f1;
 }
+#pulsante4{
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	width:20%;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 10px 40px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
 #pulsantee {
 outline: none;
 cursor: pointer;
@@ -76,6 +92,7 @@ background: #333;
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
+	width:70%;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
@@ -218,7 +235,7 @@ pre {
 			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 			
 		</h1>
-		<p Style="color: #800000">Sito di e-commerce incentrato sulle
+		<p >Sito di e-commerce incentrato sulle
 			specialita' gastronomiche del sud Italia.</p>
 		</div>
 		
@@ -267,7 +284,7 @@ pre {
 
 						</p>
 						<p align="right">
-							<button id="pulsante" type="submit">Rimuovi</button>
+							<button id="pulsante4" type="submit">Rimuovi</button>
 							<input type="hidden" name="azionee" value="rimuovi">
 						</p>
 

@@ -20,6 +20,180 @@ body {
 	background: #f1f1f1;
 }
 
+html {
+	background-color: #f6f6f6; . shaded { background-color : rgba( 110, 110,
+	61, 0.09);
+	transition: all 500ms ease-in;
+}
+
+body {
+	background-color: #f6f6f6;
+	margin: 0;
+	padding: 0 30px 30px 30px;
+	width: 100%;
+	height: 1400px;
+	img
+	{
+	max-width
+	:
+	100%;
+}
+
+.product-filter {
+	padding: 30px 20px 0px 10px;
+	min-height: 100px;
+	.
+	collection-sort
+	{
+	margin-top
+	:
+	-10px;
+	&:
+	first-child
+	{
+	padding-right
+	:
+	20px;
+}
+
+}
+}
+.catalog {
+	padding-bottom: 30px; md-card { display : block;
+	padding: 2%;
+	margin: 1px; // Custom setting since ngMaterial 1.0.0 only // supports
+	percentage increments of 5 // 4-column Table, except Row 1 to be
+	2-Columns &.flex-22 { // max-width : 24% !important; // Disable to all
+	varying sizes in Cards max-height : 100%;
+	box-sizing: border-box;
+	flex: 1 1 24%;
+	&:
+	first-child
+	,
+	&
+	:
+	nth-child(
+	2
+	)
+	{
+	
+	
+            
+	
+	flex
+	:
+	
+	 
+	
+	2
+	46%;
+}
+
+}
+@media ( min-width : 600px) and (max-width: 959px) { //
+	Custom setting since ngMaterial 1.0.0 only // supports percentage increments of 
+		 5 // 2-column table
+          &.flex-sm-46 { //
+		max-width: 24% !important; // Disable to all varying sizes in Cards
+		max-height : 100%;
+		box-sizing: border-box;
+		flex: 2 46%;
+	}
+}
+
+//
+Need
+
+ 
+
+this
+
+ 
+
+for
+
+ 
+
+specificity
+
+ 
+
+to
+
+ 
+
+override
+
+ 
+
+defaults
+//
+
+ 
+
+1
+-column
+
+ 
+
+Table
+
+
+        
+
+@media ( max-width : 599px) { &
+	.flex-xs-80 {
+		flex: 1 80%;
+		//
+		Special
+		override
+		for
+		the
+		1st
+		&
+		2nd
+		child
+		default
+		resizing
+		&
+		:
+		first-child
+		,
+		&:
+		
+		
+		nth-child(
+		2
+		)
+		{
+		
+		
+              
+		
+		flex
+		:
+		
+		 
+		
+		1
+		80%;
+	}
+}
+
+}
+img {
+	max-width: 100%;
+}
+
+md-card-footer-text {
+	padding-top: 25px;
+	text-align: center;
+}
+
+}
+}
+}
+}
 #pulsantee {
 	outline: none;
 	cursor: pointer;
@@ -129,6 +303,7 @@ body {
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
+	width: 70%;
 	border: solid 1px #333;
 	background: white;
 	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
@@ -321,7 +496,6 @@ body {
 	-o-transition: all 0.5s ease;
 	-ms-transition: all 0.5s ease;
 	transition: all 0.5s ease;
-
 }
 
 .zoom img:hover {
@@ -345,8 +519,8 @@ body {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p Style="color: #800000">Sito di e-commerce incentrato sulle
-				specialita' gastronomiche del sud Italia.</p>
+			<p>Sito di e-commerce incentrato sulle specialita' gastronomiche
+				del sud Italia.</p>
 		</div>
 
 
@@ -413,12 +587,12 @@ body {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		
 
-		<%
+
+			<%
 			}
 		%>
-</div>
+		</div>
 	</div>
 	<!-- Stampa catalogo -->
 	<div class="row">
@@ -432,25 +606,25 @@ body {
 					for (int i = 0; i < prodotti.lengthCatalogo(); i++) {
 						Item el = prodotti.getItemIndex(i);
 				%>
-				<div>
-					<p align="center">
-						<b><%=el.getNome()%></b>
-					</p>
+				<div class="product-filter" layout>
+					<h1 flex class="md-headline">Catalogo</
+					</h1>
+					<div class="sort md-caption" layout>
+						<div class="collection-sort" layout="column"></div>
+					</div>
+				</div>
 
-
+				<section class="catalog" layout layout-wrap layout-align="center">
+					<md-card ng-repeat="it in products.catalog" flex="22" flex-sm="46"
+						flex-xs="80" ng-class="{shaded:$mdMedia('xs') }">
 					<div class="zoom img" align="center">
 						<img src="<%=el.getImg()%>">
 					</div>
-
-
-					<p align="center">
-						
-						<br> Prezzo: $
-						<%=el.getPrezzo()%><br>
-					</p>
-					<br>
-
-					<div style="text-align: center">
+					<md-card-footer-text layout="column"> <span
+						class="md-title"><%=el.getNome()%> </span> <span class="md-subhead"><%=el.getPrezzo()%></span>
+					</md-card-footer-text> </md-card>
+				</section>
+               <div style="text-align: center">
 						<form action="ServletDettaglio" method="get">
 							<input type="hidden" id="id" name="id"
 								value="<%=el.getCodice()%>">
@@ -467,11 +641,11 @@ body {
 							<br>
 						</form>
 					</div>
-				</div>
+				
 				<%
 					}
 				%>
-
+               
 
 			</div>
 		</div>

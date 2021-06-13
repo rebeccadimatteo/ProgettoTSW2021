@@ -128,6 +128,7 @@ background: #333;
 	outline: none;
 	cursor: pointer;
 	text-align: center;
+	width:70%;
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
@@ -278,7 +279,7 @@ background: linear-gradient(top right, #FFFFFF 0%, #AACFEF 100%);
 			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 			
 		</h1>
-		<p Style="color: #800000">Sito di e-commerce incentrato sulle
+		<p >Sito di e-commerce incentrato sulle
 			specialita' gastronomiche del sud Italia.</p>
 		</div>
 		
@@ -358,19 +359,20 @@ background: linear-gradient(top right, #FFFFFF 0%, #AACFEF 100%);
 </div> 
 		<div class="rightcolumn">
 			<div class="card">
-				<h2 Style="color: #800000"><b>Gestisci</b></h2>
+				<h2 Style="color: #800000">Gestisci</h2>
 
-				<button onclick="location.href='mioprofilo.jsp'" id="pulsante"
-					type="submit">Vai al mio profilo</button>
-				<br> <br>
+				<button onclick="location.href='mioprofilo.jsp'" id="pulsante" type="submit">
+					Vai al mio profilo
+				</button>
+				<br />
+				<br />
 
-				<button onclick="location.href='mioordini.jsp'" id="pulsante"
-					type="submit">I miei ordini</button>
-				<br> <br>
-
-
+				<button onclick="location.href='mioordini.jsp'" id="pulsante" type="submit">
+					I miei ordini
+				</button>
+				<br />
+				<br />
 			</div>
-
 		</div>
 	</div>
 

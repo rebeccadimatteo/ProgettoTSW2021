@@ -21,6 +21,7 @@ body {
 }
 #pulsantee {
 outline: none;
+
 cursor: pointer;
 text-align: center;
 text-decoration: none;
@@ -82,6 +83,7 @@ background: #333;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
+	width:70%;
 	border: solid 1px #333;
 	background: white;
 	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
@@ -268,7 +270,7 @@ th {
 			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 			
 		</h1>
-		<p Style="color: #800000">Sito di e-commerce incentrato sulle
+		<p >Sito di e-commerce incentrato sulle
 			specialita' gastronomiche del sud Italia.</p>
 		</div>
 		
@@ -305,9 +307,19 @@ th {
 				<h1 Style="color: #800000">Visualizza ordini per Cliente : </h1>
 				<form action="ServletAdmin" method="post">
 				
-				<p Style="color: #800000">Inserisci id: 				<input type="text" id="c">
+				<p >Inserisci id: 				<input type="text" id="c">
 						<button id="pulsante3" type="submit">cerca </button>
 						<input type="hidden" name="azione3" value="cliente"> <br>
+						<br>
+					</form>
+				
+				<h1 Style="color: #800000">Visualizza ordini per data : </h1>
+				<form action="ServletAdmin" method="post">
+				
+				<p >Inserisci date:da			<input type="Date" id="data1"> a
+				<input type="Date" id="data2">
+						<button id="pulsante3" type="submit">cerca </button>
+						<input type="hidden" name="azione3" value="data"> <br>
 						<br>
 					</form>
 				</p>

@@ -67,6 +67,7 @@ body {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
+
 	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
@@ -84,6 +85,7 @@ body {
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
+	width:70%;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
@@ -263,7 +265,7 @@ label {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p Style="color: #800000">Sito di e-commerce incentrato sulle
+			<p >Sito di e-commerce incentrato sulle
 				specialita' gastronomiche del sud Italia.</p>
 		</div>
 

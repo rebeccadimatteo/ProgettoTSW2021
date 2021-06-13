@@ -19,17 +19,7 @@ body {
 	background: #f1f1f1;
 }
 
-#pulsantee {
-	outline: none;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	font: bold 20px Arial, Helvetica, sans-serif;
-	color: white;
-	padding: 10px 20px;
-	border: solid 1px #333;
-	background: #333;
-}
+
 
 .header h1 {
 	font-size: 50px;
@@ -95,6 +85,7 @@ body {
 	outline: none;
 	cursor: pointer;
 	text-align: center;
+	width:70%;
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
@@ -106,7 +97,22 @@ body {
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
-
+#pulsante4{
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	width:20%;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 10px 40px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
 pre {
 	display: block;
 	font-family: Arial;
@@ -237,7 +243,7 @@ pre {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p Style="color: #800000">Sito di e-commerce incentrato sulle
+			<p >Sito di e-commerce incentrato sulle
 				specialita' gastronomiche del sud Italia.</p>
 		</div>
 
@@ -321,7 +327,7 @@ pre {
 
 						</p>
 						<p align="right">
-							<button id="pulsante" type="submit">Aggiungi</button>
+							<button id="pulsante4" type="submit">Aggiungi</button>
 							<input type="hidden" name="azionee" value="aggiungi">
 						</p>
 

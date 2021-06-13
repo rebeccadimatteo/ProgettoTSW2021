@@ -15,10 +15,27 @@ body {
 	padding: 10px;
 	background: #f1f1f1;
 }
+#pulsante4{
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	width:30%;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 5px 10px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
 
 /* Header/Blog Title */
 .header {
 	padding: 30px;
+	
 	text-align: center;
 	background: white;
 	display:flex;
@@ -78,6 +95,7 @@ background: #333;
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
+	width:70%;
 	padding: 10px 40px;
 	border: solid 1px #333;
 	background: white;
@@ -246,7 +264,7 @@ pre {
 			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 			
 		</h1>
-		<p Style="color: #800000">Sito di e-commerce incentrato sulle
+		<p >Sito di e-commerce incentrato sulle
 			specialita' gastronomiche del sud Italia.</p>
 		</div>
 		
@@ -297,7 +315,7 @@ pre {
 							<p align="left">
 							<input
 								type="number" name="prez" placeholder="3.50" />
-							<button id="pulsante" type="submit">Modifica prezzo</button>
+							<button id="pulsante4" type="submit">Modifica prezzo</button>
 							<input type="hidden" name="azionee" value="modificaprezzo">
 							</p>
 							</form>
@@ -307,7 +325,7 @@ pre {
 								type="number" name="pes" placeholder="3.50" />
 								
 							
-							<button id="pulsante" type="submit">Modifica peso</button>
+							<button id="pulsante4" type="submit">Modifica peso</button>
 							<input type="hidden" name="azionee" value="modificapeso">
 							</p>
 							</form>
@@ -316,7 +334,7 @@ pre {
 							
 							<input
 								type="number" name="quant" placeholder="3" />
-							<button id="pulsante" type="submit">	Modifica quantita'</button>
+							<button id="pulsante4" type="submit">	Modifica quantita'</button>
 							<input type="hidden" name="azionee" value="modificaquant">
 							
 						</p>

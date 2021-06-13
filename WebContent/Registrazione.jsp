@@ -69,6 +69,23 @@
 			outline: none;
 			cursor: pointer;
 			text-align: center;
+			width:70%;
+			text-decoration: none;
+			font: bold 12px Arial, Helvetica, sans-serif;
+			color: #800000;
+			padding: 10px 40px;
+			border: solid 1px #333;
+			background: white;
+			-webkit-box-shadow: 5px 5px 10px 0px #3b3b3b;
+			-moz-box-shadow: 5px 5px 10px 0px #3b3b3b;
+			-o-box-shadow: 5px 5px 10px 0px #3b3b3b;
+			box-shadow: 5px 5px 10px 0px #3b3b3b;
+		}
+		#pulsante4 {
+			outline: none;
+			cursor: pointer;
+			text-align: center;
+			width:20%;
 			text-decoration: none;
 			font: bold 12px Arial, Helvetica, sans-serif;
 			color: #800000;
@@ -245,7 +262,7 @@
 			<h1>
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 			</h1>
-			<p Style="color: #800000">
+			<p >
 				Sito di e-commerce incentrato sulle specialita' gastronomiche del sud
 				Italia.
 			</p>
@@ -399,7 +416,7 @@
 									placeholder="Mario Rossi" />
 							</fieldset>
 							<p align="right">
-								<button id="pulsante" type="submit">Registrati</button>
+								<button id="pulsante4" type="submit">Registrati</button>
 							</p>
 					</form>
 				</div>
