@@ -380,7 +380,7 @@ path.selected {
 					%>
 					<div class=container">
 					<div class="wrapper">
-					<div id="content" style="width: 400px; height: 241px; ">
+					<div id="content" style="width: 430px; height: 241px; ">
 						<p><h2><b><a class="btn" href="#" >Clicca su una <br>regione del Sud !</a></b></h2></p>
 					</div>
 				</div>
