@@ -128,6 +128,7 @@ background: #333;
 	outline: none;
 	cursor: pointer;
 	text-align: center;
+	align:center;
 	width:70%;
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
@@ -221,7 +222,7 @@ background: linear-gradient(top right, #FFFFFF 0%, #AACFEF 100%);
 #login-card{
     width:500px;
     border-radius: 25px;
-    margin:150px auto;
+    margin:10px auto;
     border: 2px solid black;
   
 }
@@ -328,24 +329,28 @@ background: linear-gradient(top right, #FFFFFF 0%, #AACFEF 100%);
 			<div class="card" >
 			<div class=body2>
 				<div id="login-card" class="card">
-<div class="card-body">
+<div class="card-body" style="align:center;">
   <h2 class="text-center" Style="color: #800000"><b>Login</b></h2>
   <br>
-  <form action="LoginServlet" method="post" >
-   <div class="form-group">
-     <input type="text" id="user" name="username" class="form-control" placeholder="Inserisci nome utente" /><br> <br>
+  <form action="LoginServlet" method="post" style="text-align:center;" >
+   <div class="form-group" style="align:center;">
+     <input type="text" id="user" name="username" class="form-control" placeholder="Inserisci nome utente" style="align:center;" /><br> <br>
     </div>
     <div class="form-group">
    <input type="password" name="pwsd" class="form-control" placeholder="Inserisci password"  /> <br>
+
     </div>
-    <button id="pulsante" class="btn btn-primary deep-purple btn-block" type="submit">Accedi</button>
+    <button id="pulsante" align=center class="btn btn-primary deep-purple btn-block" type="submit" style="display: block;
+margin: 0 auto; width:200px;" >Accedi</button>
 				</form>
-			</div><br><br>
-			<b Style="color: black">Non sei registrato? Clicca
+			</div><br>
+			<b Style="color: black; text-align:center; display: block;
+margin: 0 auto; width:200px;" >Non sei registrato? Clicca
 					il tasto Registrati!</b> <br>
 				<form action="RegistrazioneServlet" method="get">
-					<p align="left">
-						<button id="pulsante" type="submit">Registrati</button>
+					<p align="center">
+						<button id="pulsante" class="btn btn-primary deep-purple btn-block" type="submit" style="display: block;
+margin: 0 auto; width:200px;">Registrati</button>
 					</p>
 
 				</form>
@@ -365,7 +370,7 @@ background: linear-gradient(top right, #FFFFFF 0%, #AACFEF 100%);
 					Vai al mio profilo
 				</button>
 				<br />
-				<br />
+				
 
 				<button onclick="location.href='mioordini.jsp'" id="pulsante" type="submit">
 					I miei ordini

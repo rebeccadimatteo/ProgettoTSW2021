@@ -67,6 +67,10 @@ body {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 
 /* Create two unequal columns that floats next to each other */

@@ -385,7 +385,7 @@ path.selected {
 					<div class=container">
 					<div class="wrapper">
 					<div id="content" style="width: 400px; height: 241px; ">
-						<p><h2><b><a class="btn" href="#" >Clicca su una <br>regione del Sud !</a></b></h2></p>
+						<p><h2 ><b><a class="btn" href="#" >Clicca su una <br>regione del Sud !</a></b></h2></p>
 					</div>
 				</div>
 				</div>
@@ -393,7 +393,7 @@ path.selected {
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink"
 					xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px"
-					y="0px" width="560.512px" height="663.114px"
+					y="0px" width="500.512px" height="663.114px"
 					viewBox="0 0 560.512 663.114"
 					enable-background="new 0 0 560.512 663.114" xml:space="preserve">
 <defs>
@@ -1061,7 +1061,7 @@ path.selected {
 						break;
 						
 						case('Sicilia'):
-							nuovo="La <b style='color:#800000'>Sicilia</b> terra di sole, di mare e tesori della storia dell'arte. La sua unicita' risiede anche nelle specialità tipiche, imperdibili in un viaggio attraverso le provincie di questa favolosa isola: gli <b>arancini</b> di Palermo, i <b>cannoli</b> siciliani gustati in una pasticceria catanese o un buon piatto di pasta condita con <b>pesto alla trapanese</b>. Un percorso enogastronomico che non ha eguali e vi fara' desiderare di rimanere piu' a lungo possibile in questa magica terra.  ";
+							nuovo="La <b style='color:#800000'>Sicilia</b> terra di sole, di mare e tesori della storia dell'arte. La sua unicita' risiede anche nelle specialita' tipiche, imperdibili in un viaggio attraverso le provincie di questa favolosa isola: gli <b>arancini</b> di Palermo, i <b>cannoli</b> siciliani gustati in una pasticceria catanese o un buon piatto di pasta condita con <b>pesto alla trapanese</b>. Un percorso enogastronomico che non ha eguali e vi fara' desiderare di rimanere piu' a lungo possibile in questa magica terra.  ";
 						
 							document.getElementById('content').style.display = 'block';
 							document.getElementById('content').innerHTML = nuovo;
