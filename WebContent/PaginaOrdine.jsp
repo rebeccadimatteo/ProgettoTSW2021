@@ -273,7 +273,7 @@ pre {
 }
 
 .cart-table .cart-row input {
-	width: 30px;
+	width: 50px;
 	height: auto;
 	padding: 2px;
 	border-radius: 0;
@@ -477,9 +477,9 @@ pre {
 								<div class="product-delete">
 									<form action="ServletOrdine" method="post">
 
-
-										<input type="number" value="<%=el.getQuantita()%>" id="agg"
-											min="1" max="30" > <br> <input type="hidden"
+<div>
+										<input type="number" value="<%=Math.round(el.getQuantita())%>" id="agg"
+											min="1" max="30" style="min-width:20px;"> <br> <input type="hidden"
 											name="azione" value="+"> <input type="hidden"
 											name="cod" value="<%=el.getCodice()%>">
 										<%
@@ -491,7 +491,7 @@ pre {
 										%>
 									</form>
 									<form action="ServletOrdine" method="post">
-										<button id="pulsante2" type="submit">Rimuovi</button>
+										<button id="pulsante2" type="submit"><i style='font-size:20px' class='fas'>Rimuovi &#xf2ed;</i></button>
 										<br> <input type="hidden" name="azione" value="rim">
 										<input type="hidden" name="cod3" value="<%=el.getCodice()%>">
 
@@ -499,7 +499,7 @@ pre {
 
 
 									</form>
-
+</div>
 
 
 								</div>

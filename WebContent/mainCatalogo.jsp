@@ -39,6 +39,12 @@ body {
 	100%;
 }
 
+body {
+	font-family: Arial;
+	padding: 10px;
+	background: #f1f1f1;
+}
+
 .product-filter {
 	padding: 30px 20px 0px 10px;
 	min-height: 100px;
@@ -78,12 +84,20 @@ body {
 	{
 	
 	
+	
+	
             
+	
+	
 	
 	flex
 	:
 	
+	
+	
 	 
+	
+	
 	
 	2
 	46%;
@@ -104,42 +118,78 @@ body {
 //
 Need
 
+
+
  
+
+
 
 this
 
+
+
  
+
+
 
 for
 
+
+
  
+
+
 
 specificity
 
+
+
  
+
+
 
 to
 
+
+
  
+
+
 
 override
 
+
+
  
+
+
 
 defaults
 //
 
+
+
  
+
+
 
 1
 -column
 
+
+
  
+
+
 
 Table
 
 
+
+
         
+
+
 
 @media ( max-width : 599px) { &
 	.flex-xs-80 {
@@ -162,18 +212,30 @@ Table
 		&:
 		
 		
+		
+		
+		
+		
 		nth-child(
 		2
 		)
 		{
 		
 		
+		
+		
               
+		
+		
 		
 		flex
 		:
 		
+		
+		
 		 
+		
+		
 		
 		1
 		80%;
@@ -204,6 +266,10 @@ md-card-footer-text {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 
 .logo {
@@ -502,6 +568,287 @@ md-card-footer-text {
 	width: 250px;
 	height: 250px;
 }
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.cf {
+	zoom: 1
+}
+
+.cf:before, .cf:after {
+	content: "";
+	display: table
+}
+
+.cf:after {
+	clear: both
+}
+
+.fl-l {
+	float: left
+}
+
+.fl-r {
+	float: right
+}
+
+a {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+html, body {
+	background-color: #F2F2F2;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+		sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	color: #404040;
+	position: relative;
+}
+
+.wrapper {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 790px;
+	margin: 0px auto 0;
+	text-align: left;
+}
+
+.product {
+	width: 250px;
+	margin-right: 20px;
+	background-color: #FFFFFF;
+	position: relative;
+}
+
+.product:last-of-type {
+	margin-right: 0;
+}
+
+.container-prod {
+	height: 350px;
+	overflow: hidden;
+	position: relative;
+	-moz-box-shadow: 0px 0px 0px 0px #F2F2F2;
+	-webkit-box-shadow: 0px 0px 0px 0px #F2F2F2;
+	box-shadow: 0px 0px 0px 0px #F2F2F2;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.container-prod:hover, .container-prod.information, .container-prod.social-sharing
+	{
+	-moz-box-shadow: 0px 0px 5px 0px #333;
+	-webkit-box-shadow: 0px 0px 5px 0px #333;
+	box-shadow: 0px 0px 5px 0px #333;
+}
+
+.image {
+	height: 270px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.information .image {
+	height: 150px;
+}
+
+.container-information {
+	height: 40px;
+	overflow: hidden;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	background-color: #031E16;
+	color: #FFFFFF;
+}
+
+.information .container-information {
+	height: 160px;
+}
+
+.container-information .title {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	background-color: #5DBA9D;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+}
+
+.close {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #11956c;
+	position: absolute;
+	right: -40px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	color: #FFFFFF;
+}
+
+.information .close {
+	right: 0;
+}
+
+.container-information .description {
+	padding: 10px;
+	height: 120px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.sharing {
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: -50px;
+	overflow: hidden;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	background-color: #031E16;
+	z-index: 1;
+}
+
+.social-sharing .sharing {
+	bottom: 40px;
+}
+
+.sharing a {
+	color: #FFFFFF;
+	font-size: 20px;
+	width: 25%;
+	height: 40px;
+	line-height: 40px;
+}
+
+.sharing a:hover {
+	color: #5DBA9D;
+}
+
+.buttons {
+	position: relative;
+	z-index: 2;
+}
+
+.buttons a {
+	text-align: center;
+	width: 25%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #11956c;
+	color: #FFFFFF;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+}
+
+.buttons a>span>span {
+	position: relative;
+	z-index: 3;
+	display: block;
+	width: 100%;
+}
+
+.buttons a>span:before {
+	content: "";
+	background-color: rgba(0, 0, 0, 0);
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	z-index: 1;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.buttons a:hover>span:before, .information .buttons a.more>span:before,
+	.social-sharing .buttons a.share>span:before {
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.information .buttons a.more>span:before, .social-sharing .buttons a.share>span:before
+	{
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.buttons a.cart.added>span:before {
+	top: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.buttons a.cart>span>span.check {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.buttons a.cart.added>span>span.check {
+	top: 0;
+	color: #11956c;
+}
+
+.buttons a.cart>span>span.add {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.buttons a.cart.added>span>span.add {
+	top: -40px;
+}
+
+.buttons a i {
+	font-size: 20px;
+}
+
+.buttons a:first-of-type {
+	width: 50%;
+}
 </style>
 </head>
 <body>
@@ -590,66 +937,65 @@ md-card-footer-text {
 
 
 			<%
-			}
-		%>
+				}
+			%>
 		</div>
 	</div>
 	<!-- Stampa catalogo -->
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
-
-
 				<%
 					Catalogo prodotti = (Catalogo) request.getAttribute("Catalogo");
 
 					for (int i = 0; i < prodotti.lengthCatalogo(); i++) {
 						Item el = prodotti.getItemIndex(i);
 				%>
-				<div class="product-filter" layout>
-					<h1 flex class="md-headline">Catalogo</
-					</h1>
-					<div class="sort md-caption" layout>
-						<div class="collection-sort" layout="column"></div>
-					</div>
-				</div>
+				<ul class="wrapper cf">
+					<li class="product fl-l">
+						<div class="container-prod">
+							<div class="image"
+								style="background-image:url('<%=el.getImg()%>');"></div>
+							<div class="container-information">
+								<div class="title">
+									<%=el.getNome()%>
+									<a href="" class="more close"><i class="fa fa-times"></i></a>
+								</div>
+							</div>
+							<div class="buttons cf">
+								<form action="ServletCarrello" method="post">
+									<a class="cart fl-l"> <span> <span class="add"
+											style="text-align: center">
+												<button
+													style="background: transparent; border: none; outline: none; display: table-row; text-align: center;
+													font-family: Segoe, Segoe UI;"
+													type="submit">
+													<i style="font-size:17px;display: table-row;" class="fa">&#xf07a;&ensp;  Aggiungi</i>
+												</button>
+										</span><span></span>
+									</span>
+									</a> <input type="hidden" id="id" name="id"
+										value="<%=el.getCodice()%>"> <input type="hidden"
+										name="azione" value="aggiungi"> <input type="hidden"
+										name="pagina" value="ServletDati">
+								</form>
+								<form action="ServletDettaglio" method="get">
+									<a class="more fl-l"><span><span><button
+													style="background: transparent; border: none; outline: none; display: unset;font-size:17px; text-align: center;"
+													type="submit"> Dettaglio 
+												</button></span></span></a> <input type="hidden" id="id" name="id"
+										value="<%=el.getCodice()%>">
+								</form>
+							</div>
+						</div> <br> <br>
+					</li>
+					<%
+						}
+					%>
 
-				<section class="catalog" layout layout-wrap layout-align="center">
-					<md-card ng-repeat="it in products.catalog" flex="22" flex-sm="46"
-						flex-xs="80" ng-class="{shaded:$mdMedia('xs') }">
-					<div class="zoom img" align="center">
-						<img src="<%=el.getImg()%>">
-					</div>
-					<md-card-footer-text layout="column"> <span
-						class="md-title"><%=el.getNome()%> </span> <span class="md-subhead"><%=el.getPrezzo()%></span>
-					</md-card-footer-text> </md-card>
-				</section>
-               <div style="text-align: center">
-						<form action="ServletDettaglio" method="get">
-							<input type="hidden" id="id" name="id"
-								value="<%=el.getCodice()%>">
-							<button id="pulsante" type="submit">DETTAGLIO</button>
-							<br> <br>
-						</form>
-						<form action="ServletCarrello" method="post">
-							<input type="hidden" id="id" name="id"
-								value="<%=el.getCodice()%>"> <input type="hidden"
-								name="azione" value="aggiungi"> <input type="hidden"
-								name="pagina" value="ServletDati">
-							<button id="pulsante" type="submit">AGGIUNGI AL CARRELLO
-							</button>
-							<br>
-						</form>
-					</div>
-				
-				<%
-					}
-				%>
-               
-
+				</ul>
 			</div>
 		</div>
-
 		<div class="rightcolumn">
 
 			<div class="card">
@@ -710,5 +1056,46 @@ md-card-footer-text {
 			href="#" class="fa fa-youtube"></a> <a href="#"
 			class="fa fa-instagram"></a>
 	</div>
+	<script>
+		(function($) {
+
+			$('.wrapper .more').click(
+					function(show) {
+						var showMe = $(this).closest('.product').find(
+								'.container-prod');
+						$(this).closest('.wrapper').find('.container-prod')
+								.not(showMe).removeClass('information');
+						$('.container-prod').removeClass('social-sharing');
+						showMe.stop(false, true).toggleClass('information')
+								.removeClass('social-sharing');
+						show.preventDefault();
+					});
+
+			$('.wrapper .share').click(
+					function(share) {
+						var showMe = $(this).closest('.product').find(
+								'.container-prod');
+						$(this).closest('.wrapper').find('.container-prod')
+								.not(showMe).removeClass('social-sharing');
+						$('.container-prod').removeClass('information');
+						showMe.stop(false, true).toggleClass('social-sharing')
+								.removeClass('information');
+						share.preventDefault();
+					});
+
+			$('.wrapper .add').click(
+					function(share) {
+						var showMe = $(this).closest('.product').find('.cart');
+						showMe.stop(false, true).addClass('added');
+						var showMe = $(this).closest('.product').find(
+								'.container-prod');
+						showMe.stop(false, true).removeClass('social-sharing')
+								.removeClass('information');
+						share.preventDefault();
+					});
+
+		})(jQuery);
+	</script>
+
 </body>
 </html>

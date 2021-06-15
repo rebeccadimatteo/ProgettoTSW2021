@@ -141,6 +141,22 @@ background: #333;
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
+
+		#pulsantee {
+			outline: none;
+			cursor: pointer;
+			text-align: center;
+			text-decoration: none;
+			font: bold 20px Arial, Helvetica, sans-serif;
+			color: white;
+			padding: 10px 20px;
+			border: solid 1px #333;
+			background: #333;
+			-webkit-box-shadow: 5px 5px 10px 0px #3b3b3b;
+			-moz-box-shadow: 5px 5px 10px 0px #3b3b3b;
+			-o-box-shadow: 5px 5px 10px 0px #3b3b3b;
+			box-shadow: 5px 5px 10px 0px #3b3b3b;
+		}
 /* Footer */
 .footer {
 	padding: 20px;

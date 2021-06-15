@@ -313,7 +313,7 @@ body {
 					<%=prodotto.getDescrizione()%>
 					<br>
 					<br> <b>Peso: </b>
-					<%=prodotto.getPeso()%> <b>kg</b>
+					<%=prodotto.getPeso()%> kg
 					<b>Prezzo: </b>$<%=(double)prodotto.getPrezzo()%>
 					<br> <br>
 				</p>
