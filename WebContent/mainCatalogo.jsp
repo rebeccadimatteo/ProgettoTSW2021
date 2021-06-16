@@ -369,7 +369,7 @@ md-card-footer-text {
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
-	width: 70%;
+	width: 60%;
 	border: solid 1px #333;
 	background: white;
 	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
@@ -404,6 +404,15 @@ md-card-footer-text {
 	.logo {
 		width: 100%;
 		display: block;
+	}
+	
+	.pulsante{
+	text-align:-webkit-center;
+	}
+	
+	.icon-cart{
+	position:absolute;
+	display:grid;
 	}
 }
 
@@ -1011,7 +1020,7 @@ html, body {
 			</div>
 			<div class="card">
 
-				<button onclick="location.href='ServletCarrello'" id="pulsante"
+				<button onclick="location.href='ServletCarrello'" id="pulsante"style="align: left;"
 					type="submit">
 					<div class="icon-cart"
 						style="align: center; clear: left; float: left">
@@ -1020,7 +1029,7 @@ html, body {
 						<div class="cart-line-3" style="background-color: black"></div>
 						<div class="cart-wheel" style="background-color: black"></div>
 					</div>
-					<br>&emsp; &emsp; Carrello (${car.lengthCarrello()})
+					<br><br> Carrello (${car.lengthCarrello()})
 				</button>
 			</div>
 

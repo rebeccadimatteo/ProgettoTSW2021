@@ -328,7 +328,7 @@ body {
 				if(!a.getId().equalsIgnoreCase("admin")){
 			%>
 
-						<button id="pulsante" type="submit">Aggiungi al Carrello</button>
+						<button id="pulsante" type="submit" style="width:200px">Aggiungi al Carrello</button>
 						<br> <input type="hidden" name="azione" value="aggiungi">
 						<input type="hidden" name="pagina"
 							value="ServletDettaglio?id=${prodotto.getCodice() }">
@@ -336,6 +336,8 @@ body {
 				}
 			%>
 					</form>
+					
+					
 				</div>
 			</div>
 		</div>
