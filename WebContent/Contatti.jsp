@@ -35,6 +35,10 @@ body {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 
 #pulsante {
@@ -89,7 +93,11 @@ body {
 	background-color: #ddd;
 	color: black;
 }
-
+body {
+	font-family: Arial;
+	padding: 10px;
+	background: #f1f1f1;
+}
 .logo {
 	float: left;
 	width: 20%;

@@ -30,16 +30,9 @@ public class ServletDati extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setAttribute("Catalogo", catal);
-		String azione = request.getParameter("azione");
+		
 		String azione2 = request.getParameter("azione2");
-		if (azione != null) {
-			if (azione.equalsIgnoreCase("admin")) {
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Admincat.jsp");
-				rd.forward(request, response);
-
-			}
-
-		} // annulla il carrello e lo riporta al main catalogo
+		 // annulla il carrello e lo riporta al main catalogo
 		if (azione2 != null) {
 			if (azione2.equalsIgnoreCase("fine")) {
 				Carrello car = new Carrello();

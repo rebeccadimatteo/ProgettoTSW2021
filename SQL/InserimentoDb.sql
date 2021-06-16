@@ -32,13 +32,13 @@ insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,q
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("005", "MOZZARELLA DI GIOIA DEL COLLE DOP" , "Il sapore della Mozzarella di Gioia del Colle Dop e' di latte delicatamente acidulo, con lieve retrogusto di fermentato/siero acido, piu' intenso nel formaggio appena prodotto; odore lattico, acidulo, con eventuali sfumature di burro; Si presenta con una superficie liscia o lievemente fibrosa, lucente, non viscida, ne scagliata. L'aspetto esterno e' di colore bianco, con eventuali sfumature stagionali di colore paglierino. Al taglio la pasta, che deve avere consistenza elastica ed essere priva di difetti, presenta una leggera fuoriuscita di siero di colore bianco.",30.10, 4.00,"F","images/mozzarellaGioia.jpg",1 );
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("006","Orecchiette di semola" , "Pasta di semola di grano duro. Ingredienti: semola di grano duro, acqua. Allergeni: glutine; puo' contenere tracce di soia.",3.10, 0.500, "P","images/orecchiette.jpg",1 );
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ( "007"," Burrata di Bufala" ,"Stracciatella filetti di mozzarella mescolati con panna fresca
-racchiusa in una sacca di pasta filata.",9.20,1.00,"F","images/burrata.jpg",1);
+racchiusa in una sacca di pasta filata.",9.20,1.00,"F","images/burrata.png",1);
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("008", "Caciocavallo Podolico", "Porzione in confezione sottovuoto, stagionatura 4 mesi", "21.20", "0.500", "F"," images/cacio.jpg ",1);
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("009","Cavatelli","Noti come capuniti, si ottengono strisciando un rotolino di impasto di farina e acqua con tre dita in modo da formare un incavo","3.20","0.500","P"," images/cavat.jpg ",1);
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("010", "Liquore Fragolino", "Il rosolio di fragole, conosciuto come Fragolino, è un’antica specialità diffusa in tutta la Campania.
 Dolce e moderatamente alcolico, si caratterizza per l’aroma particolarmente delicato, arricchito da fragoline di bosco.", "15.99", "70", "VL"," images/fragolino.jpg  ",1);
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("011", "Falanghina Del Sannio", "La Falanghina è un vino bianco campano con aroma che riporta a note floreali 
-leggermente fruttate.", "11.10", "75", "VL"," images/falang.jpg ",1);
+leggermente fruttate.", "11.10", "75", "VL"," images/falang.png ",1);
 
 
 

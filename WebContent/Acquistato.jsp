@@ -17,7 +17,22 @@
 * {
 	box-sizing: border-box;
 }
-
+#pulsanteac {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	width:20%;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 10px 40px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
 body {
 	font-family: Arial;
 	padding: 10px;
@@ -496,8 +511,8 @@ pre {
 
 
 				<br>
-				<form action="ServletDati" method="get">
-					<button id="pulsante" type="submit">Ritorna al Catalogo</button>
+				<form action="ServletDati" method="get" align="right">
+					<button id="pulsanteac" type="submit" >Ritorna al Catalogo</button>
 					<input type="hidden" name="azione2" value="fine">
 				</form>
 

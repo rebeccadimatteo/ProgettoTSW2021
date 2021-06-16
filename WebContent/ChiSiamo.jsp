@@ -6,7 +6,7 @@
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 <style>
@@ -30,6 +30,10 @@ body {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
 
 #pulsante {
@@ -222,6 +226,8 @@ body {
 	width: 50px;
 	border-radius: 50%;
 }
+
+.mySlides {display:none;margin:auto;}
 </style>
 </head>
 <body>
@@ -320,6 +326,35 @@ body {
 			<div class="card">
 				<h1 Style="color: #800000" align="center">Ora vi raccontiamo la
 					nostra storia...</h1>
+					
+					<div class="w3-content w3-section" style="max-width:500px;">
+  <img class="mySlides w3-animate-fading" src="images/costieracilentana.jpg" style="width:100%;border-radius: 5%;">
+  <img class="mySlides w3-animate-fading" src="images/sicilia2.jpg" style="width:100%;text-align:center;border-radius: 5%;">
+  <img class="mySlides w3-animate-fading" src="images/maratea1.jpg" style="width:100%;align:center;border-radius: 5%;">
+  <img class="mySlides w3-animate-fading" src="images/calabria.jpg" style="width:100%;align:center;border-radius: 5%;">
+  <img class="mySlides w3-animate-fading" src="images/puglia.jpg" style="width:100%;align:center;border-radius: 5%;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 7000);    
+}
+</script>
+					
+					
+					
+					
 				<p align="center" style="font-family: 'Trebuchet MS', sans-serif;">
 
 					I <i>Sapori del Sud tra Terra e Mare</i> e' un sito di e-commerce
@@ -338,6 +373,7 @@ body {
 
 				</p>
 				<br>
+				&emsp;&emsp;&emsp;
 				<div class="chip">
 					<img src="images/avatar1.png" alt="Person" width="96" height="96">
 					Ilaria De Sio

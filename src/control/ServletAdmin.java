@@ -56,6 +56,11 @@ public class ServletAdmin extends HttpServlet {
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Adminhomepage.jsp");
 				rd.forward(request, response);
 			}
+			if (azione.equalsIgnoreCase("cat")) {
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/Admincat.jsp");
+				rd.forward(request, response);
+
+			}
 
 		}
 

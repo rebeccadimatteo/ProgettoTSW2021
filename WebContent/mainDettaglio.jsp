@@ -301,7 +301,7 @@ body {
 			<div class="card">
 
 				<%
-					Item prodotto = (Item) request.getAttribute("Prodotto");
+					Item prodotto = (Item)request.getAttribute("Prodotto");
 				%>
 				<p align="center">
 					<b><%=prodotto.getNome()%></b>
@@ -313,7 +313,7 @@ body {
 					<%=prodotto.getDescrizione()%>
 					<br>
 					<br> <b>Peso: </b>
-					<%=prodotto.getPeso()%> <b>kg</b>
+					<%=prodotto.getPeso()%> kg
 					<b>Prezzo: </b>$<%=(double)prodotto.getPrezzo()%>
 					<br> <br>
 				</p>
@@ -322,13 +322,13 @@ body {
 				<div style="text-align: center">
 					<form action="ServletCarrello" method="post">
 						<input type="hidden" id="id" name="id"
-							value="<%=prodotto.getCodice()%>">
+							value="<%= prodotto.getCodice()%>">
               <%
 				Utente a =(Utente)request.getSession().getAttribute("utente");
 				if(!a.getId().equalsIgnoreCase("admin")){
 			%>
 
-						<button id="pulsante" type="submit">Aggiungi al Carrello</button>
+						<button id="pulsante" type="submit" style="width:200px">Aggiungi al Carrello</button>
 						<br> <input type="hidden" name="azione" value="aggiungi">
 						<input type="hidden" name="pagina"
 							value="ServletDettaglio?id=${prodotto.getCodice() }">
@@ -336,6 +336,8 @@ body {
 				}
 			%>
 					</form>
+					
+					
 				</div>
 			</div>
 		</div>

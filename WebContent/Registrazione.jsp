@@ -27,6 +27,10 @@
 			padding: 10px 20px;
 			border: solid 1px #333;
 			background: #333;
+			-webkit-box-shadow: 5px 5px 10px 0px #3b3b3b;
+			-moz-box-shadow: 5px 5px 10px 0px #3b3b3b;
+			-o-box-shadow: 5px 5px 10px 0px #3b3b3b;
+			box-shadow: 5px 5px 10px 0px #3b3b3b;
 		}
 
 		/* Create two unequal columns that floats next to each other */

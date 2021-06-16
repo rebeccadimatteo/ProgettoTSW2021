@@ -313,7 +313,7 @@ body {
 				<h1 Style="color: #800000" align="center">Metodi di pagamento</h1>
 				<div style="float:center;">
 					<p align="center">
-						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						
 						<img src="images/mastercard.png" 
 							style="height: 50px; float:center;">
 						<img src="images/visa.png"

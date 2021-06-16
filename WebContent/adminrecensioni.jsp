@@ -363,10 +363,10 @@ th {
 					<input type="hidden" name="azione" value="homepage">
 				<br> <br>
 					</form>
-					<form action="ServletDati" method="get">
+					<form action="ServletAdmin" method="get">
 				<button  id="pulsante"
 					type="submit">Visualizza Catalogo</button>
-					<input type="hidden" name="azione" value="admin">
+					<input type="hidden" name="azione" value="cat">
 				<br> <br>
 				</form>
                 <form action="ServletAdmin" method="get">

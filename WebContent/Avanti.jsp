@@ -96,6 +96,22 @@ body {
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
+#pulsanteac {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	width:20%;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	color: #800000;
+	padding: 10px 40px;
+	border: solid 1px #333;
+	background: white;
+	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
+	box-shadow: 5px 5px 10px 0px #3B3B3B;
+}
 
 pre {
 	display: block;
@@ -378,7 +394,7 @@ label {
 						</fieldset>
 						<p align=right>
 							<br> <input type="hidden" name="az" value="acquista">
-							<button id="pulsante" type="submit">Acquista</button>
+							<button id="pulsanteac" type="submit">Acquista</button>
 							<br>
 						</p>
 
