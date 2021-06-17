@@ -701,7 +701,7 @@ html, body {
 	padding: 0 10px;
 	background-color: #5DBA9D;
 	color: #FFFFFF;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: bold;
 	position: relative;
 }
