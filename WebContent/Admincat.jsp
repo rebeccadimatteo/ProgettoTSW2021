@@ -973,17 +973,7 @@ html, body {
 							</div>
 							<div class="buttons cf">
 								<form action="ServletCarrello" method="post">
-									<a class="cart fl-l"> <span> <span class="add"
-											style="text-align: center">
-												<button
-													style="background: transparent; border: none; outline: none; display: table-row; text-align: center;
-													font-family: Segoe, Segoe UI;"
-													type="submit">
-													<i style="font-size:17px;display: table-row;" class="fa">&#xf07a;&ensp;  Aggiungi</i>
-												</button>
-										</span><span></span>
-									</span>
-									</a> <input type="hidden" id="id" name="id"
+									 <input type="hidden" id="id" name="id"
 										value="<%=el.getCodice()%>"> <input type="hidden"
 										name="azione" value="aggiungi"> <input type="hidden"
 										name="pagina" value="ServletDati">

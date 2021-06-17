@@ -324,8 +324,9 @@ body {
 						<input type="hidden" id="id" name="id"
 							value="<%= prodotto.getCodice()%>">
               <%
-				Utente a =(Utente)request.getSession().getAttribute("utente");
-				if(!a.getId().equalsIgnoreCase("admin")){
+              if((request.getSession().getAttribute("utente")==null )||  !((Utente)request.getSession().getAttribute("utente")).getId().equalsIgnoreCase("admin")){
+            	  
+				
 			%>
 
 						<button id="pulsante" type="submit" style="width:200px">Aggiungi al Carrello</button>
@@ -337,6 +338,7 @@ body {
 			%>
 					</form>
 					
+			
 					
 				</div>
 			</div>

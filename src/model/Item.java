@@ -122,7 +122,6 @@ public class Item {
 			preparedStatement.setString(6, codicecategoria);
 			preparedStatement.setString(7, img);
 			preparedStatement.setDouble(8, quantita);
-
 			preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {

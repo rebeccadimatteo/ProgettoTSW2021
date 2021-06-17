@@ -292,9 +292,11 @@ th {
 				
 				<%
 			
+		           
 				ArrayList<Ordine> listaordini= new ArrayList<Ordine>();
+				Ordine ris=new Ordine(0,null,null,null,null,null,null,0);
+				listaordini=ris.restituisciordiniid((String)request.getAttribute("c1"));
 				
-				listaordini=(ArrayList<Ordine>)request.getAttribute("listaid");
 				
 				%>
 				

@@ -661,39 +661,29 @@ Transitions
 									<label for="codrim">Codice prodotto </label> <input type="text"
 										name="codmod" placeholder="003" />
 								</p>
-							</form>
-
-							<form action="ServletAdmin" method="post"
-								style="display: contents; font-family: 'Nunito', sans-serif; color: #384047;">
+							
+								
 								<p class="field">
 									<label for="prez"> </label><input type="text" name="prez"
 										placeholder="3.50 $" />
-									<button id="pulsante4" type="submit">Modifica prezzo</button>
-									<input type="hidden" name="azionee" value="modificaprezzo">
+									
 								</p>
-							</form>
-
-							<form action="ServletAdmin" method="post"
-								style="display: contents; font-family: 'Nunito', sans-serif; color: #384047;">
+							
+								
 								<p class="field">
-									<input type="text" name="pes" placeholder="1 kg" />
-									<button id="pulsante4" type="submit">Modifica peso</button>
-									<input type="hidden" name="azionee" value="modificapeso">
+									<input type="text" name="pes" id="pes" placeholder="1 kg" />
+									
 								</p>
-							</form>
-
-							<form action="ServletAdmin" method="post"
-								style="display: contents; font-family: 'Nunito', sans-serif; color: #384047;">
+							
 								<p class="field">
 									<input type="text" name="quant" placeholder="3" />
-									<button id="pulsante4" type="submit">Modifica
-										quantita'</button>
-									<input type="hidden" name="azionee" value="modificaquant">
+									
 								</p>
+								<input type='submit' type="submit" value="  MODIFICA"
+								style="width: 800px;" />
 							</form>
 
-							<input type='submit' type="submit" value="  "
-								style="width: 800px;" />
+							
 						</div>
 					</div>
 				</div>

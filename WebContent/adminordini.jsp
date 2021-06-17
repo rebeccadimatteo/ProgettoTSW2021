@@ -310,7 +310,7 @@ th {
 				<legend style="color: #800000"> Visualizza ordini per Cliente :  </legend>
 				<form action="ServletAdmin" method="post">
 				
-				<p >Inserisci id: 				<input type="text" id="c">
+				<p >Inserisci id: 				<input type="text" name="c" id="c" placeholder="mariorossi" />
 						<button id="pulsante3" type="submit">cerca </button>
 						<input type="hidden" name="azione3" value="cliente"> <br>
 						<br>
@@ -323,8 +323,8 @@ th {
 				<legend style="color: #800000"> Visualizza ordini per data :  </legend>
 				<form action="ServletAdmin" method="post">
 				
-				<p>Inserisci date: da			<input type="Date" id="data1"> a
-				<input type="Date" id="data2">
+				<p>Inserisci date: da<input type="Date"  name ="data1" id="data1"/> a
+				<input type="Date"  name ="data2" id="data2"/>
 						<button id="pulsante3" type="submit">cerca </button>
 						<input type="hidden" name="azione3" value="data"> <br>
 						<br>

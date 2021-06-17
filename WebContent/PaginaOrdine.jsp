@@ -680,15 +680,16 @@ button:hover {
 					<h3><%=el.getNome()%></h3>
 					<br>
 					<p class="quantity"><h5>Quantita':</h5> <form action="ServletOrdine" method="post">
-
-										<input type="number" value="<%=Math.round(el.getQuantita())%>" id="agg"
+                                    
+										<input type="number" value="<%=Math.round(el.getQuantita())%>"  onchange="this.form.submit()" name="agg" id="agg"
 											min="1" max="30" style="min-width:10px;"> <br> <input type="hidden"
 											name="azione" value="+"> <input type="hidden"
 											name="cod" value="<%=el.getCodice()%>">
+											
 										<%
 											if (el.getQuantita() > 30) {
 										%>
-										<p>Quantità non disponibile</p>
+										<p>Quantita' non disponibile</p>
 										<%
 											}
 										%>

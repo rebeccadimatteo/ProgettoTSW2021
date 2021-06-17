@@ -2,8 +2,12 @@ package control;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -33,6 +37,9 @@ public class ServletAdmin extends HttpServlet {
 	// inerenti
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		 Catalogo catal = new Catalogo();
+		 request.setAttribute("Catalogo", catal);
+
 		String azione = request.getParameter("azione");
 		if (azione != null) {
 			if (azione.equalsIgnoreCase("aggiungi")) {
@@ -73,17 +80,20 @@ public class ServletAdmin extends HttpServlet {
 		String azionee = request.getParameter("azionee");
 		String azione3 = request.getParameter("azione3");
 
-		String codice = request.getParameter("cod");
-		String nome = request.getParameter("nome");
-		String descrizione = request.getParameter("descrizione");
-		double prezzo = Double.parseDouble(request.getParameter("prezzo"));
-		double peso = Double.parseDouble(request.getParameter("peso"));
-		String codicecategoria = request.getParameter("tipo");
-		String img = request.getParameter("image");
-		Item nuovo = new Item(codice, nome, descrizione, prezzo, peso, codicecategoria, img, 0);
 
 		if (azionee != null) {
+
+			
 			if (azionee.equalsIgnoreCase("aggiungi")) {
+				String codice = request.getParameter("cod");
+				String nome = request.getParameter("nome");
+				String descrizione = request.getParameter("descrizione");
+				double prezzo = Double.parseDouble(request.getParameter("prezzo"));
+				double peso = Double.parseDouble(request.getParameter("peso"));
+				String codicecategoria = request.getParameter("cat");
+				
+				String img = request.getParameter("image");
+				Item nuovo = new Item(codice, nome, descrizione, prezzo, peso, codicecategoria, img, 0);
 				nuovo.inserisciprodotto();
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
 				rd.forward(request, response);
@@ -101,11 +111,12 @@ public class ServletAdmin extends HttpServlet {
 			}
 			if (azionee.equalsIgnoreCase("modificaprezzo")) {
 				String codicerim = request.getParameter("codmod");
+				System.out.println(codicerim);
 				double prezzo2 = Double.parseDouble(request.getParameter("prez"));
 				Catalogo ris = new Catalogo();
 				Item fin = ris.getItem(codicerim);
+				System.out.println(fin);
 				fin.setPrezzo(prezzo2);
-
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
 				rd.forward(request, response);
 
@@ -137,10 +148,8 @@ public class ServletAdmin extends HttpServlet {
 		if (azione3.equalsIgnoreCase("cliente")) {
 			
 			String c = request.getParameter("c");
-			ArrayList<Ordine> listaordini= new ArrayList<Ordine>();
-			Ordine ris=new Ordine(0,null,null,null,null,null,null,0);
-			listaordini=ris.restituisciordiniid(c);
-			request.setAttribute("listaid",listaordini);
+			
+			request.setAttribute("c1",c);
 			
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdminOrdineCliente.jsp");
 			rd.forward(request, response);
@@ -149,12 +158,18 @@ public class ServletAdmin extends HttpServlet {
         if (azione3.equalsIgnoreCase("data")) {
         	
         	
-			Date  d1 = java.sql.Date.valueOf(request.getParameter("data1"));
-			Date  d2 = java.sql.Date.valueOf(request.getParameter("data2"));
+        	
+            LocalDate d1 = LocalDate.parse(request.getParameter("data1"));
+            LocalDate d2= LocalDate.parse(request.getParameter("data2"));
+			
+        	
 			ArrayList<Ordine> listaordini= new ArrayList<Ordine>();
 			Ordine ris=new Ordine(0,null,null,null,null,null,null,0);
 			listaordini=ris.restituisciordinidata(d1, d2);
 			request.setAttribute("listadata",listaordini);
+			
+			
+			
 			
 
 			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdminOrdineData.jsp");
