@@ -341,7 +341,7 @@ path.selected {
 		</div>
 
 		<div class="topnavRight" style="float: right; display: flex;">
-			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
+			<!--  se utente Ã¨ autentifico esce logout e puÃ² accedere  a mio profilo e miei ordini -->
 			<%
 				if (request.getSession().getAttribute("utente") != null) {
 			%>

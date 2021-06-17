@@ -688,7 +688,7 @@ button:hover {
 										<%
 											if (el.getQuantita() > 30) {
 										%>
-										<p>Quantit‡ non disponibile</p>
+										<p>Quantit√† non disponibile</p>
 										<%
 											}
 										%>
@@ -726,7 +726,10 @@ button:hover {
 							
 							
 			
+
 					<button onclick="location.href='ServletDati'" style="font-size:24px; width:50%;display:contents; float:left;" id="pulsante">Ritorna al Catalogo<i class="fa fa-arrow-circle-left" style="color: #800000"></i></button>
+
+				
 				
 				
 					 <form action="ServletOrdine" method="post" style="display:unset;float:right;">
