@@ -303,26 +303,36 @@ th {
 			<div class="card">
 			
 				
-				<h1 Style="color: #800000">Ecco tutti gli ordini che hanno effettuato </h1>
-				<h1 Style="color: #800000">Visualizza ordini per Cliente : </h1>
+				<h1 Style="color: #800000">Ecco tutti gli ordini che hanno effettuato i tuoi clienti </h1>
+				<br>
+				<fieldset>  
+				
+				<legend style="color: #800000"> Visualizza ordini per Cliente :  </legend>
 				<form action="ServletAdmin" method="post">
 				
 				<p >Inserisci id: 				<input type="text" id="c">
 						<button id="pulsante3" type="submit">cerca </button>
 						<input type="hidden" name="azione3" value="cliente"> <br>
 						<br>
-					</form>
+				</form>
 				
-				<h1 Style="color: #800000">Visualizza ordini per data : </h1>
+				</fieldset>
+				
+				<br>
+				<fieldset>
+				<legend style="color: #800000"> Visualizza ordini per data :  </legend>
 				<form action="ServletAdmin" method="post">
 				
-				<p >Inserisci date:da			<input type="Date" id="data1"> a
+				<p>Inserisci date: da			<input type="Date" id="data1"> a
 				<input type="Date" id="data2">
 						<button id="pulsante3" type="submit">cerca </button>
 						<input type="hidden" name="azione3" value="data"> <br>
 						<br>
 					</form>
-				</p>
+				
+				</fieldset>
+				<h1 Style="color: #800000">Visualizza ordini per data : </h1>
+				
 				<%
 			
 				ArrayList<Ordine> listaordini= new ArrayList<Ordine>();
@@ -395,8 +405,8 @@ th {
 			
 		</div>
 		<div class="rightcolumn">
-			<div class="card">
-				<div class="card">
+			<div class="card" style="height: 1190px;">
+				<div class="card" >
 				<h2 Style="color: #800000">Gestisci</h2>
 				<form action="ServletAdmin" method="get">
 				<button  id="pulsante"
@@ -458,7 +468,7 @@ th {
 		</div>
 		
 	</div>
-
+</div>
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
