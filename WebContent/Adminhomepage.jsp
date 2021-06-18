@@ -328,9 +328,9 @@ path.selected {
 	</div>
 	
 <div class="row">
-		<div class="leftcolumn">
+		<div class="leftcolumn" >
 
-			<div class="card">
+			<div class="card" style="height:800px">
 				<div class="card"  style="width: 430px; height: 241px;float: right; ">
 					<%
 						String[] regioni = {"Campania","Sicilia","Calabria","Puglia","Basilicata"};

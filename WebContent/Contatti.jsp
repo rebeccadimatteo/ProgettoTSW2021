@@ -366,7 +366,7 @@ body {
 	</div>
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card">
+			<div class="card"  style="height:500px">
 
 				<h1 Style="color: #800000" align="center">Stai riscontrando dei
 					problemi? Contattaci!</h1>
@@ -404,7 +404,7 @@ body {
 			</div>
 		</div>
 		<div class="rightcolumn">
-			<div class="card">
+			<div class="card" style="height:500px">
 
 				<h2 Style="color: #800000">Gestisci</h2>
 

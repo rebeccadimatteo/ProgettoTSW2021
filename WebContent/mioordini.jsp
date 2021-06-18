@@ -84,9 +84,8 @@ body {
 /* Right column */
 .rightcolumn {
 	float: left;
-	width: 25%;
+	width: 100%;
 	background-color: #f1f1f1;
-	padding-left: 20px;
 }
 
 /* Fake image */
@@ -332,7 +331,9 @@ th {
 	</div>
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card">
+			<div class="card"><br>
+			<b Style="color: #800000">I tuoi Ordini effettuati:</b>
+			<br>
 				<%
 					Utente ut = (Utente) request.getSession().getAttribute("utente");
 
@@ -346,12 +347,6 @@ th {
 				%>
 
 				<fieldset>
-
-					<legend>
-
-						<b Style="color: #800000">I tuoi Ordini effettuati:</b>
-
-					</legend>
 					<table width="55%" border="1">
 
 						<tr>
@@ -396,11 +391,12 @@ th {
 
 
 						</tr>
+						
 
 
 
 					</table>
-
+<br>
 				</fieldset>
 
 
@@ -420,7 +416,7 @@ th {
 				<h2 Style="color: #800000">Gestisci</h2>
 				<br>
 
-				<button onclick="location.href='mioprofilo.jsp'" id="pulsante"
+				<button style="width:200px "onclick="location.href='mioprofilo.jsp'" id="pulsante"
 					type="submit">Vai al mio profilo</button>
 				<br> <br>
 

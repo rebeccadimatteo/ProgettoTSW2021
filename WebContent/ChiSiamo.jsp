@@ -396,7 +396,7 @@ function carousel() {
 			</div>
 		</div>
 		<div class="rightcolumn">
-			<div class="card">
+			<div class="card" style="height:635px">
 				<h2 Style="color: #800000">Gestisci</h2>
 
 				<button onclick="location.href='mioprofilo.jsp'" id="pulsante"

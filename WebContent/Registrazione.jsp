@@ -322,7 +322,7 @@
 
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card">
+			<div class="card" >
 				<div class="container">
 					<form action="RegistrazioneServlet" method="post" name="regform"
 						onsubmit="event.preventDefault(); myfunction(this)">
@@ -428,7 +428,7 @@
 		</div>
 
 		<div class="rightcolumn">
-			<div class="card">
+			<div class="card"  style="height:1570px">
 				<h2 Style="color: #800000">Gestisci</h2>
 
 				<button onclick="location.href='mioprofilo.jsp'" id="pulsante" type="submit">

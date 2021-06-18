@@ -972,12 +972,22 @@ html, body {
 								</div>
 							</div>
 							<div class="buttons cf">
-								<form action="ServletCarrello" method="post">
-									 <input type="hidden" id="id" name="id"
+								
+									<a class="cart fl-l"> <span> <span class="add"
+											style="text-align: center">
+												<button
+													style="background: transparent; border: none; outline: none; display: table-row; text-align: center;
+													font-family: Segoe, Segoe UI;"
+													type="submit">
+													<i style="font-size:17px;display: table-row;" class="fa">&ensp;  </i>
+												</button>
+										</span><span></span>
+									</span>
+									</a> <input type="hidden" id="id" name="id"
 										value="<%=el.getCodice()%>"> <input type="hidden"
 										name="azione" value="aggiungi"> <input type="hidden"
 										name="pagina" value="ServletDati">
-								</form>
+								
 								<form action="ServletDettaglio" method="get">
 									<a class="more fl-l"><span><span><button
 													style="background: transparent; border: none; outline: none; display: unset;font-size:17px; text-align: center;"
@@ -995,9 +1005,9 @@ html, body {
 				</ul>
 			</div>
 		</div>
-		<div class="rightcolumn">
-			<div class="card">
-				<div class="card">
+		<div class="rightcolumn" >
+			<div class="card" >
+				<div class="card" style="height:1530px">
 				<h2 Style="color: #800000">Gestisci</h2>
 				<form action="ServletAdmin" method="get">
 				<button  id="pulsante"
@@ -1039,12 +1049,6 @@ html, body {
 					<input type="hidden" name="azione" value="ordini">
 				<br> <br>
 					</form>
-				
-				
-				
-				
-				
-				
 				
 				<form action="ServletRecensioni" method="get">
 				<button  id="pulsante"

@@ -76,14 +76,15 @@ body {
 .leftcolumn {
 	float: left;
 	width: 100%;
+	overflow:scroll;
 }
 
 /* Right column */
 .rightcolumn {
 	float: left;
-	width: 25%;
+
 	background-color: #f1f1f1;
-	padding-left: 20px;
+
 }
 
 /* Fake image */
@@ -98,6 +99,7 @@ body {
 	padding: 20px;
 	margin-top: 20px;
 	-webkit-border-radius: 20px;
+	
 }
 
 /* Clear floats after the columns */
@@ -306,8 +308,8 @@ body {
 	
 
 	<div class="row">
-		<div class="leftcolumn">
-			<div class="card">
+		<div class="leftcolumn" style="width:700px">
+			<div class="card" >
 				<%
 					Utente ut = (Utente) request.getSession().getAttribute("utente");
 					if (ut == null) {
@@ -333,7 +335,7 @@ body {
 						</b><%=ut.getCellulare()%><br> <br>
 					</p>
 				</fieldset>
-
+<br>
 				<fieldset>
 					<legend>
 						<b Style="color: #800000">Dati di spedizione:</b>
@@ -355,13 +357,13 @@ body {
 			</div>
 		</div>
 
-		<div class="rightcolumn">
-			<div class="card">
+		<div class="rightcolumn" >
+			<div class="card"  style="width:1390px">
 				<h2 Style="color: #800000">Gestisci</h2>
 				<br>
 
 				<button onclick="location.href='mioordini.jsp'" id="pulsante"
-					type="submit">I miei ordini</button>
+					type="submit" style="width:200px;text-align:center;">I miei ordini</button>
 				<br> <br>
 
 			</div>

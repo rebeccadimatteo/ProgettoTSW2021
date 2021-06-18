@@ -310,7 +310,7 @@ body {
 					ritardi). I costi di spedizione sono gratuiti</h4>
 			</div>
 			<div class="card">
-				<h1 Style="color: #800000" align="center">Metodi di pagamento</h1>
+				<h1 Style="color: #800000" align="center" style="display:-webkit-box;">Metodi di pagamento</h1>
 				<div style="float:center;">
 					<p align="center">
 						
@@ -327,7 +327,7 @@ body {
 			</div>
 		</div>
 		<div class="rightcolumn">
-			<div class="card">
+			<div class="card" style="height:470px">
 				<h2 Style="color: #800000">Gestisci</h2>
 
 				<button onclick="location.href='mioprofilo.jsp'" id="pulsante"

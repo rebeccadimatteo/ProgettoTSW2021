@@ -957,7 +957,7 @@ html, body {
 				<%
 					Catalogo prodotti = (Catalogo) request.getAttribute("Catalogo");
 
-					for (int i = 0; i < prodotti.lengthCatalogo(); i++) {
+					for (int i = 0; i < prodotti.lengthCatalogo()-1; i++) {
 						Item el = prodotti.getItemIndex(i);
 				%>
 				<ul class="wrapper cf">
@@ -1031,8 +1031,11 @@ html, body {
 					</div>
 					<br><br> Carrello (${car.lengthCarrello()})
 				</button>
+				
 			</div>
+<div class="card" style="height:1160px">
 
+</div>
 		</div>
 	</div>
 

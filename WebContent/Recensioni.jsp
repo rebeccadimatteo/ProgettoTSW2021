@@ -80,7 +80,7 @@ body {
 	width: 75%;
 	box-sizing: border-box;
 	background: linear-gradient(to right bottom, white, white);
-	height: 130vh;
+	height: 135vh;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -453,7 +453,7 @@ width:50%;
 
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card2">
+			<div class="card2" >
 
 				<div class=body2>
 					<div class="wrapper2">
@@ -507,7 +507,7 @@ width:50%;
 		</div>
 		
 		<div class="rightcolumn">
-			<div class="card">
+			<div class="card"  style="height:1000px">
 
 				<h2 Style="color: #800000">Gestisci</h2>
 
