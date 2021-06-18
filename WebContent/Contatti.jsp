@@ -372,7 +372,7 @@ body {
 
 				<h1 Style="color: #800000" align="center">Stai riscontrando dei
 					problemi? Contattaci!</h1>
-
+<br>
 				<div class="address details"
 					style="float: center; text-align: center;">
 					<i class="bi bi-geo-alt-fill" style='font-size: 24px'></i>
