@@ -59,7 +59,6 @@ body {
 	color: black;
 }
 
-
 .logo {
 	float: left;
 	width: 20%;
@@ -135,7 +134,7 @@ tr:nth-child(even) {
 	outline: none;
 	cursor: pointer;
 	text-align: center;
-	width:70%;
+	width: 70%;
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
@@ -253,8 +252,8 @@ th {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p>Sito di e-commerce incentrato sulle
-				specialita' gastronomiche del sud Italia.</p>
+			<p>Sito di e-commerce incentrato sulle specialita' gastronomiche
+				del sud Italia.</p>
 		</div>
 
 
@@ -321,19 +320,18 @@ th {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		
-		<%
-			}
-		%>
-			</div>
-		
+
+			<%
+				}
+			%>
+		</div>
+
 		<!--  colonna destra -->
 	</div>
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card"><br>
-			<b Style="color: #800000">I tuoi Ordini effettuati:</b>
-			<br>
+			<div class="card">
+				<br> <b Style="color: #800000">I tuoi Ordini effettuati:</b> <br>
 				<%
 					Utente ut = (Utente) request.getSession().getAttribute("utente");
 
@@ -382,7 +380,7 @@ th {
 							<td><%=listaordini1.get(i).getCap()%>&nbsp;</td>
 
 							<td><%=listaordini1.get(i).getCitta()%>&nbsp;</td>
-							<td><a href="Acquistato.jsp" >Vai al dettaglio</a></td>
+							<td><a href="Acquistato.jsp">Vai al dettaglio</a></td>
 
 
 
@@ -391,12 +389,12 @@ th {
 
 
 						</tr>
-						
+
 
 
 
 					</table>
-<br>
+					<br>
 				</fieldset>
 
 
@@ -416,7 +414,8 @@ th {
 				<h2 Style="color: #800000">Gestisci</h2>
 				<br>
 
-				<button style="width:200px "onclick="location.href='mioprofilo.jsp'" id="pulsante"
+				<button style="width: 200px"
+					onclick="location.href='mioprofilo.jsp'" id="pulsante"
 					type="submit">Vai al mio profilo</button>
 				<br> <br>
 

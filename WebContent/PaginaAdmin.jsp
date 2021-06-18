@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<script src='https://kit.fontawesome.com/a076d05399.js' ></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 * {
@@ -22,8 +23,8 @@ body {
 	padding: 30px;
 	text-align: center;
 	background: white;
-	display:flex;
-	flex-wrap:wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .header h1 {
@@ -40,23 +41,24 @@ body {
 .topnav a {
 	float: left;
 	display: flex;
-	flex-wrap:wrap;
-	justify-content :space-between;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 }
+
 #pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
 }
 
 /* Change color on hover */
@@ -64,6 +66,7 @@ background: #333;
 	background-color: #ddd;
 	color: black;
 }
+
 .logo {
 	float: left;
 	width: 20%;
@@ -71,6 +74,7 @@ background: #333;
 	padding-left: 5px;
 	margin-top: 9px;
 }
+
 .img2 {
 	background-color: white;
 	width: 100%;
@@ -82,6 +86,7 @@ background: #333;
 	float: left;
 	width: 75%;
 }
+
 #pulsante {
 	outline: none;
 	cursor: pointer;
@@ -89,7 +94,7 @@ background: #333;
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
-	width:70%;
+	width: 70%;
 	padding: 10px 40px;
 	border: solid 1px #333;
 	background: white;
@@ -98,17 +103,19 @@ background: #333;
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
+
 #pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
 }
+
 pre {
 	display: block;
 	font-family: Arial;
@@ -123,17 +130,20 @@ pre {
 	background-color: #f1f1f1;
 	padding-left: 20px;
 }
+
 .img {
-       -webkit-filter: grayscale(100%);
-       -webkit-transition: all 1s ease;
-       -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-       -ms-transition: all 1s ease;
-       transition: all 1s ease;
- }
- .img:hover {
-       -webkit-filter: grayscale(0%);
- }
+	-webkit-filter: grayscale(100%);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.img:hover {
+	-webkit-filter: grayscale(0%);
+}
+
 .card {
 	background-color: white;
 	padding: 20px;
@@ -162,68 +172,62 @@ pre {
 		padding: 0;
 		display: block;
 	}
-	.rightcolumn{
-	text-align:center;
+	.rightcolumn {
+		text-align: center;
 	}
 	.topnav a {
 		float: none;
 		width: 100%;
 		display: block;
 	}
-	
-	.topnav,.topnavLeft,.topnavRight {
-	flex-wrap:wrap;
-	flex-direction:column;
-	text-align:center;
-	
+	.topnav, .topnavLeft, .topnavRight {
+		flex-wrap: wrap;
+		flex-direction: column;
+		text-align: center;
 	}
-	
-	
 	.logo {
 		width: 100%;
 		display: block;
 	}
 }
 
-
-
 /* LOGHI FOOTER */
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
+	padding: 20px;
+	font-size: 30px;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
 }
+
 .fa:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+	background: #3B5998;
+	color: white;
 }
 
 .fa-youtube {
-  background: #bb0000;
-  color: white;
+	background: #bb0000;
+	color: white;
 }
 
 .fa-instagram {
-  background: #125688;
-  color: white;
+	background: #125688;
+	color: white;
 }
 
-
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+	background: #55ACEE;
+	color: white;
 }
 
 .fa-google {
-  background: #dd4b39;
-  color: white;
+	background: #dd4b39;
+	color: white;
 }
 
 path:hover {
@@ -238,35 +242,33 @@ path.selected {
 	transition: all 200ms ease-in-out;
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  font-family: 'Aref Ruqaa', serif;
-  font-size: 30px;
-  height: 100vh;
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Aref Ruqaa', serif;
+	font-size: 30px;
+	height: 100vh;
 }
 
-.btn{
-  display: inline-block;
-  background-color: #800000;
-  border-radius: 7px;
-  color: #fff;
-  height: 110px;
-  line-height: 50px;
-  padding: 10px 30px;
-  text-decoration: none;
-  text-align:center;
-  box-shadow: 0px 15px 10px -10px rgba( 0,0,0,0.6);
-  transition: all .7s;
+.btn {
+	display: inline-block;
+	background-color: #800000;
+	border-radius: 7px;
+	color: #fff;
+	height: 110px;
+	line-height: 50px;
+	padding: 10px 30px;
+	text-decoration: none;
+	text-align: center;
+	box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.6);
+	transition: all .7s;
 }
 
-.wrapper:hover .btn{
-  box-shadow: 0px 45px 20px -30px rgba( 0,0,0,0.2);
-  transform: translateY(-20px);
+.wrapper:hover .btn {
+	box-shadow: 0px 45px 20px -30px rgba(0, 0, 0, 0.2);
+	transform: translateY(-20px);
 }
-
 </style>
 </head>
 <body>
@@ -277,27 +279,28 @@ path.selected {
 				<a title="Ciao Amministratore" href="Adminhomepage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
-		</div>	
+		</div>
 
 		<div>
-		<h1>
-			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-			
-		</h1>
-		<p >Sito di e-commerce incentrato sulle
-			specialita' gastronomiche del sud Italia.</p>
+			<h1>
+				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
+
+			</h1>
+			<p>Sito di e-commerce incentrato sulle specialita' gastronomiche
+				del sud Italia.</p>
 		</div>
-		
-		
+
+
 	</div>
-		
-	<div class="topnav" style="display: flex; justify-content: space-between;">
+
+	<div class="topnav"
+		style="display: flex; justify-content: space-between;">
 		<div class="topnavLeft" style="float: left; display: flex;">
-	<h1 style="color:white">Ciao Amministratore!</h1>
-	
-				
-	</div>
-	<div class="topnavRight" style="float: right; display: flex;">
+			<h1 style="color: white">Ciao Amministratore!</h1>
+
+
+		</div>
+		<div class="topnavRight" style="float: right; display: flex;">
 			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
 			<%
 				if (request.getSession().getAttribute("utente") != null) {
@@ -312,24 +315,30 @@ path.selected {
 			<%
 				}
 			%>
-	</div>
+		</div>
 	</div>
 
 	<div class="row">
 		<div class="leftcolumn">
 
 			<div class="card">
-				<div class="card"  style="width: 430px; height: 241px;float: right; ">
+				<div class="card" style="width: 430px; height: 241px; float: right;">
 					<%
-						String[] regioni = {"Campania","Sicilia","Calabria","Puglia","Basilicata"};
+						String[] regioni = {"Campania", "Sicilia", "Calabria", "Puglia", "Basilicata"};
 					%>
 					<div class=container">
-					<div class="wrapper">
-					<div id="content" style="width: 400px; height: 241px; ">
-						<p><h2 ><b><a class="btn" href="#" >Clicca su una <br>regione del Sud !</a></b></h2></p>
+						<div class="wrapper">
+							<div id="content" style="width: 400px; height: 241px;">
+								<p>
+								<h2>
+									<b><a class="btn" href="#">Clicca su una <br>regione
+											del Sud !
+									</a></b>
+								</h2>
+								</p>
+							</div>
+						</div>
 					</div>
-				</div>
-				</div>
 				</div>
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -523,8 +532,9 @@ path.selected {
 		c0.536,0.534,0.975,1.177,1.555,1.651c1.485,1.215,2.77,1.194,4.336,0.031c2.866-2.129,3.382-2.131,6.216-0.127
 		c1.158,0.819,2.308,1.66,3.53,2.376c2.485,1.456,3.352,1.19,4.737-1.273c0.231-0.411,0.487-0.811,0.772-1.185
 		C204.679,200.753,204.903,200.732,205.067,200.665z" />
-	<path fill="#3E5C73" stroke="#3E5C73" onclick="cambia('<%=regioni[1]%>');" oncontextmenu="nascondi();" class="regione2"
-						data-nome-regione="Sicilia" stroke-width="2"
+	<path fill="#3E5C73" stroke="#3E5C73"
+						onclick="cambia('<%=regioni[1]%>');" oncontextmenu="nascondi();"
+						class="regione2" data-nome-regione="Sicilia" stroke-width="2"
 						stroke-miterlimit="10"
 						d="M384.528,658.926
 		c-0.908-0.781-1.864-2.021-3.243-0.345c-2.169-2.501-4.62-3.79-7.818-3.606c-1.594,0.092-2.58-1.15-3.036-2.581
@@ -557,8 +567,10 @@ path.selected {
 		c-0.242,0.697-0.62,1.383-1.079,1.961c-1.703,2.142-2.469,4.276-0.869,6.914c0.624,1.028,0.617,2.439,0.944,3.884
 		c-0.4,0.228-0.944,0.539-1.534,0.875c-0.442-0.637-0.711-1.337-1.221-1.684c-0.725-0.494-1.785-1.199-2.42-0.983
 		c-1.586,0.54-2.688,0.126-3.801-0.901c-0.905-0.834-1.895-1.084-3.129-0.544C387.224,658.204,385.922,658.492,384.528,658.926z" />
-	<path fill="#3E5C73" class="regione2" onclick="cambia('<%=regioni[3]%>');" oncontextmenu="nascondi();" data-nome-regione="Puglia"
-						stroke="#3E5C73" stroke-width="2" stroke-miterlimit="10"
+	<path fill="#3E5C73" class="regione2"
+						onclick="cambia('<%=regioni[3]%>');" oncontextmenu="nascondi();"
+						data-nome-regione="Puglia" stroke="#3E5C73" stroke-width="2"
+						stroke-miterlimit="10"
 						d="M403.525,356.517
 		c-0.585-0.839-0.915-1.65-1.515-2.111c-1.781-1.368-2.008-3.171-1.529-5.106c0.541-2.186,1.29-4.321,2.052-6.816
 		c3.186,1.16,6.416,0.079,9.556,1.352c1.554,0.63,3.568,0.355,5.34,0.164c2.153-0.232,4.267-0.819,6.403-1.224
@@ -659,8 +671,9 @@ path.selected {
 		c0.036-1.493-0.888-3.009-1.461-4.763c0.613-0.213,1.281-0.496,1.975-0.677c1.869-0.488,2.902-1.838,3.333-3.554
 		c0.44-1.748-0.375-3.249-1.872-4.107c-1.788-1.025-3.735-1.77-5.608-2.648c-0.895-0.42-1.777-0.869-2.917-1.429
 		c2.251-0.941,3.551-3.193,3.436-5.484C182.461,31.494,180.398,30.853,177.909,30.455z" />
-	<path fill="#3E5C73" stroke="#3E5C73" onclick="cambia('<%=regioni[2]%>');" oncontextmenu="nascondi();" stroke-width="2"
-						stroke-miterlimit="10" class="regione2"
+	<path fill="#3E5C73" stroke="#3E5C73"
+						onclick="cambia('<%=regioni[2]%>');" oncontextmenu="nascondi();"
+						stroke-width="2" stroke-miterlimit="10" class="regione2"
 						data-nome-regione="Calabria"
 						d="M463.377,454.859
 		c1.716-0.679,2.951-1.071,4.096-1.644c1.584-0.792,3.054-0.862,4.711,0.376c-2.087,3.313-3.299,6.799-1.121,10.276
@@ -688,9 +701,10 @@ path.selected {
 		c0.363,0.023,1.068-0.672,1.109-1.086c0.145-1.442,1-2.403,1.853-3.422c0.29-0.347,0.463-0.82,0.595-1.264
 		C462.52,457.923,463.01,456.149,463.377,454.859z" />
 		
-	<path fill="#3E5C73" onclick="cambia('<%=regioni[0]%>');" oncontextmenu="nascondi();"
-						stroke="#3E5C73" stroke-width="2" stroke-miterlimit="10"
-						class="regione2" data-nome-regione="Campania"
+	<path fill="#3E5C73" onclick="cambia('<%=regioni[0]%>');"
+						oncontextmenu="nascondi();" stroke="#3E5C73" stroke-width="2"
+						stroke-miterlimit="10" class="regione2"
+						data-nome-regione="Campania"
 						d="M400.276,382.654
 		c1.904,0.284,3.736,0.556,5.67,0.844c0,1.53-0.008,2.738,0.002,3.946c0.011,1.391-0.162,2.82,0.099,4.163
 		c0.512,2.631,3.066,4.372,5.503,3.347c2.806-1.18,4.988,0.048,7.287,0.99c2.048,0.839,3.208,5.104,1.926,7.238
@@ -768,8 +782,9 @@ path.selected {
 		c-0.345-0.024-0.684-0.145-1.496-0.326c1.007-1.237,1.743-2.289,2.632-3.192c0.879-0.893,1.22-1.875,1.065-3.085
 		c-0.195-1.518-0.953-2.325-2.446-1.978c-1.86,0.433-3.114-0.226-4.253-1.511c-0.126-0.142-0.25-0.288-0.39-0.414
 		C303.877,277.31,302.869,277.367,300.687,279.806z" />
-	<path fill="#3E5C73" stroke="#3E5C73" onclick="cambia('<%=regioni[4]%>');" oncontextmenu="nascondi();" class="regione2"
-						data-nome-regione="Basilicata" stroke-width="2"
+	<path fill="#3E5C73" stroke="#3E5C73"
+						onclick="cambia('<%=regioni[4]%>');" oncontextmenu="nascondi();"
+						class="regione2" data-nome-regione="Basilicata" stroke-width="2"
 						stroke-miterlimit="10"
 						d="M412.554,410.169
 		c0.292-0.46,0.738-1.164,1.174-1.851c0.216-0.037,0.406-0.118,0.583-0.094c3.739,0.504,3.795,0.553,6.216-2.366
@@ -991,45 +1006,45 @@ path.selected {
 				<script charset="UTF-8">
 					function cambia(nomeR) {
 						var nuovo;
-						switch(nomeR){
-						
-						case('Campania'):
-							nuovo="La <b style='color:#800000'>Campania</b> e' una terra molto famosa per la sua cucina e per la sua gastronomia, la Campania si distingue per la produzione di formaggi a pasta filata, dove la <b>mozzarella di bufala</b> la fa da padrona, "
-								+ "affiancata da altre produzioni di nicchia particolarmente interessanti come il <b>caciocavallo podolico</b> e il <b>provolone del Monaco</b> , due prodotti tipici campani meno conosciuti,"
-								+ "ma sicuramente piu' interessanti in quanto piu stagionati, e dunque con caratteristiche organolettiche molto piu' evolute della mozzarella.";
+						switch (nomeR) {
+
+						case ('Campania'):
+							nuovo = "La <b style='color:#800000'>Campania</b> e' una terra molto famosa per la sua cucina e per la sua gastronomia, la Campania si distingue per la produzione di formaggi a pasta filata, dove la <b>mozzarella di bufala</b> la fa da padrona, "
+									+ "affiancata da altre produzioni di nicchia particolarmente interessanti come il <b>caciocavallo podolico</b> e il <b>provolone del Monaco</b> , due prodotti tipici campani meno conosciuti,"
+									+ "ma sicuramente piu' interessanti in quanto piu stagionati, e dunque con caratteristiche organolettiche molto piu' evolute della mozzarella.";
 							document.getElementById('content').style.display = 'block';
 							document.getElementById('content').innerHTML = nuovo;
-						break;
-						
-						case('Sicilia'):
-							nuovo="La <b style='color:#800000'>Sicilia</b> terra di sole, di mare e tesori della storia dell'arte. La sua unicita' risiede anche nelle specialita' tipiche, imperdibili in un viaggio attraverso le provincie di questa favolosa isola: gli <b>arancini</b> di Palermo, i <b>cannoli</b> siciliani gustati in una pasticceria catanese o un buon piatto di pasta condita con <b>pesto alla trapanese</b>. Un percorso enogastronomico che non ha eguali e vi fara' desiderare di rimanere piu' a lungo possibile in questa magica terra.  ";
-						
+							break;
+
+						case ('Sicilia'):
+							nuovo = "La <b style='color:#800000'>Sicilia</b> terra di sole, di mare e tesori della storia dell'arte. La sua unicita' risiede anche nelle specialita' tipiche, imperdibili in un viaggio attraverso le provincie di questa favolosa isola: gli <b>arancini</b> di Palermo, i <b>cannoli</b> siciliani gustati in una pasticceria catanese o un buon piatto di pasta condita con <b>pesto alla trapanese</b>. Un percorso enogastronomico che non ha eguali e vi fara' desiderare di rimanere piu' a lungo possibile in questa magica terra.  ";
+
 							document.getElementById('content').style.display = 'block';
 							document.getElementById('content').innerHTML = nuovo;
-						break;
-						
-						case('Calabria'):
-							nuovo="La <b style='color:#800000'>Calabria</b> e' famosa nel campo della salumeria si contano alcuni importanti prodotti DOP tra cui il <b>capocollo</b>, la <b>soppressata</b> di Calabria e la <b>pancetta</b> di Calabria."
-								+"<br>Il prodotto piu' famoso, apprezzatissimo anche all'estero e' la celeberrima <b>'Nduja di Spilinga</b> per cui e' in corso l'iter per il meritato riconoscimento IGP. ";
-							
+							break;
+
+						case ('Calabria'):
+							nuovo = "La <b style='color:#800000'>Calabria</b> e' famosa nel campo della salumeria si contano alcuni importanti prodotti DOP tra cui il <b>capocollo</b>, la <b>soppressata</b> di Calabria e la <b>pancetta</b> di Calabria."
+									+ "<br>Il prodotto piu' famoso, apprezzatissimo anche all'estero e' la celeberrima <b>'Nduja di Spilinga</b> per cui e' in corso l'iter per il meritato riconoscimento IGP. ";
+
 							document.getElementById('content').style.display = 'block';
 							document.getElementById('content').innerHTML = nuovo;
-						break;
-						
-						case('Puglia'):
-							nuovo="La <b style='color:#800000'>Puglia</b> si caratterizza soprattutto per il rilievo dato alla materia prima, sia di terra che di mare, e per il fatto che tutti gli ingredienti sono appunto finalizzati ad esaltare e a non alterare i sapori base dei prodotti usati.<br> "+
-							"Il piatto piu' tipico e' quello delle <b>Orecchiette al ragu' di carne di cavallo</b>, la cui ricetta e' ormai diffusa in tutti i ricettari, ma non sono meno conosciute le <b>Orecchiette con le cime di rapa</b>, la <b>cicoria con la purea di fave</b>, e quelle che ricollegano il territorio al Mediterraneo, come i <b>Cavatelli con le cozze</b> o il <b>riso al forno alla barese</b>.";
+							break;
+
+						case ('Puglia'):
+							nuovo = "La <b style='color:#800000'>Puglia</b> si caratterizza soprattutto per il rilievo dato alla materia prima, sia di terra che di mare, e per il fatto che tutti gli ingredienti sono appunto finalizzati ad esaltare e a non alterare i sapori base dei prodotti usati.<br> "
+									+ "Il piatto piu' tipico e' quello delle <b>Orecchiette al ragu' di carne di cavallo</b>, la cui ricetta e' ormai diffusa in tutti i ricettari, ma non sono meno conosciute le <b>Orecchiette con le cime di rapa</b>, la <b>cicoria con la purea di fave</b>, e quelle che ricollegano il territorio al Mediterraneo, come i <b>Cavatelli con le cozze</b> o il <b>riso al forno alla barese</b>.";
 							document.getElementById('content').style.display = 'block';
 							document.getElementById('content').innerHTML = nuovo;
-						break;
-						
-						case('Basilicata'):
-							nuovo="La cucina lucana e' l'arte culinaria propria della regione <b style='color:#800000'>Basilicata</b>. Si basa prevalentemente sull'uso di <b>carne suina e ovina</b>, legumi, cereali e verdure, con l'aggiunta di aromi come </b>peperoncino</b>, polvere di <b>peperone crusco</b> e rafano. La gastronomia locale e', per ragioni storico-culturali, prettamente contadina, basata su ricette semplici e sulla cultura del riuso, in particolare di carne e pane. ";
+							break;
+
+						case ('Basilicata'):
+							nuovo = "La cucina lucana e' l'arte culinaria propria della regione <b style='color:#800000'>Basilicata</b>. Si basa prevalentemente sull'uso di <b>carne suina e ovina</b>, legumi, cereali e verdure, con l'aggiunta di aromi come </b>peperoncino</b>, polvere di <b>peperone crusco</b> e rafano. La gastronomia locale e', per ragioni storico-culturali, prettamente contadina, basata su ricette semplici e sulla cultura del riuso, in particolare di carne e pane. ";
 							document.getElementById('content').style.display = 'block';
 							document.getElementById('content').innerHTML = nuovo;
-						break;
+							break;
 						}
-						
+
 					}
 
 					function nascondi() {
@@ -1042,90 +1057,88 @@ path.selected {
 		<div class="rightcolumn">
 			<div class="card">
 				<h2 Style="color: #800000">Gestisci</h2>
-				
+
 				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza HomePage</button>
-					<input type="hidden" name="azione" value="homepage">
-				<br> <br>
-					</form>
-					<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza Catalogo</button>
-					<input type="hidden" name="azione" value="cat">
-				<br> <br>
+					<button id="pulsante" type="submit">Visualizza HomePage</button>
+					<input type="hidden" name="azione" value="homepage"> <br>
+					<br>
 				</form>
-                <form action="ServletAdmin" method="get">
-               
-				<button  id="pulsante"
-					type="submit">Aggiungi elemento al Catalogo</button>
-					 <input type="hidden" name="azione" value="aggiungi">
-				<br> <br>
-					</form>
-				 <form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Rimuovi elemento dal Catalogo</button>
-					<input type="hidden" name="azione" value="rimuovi">
-				<br> <br>
+				<form action="ServletAdmin" method="get">
+					<button id="pulsante" type="submit">Visualizza Catalogo</button>
+					<input type="hidden" name="azione" value="cat"> <br> <br>
 				</form>
-			
 				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Modifica elemento dal Catalogo</button>
-					<input type="hidden" name="azione" value="modifica">
-				<br> <br>
-					</form>
-				
-				
+
+					<button id="pulsante" type="submit">Aggiungi elemento al
+						Catalogo</button>
+					<input type="hidden" name="azione" value="aggiungi"> <br>
+					<br>
+				</form>
 				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Ordini totali effettuati dai clienti</button>
-					<input type="hidden" name="azione" value="ordini">
-				<br> <br>
-					</form>
-					
-					
-				
+					<button id="pulsante" type="submit">Rimuovi elemento dal
+						Catalogo</button>
+					<input type="hidden" name="azione" value="rimuovi"> <br>
+					<br>
+				</form>
+
+				<form action="ServletAdmin" method="get">
+					<button id="pulsante" type="submit">Modifica elemento dal
+						Catalogo</button>
+					<input type="hidden" name="azione" value="modifica"> <br>
+					<br>
+				</form>
+
+
+				<form action="ServletAdmin" method="get">
+					<button id="pulsante" type="submit">Ordini totali
+						effettuati dai clienti</button>
+					<input type="hidden" name="azione" value="ordini"> <br>
+					<br>
+				</form>
+
+
+
 				<form action="ServletRecensioni" method="get">
-				<button  id="pulsante"
-					type="submit">Recensioni clienti</button>
-				<br> <br>
-                   </form>
+					<button id="pulsante" type="submit">Recensioni clienti</button>
+					<br> <br>
+				</form>
 
 			</div>
-			
-			
+
+
 		</div>
-		
+
 	</div>
 	</div>
 
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		
-			<button id="pulsantee" type="submit"> Pagamenti e metodi di
-				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
+
+			<button id="pulsantee" type="submit">
+				Pagamenti e metodi di Spedizione &nbsp;<i style="font-size: 24px"
+					class="fa">&#xf09d;</i><i style='font-size: 24px' class='fas'>&#xf0d1;</i>
+			</button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
-		
-		
-		 <form action="ServletHomePage" method="get">  
-			<button id="pulsantee" type="submit" >Chi Siamo</button>
-			<input type="hidden" name="home" value="chisiamo"><br> <br>
-			 </form>
-		
+
+
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
-		
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+		</form>
+
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">
+				Contatti &nbsp;&nbsp; <i style='font-size: 24px' class='fas'>&#xf095;</i>
+			</button>
+
 			<input type="hidden" name="home" value="contatti">
 		</form>
-		<br>
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
+		<br> <a href="#" class="fa fa-facebook"></a> <a href="#"
+			class="fa fa-google"></a> <a href="#" class="fa fa-twitter"></a> <a
+			href="#" class="fa fa-youtube"></a> <a href="#"
+			class="fa fa-instagram"></a>
 	</div>
 </body>
 </html>

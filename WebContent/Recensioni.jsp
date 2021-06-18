@@ -125,9 +125,9 @@ body {
 	-webkit-border-radius: 20px;
 }
 
-.card2{
-height:85%;
-width:50%;
+.card2 {
+	height: 85%;
+	width: 50%;
 	background-color: white;
 	padding: 0px;
 	margin-top: 0px;
@@ -353,7 +353,7 @@ width:50%;
 	width: 40%;
 	align: center;
 	margin-top: 30px auto;
-	margin-bottom: 30px auto ;
+	margin-bottom: 30px auto;
 	border-radius: 3px;
 	border: none;
 	color: white;
@@ -453,7 +453,7 @@ width:50%;
 
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card2" >
+			<div class="card2">
 
 				<div class=body2>
 					<div class="wrapper2">
@@ -489,13 +489,13 @@ width:50%;
 								</label> <input id="star-1" type="radio" name="rating" value="star-1" />
 								<label for="star-1" title="1 star"> <i
 									class="active fa fa-star" aria-hidden="true"></i>
-								</label></div>
-<p align="center">
-			<button class="button2" id="pulsante3" type="submit">Invia</button>
-			
-		</form>
+								</label>
+							</div>
+							<p align="center">
+								<button class="button2" id="pulsante3" type="submit">Invia</button>
+						</form>
 
-							
+
 					</div>
 
 
@@ -505,9 +505,9 @@ width:50%;
 			</div>
 
 		</div>
-		
+
 		<div class="rightcolumn">
-			<div class="card"  style="height:1000px">
+			<div class="card" style="height: 1000px">
 
 				<h2 Style="color: #800000">Gestisci</h2>
 

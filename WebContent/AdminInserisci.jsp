@@ -7,7 +7,8 @@
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+<link rel="stylesheet"
+	href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
 <style>
 * {
 	box-sizing: border-box;
@@ -629,68 +630,65 @@ Transitions
 		<div class="leftcolumn">
 			<div class="card" style="height: 900px;">
 
-				<form action="ServletAdmin"  method="post"
-					style="display: contents;font-family: 'Nunito', sans-serif;
-	color: #384047;">
-	<br>
-<br>
-<br>
-<br>
-  <div class='box-form'>
-    <div class='box-login-tab'></div>
-    <div class='box-login-title'>
-      <div class='i i-login'></div>
-      <h2 class="h21">AGGIUNGI UN PRODOTTO AL CATALOGO</h2>
-    </div>
-    <div class='box-login'>
-      <div class='fieldset-body' id='login_form'>
-        <button  class='b b-form i i-more' title='Info'></button>
-        <p class='field'>
-        <label for="cod">Codice prodotto </label><input type="text" name="cod" placeholder="003" />
-        </p>
-        <p class='field'>
-          <label for="nome">Nome </label>
-          <input type="text" name="nome" placeholder="Formaggio al tartufo" /> 
-        </p>
-		 <p class='field'>
-          <label for="descrizione">Descrizione </label>
-          <input type="text" name="descrizione" placeholder="Questo formaggio proviene.." size="100" />
-        </p>
-        <p class="field">
-        <label for="prezzo">Prezzo </label> <input
-								type="text" name="prezzo" size="100" placeholder="9.99$"/>
-        </p>
-        <p class="field">
-        <label for="peso">Peso </label><input type="text"
-								name="peso" size="100" placeholder="1 kg" /> <br> 
-        </p>
-        
-        <p class="field">
-							
-        <label for="cat"> Codice Categoria  </label>
-        <select name="cat">
-								<option value="vl" name="tipo">VL</option>
-								<option value="f" name="tipo">F</option>
-								<option value="p" name="tipo">P</option>
-		</select>
-        </p>
-<p class="field">
-<label for="image">Stringa image:</label> <input
-								type="text" name="image" placeholder="images/costaAm.jpg" />
-</p>
-        <input type='submit' type="submit" value='AGGIUNGI'  />
-		<input type="hidden" name="azionee" value="aggiungi">
-      </div>
-    </div>
-  </div>	
+				<form action="ServletAdmin" method="post"
+					style="display: contents; font-family: 'Nunito', sans-serif; color: #384047;">
+					<br> <br> <br> <br>
+					<div class='box-form'>
+						<div class='box-login-tab'></div>
+						<div class='box-login-title'>
+							<div class='i i-login'></div>
+							<h2 class="h21">AGGIUNGI UN PRODOTTO AL CATALOGO</h2>
+						</div>
+						<div class='box-login'>
+							<div class='fieldset-body' id='login_form'>
+								<button class='b b-form i i-more' title='Info'></button>
+								<p class='field'>
+									<label for="cod">Codice prodotto </label><input type="text"
+										name="cod" placeholder="003" />
+								</p>
+								<p class='field'>
+									<label for="nome">Nome </label> <input type="text" name="nome"
+										placeholder="Formaggio al tartufo" />
+								</p>
+								<p class='field'>
+									<label for="descrizione">Descrizione </label> <input
+										type="text" name="descrizione"
+										placeholder="Questo formaggio proviene.." size="100" />
+								</p>
+								<p class="field">
+									<label for="prezzo">Prezzo </label> <input type="text"
+										name="prezzo" size="100" placeholder="9.99$" />
+								</p>
+								<p class="field">
+									<label for="peso">Peso </label><input type="text" name="peso"
+										size="100" placeholder="1 kg" /> <br>
+								</p>
+
+								<p class="field">
+
+									<label for="cat"> Codice Categoria </label> <select name="cat">
+										<option value="vl" name="tipo">VL</option>
+										<option value="f" name="tipo">F</option>
+										<option value="p" name="tipo">P</option>
+									</select>
+								</p>
+								<p class="field">
+									<label for="image">Stringa image:</label> <input type="text"
+										name="image" placeholder="images/costaAm.jpg" />
+								</p>
+								<input type='submit' type="submit" value='AGGIUNGI' /> <input
+									type="hidden" name="azionee" value="aggiungi">
+							</div>
+						</div>
+					</div>
 				</form>
 			</div>
 		</div>
 
 
-		<div class="rightcolumn" >
+		<div class="rightcolumn">
 			<div class="card">
-				<div class="card"style="height:840px">
+				<div class="card" style="height: 840px">
 					<h2 Style="color: #800000">Gestisci</h2>
 					<form action="ServletAdmin" method="get">
 						<button id="pulsante" type="submit">Visualizza HomePage</button>

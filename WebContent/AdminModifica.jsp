@@ -661,29 +661,30 @@ Transitions
 									<label for="codrim">Codice prodotto </label> <input type="text"
 										name="codmod" placeholder="003" />
 								</p>
-							
-								
+
+
 								<p class="field">
 									<label for="prez"> </label><input type="text" name="prez"
 										placeholder="3.50 $" />
-									
+
 								</p>
-							
-								
+
+
 								<p class="field">
 									<input type="text" name="pes" id="pes" placeholder="1 kg" />
-									
+
 								</p>
-							
+
 								<p class="field">
 									<input type="text" name="quant" placeholder="3" />
-									
+
 								</p>
 								<input type='submit' type="submit" value="  MODIFICA"
-								style="width: 800px;" />
+									style="width: 800px;" /> <input type="hidden" name="azionee"
+									value="modifica">
 							</form>
 
-							
+
 						</div>
 					</div>
 				</div>

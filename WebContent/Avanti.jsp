@@ -67,7 +67,6 @@ body {
 	padding: 10px 20px;
 	border: solid 1px #333;
 	background: #333;
-
 	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
@@ -85,7 +84,7 @@ body {
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
-	width:70%;
+	width: 70%;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
@@ -96,12 +95,13 @@ body {
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
+
 #pulsanteac {
 	outline: none;
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
-	width:20%;
+	width: 20%;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
@@ -281,8 +281,8 @@ label {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p >Sito di e-commerce incentrato sulle
-				specialita' gastronomiche del sud Italia.</p>
+			<p>Sito di e-commerce incentrato sulle specialita' gastronomiche
+				del sud Italia.</p>
 		</div>
 
 
@@ -350,14 +350,14 @@ label {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		
-		<%
-			}
-		%>
-		<!--  colonna destra -->
+
+			<%
+				}
+			%>
+			<!--  colonna destra -->
+		</div>
 	</div>
-	</div>
-	
+
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">

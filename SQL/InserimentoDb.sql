@@ -40,7 +40,7 @@ Dolce e moderatamente alcolico, si caratterizza per l’aroma particolarmente de
 insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("011", "Falanghina Del Sannio", "La Falanghina è un vino bianco campano con aroma che riporta a note floreali 
 leggermente fruttate.", "11.10", "75", "VL"," images/falang.png ",1);
 
-
+insert into Prodotto(Codice,Nome,Descrizione,Prezzo,Peso,CodiceCategoria,image,quantita) values ("012", "Nduja calabrese", "La ‘nduja è la regina incontrastata dei salumi calabresi, un prodotto dalle umili origini ma che da qualche anno è sulla bocca di tutti per il suo gusto unico, squisitamente piccante e, dopo un primo assaggio, assolutamente irrinunciabile.", "8.50", "1.00", "F"," images/nduja.jpg",1);
 
 /*
 insert into Acquisto(IDUtente,CodiceProdotto,CodFattura) values ();

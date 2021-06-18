@@ -332,7 +332,10 @@ pre {
 	margin-right: 1em;
 	color: #6f6f6f;
 	font-family: helvetica, arial, sans-serif
-}@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600')
+	;
 
 * {
 	margin: 0;
@@ -395,7 +398,7 @@ pre {
 .item img {
 	float: left;
 	margin-right: 3%;
-	width:250px;
+	width: 250px;
 }
 
 .item .info {
@@ -456,7 +459,8 @@ hr {
 	background-color: white;
 	width: 100%;
 	height: auto;
-	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1978060/chien.png);
+	background-image:
+		url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1978060/chien.png);
 	background-repeat: no-repeat;
 	background-position: right;
 	background-size: 50%;
@@ -489,8 +493,7 @@ hr {
 	transition: 0.3s ease-in-out;
 }
 
-.mastercard:hover,
-.paypal:hover {
+.mastercard:hover, .paypal:hover {
 	opacity: 1;
 }
 
@@ -511,8 +514,7 @@ input, select {
 	margin-top: 2%;
 }
 
-input:focus,
-select:focus {
+input:focus, select:focus {
 	outline: none;
 }
 
@@ -550,7 +552,6 @@ select:last-of-type {
 	width: 25%;
 }
 
-
 button:hover {
 	background-color: #C64F46;
 }
@@ -585,7 +586,7 @@ button:hover {
 			<form action="ServletHomePage" method="get">
 
 				<button id="pulsantee" type="submit">
-					<i style='font-size: 24px; color:white;' class='fas'>&#xf015;</i>
+					<i style='font-size: 24px; color: white;' class='fas'>&#xf015;</i>
 				</button>
 				<input type="hidden" name="home" value="home">
 			</form>
@@ -658,13 +659,11 @@ button:hover {
 
 
 				<div class="container">
-				
-				
+
+
 
 					<h1>
-						<b Style="color: #800000">Prodotti</b>
-						<br>
-						<br>
+						<b Style="color: #800000">Prodotti</b> <br> <br>
 					</h1>
 					<%
 						Carrello car = (Carrello) session.getAttribute("car");
@@ -672,76 +671,91 @@ button:hover {
 							Item el = car.getItemIndex(i);
 					%>
 
-		
-			<div class="item">
-				<img src="<%=el.getImg()%>" alt=''>
-				
-				<div class="info">
-					<h3><%=el.getNome()%></h3>
-					<br>
-					<p class="quantity"><h5>Quantita':</h5> <form action="ServletOrdine" method="post">
-                                    
-										<input type="number" value="<%=Math.round(el.getQuantita())%>"  onchange="this.form.submit()" name="agg" id="agg"
-											min="1" max="30" style="min-width:10px;"> <br> <input type="hidden"
-											name="azione" value="+"> <input type="hidden"
-											name="cod" value="<%=el.getCodice()%>">
-											
-										<%
-											if (el.getQuantita() > 30) {
-										%>
-										<p>Quantita' non disponibile</p>
-										<%
-											}
-										%>
-									</form>
-									<br>
-									
-					<p class="price"><%=el.getPrezzo()%> $</p>
-				</div> <!-- .info -->
-				<br>
-				<br>
-				<form action="ServletOrdine" method="post" style="float:left;position: absolute;
-	padding: 1% 2%;
-	bottom: 5%;
-	left: 2%;">
-										<button  type="submit" style="width:100px;float:left;"><i style='font-size:20px' class='fas'> &#xf00d;</i></button>
-										<br> <input type="hidden" name="azione" value="rim">
-										<input type="hidden" name="cod3" value="<%=el.getCodice()%>">
-									</form>
-			</div> <!-- .item -->
+
+					<div class="item">
+						<img src="<%=el.getImg()%>" alt=''>
+
+						<div class="info">
+							<h3><%=el.getNome()%></h3>
+							<br>
+							<p class="quantity">
+							<h5>Quantita':</h5>
+							<form action="ServletOrdine" method="post">
+
+								<input type="number" value="<%=Math.round(el.getQuantita())%>"
+									onchange="this.form.submit()" name="agg" id="agg" min="1"
+									max="30" style="min-width: 10px;"> <br> <input
+									type="hidden" name="azione" value="+"> <input
+									type="hidden" name="cod" value="<%=el.getCodice()%>">
+
+								<%
+									if (el.getQuantita() > 30) {
+								%>
+								<p>Quantita' non disponibile</p>
+								<%
+									}
+								%>
+							</form>
+							<br>
+
+							<p class="price"><%=el.getPrezzo()%>
+								$
+							</p>
+						</div>
+						<!-- .info -->
+						<br> <br>
+						<form action="ServletOrdine" method="post"
+							style="float: left; position: absolute; padding: 1% 2%; bottom: 5%; left: 2%;">
+							<button type="submit" style="width: 100px; float: left;">
+								<i style='font-size: 20px' class='fas'> &#xf00d;</i>
+							</button>
+							<br> <input type="hidden" name="azione" value="rim">
+							<input type="hidden" name="cod3" value="<%=el.getCodice()%>">
+						</form>
+					</div>
+					<!-- .item -->
 
 					<%
 						}
 						double pesotot = car.SommaPeso();
 						double prezzotot = car.SommaPrezzo();
 					%>
-					<br>
-					<br>
-						<p align="center">
-							Peso totale:
-							<%=pesotot%>
-							kg <br> Prezzo totale: $
-							<%=prezzotot%><br> <br>
-							</p>
-							
-							
-							
-			
+					<br> <br>
+					<p align="center">
+						Peso totale:
+						<%=pesotot%>
+						kg <br> Prezzo totale: $
+						<%=prezzotot%><br> <br>
+					</p>
 
-					<button onclick="location.href='ServletDati'" style="font-size:24px; width:50%;display:contents; float:left;" id="pulsante">Ritorna al Catalogo<i class="fa fa-arrow-circle-left" style="color: #800000"></i></button>
 
-				
-				
-				
-					 <form action="ServletOrdine" method="post" style="display:unset;float:right;">
-					<button id="pulsante" type="submit" style="font-size:24px;width:50%;display:block; float:right;display:contents;">Procedi con l'ordine <i class="fa fa-arrow-circle-right" style="color: #800000"></i></button>
-							<input type="hidden" name="azione" value="Avanti">
+
+
+
+					<button onclick="location.href='ServletDati'"
+						style="font-size: 24px; width: 50%; display: contents; float: left;"
+						id="pulsante">
+						Ritorna al Catalogo<i class="fa fa-arrow-circle-left"
+							style="color: #800000"></i>
+					</button>
+
+
+
+
+					<form action="ServletOrdine" method="post"
+						style="display: unset; float: right;">
+						<button id="pulsante" type="submit"
+							style="font-size: 24px; width: 50%; display: block; float: right; display: contents;">
+							Procedi con l'ordine <i class="fa fa-arrow-circle-right"
+								style="color: #800000"></i>
+						</button>
+						<input type="hidden" name="azione" value="Avanti">
 					</form>
-					
-					
-					
-					
-					</div>
+
+
+
+
+				</div>
 
 
 
@@ -761,7 +775,7 @@ button:hover {
 
 				<button onclick="location.href='mioordini.jsp'" id="pulsante"
 					type="submit">I miei ordini</button>
-				<br> <br> 
+				<br> <br>
 			</div>
 
 
@@ -775,8 +789,9 @@ button:hover {
 		<form action="ServletHomePage" method="get">
 
 			<button id="pulsantee" type="submit">
-				Pagamenti e metodi di Spedizione &nbsp;<i style="font-size: 24px;color:white;"
-					class="fa">&#xf09d;</i><i style='font-size: 24px;color:white;' class='fas'>&#xf0d1;</i>
+				Pagamenti e metodi di Spedizione &nbsp;<i
+					style="font-size: 24px; color: white;" class="fa">&#xf09d;</i><i
+					style='font-size: 24px; color: white;' class='fas'>&#xf0d1;</i>
 			</button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
@@ -789,7 +804,8 @@ button:hover {
 
 		<form action="ServletHomePage" method="get">
 			<button id="pulsantee" type="submit">
-				Contatti &nbsp;&nbsp; <i style='font-size: 24px; color:white;' class='fas'>&#xf095;</i>
+				Contatti &nbsp;&nbsp; <i style='font-size: 24px; color: white;'
+					class='fas'>&#xf095;</i>
 			</button>
 
 			<input type="hidden" name="home" value="contatti">

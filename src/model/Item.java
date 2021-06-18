@@ -24,7 +24,10 @@ public class Item {
 			System.out.println("Error:" + e.getMessage());
 		}
 	}
-
+	public Item() {
+		super();
+		
+	}
 	public Item(String codice, String n, String descrizione, double prezzo, double peso, String codicecategoria,
 			String img, double q) {
 		super();
@@ -122,6 +125,157 @@ public class Item {
 			preparedStatement.setString(6, codicecategoria);
 			preparedStatement.setString(7, img);
 			preparedStatement.setDouble(8, quantita);
+			preparedStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (preparedStatement != null)
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			} finally {
+
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+		}
+
+	}
+	
+	public void rimuoviprodottosql(String cod) {
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+
+		try {
+
+			String sql = "DELETE FROM PRODOTTO WHERE Codice='" + cod + "'";
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (preparedStatement != null)
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			} finally {
+
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+		}
+
+	}
+	
+	public void modificapesosql(String cod,double p) {
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+
+		try {
+
+			String sql = " UPDATE PRODOTTO  SET Peso='" + p + "' WHERE Codice='" + cod + "'";
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (preparedStatement != null)
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			} finally {
+
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+		}
+
+	}
+	public void modificaprezzosql(String cod,double p) {
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+
+		try {
+
+			String sql = " UPDATE PRODOTTO  SET Prezzo='" + p + "' WHERE Codice='" + cod + "'";
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (preparedStatement != null)
+					try {
+						preparedStatement.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			} finally {
+
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+		}
+
+	}
+	
+	public void modificaquantsql(String cod,double q) {
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+
+		try {
+
+			String sql = " UPDATE PRODOTTO  SET quantita='" + q + "' WHERE Codice='" + cod + "'";
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {

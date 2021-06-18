@@ -36,10 +36,10 @@ PRIMARY KEY(Codice)
 );
 
 CREATE TABLE IF NOT EXISTS MetodoDiPagamento(
-Codice VARCHAR(10),
+Codice VARCHAR(10) PRIMARY KEY,
 Tipo VARCHAR(50) NOT NULL,
-NominativoIntestatario VARCHAR(50) NOT NULL,
-PRIMARY KEY(Codice)
+NominativoIntestatario VARCHAR(50) NOT NULL
+
 );
 
 
@@ -160,4 +160,39 @@ FOREIGN KEY(IDUtente) REFERENCES Utente(ID)
 								ON UPDATE CASCADE
 
 );
+/*
+CREATE TABLE IF NOT EXISTS Fattura(
+Id INTEGER PRIMARY KEY,
+NomiProdotto VARCHAR(200),
+Codice VARCHAR(10),
+Tipo VARCHAR(50) ,
+NominativoIntestatario VARCHAR(50) ,
+CostoTotale DOUBLE,
+Via VARCHAR(50) ,
+Cap VARCHAR(5) ,
+Citta VARCHAR(50) ,
+FOREIGN KEY(Codice) REFERENCES MetodoDiPagamento(Codice)
+								ON DELETE CASCADE 
+								ON UPDATE CASCADE,
+FOREIGN KEY(Tipo) REFERENCES MetodoDiPagamento(Tipo)
+								ON DELETE CASCADE 
+								ON UPDATE CASCADE,
+FOREIGN KEY(NominativoIntestatario) REFERENCES MetodoDiPagamento(NominativoIntestatario)
+								ON DELETE CASCADE 
+								ON UPDATE CASCADE,
+FOREIGN KEY(CostoTotale) REFERENCES SpecificaOrdine(CostoTotale)
+								ON DELETE CASCADE 
+								ON UPDATE CASCADE,
+FOREIGN KEY(Via) REFERENCES SpecificaOrdine(Via)
+								ON DELETE CASCADE 
+								ON UPDATE CASCADE,
+FOREIGN KEY(Cap) REFERENCES SpecificaOrdine(Cap)
+								ON DELETE CASCADE 
+								ON UPDATE CASCADE,
+FOREIGN KEY(Citta) REFERENCES SpecificaOrdine(Citta)
+								ON DELETE CASCADE 
+								ON UPDATE CASCADE
+
+);
+*/
 

@@ -86,7 +86,9 @@ body {
 	
 	
 	
+	
             
+	
 	
 	
 	
@@ -95,7 +97,9 @@ body {
 	
 	
 	
+	
 	 
+	
 	
 	
 	
@@ -120,7 +124,9 @@ Need
 
 
 
+
  
+
 
 
 
@@ -128,7 +134,9 @@ this
 
 
 
+
  
+
 
 
 
@@ -136,7 +144,9 @@ for
 
 
 
+
  
+
 
 
 
@@ -144,7 +154,9 @@ specificity
 
 
 
+
  
+
 
 
 
@@ -152,7 +164,9 @@ to
 
 
 
+
  
+
 
 
 
@@ -160,7 +174,9 @@ override
 
 
 
+
  
+
 
 
 
@@ -169,7 +185,9 @@ defaults
 
 
 
+
  
+
 
 
 
@@ -178,7 +196,9 @@ defaults
 
 
 
+
  
+
 
 
 
@@ -187,7 +207,9 @@ Table
 
 
 
+
         
+
 
 
 
@@ -216,6 +238,8 @@ Table
 		
 		
 		
+		
+		
 		nth-child(
 		2
 		)
@@ -224,7 +248,9 @@ Table
 		
 		
 		
+		
               
+		
 		
 		
 		
@@ -233,7 +259,9 @@ Table
 		
 		
 		
+		
 		 
+		
 		
 		
 		
@@ -405,14 +433,12 @@ md-card-footer-text {
 		width: 100%;
 		display: block;
 	}
-	
-	.pulsante{
-	text-align:-webkit-center;
+	.pulsante {
+		text-align: -webkit-center;
 	}
-	
-	.icon-cart{
-	position:absolute;
-	display:grid;
+	.icon-cart {
+		position: absolute;
+		display: grid;
 	}
 }
 
@@ -972,28 +998,27 @@ html, body {
 								</div>
 							</div>
 							<div class="buttons cf">
-								
-									<a class="cart fl-l"> <span> <span class="add"
-											style="text-align: center">
-												<button
-													style="background: transparent; border: none; outline: none; display: table-row; text-align: center;
-													font-family: Segoe, Segoe UI;"
-													type="submit">
-													<i style="font-size:17px;display: table-row;" class="fa">&ensp;  </i>
-												</button>
-										</span><span></span>
-									</span>
-									</a> <input type="hidden" id="id" name="id"
-										value="<%=el.getCodice()%>"> <input type="hidden"
-										name="azione" value="aggiungi"> <input type="hidden"
-										name="pagina" value="ServletDati">
-								
+
+								<a class="cart fl-l"> <span> <span class="add"
+										style="text-align: center">
+											<button
+												style="background: transparent; border: none; outline: none; display: table-row; text-align: center; font-family: Segoe, Segoe UI;"
+												type="submit">
+												<i style="font-size: 17px; display: table-row;" class="fa">&ensp;
+												</i>
+											</button>
+									</span><span></span>
+								</span>
+								</a> <input type="hidden" id="id" name="id"
+									value="<%=el.getCodice()%>"> <input type="hidden"
+									name="azione" value="aggiungi"> <input type="hidden"
+									name="pagina" value="ServletDati">
+
 								<form action="ServletDettaglio" method="get">
 									<a class="more fl-l"><span><span><button
-													style="background: transparent; border: none; outline: none; display: unset;font-size:17px; text-align: center;"
-													type="submit"> Dettaglio 
-												</button></span></span></a> <input type="hidden" id="id" name="id"
-										value="<%=el.getCodice()%>">
+													style="background: transparent; border: none; outline: none; display: unset; font-size: 17px; text-align: center;"
+													type="submit">Dettaglio</button></span></span></a> <input type="hidden"
+										id="id" name="id" value="<%=el.getCodice()%>">
 								</form>
 							</div>
 						</div> <br> <br>
@@ -1005,97 +1030,95 @@ html, body {
 				</ul>
 			</div>
 		</div>
-		<div class="rightcolumn" >
-			<div class="card" >
-				<div class="card" style="height:1530px">
-				<h2 Style="color: #800000">Gestisci</h2>
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza HomePage</button>
-					<input type="hidden" name="azione" value="homepage">
-				<br> <br>
+		<div class="rightcolumn">
+			<div class="card">
+				<div class="card" style="height: 1530px">
+					<h2 Style="color: #800000">Gestisci</h2>
+					<form action="ServletAdmin" method="get">
+						<button id="pulsante" type="submit">Visualizza HomePage</button>
+						<input type="hidden" name="azione" value="homepage"> <br>
+						<br>
 					</form>
 					<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza Catalogo</button>
-					<input type="hidden" name="azione" value="cat">
-				<br> <br>
-				</form>
-                <form action="ServletAdmin" method="get">
-               
-				<button  id="pulsante"
-					type="submit">Aggiungi elemento al Catalogo</button>
-					 <input type="hidden" name="azione" value="aggiungi">
-				<br> <br>
+						<button id="pulsante" type="submit">Visualizza Catalogo</button>
+						<input type="hidden" name="azione" value="cat"> <br>
+						<br>
 					</form>
-				 <form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Rimuovi elemento dal Catalogo</button>
-					<input type="hidden" name="azione" value="rimuovi">
-				<br> <br>
-				</form>
-			
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Modifica elemento dal Catalogo</button>
-					<input type="hidden" name="azione" value="modifica">
-				<br> <br>
+					<form action="ServletAdmin" method="get">
+
+						<button id="pulsante" type="submit">Aggiungi elemento al
+							Catalogo</button>
+						<input type="hidden" name="azione" value="aggiungi"> <br>
+						<br>
 					</form>
-				
-				
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Ordini totali effettuati dai clienti</button>
-					<input type="hidden" name="azione" value="ordini">
-				<br> <br>
+					<form action="ServletAdmin" method="get">
+						<button id="pulsante" type="submit">Rimuovi elemento dal
+							Catalogo</button>
+						<input type="hidden" name="azione" value="rimuovi"> <br>
+						<br>
 					</form>
-				
-				<form action="ServletRecensioni" method="get">
-				<button  id="pulsante"
-					type="submit">Recensioni clienti</button>
-				<br> <br>
-                   </form>
+
+					<form action="ServletAdmin" method="get">
+						<button id="pulsante" type="submit">Modifica elemento dal
+							Catalogo</button>
+						<input type="hidden" name="azione" value="modifica"> <br>
+						<br>
+					</form>
+
+
+					<form action="ServletAdmin" method="get">
+						<button id="pulsante" type="submit">Ordini totali
+							effettuati dai clienti</button>
+						<input type="hidden" name="azione" value="ordini"> <br>
+						<br>
+					</form>
+
+					<form action="ServletRecensioni" method="get">
+						<button id="pulsante" type="submit">Recensioni clienti</button>
+						<br> <br>
+					</form>
+
+
+				</div>
 
 
 			</div>
-			
-			
+
 		</div>
-		
 	</div>
-	</div>
-		<div class="footer">
+	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		
-			<button id="pulsantee" type="submit"> Pagamenti e metodi di
-				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
+
+			<button id="pulsantee" type="submit">
+				Pagamenti e metodi di Spedizione &nbsp;<i style="font-size: 24px"
+					class="fa">&#xf09d;</i><i style='font-size: 24px' class='fas'>&#xf0d1;</i>
+			</button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
-		
-		
-		 <form action="ServletHomePage" method="get">  
-			<button id="pulsantee" type="submit" >Chi Siamo</button>
-			<input type="hidden" name="home" value="chisiamo"><br> <br>
-			 </form>
-		
+
+
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
-		
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+		</form>
+
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">
+				Contatti &nbsp;&nbsp; <i style='font-size: 24px' class='fas'>&#xf095;</i>
+			</button>
+
 			<input type="hidden" name="home" value="contatti">
 		</form>
-		<br>
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
+		<br> <a href="#" class="fa fa-facebook"></a> <a href="#"
+			class="fa fa-google"></a> <a href="#" class="fa fa-twitter"></a> <a
+			href="#" class="fa fa-youtube"></a> <a href="#"
+			class="fa fa-instagram"></a>
 	</div>
 
 
-	
-	
+
+
 
 </body>
 </html>
-		

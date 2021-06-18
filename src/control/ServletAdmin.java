@@ -102,47 +102,29 @@ public class ServletAdmin extends HttpServlet {
 			if (azionee.equalsIgnoreCase("rimuovi")) {
 				String codicerim = request.getParameter("codrim");
 				Catalogo ris = new Catalogo();
-				Item fin = ris.getItem(codicerim);
-				fin.rimuoviprodotto();
-
+				Item fin=new Item();
+				fin = ris.getItem(codicerim);
+				fin.rimuoviprodottosql(codicerim);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
 				rd.forward(request, response);
 
 			}
-			if (azionee.equalsIgnoreCase("modificaprezzo")) {
+			if (azionee.equalsIgnoreCase("modifica")) {
 				String codicerim = request.getParameter("codmod");
-				System.out.println(codicerim);
 				double prezzo2 = Double.parseDouble(request.getParameter("prez"));
-				Catalogo ris = new Catalogo();
-				Item fin = ris.getItem(codicerim);
-				System.out.println(fin);
-				fin.setPrezzo(prezzo2);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
-				rd.forward(request, response);
-
-			}
-			if (azionee.equalsIgnoreCase("modificapeso")) {
-				String codicerim = request.getParameter("codmod");
 				double peso2 = Double.parseDouble(request.getParameter("pes"));
-				Catalogo ris = new Catalogo();
-				Item fin = ris.getItem(codicerim);
-				fin.setPeso(peso2);
-
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
-				rd.forward(request, response);
-
-			}
-			if (azionee.equalsIgnoreCase("modificaquant")) {
-				String codicerim = request.getParameter("codmod");
 				double quant1 = Double.parseDouble(request.getParameter("quant"));
 				Catalogo ris = new Catalogo();
 				Item fin = ris.getItem(codicerim);
-				fin.setQuantita(quant1);
-
+				fin.modificapesosql(codicerim,peso2);
+				fin.modificaprezzosql(codicerim, prezzo2);
+				fin.modificaquantsql(codicerim,quant1);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/PaginaAdmin.jsp");
 				rd.forward(request, response);
-
+				
 			}
+
+			
 		}
 		if(azione3!=null) {
 		if (azione3.equalsIgnoreCase("cliente")) {

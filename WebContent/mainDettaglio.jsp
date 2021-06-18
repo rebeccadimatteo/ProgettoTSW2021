@@ -124,7 +124,7 @@ body {
 	outline: none;
 	cursor: pointer;
 	text-align: center;
-	width:70%;
+	width: 70%;
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
@@ -221,8 +221,8 @@ body {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p >Sito di e-commerce incentrato sulle
-				specialita' gastronomiche del sud Italia.</p>
+			<p>Sito di e-commerce incentrato sulle specialita' gastronomiche
+				del sud Italia.</p>
 		</div>
 
 
@@ -289,19 +289,19 @@ body {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		
 
-		<%
-			}
-		%>
-</div>
+
+			<%
+				}
+			%>
+		</div>
 	</div>
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
 
 				<%
-					Item prodotto = (Item)request.getAttribute("Prodotto");
+					Item prodotto = (Item) request.getAttribute("Prodotto");
 				%>
 				<p align="center">
 					<b><%=prodotto.getNome()%></b>
@@ -311,10 +311,9 @@ body {
 				</p>
 				<p align="center">
 					<%=prodotto.getDescrizione()%>
-					<br>
-					<br> <b>Peso: </b>
-					<%=prodotto.getPeso()%> kg
-					<b>Prezzo: </b>$<%=(double)prodotto.getPrezzo()%>
+					<br> <br> <b>Peso: </b>
+					<%=prodotto.getPeso()%>
+					kg <b>Prezzo: </b>$<%=(double) prodotto.getPrezzo()%>
 					<br> <br>
 				</p>
 				<br>
@@ -322,24 +321,24 @@ body {
 				<div style="text-align: center">
 					<form action="ServletCarrello" method="post">
 						<input type="hidden" id="id" name="id"
-							value="<%= prodotto.getCodice()%>">
-              <%
-              if((request.getSession().getAttribute("utente")==null )||  !((Utente)request.getSession().getAttribute("utente")).getId().equalsIgnoreCase("admin")){
-            	  
-				
-			%>
+							value="<%=prodotto.getCodice()%>">
+						<%
+							if ((request.getSession().getAttribute("utente") == null)
+									|| !((Utente) request.getSession().getAttribute("utente")).getId().equalsIgnoreCase("admin")) {
+						%>
 
-						<button id="pulsante" type="submit" style="width:200px">Aggiungi al Carrello</button>
+						<button id="pulsante" type="submit" style="width: 200px">Aggiungi
+							al Carrello</button>
 						<br> <input type="hidden" name="azione" value="aggiungi">
 						<input type="hidden" name="pagina"
 							value="ServletDettaglio?id=${prodotto.getCodice() }">
-							<%
-				}
-			%>
+						<%
+							}
+						%>
 					</form>
-					
-			
-					
+
+
+
 				</div>
 			</div>
 		</div>

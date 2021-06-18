@@ -45,7 +45,7 @@ body {
 	color: #800000;
 	padding: 10px 40px;
 	border: solid 1px #333;
-	width:70%;
+	width: 70%;
 	background: white;
 	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
@@ -227,7 +227,10 @@ body {
 	border-radius: 50%;
 }
 
-.mySlides {display:none;margin:auto;}
+.mySlides {
+	display: none;
+	margin: auto;
+}
 </style>
 </head>
 <body>
@@ -245,8 +248,8 @@ body {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p >Sito di e-commerce incentrato sulle
-				specialita' gastronomiche del sud Italia.</p>
+			<p>Sito di e-commerce incentrato sulle specialita' gastronomiche
+				del sud Italia.</p>
 		</div>
 
 
@@ -313,48 +316,56 @@ body {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		
 
-		<%
-			}
-		%>
 
-	</div>
+			<%
+				}
+			%>
+
+		</div>
 	</div>
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
 				<h1 Style="color: #800000" align="center">Ora vi raccontiamo la
 					nostra storia...</h1>
-					
-					<div class="w3-content w3-section" style="max-width:500px;">
-  <img class="mySlides w3-animate-fading" src="images/costieracilentana.jpg" style="width:100%;border-radius: 5%;">
-  <img class="mySlides w3-animate-fading" src="images/sicilia2.jpg" style="width:100%;text-align:center;border-radius: 5%;">
-  <img class="mySlides w3-animate-fading" src="images/maratea1.jpg" style="width:100%;align:center;border-radius: 5%;">
-  <img class="mySlides w3-animate-fading" src="images/calabria.jpg" style="width:100%;align:center;border-radius: 5%;">
-  <img class="mySlides w3-animate-fading" src="images/puglia.jpg" style="width:100%;align:center;border-radius: 5%;">
-</div>
 
-<script>
-var myIndex = 0;
-carousel();
+				<div class="w3-content w3-section" style="max-width: 500px;">
+					<img class="mySlides w3-animate-fading"
+						src="images/costieracilentana.jpg"
+						style="width: 100%; border-radius: 5%;"> <img
+						class="mySlides w3-animate-fading" src="images/sicilia2.jpg"
+						style="width: 100%; text-align: center; border-radius: 5%;">
+					<img class="mySlides w3-animate-fading" src="images/maratea1.jpg"
+						style="width: 100%; align: center; border-radius: 5%;"> <img
+						class="mySlides w3-animate-fading" src="images/calabria.jpg"
+						style="width: 100%; align: center; border-radius: 5%;"> <img
+						class="mySlides w3-animate-fading" src="images/puglia.jpg"
+						style="width: 100%; align: center; border-radius: 5%;">
+				</div>
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 7000);    
-}
-</script>
-					
-					
-					
-					
+				<script>
+					var myIndex = 0;
+					carousel();
+
+					function carousel() {
+						var i;
+						var x = document.getElementsByClassName("mySlides");
+						for (i = 0; i < x.length; i++) {
+							x[i].style.display = "none";
+						}
+						myIndex++;
+						if (myIndex > x.length) {
+							myIndex = 1
+						}
+						x[myIndex - 1].style.display = "block";
+						setTimeout(carousel, 7000);
+					}
+				</script>
+
+
+
+
 				<p align="center" style="font-family: 'Trebuchet MS', sans-serif;">
 
 					I <i>Sapori del Sud tra Terra e Mare</i> e' un sito di e-commerce
@@ -363,8 +374,8 @@ function carousel() {
 					stimoli e valorizzi la scoperta delle tradizioni ed incentivi la
 					vendita di prodotti sia tipici che innovativi, mantenendo sempre
 					uno standard qualitativo alto ed un basso impatto ambientale.<br>
-					L'<i>obiettivo</i> infatti e' quello di soddisfare le esigenze degli
-					utenti offrendo loro una varieta' di prodotti che li facciano
+					L'<i>obiettivo</i> infatti e' quello di soddisfare le esigenze
+					degli utenti offrendo loro una varieta' di prodotti che li facciano
 					sentire immersi tra i sapori. <br> La finalita' e' di
 					sviluppare un sito accessibile ed interattivo tale da garantire
 					semplicita' d'uso ed opportune funzionalita' che possano
@@ -372,8 +383,7 @@ function carousel() {
 					e mobile.
 
 				</p>
-				<br>
-				&emsp;&emsp;&emsp;
+				<br> &emsp;&emsp;&emsp;
 				<div class="chip">
 					<img src="images/avatar1.png" alt="Person" width="96" height="96">
 					Ilaria De Sio
@@ -396,7 +406,7 @@ function carousel() {
 			</div>
 		</div>
 		<div class="rightcolumn">
-			<div class="card" style="height:635px">
+			<div class="card" style="height: 635px">
 				<h2 Style="color: #800000">Gestisci</h2>
 
 				<button onclick="location.href='mioprofilo.jsp'" id="pulsante"

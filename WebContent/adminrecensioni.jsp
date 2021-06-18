@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ page import="model.*"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="model.*"%>
 <%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
 <head>
-<script src='https://kit.fontawesome.com/a076d05399.js' ></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <style>
@@ -19,25 +20,25 @@ body {
 	padding: 10px;
 	background: #f1f1f1;
 }
-#pulsantee {
-outline: none;
 
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
+#pulsantee {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
 }
 /* Header/Blog Title */
 .header {
 	padding: 30px;
 	text-align: center;
 	background: white;
-	display:flex;
-	flex-wrap:wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .header h1 {
@@ -49,23 +50,24 @@ background: #333;
 	overflow: hidden;
 	background-color: #333;
 }
+
 #pulsantee {
-outline: none;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font: bold 20px Arial, Helvetica, sans-serif;
-color: white;
-padding: 10px 20px;
-border: solid 1px #333;
-background: #333;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: bold 20px Arial, Helvetica, sans-serif;
+	color: white;
+	padding: 10px 20px;
+	border: solid 1px #333;
+	background: #333;
 }
 /* Style the topnav links */
 .topnav a {
 	float: left;
 	display: flex;
-	flex-wrap:wrap;
-	justify-content :space-between;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
@@ -84,6 +86,7 @@ background: #333;
 	float: left;
 	width: 75%;
 }
+
 #pulsante {
 	outline: none;
 	cursor: pointer;
@@ -92,7 +95,7 @@ background: #333;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
 	padding: 10px 40px;
-	width:70%;
+	width: 70%;
 	border: solid 1px #333;
 	background: white;
 	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
@@ -115,14 +118,13 @@ pre {
 	background-color: #f1f1f1;
 	padding-left: 20px;
 }
+
 .logo {
 	float: left;
 	width: 20%;
 	background-color: #f1f1f1;
 	padding-left: 5px;
 	margin-top: 9px;
-	
-	
 }
 
 .img2 {
@@ -158,50 +160,31 @@ pre {
 	background: #ddd;
 	margin-top: 20px;
 }
+
 table {
-
-  border-collapse: collapse;
-
-  width: 100%;
-
+	border-collapse: collapse;
+	width: 100%;
 }
-
-
- 
 
 th, td {
-
-  text-align: left;
-
-  padding: 8px;
-
+	text-align: left;
+	padding: 8px;
 }
 
-
- 
-
-tr:nth-child(even){background-color: #f2f2f2}
-
-
- 
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
 
 th {
-
-  background-color: #333;
-
-  color: white;
-
+	background-color: #333;
+	color: white;
 }
+
 .row:after {
-
- content: "";
-
- display: table;
-
- clear: both;
-
+	content: "";
+	display: table;
+	clear: both;
 }
-
 
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
@@ -214,15 +197,11 @@ th {
 		width: 100%;
 		display: block;
 	}
-	
-	.topnav,.topnavLeft,.topnavRight {
-	flex-wrap:wrap;
-	flex-direction:column;
-	text-align:center;
-	
+	.topnav, .topnavLeft, .topnavRight {
+		flex-wrap: wrap;
+		flex-direction: column;
+		text-align: center;
 	}
-	
-	
 	.logo {
 		width: 100%;
 		display: block;
@@ -231,42 +210,41 @@ th {
 
 /* LOGHI FOOTER */
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
+	padding: 20px;
+	font-size: 30px;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
 }
 
 .fa:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+	background: #3B5998;
+	color: white;
 }
 
 .fa-youtube {
-  background: #bb0000;
-  color: white;
+	background: #bb0000;
+	color: white;
 }
 
 .fa-instagram {
-  background: #125688;
-  color: white;
+	background: #125688;
+	color: white;
 }
 
-
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+	background: #55ACEE;
+	color: white;
 }
 
 .fa-google {
-  background: #dd4b39;
-  color: white;
+	background: #dd4b39;
+	color: white;
 }
 </style>
 </head>
@@ -278,25 +256,26 @@ th {
 				<a title="Recensioni dei tuoi clienti" href="Adminhomepage.jsp"><img
 					src="images/logo.png" alt="logo" style="height: 120px;"></a>
 			</div>
-		</div>	
+		</div>
 
 		<div>
-		<h1>
-			<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
-			
-		</h1>
-		<p >Sito di e-commerce incentrato sulle
-			specialita' gastronomiche del sud Italia.</p>
+			<h1>
+				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
+
+			</h1>
+			<p>Sito di e-commerce incentrato sulle specialita' gastronomiche
+				del sud Italia.</p>
 		</div>
-		
-		
+
+
 	</div>
 
-	<div class="topnav" style="display: flex; justify-content: space-between;">
+	<div class="topnav"
+		style="display: flex; justify-content: space-between;">
 		<div class="topnavLeft" style="float: left; display: flex;">
-	<h1 style="color:white">Ciao Amministratore!</h1>
-	</div>
-	<div class="topnavRight" style="float: right; display: flex;">
+			<h1 style="color: white">Ciao Amministratore!</h1>
+		</div>
+		<div class="topnavRight" style="float: right; display: flex;">
 			<!--  se utente è autentifico esce logout e può accedere  a mio profilo e miei ordini -->
 			<%
 				if (request.getSession().getAttribute("utente") != null) {
@@ -311,139 +290,141 @@ th {
 			<%
 				}
 			%>
-	</div>
+		</div>
 	</div>
 
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card">
-			
-				
-				<h1 Style="color: #800000">Ecco le recensioni dei tuoi clienti </h1>
-				
-				<% 
-				ArrayList<Recensione> ris=new ArrayList<Recensione>();
-				Recensione nuova=new Recensione();
-				ris=nuova.totrecensioni();
-				for(int i=0; i<ris.size();i++)
-				{
-				
+
+
+				<h1 Style="color: #800000">Ecco le recensioni dei tuoi clienti
+				</h1>
+
+				<%
+					ArrayList<Recensione> ris = new ArrayList<Recensione>();
+					Recensione nuova = new Recensione();
+					ris = nuova.totrecensioni();
+					for (int i = 0; i < ris.size(); i++) {
 				%>
-				
+
 				<fieldset>
-				<legend> Recensione di <%= ris.get(i).getIdutente() %> su: <%=ris.get(i).getNomeprodotto() %></legend>
-				
-				<p><%=ris.get(i).getDescrizione() %></p><br><br>
-				     
-				
+					<legend>
+						Recensione di
+						<%=ris.get(i).getIdutente()%>
+						su:
+						<%=ris.get(i).getNomeprodotto()%></legend>
+
+					<p><%=ris.get(i).getDescrizione()%></p>
+					<br>
+					<br>
+
+
 				</fieldset>
 
 
- 
 
- 
-				
-				<% 
-				
-				}
-				
+
+
+
+				<%
+					}
 				%>
-				
-				
+
+
 			</div>
-			
+
 		</div>
-	<div class="rightcolumn">
+		<div class="rightcolumn">
 			<div class="card">
 				<div class="card">
-				<h2 Style="color: #800000">Gestisci</h2>
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza HomePage</button>
-					<input type="hidden" name="azione" value="homepage">
-				<br> <br>
+					<h2 Style="color: #800000">Gestisci</h2>
+					<form action="ServletAdmin" method="get">
+						<button id="pulsante" type="submit">Visualizza HomePage</button>
+						<input type="hidden" name="azione" value="homepage"> <br>
+						<br>
 					</form>
 					<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Visualizza Catalogo</button>
-					<input type="hidden" name="azione" value="cat">
-				<br> <br>
-				</form>
-                <form action="ServletAdmin" method="get">
-               
-				<button  id="pulsante"
-					type="submit">Aggiungi elemento al Catalogo</button>
-					 <input type="hidden" name="azione" value="aggiungi">
-				<br> <br>
+						<button id="pulsante" type="submit">Visualizza Catalogo</button>
+						<input type="hidden" name="azione" value="cat"> <br>
+						<br>
 					</form>
-				 <form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Rimuovi elemento dal Catalogo</button>
-					<input type="hidden" name="azione" value="rimuovi">
-				<br> <br>
-				</form>
-			
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Modifica elemento dal Catalogo</button>
-					<input type="hidden" name="azione" value="modifica">
-				<br> <br>
+					<form action="ServletAdmin" method="get">
+
+						<button id="pulsante" type="submit">Aggiungi elemento al
+							Catalogo</button>
+						<input type="hidden" name="azione" value="aggiungi"> <br>
+						<br>
 					</form>
-				
-				
-				<form action="ServletAdmin" method="get">
-				<button  id="pulsante"
-					type="submit">Ordini totali effettuati dai clienti</button>
-					<input type="hidden" name="azione" value="ordini">
-				<br> <br>
+					<form action="ServletAdmin" method="get">
+						<button id="pulsante" type="submit">Rimuovi elemento dal
+							Catalogo</button>
+						<input type="hidden" name="azione" value="rimuovi"> <br>
+						<br>
 					</form>
-				
-				
-				
-				
-				
-				
-				
-				<form action="ServletRecensioni" method="get">
-				<button  id="pulsante"
-					type="submit">Recensioni clienti</button>
-				<br> <br>
-                   </form>
+
+					<form action="ServletAdmin" method="get">
+						<button id="pulsante" type="submit">Modifica elemento dal
+							Catalogo</button>
+						<input type="hidden" name="azione" value="modifica"> <br>
+						<br>
+					</form>
+
+
+					<form action="ServletAdmin" method="get">
+						<button id="pulsante" type="submit">Ordini totali
+							effettuati dai clienti</button>
+						<input type="hidden" name="azione" value="ordini"> <br>
+						<br>
+					</form>
+
+
+
+
+
+
+
+					<form action="ServletRecensioni" method="get">
+						<button id="pulsante" type="submit">Recensioni clienti</button>
+						<br> <br>
+					</form>
+
+
+				</div>
 
 
 			</div>
-			
-			
+
 		</div>
-		
-	</div>
 	</div>
 	<div class="footer">
 		<h2 Style="color: #800000">Hai bisogno di aiuto ?</h2>
 		<form action="ServletHomePage" method="get">
-		
-			<button id="pulsantee" type="submit"> Pagamenti e metodi di
-				Spedizione &nbsp;<i style="font-size:24px" class="fa">&#xf09d;</i><i style='font-size:24px' class='fas'>&#xf0d1;</i></button>
+
+			<button id="pulsantee" type="submit">
+				Pagamenti e metodi di Spedizione &nbsp;<i style="font-size: 24px"
+					class="fa">&#xf09d;</i><i style='font-size: 24px' class='fas'>&#xf0d1;</i>
+			</button>
 			<input type="hidden" name="home" value="pagmet"><br> <br>
 		</form>
-		
-		
-		 <form action="ServletHomePage" method="get">  
-			<button id="pulsantee" type="submit" >Chi Siamo</button>
-			<input type="hidden" name="home" value="chisiamo"><br> <br>
-			 </form>
-		
+
+
 		<form action="ServletHomePage" method="get">
-			<button id="pulsantee" type="submit">Contatti &nbsp;&nbsp; <i style='font-size:24px' class='fas'>&#xf095;</i></button>
-		
+			<button id="pulsantee" type="submit">Chi Siamo</button>
+			<input type="hidden" name="home" value="chisiamo"><br> <br>
+		</form>
+
+		<form action="ServletHomePage" method="get">
+			<button id="pulsantee" type="submit">
+				Contatti &nbsp;&nbsp; <i style='font-size: 24px' class='fas'>&#xf095;</i>
+			</button>
+
 			<input type="hidden" name="home" value="contatti">
 		</form>
-		<br>
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
+		<br> <a href="#" class="fa fa-facebook"></a> <a href="#"
+			class="fa fa-google"></a> <a href="#" class="fa fa-twitter"></a> <a
+			href="#" class="fa fa-youtube"></a> <a href="#"
+			class="fa fa-instagram"></a>
 	</div>
 
 </body>

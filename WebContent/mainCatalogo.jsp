@@ -86,7 +86,9 @@ body {
 	
 	
 	
+	
             
+	
 	
 	
 	
@@ -95,7 +97,9 @@ body {
 	
 	
 	
+	
 	 
+	
 	
 	
 	
@@ -120,7 +124,9 @@ Need
 
 
 
+
  
+
 
 
 
@@ -128,7 +134,9 @@ this
 
 
 
+
  
+
 
 
 
@@ -136,7 +144,9 @@ for
 
 
 
+
  
+
 
 
 
@@ -144,7 +154,9 @@ specificity
 
 
 
+
  
+
 
 
 
@@ -152,7 +164,9 @@ to
 
 
 
+
  
+
 
 
 
@@ -160,7 +174,9 @@ override
 
 
 
+
  
+
 
 
 
@@ -169,7 +185,9 @@ defaults
 
 
 
+
  
+
 
 
 
@@ -178,7 +196,9 @@ defaults
 
 
 
+
  
+
 
 
 
@@ -187,7 +207,9 @@ Table
 
 
 
+
         
+
 
 
 
@@ -216,6 +238,8 @@ Table
 		
 		
 		
+		
+		
 		nth-child(
 		2
 		)
@@ -224,7 +248,9 @@ Table
 		
 		
 		
+		
               
+		
 		
 		
 		
@@ -233,7 +259,9 @@ Table
 		
 		
 		
+		
 		 
+		
 		
 		
 		
@@ -405,14 +433,12 @@ md-card-footer-text {
 		width: 100%;
 		display: block;
 	}
-	
-	.pulsante{
-	text-align:-webkit-center;
+	.pulsante {
+		text-align: -webkit-center;
 	}
-	
-	.icon-cart{
-	position:absolute;
-	display:grid;
+	.icon-cart {
+		position: absolute;
+		display: grid;
 	}
 }
 
@@ -701,7 +727,7 @@ html, body {
 	padding: 0 10px;
 	background-color: #5DBA9D;
 	color: #FFFFFF;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: bold;
 	position: relative;
 }
@@ -957,7 +983,7 @@ html, body {
 				<%
 					Catalogo prodotti = (Catalogo) request.getAttribute("Catalogo");
 
-					for (int i = 0; i < prodotti.lengthCatalogo()-1; i++) {
+					for (int i = 0; i < prodotti.lengthCatalogo() - 1; i++) {
 						Item el = prodotti.getItemIndex(i);
 				%>
 				<ul class="wrapper cf">
@@ -976,10 +1002,10 @@ html, body {
 									<a class="cart fl-l"> <span> <span class="add"
 											style="text-align: center">
 												<button
-													style="background: transparent; border: none; outline: none; display: table-row; text-align: center;
-													font-family: Segoe, Segoe UI;"
+													style="background: transparent; border: none; outline: none; display: table-row; text-align: center; font-family: Segoe, Segoe UI;"
 													type="submit">
-													<i style="font-size:17px;display: table-row;" class="fa">&#xf07a;&ensp;  Aggiungi</i>
+													<i style="font-size: 17px; display: table-row;" class="fa">&#xf07a;&ensp;
+														Aggiungi</i>
 												</button>
 										</span><span></span>
 									</span>
@@ -990,10 +1016,9 @@ html, body {
 								</form>
 								<form action="ServletDettaglio" method="get">
 									<a class="more fl-l"><span><span><button
-													style="background: transparent; border: none; outline: none; display: unset;font-size:17px; text-align: center;"
-													type="submit"> Dettaglio 
-												</button></span></span></a> <input type="hidden" id="id" name="id"
-										value="<%=el.getCodice()%>">
+													style="background: transparent; border: none; outline: none; display: unset; font-size: 17px; text-align: center;"
+													type="submit">Dettaglio</button></span></span></a> <input type="hidden"
+										id="id" name="id" value="<%=el.getCodice()%>">
 								</form>
 							</div>
 						</div> <br> <br>
@@ -1020,8 +1045,8 @@ html, body {
 			</div>
 			<div class="card">
 
-				<button onclick="location.href='ServletCarrello'" id="pulsante"style="align: left;"
-					type="submit">
+				<button onclick="location.href='ServletCarrello'" id="pulsante"
+					style="align: left;" type="submit">
 					<div class="icon-cart"
 						style="align: center; clear: left; float: left">
 						<div class="cart-line-1" style="background-color: black"></div>
@@ -1029,13 +1054,12 @@ html, body {
 						<div class="cart-line-3" style="background-color: black"></div>
 						<div class="cart-wheel" style="background-color: black"></div>
 					</div>
-					<br><br> Carrello (${car.lengthCarrello()})
+					<br>
+					<br> Carrello (${car.lengthCarrello()})
 				</button>
-				
-			</div>
-<div class="card" style="height:1160px">
 
-</div>
+			</div>
+			<div class="card" style="height: 1160px"></div>
 		</div>
 	</div>
 

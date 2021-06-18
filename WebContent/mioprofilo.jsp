@@ -20,6 +20,7 @@ body {
 	padding: 10px;
 	background: #f1f1f1;
 }
+
 .header {
 	padding: 30px;
 	text-align: center;
@@ -27,6 +28,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .header h1 {
 	font-size: 50px;
 }
@@ -55,7 +57,6 @@ body {
 	color: black;
 }
 
-
 .logo {
 	float: left;
 	width: 20%;
@@ -76,15 +77,13 @@ body {
 .leftcolumn {
 	float: left;
 	width: 100%;
-	overflow:scroll;
+	overflow: scroll;
 }
 
 /* Right column */
 .rightcolumn {
 	float: left;
-
 	background-color: #f1f1f1;
-
 }
 
 /* Fake image */
@@ -99,7 +98,6 @@ body {
 	padding: 20px;
 	margin-top: 20px;
 	-webkit-border-radius: 20px;
-	
 }
 
 /* Clear floats after the columns */
@@ -108,7 +106,6 @@ body {
 	display: table;
 	clear: both;
 }
-
 
 #pulsante {
 	outline: none;
@@ -119,7 +116,7 @@ body {
 	color: #800000;
 	padding: 10px 40px;
 	border: solid 1px #333;
-	width:70%;
+	width: 70%;
 	background: white;
 	-webkit-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	-moz-box-shadow: 5px 5px 10px 0px #3B3B3B;
@@ -149,7 +146,6 @@ body {
 	background: #ddd;
 	margin-top: 20px;
 }
-
 
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
@@ -228,8 +224,8 @@ body {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p >Sito di e-commerce incentrato sulle
-				specialita' gastronomiche del sud Italia.</p>
+			<p>Sito di e-commerce incentrato sulle specialita' gastronomiche
+				del sud Italia.</p>
 		</div>
 
 
@@ -296,20 +292,20 @@ body {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		
-		<%
-			}
-		%>
-			</div>
-		
-		
+
+			<%
+				}
+			%>
+		</div>
+
+
 	</div>
 
-	
+
 
 	<div class="row">
-		<div class="leftcolumn" style="width:700px">
-			<div class="card" >
+		<div class="leftcolumn" style="width: 700px">
+			<div class="card">
 				<%
 					Utente ut = (Utente) request.getSession().getAttribute("utente");
 					if (ut == null) {
@@ -335,7 +331,7 @@ body {
 						</b><%=ut.getCellulare()%><br> <br>
 					</p>
 				</fieldset>
-<br>
+				<br>
 				<fieldset>
 					<legend>
 						<b Style="color: #800000">Dati di spedizione:</b>
@@ -357,13 +353,14 @@ body {
 			</div>
 		</div>
 
-		<div class="rightcolumn" >
-			<div class="card"  style="width:1390px">
+		<div class="rightcolumn">
+			<div class="card" style="width: 1390px">
 				<h2 Style="color: #800000">Gestisci</h2>
 				<br>
 
 				<button onclick="location.href='mioordini.jsp'" id="pulsante"
-					type="submit" style="width:200px;text-align:center;">I miei ordini</button>
+					type="submit" style="width: 200px; text-align: center;">I
+					miei ordini</button>
 				<br> <br>
 
 			</div>

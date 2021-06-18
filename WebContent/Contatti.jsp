@@ -45,7 +45,7 @@ body {
 	outline: none;
 	cursor: pointer;
 	text-align: center;
-	width:70%;
+	width: 70%;
 	text-decoration: none;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	color: #800000;
@@ -93,11 +93,13 @@ body {
 	background-color: #ddd;
 	color: black;
 }
+
 body {
 	font-family: Arial;
 	padding: 10px;
 	background: #f1f1f1;
 }
+
 .logo {
 	float: left;
 	width: 20%;
@@ -290,8 +292,8 @@ body {
 				<b Style="color: #800000">I Sapori Del Sud Tra Terra e Mare</b>
 
 			</h1>
-			<p>Sito di e-commerce incentrato sulle
-				specialita' gastronomiche del sud Italia.</p>
+			<p>Sito di e-commerce incentrato sulle specialita' gastronomiche
+				del sud Italia.</p>
 		</div>
 
 
@@ -357,16 +359,16 @@ body {
 			<form action="RegistrazioneServlet" method="get">
 				<button id="pulsantee" type="submit">Registrazione</button>
 			</form>
-		
 
-		<%
-			}
-		%>
-</div>
+
+			<%
+				}
+			%>
+		</div>
 	</div>
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card"  style="height:500px">
+			<div class="card" style="height: 500px">
 
 				<h1 Style="color: #800000" align="center">Stai riscontrando dei
 					problemi? Contattaci!</h1>
@@ -404,7 +406,7 @@ body {
 			</div>
 		</div>
 		<div class="rightcolumn">
-			<div class="card" style="height:500px">
+			<div class="card" style="height: 500px">
 
 				<h2 Style="color: #800000">Gestisci</h2>
 

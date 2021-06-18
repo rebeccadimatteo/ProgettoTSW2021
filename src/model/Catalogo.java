@@ -70,20 +70,21 @@ public class Catalogo {
 	}
 
 	public Item getItem(String cod) {
-		Item nuovo;
+		Item nuovo=new Item();
 
 		if (cod == null) {
 			return null;
 		}
 
 		for (int i = 0; i < this.catalogo.size(); i++) {
-			nuovo = this.catalogo.get(i);
-			if (cod.equals(nuovo.getCodice())) {
-				return (nuovo);
+			if(this.catalogo.get(i).getCodice().equalsIgnoreCase(cod)) {
+				nuovo=this.catalogo.get(i);
+				
+			
 			}
 		}
 
-		return (null);
+		return nuovo;
 	}
 
 	public ArrayList<Item> getCatalogo() {
