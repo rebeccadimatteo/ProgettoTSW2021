@@ -193,6 +193,11 @@ pre {
 		display: block;
 	}
 	
+	.pack-grig{
+ 	 width: 100%;
+	}
+	
+
 	
 }
 
@@ -202,8 +207,9 @@ pre {
 }
 
 .pack-section{
-  max-width: 960px;
   margin: 0 auto;
+   width: 100%;
+   max-width:100%
 }
 .pack-grig{
   margin: 20px 0 0 0;
@@ -212,6 +218,7 @@ pre {
   display: block;
   text-align: center;
   width: 100%;
+  max-width:100%
   
 }
 .pack-grig:after{
@@ -303,10 +310,6 @@ pre {
    box-shadow: 0 2px 3px #000;
   width: 120px;
 }
-
-
-
-
 
 </style>
 </head>

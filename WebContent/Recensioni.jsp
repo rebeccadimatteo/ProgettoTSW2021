@@ -232,7 +232,7 @@ body {
 .body2 {
 	box-sizing: border-box;
 	background: linear-gradient(to right bottom, #000046, #5B86E5);
-	height: 135vh;
+	height: 140vh;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
