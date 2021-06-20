@@ -355,27 +355,28 @@ label {
 							</p>
 							<!--  controlla con ajax campo email attraverso uan query controlla se presente se lo � segnala a schermo che � presente -->
 							<script>
+							//Funzione java script 
 								function erroreMail(stringa) {
 									var campo = document
 											.getElementById("errorMessage");
 									if (stringa.length == 0) {
 										return;
 									}
-
+                                      // url della pagina che sta richiedendo lo script 
 									var xmlHttpReq = new XMLHttpRequest();
 									xmlHttpReq.onreadystatechange = function() {
-										if (this.readyState == 4
-												&& this.status == 200) {
-											campo.innerHTML = this.response;
+										if (this.readyState == 4//richiesta in elaborazione
+												&& this.status == 200) {// richiesta pronta
+											campo.innerHTML = this.response;//stampa riposta collegato a una servlet che mette in errore l'email
 										}
 									};
-									xmlHttpReq
+									xmlHttpReq  // rispondere alla pagina questa parte viene messa nell url con risultato query
 											.open(
 													"GET",
 													"emailpresente?email="
 															+ encodeURIComponent(stringa),
 													true);
-									xmlHttpReq.send();
+									xmlHttpReq.send(); // manda la pagina in esecuzione
 								}
 							</script>
 

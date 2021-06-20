@@ -983,7 +983,7 @@ html, body {
 				<%
 					Catalogo prodotti = (Catalogo) request.getAttribute("Catalogo");
 
-					for (int i = 0; i < prodotti.lengthCatalogo() - 1; i++) {
+					for (int i = 0; i < prodotti.lengthCatalogo() ; i++) {
 						Item el = prodotti.getItemIndex(i);
 				%>
 				<ul class="wrapper cf">
