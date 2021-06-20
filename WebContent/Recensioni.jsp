@@ -4,7 +4,7 @@
 <html>
 <head>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
+<link href="Fragment.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"
@@ -20,42 +20,7 @@ body {
 	background: #f1f1f1;
 }
 
-/* Header/Blog Title */
-.header {
-	padding: 30px;
-	text-align: center;
-	background: white;
-	display: flex;
-	flex-wrap: wrap;
-}
 
-.header h1 {
-	font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-	overflow: hidden;
-	background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-	float: left;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-	background-color: #ddd;
-	color: black;
-}
 
 #pulsantee {
 	outline: none;
@@ -175,13 +140,7 @@ body {
 	clear: both;
 }
 
-/* Footer */
-.footer {
-	padding: 20px;
-	text-align: center;
-	background: #ddd;
-	margin-top: 20px;
-}
+
 
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
@@ -393,14 +352,12 @@ body {
 				</button>
 				<input type="hidden" name="home" value="home">
 			</form>
-
+			
 			<form action="ServletHomePage" method="get">
-
 				<button id="pulsantee" type="submit">Catalogo</button>
 				<input type="hidden" name="home" value="catal">
-
 			</form>
-
+			
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Chi Siamo</button>
 				<input type="hidden" name="home" value="chisiamo">
@@ -411,11 +368,11 @@ body {
 				<input type="hidden" name="home" value="contatti">
 			</form>
 
-
 			<form action="ServletHomePage" method="get">
 				<button id="pulsantee" type="submit">Recensioni</button>
 				<input type="hidden" name="home" value="recensione">
 			</form>
+			
 		</div>
 
 		<div class="topnavRight" style="float: right; display: flex;">
@@ -454,7 +411,6 @@ body {
 	<div class="row">
 		<div class="leftcolumn">
 			<div class="card2">
-
 				<div class=body2>
 					<div class="wrapper2">
 						<div class="header2">
@@ -494,14 +450,8 @@ body {
 							<p align="center">
 								<button class="button2" id="pulsante3" type="submit">Invia</button>
 						</form>
-
-
 					</div>
-
-
-
 				</div>
-
 			</div>
 
 		</div>

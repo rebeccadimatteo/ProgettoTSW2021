@@ -4,6 +4,8 @@
 <html>
 <head>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<link href="Fragment.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <link rel="stylesheet"
@@ -57,42 +59,7 @@ body {
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
-/* Header/Blog Title */
-.header {
-	padding: 30px;
-	text-align: center;
-	background: white;
-	display: flex;
-	flex-wrap: wrap;
-}
 
-.header h1 {
-	font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-	overflow: hidden;
-	background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-	float: left;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-	background-color: #ddd;
-	color: black;
-}
 
 body {
 	font-family: Arial;
@@ -151,19 +118,16 @@ body {
 	clear: both;
 }
 
-/* Footer */
-.footer {
-	padding: 20px;
-	text-align: center;
-	background: #ddd;
-	margin-top: 20px;
-}
+
 
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
 		padding: 0;
 		display: block;
+	}
+	.rightcolumn {
+		text-align: center;
 	}
 	.topnav a {
 		float: none;
@@ -179,7 +143,10 @@ body {
 		width: 100%;
 		display: block;
 	}
+	
+	
 }
+
 /* LOGHI FOOTER */
 .fa {
 	padding: 20px;
