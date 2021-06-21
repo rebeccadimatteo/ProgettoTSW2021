@@ -6,32 +6,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<script> 
-$(document).ready(function(){
-  $('#flip').onclick(function(){
-    $('#panel').slideToggle("slow");
-  });
-});
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 <link href="Fragment.css" rel="stylesheet" type="text/css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-#panel, #flip {
-  padding: 0px;
-  text-align: center;
-  background-color: white;
-  border: solid 1px #800000;
-}
-
-#panel {
-  padding: 30px;
- 
-}
 
 * {
 	box-sizing: border-box;
@@ -664,10 +648,7 @@ button:hover {
 							<h3><%=el.getNome()%></h3>
 							<br>
 							
-							<div id="flip">Per Sapere di piu' sul prodotto ordinato:</div>
-                               <div id="panel"><%=el.getDescrizione()%></div>
-                               <br>
-                              
+							
 							<p class="quantity">
 							<h5>Quantita':</h5>
 							<form action="ServletOrdine" method="post">

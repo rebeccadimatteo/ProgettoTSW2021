@@ -11,7 +11,6 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-
 * {
 	box-sizing: border-box;
 }
@@ -89,7 +88,9 @@ body {
 	
 	
 	
+	
             
+	
 	
 	
 	
@@ -100,7 +101,9 @@ body {
 	
 	
 	
+	
 	 
+	
 	
 	
 	
@@ -147,8 +150,6 @@ md-card-footer-text {
 	margin-top: 9px;
 }
 
-
-
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {
@@ -187,6 +188,19 @@ md-card-footer-text {
 	-webkit-border-radius: 20px;
 }
 
+.cardres {
+    display: flex;
+	flex-wrap:wrap; 
+	justify-content:space-between;
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+	-webkit-border-radius: 20px;
+}
+
+
+
+
 /* Clear floats after the columns */
 .row:after {
 	content: "";
@@ -217,6 +231,7 @@ md-card-footer-text {
 		padding: 0;
 		display: block;
 	}
+	
 	.rightcolumn {
 		text-align: center;
 	}
@@ -241,8 +256,10 @@ md-card-footer-text {
 		position: absolute;
 		display: grid;
 	}
+	.cardres{
+	justify-content:center;
+	}
 }
-
 
 /* LOGHI FOOTER */
 .fa {
@@ -464,6 +481,7 @@ html, body {
 
 .product {
 	width: 250px;
+	height:400px;
 	margin-right: 20px;
 	background-color: #FFFFFF;
 	position: relative;
@@ -474,7 +492,10 @@ html, body {
 }
 
 .container-prod {
-	height: 350px;
+	height: 400px;
+	width:250px;
+	display:flex;
+	flex-direction:column;
 	overflow: hidden;
 	position: relative;
 	-moz-box-shadow: 0px 0px 0px 0px #F2F2F2;
@@ -781,62 +802,61 @@ html, body {
 	<!-- Stampa catalogo -->
 	<div class="row">
 		<div class="leftcolumn">
-			<div class="card">
+			<div class="cardres">
+
 				<%
 					Catalogo prodotti = (Catalogo) request.getAttribute("Catalogo");
-
-
-				
 
 					for (int i = 0; i < prodotti.lengthCatalogo(); i++) {
 
 						Item el = prodotti.getItemIndex(i);
 				%>
-				<ul class="wrapper cf">
-					<li class="product fl-l">
-						<div class="container-prod">
-							<div class="image"
-								style="background-image:url('<%=el.getImg()%>');"></div>
-								
-							<div class="container-information">
-								<div class="title">
-									<%=el.getNome()%>
-									<a href="" class="more close"><i class="fa fa-times"></i></a>
-								</div>
-							</div>
-							<div class="buttons cf">
-								<form action="ServletCarrello" method="post">
-									<a class="cart fl-l"> <span> <span class="add"
-											style="text-align: center">
-												<button
-													style="background: transparent; border: none; outline: none; display: table-row; text-align: center; font-family: Segoe, Segoe UI;"
-													type="submit">
-													<i style="font-size: 17px; display: table-row;" class="fa">&#xf07a;&ensp;
-														Aggiungi</i>
-												</button>
-										</span><span></span>
-									</span>
-									</a> <input type="hidden" id="id" name="id"
-										value="<%=el.getCodice()%>"> <input type="hidden"
-										name="azione" value="aggiungi"> <input type="hidden"
-										name="pagina" value="ServletDati">
-								</form>
-								<form action="ServletDettaglio" method="get">
-									<a class="more fl-l"><span><span><button
-													style="background: transparent; border: none; outline: none; display: unset; font-size: 17px; text-align: center;"
-													type="submit">Dettaglio</button></span></span></a> <input type="hidden"
-										id="id" name="id" value="<%=el.getCodice()%>">
-								</form>
-								
-							</div>
-							
-						</div> <br> <br>
-					</li>
-					<%
-						}
-					%>
 
-				</ul>
+				<div class="product fl-l">
+					<div class="container-prod">
+						<div class="image"
+							style="background-image:url('<%=el.getImg()%>');"></div>
+
+						<div class="container-information">
+							<div class="title">
+								<%=el.getNome()%>
+								<a href="" class="more close"><i class="fa fa-times"></i></a>
+							</div>
+						</div>
+						<div class="buttons cf">
+							<form action="ServletCarrello" method="post">
+								<a class="cart fl-l"> <span> <span class="add"
+										style="text-align: center">
+											<button
+												style="background: transparent; border: none; outline: none; display: table-row; text-align: center; font-family: Segoe, Segoe UI;"
+												type="submit">
+												<i style="font-size: 17px; display: table-row;" class="fa">&#xf07a;&ensp;
+													Aggiungi</i>
+											</button>
+									</span><span></span>
+								</span>
+								</a> <input type="hidden" id="id" name="id"
+									value="<%=el.getCodice()%>"> <input type="hidden"
+									name="azione" value="aggiungi"> <input type="hidden"
+									name="pagina" value="ServletDati">
+							</form>
+							<form action="ServletDettaglio" method="get">
+								<a class="more fl-l"><span><span><button
+												style="background: transparent; border: none; outline: none; display: unset; font-size: 17px; text-align: center;"
+												type="submit">Dettaglio</button></span></span></a> <input type="hidden"
+									id="id" name="id" value="<%=el.getCodice()%>">
+							</form>
+
+						</div>
+
+					</div>
+					<br> <br>
+				</div>
+				<%
+					}
+				%>
+
+
 			</div>
 		</div>
 		<div class="rightcolumn">
@@ -863,8 +883,7 @@ html, body {
 						<div class="cart-line-3" style="background-color: black"></div>
 						<div class="cart-wheel" style="background-color: black"></div>
 					</div>
-					<br>
-					<br> Carrello (${car.lengthCarrello()})
+					<br> <br> Carrello (${car.lengthCarrello()})
 				</button>
 
 			</div>
