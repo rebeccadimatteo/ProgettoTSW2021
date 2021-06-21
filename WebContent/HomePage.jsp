@@ -8,7 +8,8 @@
 <title></title>
 
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-
+<!-- collegamento al file css dei Fragment -->
+<link href="Fragment.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -28,44 +29,6 @@ body {
 	background: #f1f1f1;
 }
 
-/* Header/Blog Title */
-.header {
-	padding: 30px;
-	text-align: center;
-	background: white;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.header h1 {
-	font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-	overflow: hidden;
-	background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-	float: left;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-/* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {
 	float: left;
@@ -165,13 +128,7 @@ pre {
 	clear: both;
 }
 
-/* Footer */
-.footer {
-	padding: 20px;
-	text-align: center;
-	background: #ddd;
-	margin-top: 20px;
-}
+
 
 /* LOGHI FOOTER */
 .fa {
@@ -236,7 +193,12 @@ pre {
 		display: block;
 	}
 	
-	.
+	.pack-grig{
+ 	 width: 100%;
+	}
+	
+
+	
 }
 
 .wrapper:hover .btn {
@@ -245,8 +207,9 @@ pre {
 }
 
 .pack-section{
-  max-width: 960px;
   margin: 0 auto;
+   width: 100%;
+   max-width:100%
 }
 .pack-grig{
   margin: 20px 0 0 0;
@@ -255,6 +218,7 @@ pre {
   display: block;
   text-align: center;
   width: 100%;
+  max-width:100%
   
 }
 .pack-grig:after{
@@ -346,10 +310,6 @@ pre {
    box-shadow: 0 2px 3px #000;
   width: 120px;
 }
-
-
-
-
 
 </style>
 </head>

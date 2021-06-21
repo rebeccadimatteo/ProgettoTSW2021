@@ -10,6 +10,7 @@
 <head>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+<link href="Fragment.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -39,46 +40,6 @@ body {
 	font-family: Arial;
 	padding: 10px;
 	background: #f1f1f1;
-}
-
-.header h1 {
-	font-size: 50px;
-}
-/* Header/Blog Title */
-.header {
-	padding: 30px;
-	text-align: center;
-	background: white;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.header h1 {
-	font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-	overflow: hidden;
-	background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-	float: left;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-	background-color: #ddd;
-	color: black;
 }
 
 #pulsante {
@@ -172,19 +133,14 @@ pre {
 	clear: both;
 }
 
-/* Footer */
-.footer {
-	padding: 20px;
-	text-align: center;
-	background: #ddd;
-	margin-top: 20px;
-}
-
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
 		padding: 0;
 		display: block;
+	}
+	.rightcolumn {
+		text-align: center;
 	}
 	.topnav a {
 		float: none;
@@ -200,6 +156,8 @@ pre {
 		width: 100%;
 		display: block;
 	}
+	
+	
 }
 
 /* LOGHI FOOTER */

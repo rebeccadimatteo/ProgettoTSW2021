@@ -5,11 +5,13 @@
 <html>
 <head>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<link href="Fragment.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
 <style>
+
 * {
 	box-sizing: border-box;
 }
@@ -108,169 +110,6 @@ body {
 }
 
 }
-@media ( min-width : 600px) and (max-width: 959px) { //
-	Custom setting since ngMaterial 1.0.0 only // supports percentage increments of 
-		 5 // 2-column table
-          &.flex-sm-46 { //
-		max-width: 24% !important; // Disable to all varying sizes in Cards
-		max-height : 100%;
-		box-sizing: border-box;
-		flex: 2 46%;
-	}
-}
-
-//
-Need
-
-
-
-
- 
-
-
-
-
-this
-
-
-
-
- 
-
-
-
-
-for
-
-
-
-
- 
-
-
-
-
-specificity
-
-
-
-
- 
-
-
-
-
-to
-
-
-
-
- 
-
-
-
-
-override
-
-
-
-
- 
-
-
-
-
-defaults
-//
-
-
-
-
- 
-
-
-
-
-1
--column
-
-
-
-
- 
-
-
-
-
-Table
-
-
-
-
-
-        
-
-
-
-
-@media ( max-width : 599px) { &
-	.flex-xs-80 {
-		flex: 1 80%;
-		//
-		Special
-		override
-		for
-		the
-		1st
-		&
-		2nd
-		child
-		default
-		resizing
-		&
-		:
-		first-child
-		,
-		&:
-		
-		
-		
-		
-		
-		
-		
-		
-		nth-child(
-		2
-		)
-		{
-		
-		
-		
-		
-		
-              
-		
-		
-		
-		
-		flex
-		:
-		
-		
-		
-		
-		 
-		
-		
-		
-		
-		1
-		80%;
-	}
-}
-
-}
 img {
 	max-width: 100%;
 }
@@ -307,42 +146,8 @@ md-card-footer-text {
 	padding-left: 5px;
 	margin-top: 9px;
 }
-/* Header/Blog Title */
-.header {
-	padding: 30px;
-	text-align: center;
-	background: white;
-	display: flex;
-	flex-wrap: wrap;
-}
 
-.header h1 {
-	font-size: 50px;
-}
 
-/* Style the top navigation bar */
-.topnav {
-	overflow: hidden;
-	background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-	float: left;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-	background-color: #ddd;
-	color: black;
-}
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
@@ -405,19 +210,15 @@ md-card-footer-text {
 	-o-box-shadow: 5px 5px 10px 0px #3B3B3B;
 	box-shadow: 5px 5px 10px 0px #3B3B3B;
 }
-/* Footer */
-.footer {
-	padding: 20px;
-	text-align: center;
-	background: #ddd;
-	margin-top: 20px;
-}
 
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
 		padding: 0;
 		display: block;
+	}
+	.rightcolumn {
+		text-align: center;
 	}
 	.topnav a {
 		float: none;
@@ -441,6 +242,7 @@ md-card-footer-text {
 		display: grid;
 	}
 }
+
 
 /* LOGHI FOOTER */
 .fa {
@@ -983,7 +785,11 @@ html, body {
 				<%
 					Catalogo prodotti = (Catalogo) request.getAttribute("Catalogo");
 
-					for (int i = 0; i < prodotti.lengthCatalogo() ; i++) {
+
+				
+
+					for (int i = 0; i < prodotti.lengthCatalogo(); i++) {
+
 						Item el = prodotti.getItemIndex(i);
 				%>
 				<ul class="wrapper cf">
@@ -991,6 +797,7 @@ html, body {
 						<div class="container-prod">
 							<div class="image"
 								style="background-image:url('<%=el.getImg()%>');"></div>
+								
 							<div class="container-information">
 								<div class="title">
 									<%=el.getNome()%>
@@ -1020,7 +827,9 @@ html, body {
 													type="submit">Dettaglio</button></span></span></a> <input type="hidden"
 										id="id" name="id" value="<%=el.getCodice()%>">
 								</form>
+								
 							</div>
+							
 						</div> <br> <br>
 					</li>
 					<%

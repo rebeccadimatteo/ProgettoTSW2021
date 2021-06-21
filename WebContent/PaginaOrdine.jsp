@@ -8,10 +8,32 @@
 <head>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+
+<link href="Fragment.css" rel="stylesheet" type="text/css">
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideUp("slow");
+  });
+});
+</script>
 <style>
+#panel, #flip {
+  padding: 0px;
+  text-align: center;
+  background-color: white;
+  border: solid 1px #800000;
+}
+
+#panel {
+  padding: 30px;
+ 
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -22,42 +44,7 @@ body {
 	background: #f1f1f1;
 }
 
-/* Header/Blog Title */
-.header {
-	padding: 30px;
-	text-align: center;
-	background: white;
-	display: flex;
-	flex-wrap: wrap;
-}
 
-.header h1 {
-	font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-	overflow: hidden;
-	background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-	float: left;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-	background-color: #ddd;
-	color: black;
-}
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {
@@ -158,19 +145,15 @@ pre {
 	clear: both;
 }
 
-/* Footer */
-.footer {
-	padding: 20px;
-	text-align: center;
-	background: #ddd;
-	margin-top: 20px;
-}
 
 @media only screen and (max-width: 600px) {
 	.leftcolumn, .rightcolumn {
 		width: 100%;
 		padding: 0;
 		display: block;
+	}
+	.rightcolumn {
+		text-align: center;
 	}
 	.topnav a {
 		float: none;
@@ -186,6 +169,8 @@ pre {
 		width: 100%;
 		display: block;
 	}
+	
+	
 }
 
 .row:after {
@@ -675,9 +660,15 @@ button:hover {
 					<div class="item">
 						<img src="<%=el.getImg()%>" alt=''>
 
+							
 						<div class="info">
 							<h3><%=el.getNome()%></h3>
 							<br>
+							<div id="flip">Per Sapere di più sul prodotto ordinato:</div>
+						
+						
+                               <div id="panel"><%=el.getDescrizione()%></div>
+                               <br>
 							<p class="quantity">
 							<h5>Quantita':</h5>
 							<form action="ServletOrdine" method="post">
@@ -697,11 +688,17 @@ button:hover {
 								%>
 							</form>
 							<br>
+								
+						
+							
+							
+							<br>
 
 							<p class="price"><%=el.getPrezzo()%>
 								$
 							</p>
 						</div>
+						
 						<!-- .info -->
 						<br> <br>
 						<form action="ServletOrdine" method="post"
